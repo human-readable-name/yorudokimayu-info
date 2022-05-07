@@ -42,4 +42,16 @@
     * 動的要素は必要ないはずなのでStaticSiteGeneratorを使うだけ
 * CSSフレームワーク Tailwind CSS
 * 言語 TypeScript
-* ローカル開発環境 Node 16
+* ローカル開発環境
+
+構築は https://nextjs.org/docs/api-reference/create-next-app を使ってひな形を作り、
+apiディレクトリを削除してsrcディレクトリにpagesとstylesを移動している。
+
+## ローカル開発環境構築
+
+* Dockerを入れる
+* docker-composeでコンテナを起動
+* 起動したコンテナに入る
+* appディレクトリで `yarn install` で必要なパッケージのインストール
+* appディレクトリで `yarn dev` でローカル環境を起動
+* ブラウザから [http://localhost:3000](http://localhost:3000) にアクセス

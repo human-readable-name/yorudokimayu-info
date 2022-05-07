@@ -1,0 +1,10 @@
+version: '3'
+services:
+  local:
+    image: node:18
+    stdin_open: true
+    tty: true
+    ports:
+    - "3000:3000"
+    volumes:
+    - .:/app
