@@ -1,10 +1,11 @@
 version: '3'
 services:
   local:
-    image: node:18
+    image: node:16
     stdin_open: true
     tty: true
     ports:
     - "3000:3000"
+    - "6006:6006"
     volumes:
     - .:/yorudokimayu-info

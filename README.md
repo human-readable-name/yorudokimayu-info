@@ -80,21 +80,30 @@
 * Webフレームワーク Next.js
     * 動的要素は必要ないはずなのでStaticSiteGeneratorを使うだけ
 * 言語 TypeScript
+* CSSフレームワーク Tailwind
+    * スタイルのスコープはコンポーネント内に閉じる (グローバルなCSSは極力書かない)
 
 https://nextjs.org/docs/api-reference/create-next-app を使ってひな形を作り、
 apiディレクトリを削除してsrcディレクトリにpagesとstylesを移動している。
 
 ## ローカル開発環境
 
-* Node18が動けばなんでもいい
+* Node16が動けばなんでもいい
 * 起動コマンドは[package.json](./package.json)を見てください
+    * コンポーネント開発は [Storybook](https://storybook.js.org/) 使ってください
 * Dockerを使う場合は、[docker-compose.yml](./docker-compose.yml)を見てください
 
 ### WindowsでVisualStudioCodeからDockerを使う場合の具体的な手順
 
+実行環境の準備 (1回だけやればOK)
+
 * [Docker for Windowsをインストール](https://docs.docker.jp/docker-for-windows/install.html)
 * [VisualStudioCodeをインストール](https://code.visualstudio.com/)
 * VisualStudioCodeに[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)と[Remote - Containers](https://marketplace.visualstudio.com)の拡張を入れる
+
+
+ローカル環境でページを閲覧したい場合
+
 * VisualStudioCodeのEXPLORERから`docker-compose.yml`を右クックし、`Compose Up`でDockerコンテナを起動
 * VisualStudioCodeのDOCKERのCONTAINERSから起動したコンテナを右クリックし、`Attach Shell`で起動したコンテナに入る
 * `cd yorudokimayu-info`でディレクトリに移動
