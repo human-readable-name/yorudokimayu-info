@@ -13,8 +13,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 className="m-0 text-2xl">
+          YorudoKiyamu.info
         </h1>
 
         <p className={styles.description}>
