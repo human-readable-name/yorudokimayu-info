@@ -106,7 +106,6 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
 
 * VisualStudioCodeのEXPLORERから`docker-compose.yml`を右クックし、`Compose Up`でDockerコンテナを起動
 * VisualStudioCodeのDOCKERのCONTAINERSから起動したコンテナを右クリックし、`Attach Shell`で起動したコンテナに入る
-* `cd yorudokimayu-info`でディレクトリに移動
 * `yarn install` で必要なパッケージのインストール
 * `yarn dev` でNext.jsの開発サーバを起動
 * ブラウザから [http://localhost:3000](http://localhost:3000) にアクセス

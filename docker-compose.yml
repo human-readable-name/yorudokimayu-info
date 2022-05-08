@@ -4,8 +4,11 @@ services:
     image: node:16
     stdin_open: true
     tty: true
+    environment:
+    - CHOKIDAR_USEPOLLING=true
     ports:
     - "3000:3000"
     - "6006:6006"
     volumes:
     - .:/yorudokimayu-info
+    working_dir: /yorudokimayu-info
