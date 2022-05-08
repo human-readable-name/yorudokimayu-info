@@ -8,7 +8,7 @@ import path from '../constants/path';
 
 const Home: NextPage = () => {
   return (
-    <div className={"px-8"/*styles.container*/}>
+    <div className={"px-8"}>
       <Head>
         <title>拠鳥きまゆ非公式アーティストページ</title>
         <meta name="description" content="拠鳥きまゆ非公式アーティストページ" />
@@ -33,6 +33,6 @@ const Home: NextPage = () => {
       <PageFooter />
     </div>
   )
-}
+};
 
-export default Home
+export default Home;
