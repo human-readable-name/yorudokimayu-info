@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import PageTitle from '../components/common/PageTitle';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +14,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className="m-0 text-2xl">
-          YorudoKiyamu.info
-        </h1>
+        <PageTitle text="YorudoKiyamu.info" />
 
         <p className={styles.description}>
           Get started by editing{' '}
