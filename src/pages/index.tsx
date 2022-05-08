@@ -1,9 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import LinkCard from '../components/common/LinkCard';
+import PageFooter from '../components/common/PageFooter';
 import PageTitle from '../components/common/PageTitle';
+import externalLink from '../constants/externalLink';
+import path from '../constants/path';
 
 const Home: NextPage = () => {
   return (
@@ -14,33 +15,22 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={"min-h-screen py-16 flex flex-col justify-center items-center"/*styles.main*/}>
+      <main className="min-h-screen py-16 flex flex-col justify-center items-center">
         <PageTitle text="YorudoKiyamu.info" />
 
-        <p className={"my-16 text-xl"}>
+        <p className="my-16 text-xl">
           拠鳥きまゆ非公式アーティストページ
         </p>
 
-        <div className={"grid grid-cols-1 md:grid-cols-2"}>
-          <LinkCard title="Profile" caption="アーティスト紹介・ライブ出演歴" url="/profile" />
-          <LinkCard title="Discograpy" caption="楽曲リリース情報" url="/discography" />
-          <LinkCard title="Goods" caption="Booth (外部リンク)" url="https://461okmy.booth.pm/" />
-          <LinkCard title="Fan Community" caption="pixiv FANBOX(外部リンク)" url="https://penguinn0va.fanbox.cc/" />
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <LinkCard title="Profile" caption="アーティスト紹介・出演歴" url={path.profile} />
+          <LinkCard title="Discograpy" caption="楽曲リリース情報" url={path.discography} />
+          <LinkCard title="Goods" caption="Booth (外部リンク)" url={externalLink.booth} />
+          <LinkCard title="Fan Community" caption="pixiv FANBOX (外部リンク)" url={externalLink.fanbox} />
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <PageFooter />
     </div>
   )
 }
