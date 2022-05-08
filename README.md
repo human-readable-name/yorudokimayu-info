@@ -13,11 +13,13 @@
 
 ## 機能要件
 
-サイト来訪者へ以下の情報を提供できる
+サイト来訪者が以下の情報を閲覧できるようにする
 
 * アーティスト紹介
 * イベント出演歴
 * 楽曲情報
+
+サイト来訪者がCookieのオプトインができるようにする
 
 ## 非機能要件
 
@@ -36,6 +38,42 @@
     * `/discography` 楽曲一覧ページ
         * `/discography/{シングル・アルバム・EPなどの英語名称}` リリース単位 TuneCore/Booth/MVがあればYouTubeリンク
 
+## ページ構成
+
+ユーザの目に見える部分 (htmlのbodyタグ内部)
+
+* ページヘッダ (全ページ共通)
+    * アーティストロゴ
+    * メニュー(各ページへのリンク)
+* コンテンツ本体
+    * h1タグは1ページに1つ (SEO観点)
+    * 基本的にグリッドレイアウト
+* ページフッタ (全ページ共通)
+    * 運営者・権利の表示
+    * 問い合わせ先のリンク
+
+ユーザの画面サイズ・アスペクト比に応じて以下の項目の通常表示・モバイル表示をCSSで制御 (レスポンシブデザイン対応)
+
+* ページヘッダ内メニュー
+    * 通常 : 水平方向に並ぶ
+    * モバイル : ハンバーガーメニュー (タップ時に展開)
+* コンテンツ本体の一覧表示
+    * 通常 : 水平方向に繰り返し、折り返す
+    * モバイル : 折り返さない
+
+## 多端末対応
+
+* 動作要件 (いずれも最新のOS・ブラウザ)
+    * Windows : Edge, Chrome
+    * Mac : Safari, Chrome
+    * iOS : Safari, Chrome
+    * Android : Chrome
+
+## 多言語対応
+
+* 初期段階ではやらない
+    * 現状、翻訳サイトやブラウザの翻訳プラグインが優秀なので、優先度が低い
+    * 機械翻訳しやすいように文言・文章表現は平易なものにする
 
 # 開発技術
 
@@ -48,16 +86,16 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
 
 ## ローカル開発環境
 
-* Node18が動けばなんでもいいです
+* Node18が動けばなんでもいい
 * 起動コマンドは[package.json](./package.json)を見てください
 * Dockerを使う場合は、[docker-compose.yml](./docker-compose.yml)を見てください
 
-### Windows環境でVisualStudioCodeを使う場合の具体的な手順
+### WindowsでVisualStudioCodeからDockerを使う場合の具体的な手順
 
-* Docker for Windowsをインストール
-* VisualStudioCodeをインストール
-* VisualStudioCodeにDockerとRemoteDevelopmentの拡張を入れる
-* VisualStudioCodeのEXPLORERから`docker-compose.yml`を右クックし、`Compose Up`でDockerコンテナを起動\
+* [Docker for Windowsをインストール](https://docs.docker.jp/docker-for-windows/install.html)
+* [VisualStudioCodeをインストール](https://code.visualstudio.com/)
+* VisualStudioCodeに[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)と[Remote - Containers](https://marketplace.visualstudio.com)の拡張を入れる
+* VisualStudioCodeのEXPLORERから`docker-compose.yml`を右クックし、`Compose Up`でDockerコンテナを起動
 * VisualStudioCodeのDOCKERのCONTAINERSから起動したコンテナを右クリックし、`Attach Shell`で起動したコンテナに入る
 * `cd yorudokimayu-info`でディレクトリに移動
 * `yarn install` で必要なパッケージのインストール
