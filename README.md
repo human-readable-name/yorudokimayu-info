@@ -37,7 +37,7 @@
 ## サイトマップ
 
 * `/` トップページ (更新履歴・内部およびTwitter/YouTube/TuneCore/Fanbox/Boothなどへのリンク)
-    * `/profile` プロフィールページ (アーティスト紹介・イベント出演歴など)
+    * `/biography` アーティスト紹介・イベント出演歴
     * `/discography` 楽曲一覧ページ
         * `/discography/{シングル・アルバム・EPなどの英語名称}` リリース単位 TuneCore/Booth/MVがあればYouTubeリンク
 

@@ -1,12 +1,12 @@
 type Path = {
     home: string;
-    profile: string;
+    biography: string;
     discography: string;
 };
 
 const path:Path = {
     home: "/",
-    profile: "/profile",
+    biography: "/biography",
     discography: "discography",
 };
 
