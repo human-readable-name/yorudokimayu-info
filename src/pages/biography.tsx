@@ -22,7 +22,8 @@ const Biography: NextPage = () => {
                         拠鳥きまゆ (よるど きまゆ)
                         { /* 画像 */ }
                         <p>
-                            2020-10-10デビュー
+                            2020-10-10デビュー。
+                            2021年4月から12月まで9か月連続リリース企画 #nova_nextを実施し、期間中13曲リリース。
                         </p>
                         <ul className="flex space-x-4">
                             <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.twitter} target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -31,7 +32,7 @@ const Biography: NextPage = () => {
                     </section>
 
                     <section>
-                        <SectionTitle text="Live Act." />
+                        <SectionTitle text="Live/Event" />
                         <ul className="leading-6 list-inside list-disc">
                             <li>2020-11-03 #ぶいっと</li>
                             <li>2020-12-04 エンタス忘年会</li>

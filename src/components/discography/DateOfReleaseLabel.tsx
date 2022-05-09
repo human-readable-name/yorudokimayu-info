@@ -6,7 +6,7 @@ type Props = {
 };
 
 const DateOfRleaseLabel: React.FC<Props> = ({dateOfRelease}) => {
-    return <span className="text-slate-600 text-base">{format(dateOfRelease, "yyyy-MM-dd")}</span>;
+    return <span className="text-slate-600 text-base">{format(dateOfRelease, "yyyy-MM-dd")}</span>
 };
 
 export default DateOfRleaseLabel;
