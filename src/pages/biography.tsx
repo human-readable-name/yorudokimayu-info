@@ -3,6 +3,7 @@ import Head from 'next/head';
 import PageFooter from '../components/common/PageFooter';
 import PageHeader from '../components/common/PageHeader';
 import PageTitle from '../components/common/PageTitle';
+import LinkCard from '../components/common/LinkCard';
 import SectionTitle from '../components/common/SectionTitle';
 import externalLink from '../constants/externalLink';
 
@@ -16,21 +17,25 @@ const Biography: NextPage = () => {
             </Head>
 
             <PageHeader />
-
-            <main className="min-h-screen py-16 flex flex-col justify-center items-center">
+            <main className="min-h-screen flex flex-col items-center">
                 <PageTitle text="Biography" />
                 <div className="grid grid-cols-1 gap-4">
                     <section>
                         <SectionTitle text="Profile" />
-                        拠鳥きまゆ (よるど きまゆ)
+                        <p className="text-center py-4">拠鳥きまゆ<br />(よるど きまゆ)</p>
                         { /* 画像 */ }
-                        <p>
-                            2020-10-10デビュー。
-                            2021年4月から12月まで9か月連続リリース企画 #nova_nextを実施し、期間中13曲リリース。
-                        </p>
-                        <ul className="flex space-x-4">
-                            <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.twitter} target="_blank" rel="noopener noreferrer">Twitter</a></li>
+
+                        <ul className="py-4 flex space-x-4 justify-center">
                             <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.youtube} target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                            <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.twitter} target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                        </ul>
+
+                        <ul className="leading-6 list-inside list-disc">
+                            <li>2020-10-10 活動開始</li>
+                            <li>2021-04-11 9か月連続リリース企画 #nova_next 開始</li>
+                            <li>2021-10-24 3D お 披 露</li>
+                            <li>2021-12-28 #nova_next 完結</li>
                         </ul>
                     </section>
 
@@ -47,7 +52,6 @@ const Biography: NextPage = () => {
                     </section>
                 </div>
             </main>
-
             <PageFooter />
             
         </div>

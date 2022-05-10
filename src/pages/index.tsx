@@ -16,9 +16,9 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            
             <PageHeader />
-
-            <main className="min-h-screen py-16 flex flex-col justify-center items-center">
+            <main className="min-h-screen flex flex-col items-center">
                 <PageTitle text="拠鳥きまゆ非公式アーティストページ" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2">
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
                     <LinkCard title="Fan Community" caption="pixiv FANBOX" url={externalLink.fanbox} />
                 </div>
             </main>
-
             <PageFooter />
         </div>
     )

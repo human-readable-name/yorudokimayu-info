@@ -40,7 +40,7 @@ const PageHeader: React.FC = () => {
             }
         </div>
         {/** PCなどでは横にメニュー項目を出す */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex justify-center">
             <nav>
                 <ul className="flex space-x-4 py-4">
                     {navListItems.map((item,index) => <NavListItem key={index} name={item.name} url={item.url} />)}
