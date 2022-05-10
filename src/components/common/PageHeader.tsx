@@ -29,10 +29,10 @@ const PageHeader: React.FC = () => {
                 <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
             </div>
             { isMenuOpen && 
-                <div className="absolute z-10 top-0 right-0 min-h-fit min-w-full bg-white">
-                    <nav className="grid gap-2 grid-col">
-                        <button onClick={toggleMenu}>Close menu</button>
-                        <ul className="justify-center align-center px-4">
+                <div className="absolute z-10 top-0 left-0 w-full h-screen bg-white">
+                    <nav className="flex flex-col mx-16">
+                        <button className="my-4" onClick={toggleMenu}>Close menu</button>
+                        <ul className="justify-center align-center space-y-4">
                             {navListItems.map((item,index) => <NavListItem key={index} name={item.name} url={item.url} />)}
                         </ul>
                     </nav>
