@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import PageFooter from '../components/common/PageFooter';
+import PageHeader from '../components/common/PageHeader';
 import PageTitle from '../components/common/PageTitle';
 import ProductCard from '../components/discography/ProductCard';
 import { ProductSummary } from '../entities/discography/Product';
@@ -197,13 +198,17 @@ const Discography: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            <PageHeader />
+
             <main className="min-h-screen py-16 flex flex-col justify-center items-center">
                 <PageTitle text="Discography" />
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     {productSummaries.map((productSummary, index) => <ProductCard key={index} productSummary={productSummary} />)}
                 </div>
-                <PageFooter />
+                
             </main>
+
+            <PageFooter />
         </div>
     );
 };

@@ -7,7 +7,7 @@ type Path = {
 const path:Path = {
     home: "/",
     biography: "/biography",
-    discography: "discography",
+    discography: "/discography",
 };
 
 export default path;

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import PageFooter from '../components/common/PageFooter';
+import PageHeader from '../components/common/PageHeader';
 import PageTitle from '../components/common/PageTitle';
 import SectionTitle from '../components/common/SectionTitle';
 import externalLink from '../constants/externalLink';
@@ -13,6 +14,8 @@ const Biography: NextPage = () => {
                 <meta name="description" content="拠鳥きまゆ Biography" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
+            <PageHeader />
 
             <main className="min-h-screen py-16 flex flex-col justify-center items-center">
                 <PageTitle text="Biography" />
@@ -44,7 +47,9 @@ const Biography: NextPage = () => {
                     </section>
                 </div>
             </main>
+
             <PageFooter />
+            
         </div>
     )
 };
