@@ -14,6 +14,7 @@ productCard.args = {
         id: "1st-ep",
         name: "sparkler",
         kind: "EP",
+        genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: "1st EP M3-2022春 お-07a頒布で頒布・Boothにて販売",
         links: [
