@@ -1,21 +1,18 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import PageFooter from '../components/common/PageFooter';
 import PageHeader from '../components/common/PageHeader';
 import PageTitle from '../components/common/PageTitle';
-import LinkCard from '../components/common/LinkCard';
 import SectionTitle from '../components/common/SectionTitle';
 import externalLink from '../constants/externalLink';
 
 const Biography: NextPage = () => {
     return (
-        <div className={"px-8"}>
-            <Head>
-                <title>拠鳥きまゆ Biography</title>
-                <meta name="description" content="拠鳥きまゆ Biography" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
+        <>
+            <NextSeo
+                title="拠鳥きまゆ Biography"
+                description="アーティスト情報 ライブ・イベント出演歴"
+            />
             <PageHeader />
             <main className="min-h-screen flex flex-col items-center">
                 <PageTitle text="Biography" />
@@ -53,8 +50,7 @@ const Biography: NextPage = () => {
                 </div>
             </main>
             <PageFooter />
-            
-        </div>
+        </>
     )
 };
 

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import LinkCard from '../components/common/LinkCard';
 import PageFooter from '../components/common/PageFooter';
 import PageHeader from '../components/common/PageHeader';
@@ -9,14 +9,11 @@ import path from '../constants/path';
 
 const Home: NextPage = () => {
     return (
-        <div className={"px-8"}>
-            <Head>
-                <title>拠鳥きまゆ非公式アーティストページ</title>
-                <meta name="description" content="拠鳥きまゆ非公式アーティストページ" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            
+        <>
+            <NextSeo
+                title="拠鳥きまゆ非公式アーティストページ"
+                description="拠鳥きまゆ非公式アーティストページ"
+            />
             <PageHeader />
             <main className="min-h-screen flex flex-col items-center">
                 <PageTitle text="拠鳥きまゆ非公式アーティストページ" />
@@ -29,7 +26,7 @@ const Home: NextPage = () => {
                 </div>
             </main>
             <PageFooter />
-        </div>
+        </>
     )
 };
 
