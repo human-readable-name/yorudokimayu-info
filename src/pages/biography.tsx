@@ -60,6 +60,7 @@ const Biography: NextPage = () => {
                             <li>2021-04-01 #ぶいっと Bloomer 歌唱</li>
                             <li>2021-05-21 #ぶいっとコンピ セイメイトリガー 歌唱</li>
                             <li>2021-06-08 blue magic garden ワンダーラスト・アルカディア 動画・ハンドライティング</li>
+                            <li>2021-07-25 VirtuaROCK FEST. vol.1 Visibility 歌唱</li>
                             <li>2021-12-05 百鬼夜行 ATTRACTORS 歌唱</li>
                         </ul>
                     </section>

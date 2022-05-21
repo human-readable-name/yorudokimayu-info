@@ -21,7 +21,7 @@ const Home: NextPage = () => {
                 <section>
                     <SectionTitle text="About this site" />
                     <p className="p8">
-                        VSinger 拠鳥きまゆ について新しくを知った人が過去のSNSの発言やYouTube配信を辿らなくても済むように情報をまとめています。
+                        VSinger拠鳥きまゆを新しく知った人向けに情報をまとめています。
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <LinkCard title="Biography" caption="アーティスト紹介・出演歴" url={path.biography} />
