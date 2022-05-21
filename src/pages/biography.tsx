@@ -46,7 +46,7 @@ const Biography: NextPage = () => {
                     <section>
                         <SectionTitle text="Live/Event" />
                         <ul className="leading-6 list-inside list-disc">
-                            <li>2020-11-03 #ぶいっと</li>
+                            <li>2020-11-02 #ぶいっと</li>
                             <li>2020-12-04 エンタス忘年会</li>
                             <li>2020-12-11 #ぶいっと</li>
                             <li>2021-07-31 VirtuaROCK FEST.vol.1</li>
