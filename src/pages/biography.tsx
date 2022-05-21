@@ -50,6 +50,7 @@ const Biography: NextPage = () => {
                             <li>2020-12-04 エンタス忘年会</li>
                             <li>2020-12-11 #ぶいっと</li>
                             <li>2021-07-31 VirtuaROCK FEST.vol.1</li>
+                            <li>2021-08-07 VirtuaDive</li>
                             <li>2021-11-20 #ぶいじゃむ vol.1</li>
                             <li>2021-12-31 エンタス大晦日</li>
                         </ul>
