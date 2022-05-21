@@ -82,7 +82,7 @@ export const productSummaries: ProductSummary[] = [
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-10-01"),
-        description: "10th Single",
+        description: "10th single",
         links: [
             {name: "TuneCore", url: "https://linkco.re/H9494e5u"},
             {name: "Booth", url: "https://461okmy.booth.pm/items/3318455"},

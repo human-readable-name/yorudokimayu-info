@@ -10,7 +10,7 @@ const LinkButton: React.FC<Props> = ({linkItem}) => {
         href={linkItem.url} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="w-full rounded-full bg-indigo-800 text-white text-center"
+        className="w-full rounded-full bg-indigo-800 text-white text-center leading-8"
     >
         {linkItem.name}
     </a>
