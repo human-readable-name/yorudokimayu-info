@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <>
             <NextSeo
                 title="拠鳥きまゆ非公式アーティストページ"
-                description="拠鳥きまゆ非公式アーティストページ"
+                description="VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報"
             />
             <PageHeader />
             <main className="flex flex-col items-center align-center m-8">
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
                 <section>
                     <SectionTitle text="About this site" />
                     <p className="p8">
-                        VSinger拠鳥きまゆを新しく知った人向けに情報をまとめています。
+                        VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報をまとめています
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <LinkCard title="Biography" caption="アーティスト紹介・出演歴" url={path.biography} />

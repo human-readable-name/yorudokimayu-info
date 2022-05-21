@@ -17,12 +17,12 @@ const App = ({ Component, pageProps }: AppProps) => {
     </Head>
     <DefaultSeo 
         title="拠鳥きまゆ非公式アーティストページ"
-        description="拠鳥きまゆ非公式アーティストページ"
+        description="VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報"
         openGraph={
             {
                 type: "website",
                 title: "拠鳥きまゆ非公式アーティストページ",
-                description: "拠鳥きまゆ非公式アーティストページ",
+                description: "VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報",
                 site_name: "拠鳥きまゆ非公式アーティストページ",
                 locale: "ja_JP",
             }
