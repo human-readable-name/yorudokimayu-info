@@ -14,7 +14,7 @@ const Biography: NextPage = () => {
                 description="アーティスト情報 ライブ・イベント出演歴"
             />
             <PageHeader />
-            <main className="min-h-screen flex flex-col items-center">
+            <main className="flex flex-col items-center m-8">
                 <PageTitle text="Biography" />
                 <div className="grid grid-cols-1 gap-4">
                     <section>

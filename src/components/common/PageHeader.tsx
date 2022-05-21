@@ -22,7 +22,7 @@ const PageHeader: React.FC = () => {
 
     return <header>
         {/** SPなどではハンバーガーメニュー */}
-        <div className="md:hidden">
+        <div className="md:hidden m-4">
             <div className="mt-2 space-y-2" onClick={toggleMenu}>
                 <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>
                 <span className="block w-8 h-0.5 bg-gray-600 animate-pulse"></span>

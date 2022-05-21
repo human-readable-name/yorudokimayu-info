@@ -28,7 +28,7 @@ const Discography: NextPage = () => {
                 }
             />
             <PageHeader />
-            <main className="min-h-screen flex flex-col items-center">
+            <main className="flex flex-col items-center m-8">
                 <PageTitle text="Discography" />
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     {productSummaries.map((productSummary, index) => <ProductCard key={index} productSummary={productSummary} />)}
