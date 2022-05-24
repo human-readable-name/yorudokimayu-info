@@ -24,9 +24,9 @@ const Biography: NextPage = () => {
                             (よるど きまゆ)<br />
                         </p>
                         <ul className="py-4 flex space-x-4 justify-center">
-                            <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.youtube} target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                            <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.twitter} target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                            <li className="hover:border-indigo-800 hover:text-indigo-800"><a href={externalLink.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                            <li className="p-2 hover:border-indigo-800 hover:text-indigo-800 border border-solid rounded-lg"><a href={externalLink.youtube} target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                            <li className="p-2 hover:border-indigo-800 hover:text-indigo-800 border border-solid rounded-lg"><a href={externalLink.twitter} target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li className="p-2 hover:border-indigo-800 hover:text-indigo-800 border border-solid rounded-lg"><a href={externalLink.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a></li>
                         </ul>
                         <p className="text-sm p-4 leading-6">
                             「きみの背中を押す歌を届ける。」をテーマにオリジナル曲はRock中心に活動。<br />
@@ -54,6 +54,12 @@ const Biography: NextPage = () => {
                             <li>2021-11-20 #ぶいじゃむ vol.1</li>
                             <li>2021-12-31 エンタス大晦日</li>
                         </ul>
+                        <p className="m-4">
+                            <span className="p-2 underline hover:text-indigo-800">
+                                <a href="https://www.youtube.com/playlist?list=PLdeQeTiPBQGgVOJQMO1eA0FeP6gWBO7EM" target="_blank" rel="noopener noreferrer">アーカイブ・ダイジェストのYouTube再生リスト</a>
+                            </span>
+                        </p>
+                        
                     </section>
                     <section>
                         <SectionTitle text="Collaboration" />
