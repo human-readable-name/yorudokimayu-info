@@ -12,7 +12,8 @@ export type ProductSummary = {
     genre: Genre;
     dateOfRelease: Date;
     description: string;
-    links: LinkItem[];
+    mvLinks: LinkItem[];
+    storeLinks: LinkItem[];
 };
 
 export const productSummaries: ProductSummary[] = [
@@ -23,9 +24,14 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: "1st EP M3-2022春",
-        links: [
+        mvLinks: [
             {name: "Crossfade Demo", url: "https://youtu.be/FmVb7r21Z-M"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3756256"}
+            {name: "sparkler", url: "https://youtu.be/YUH6igD6brE"},
+            {name: "Enchanted", url: "https://youtu.be/RHlFEVZdsrs"},
+            {name: "CUTE AGGRESSION!!!!", url: "https://youtu.be/fhc5ifdIvec"},
+        ],
+        storeLinks: [
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3756256"},
         ]
     },
     {
@@ -35,9 +41,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-12-28"),
         description: "14th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/7qE6cdZz"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3528690"},
+        mvLinks: [
+            {name: "うたかたとかして", url: "https://youtu.be/9nNzSRtW-AE"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/7qE6cdZz"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3528690"},
         ]
     },
     {
@@ -47,9 +56,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-12-10"),
         description: "13th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/mM5ds6zM"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3492316"},
+        mvLinks: [
+            {name: "KARISOME BREAKER", url: "https://youtu.be/jFADO6wBgUo"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/mM5ds6zM"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3492316"},
         ]
     },
     {
@@ -59,9 +71,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2021-11-10"),
         description: "12th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/sd6XHQxB"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3419090"},
+        mvLinks: [
+            {name: "レオニズの降る夜に", url: "https://youtu.be/C0EH5CzDKCY"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/sd6XHQxB"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3419090"},
         ]
     },
     {
@@ -71,9 +86,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-10-10"),
         description: "11th single 活動開始1周年記念",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/D53C67Bu"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3419079"},
+        mvLinks: [
+            {name: "PENGUIN EMERGENCE", url: "https://youtu.be/4EqjcReGmZM"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/D53C67Bu"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3419079"},
         ]
     },
     {
@@ -83,9 +101,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2021-10-01"),
         description: "10th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/H9494e5u"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3318455"},
+        mvLinks: [
+            {name: "Memorable", url: "https://youtu.be/x591--tK0wk"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/H9494e5u"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3318455"},
         ]
     },
     {
@@ -95,9 +116,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-09-10"),
         description: "9th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/c78bSYh9"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3265250"},
+        mvLinks: [
+            {name: "境界のアイリス", url: "https://youtu.be/w7oDQo2ZNDc"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/c78bSYh9"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3265250"},
         ]
     },
     {
@@ -107,9 +131,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-08-10"),
         description: "8th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/pCpgzUMU"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3185868"},
+        mvLinks: [
+            {name: "ロンリーディーバ", url: "https://youtu.be/yUXNaH2JjW8"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/pCpgzUMU"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3185868"},
         ]
     },
     {
@@ -119,9 +146,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2021-07-25"),
         description: "7th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/AvPtrznD"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3143568"},
+        mvLinks: [
+            {name: "Dear My Enemy", url: "https://youtu.be/GtWwzw54zVQ"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/AvPtrznD"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3143568"},
         ]
     },
     {
@@ -131,9 +161,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Electronic",
         dateOfRelease: new Date("2021-07-10"),
         description: "6th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/0Rz8ACCd"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3107770"}
+        mvLinks: [
+            {name: "希求モーニング", url: "https://youtu.be/DpalPxOPZRo"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/0Rz8ACCd"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107770"}
         ]
     },
     {
@@ -143,9 +176,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Pop",
         dateOfRelease: new Date("2021-06-10"),
         description: "5th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/HY6DrPGd"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3107757"}
+        mvLinks: [
+            {name: "茜色の公園で", url: "https://youtu.be/xFaoFG-9ZDM"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/HY6DrPGd"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107757"}
         ]
     },
     {
@@ -155,9 +191,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-05-10"),
         description: "4th single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/vRVnqU5v"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3107710"}
+        mvLinks: [
+            {name: "RULER ", url: "https://youtu.be/uJCP_Vcqju8"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/vRVnqU5v"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107710"}
         ]
     },
     {
@@ -167,9 +206,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-04-25"),
         description: "3rd single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/eGzYDu1Y"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3107732"}
+        mvLinks: [
+            {name: "カラの鼓動はソラになる", url: "https://youtu.be/7jS6tDpvko4"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/eGzYDu1Y"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107732"}
         ]
     },
     {
@@ -179,9 +221,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-04-11"),
         description: "2nd single",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/NQZabT0H"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3107691"}
+        mvLinks: [
+            {name: "真夜中メロウライン", url: "https://youtu.be/_R3eE6D2rBw"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/NQZabT0H"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107691"}
         ]
     },
     {
@@ -191,9 +236,12 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2020-10-10"),
         description: "1st single デビュー曲",
-        links: [
-            {name: "TuneCore", url: "https://linkco.re/XRHzUnrA"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3107608"}
+        mvLinks: [
+            {name: "Penguin Nova", url: "https://youtu.be/DaVGqYTlCCk"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/XRHzUnrA"},
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107608"}
         ]
     },
 ];
