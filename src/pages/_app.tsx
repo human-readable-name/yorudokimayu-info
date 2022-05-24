@@ -27,11 +27,6 @@ const App = ({ Component, pageProps }: AppProps) => {
                 locale: "ja_JP",
             }
         }
-        additionalMetaTags={
-          [
-              {name: "keywords", content: "拠鳥きまゆ,KimayuYorudo,VSinger,VTuber", },
-          ]
-        }
     />
     <Component {...pageProps} />
   </>
