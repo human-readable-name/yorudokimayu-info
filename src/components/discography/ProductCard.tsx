@@ -1,7 +1,8 @@
 import React from "react";
 import DateOfRleaseLabel from "./DateOfReleaseLabel";
 import GenreLabel from "./GenreLabel";
-import LinkButton from "./LinkButton";
+import MusicVideoLinkButton from "./MusicVideoLinkButton";
+import StoreLinkButton from "./StoreLinkButton";
 import { ProductSummary } from "../../entities/discography/Product"; 
 
 type Props = {
@@ -16,10 +17,26 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
                 <DateOfRleaseLabel dateOfRelease={productSummary.dateOfRelease} />
                 <GenreLabel genre={productSummary.genre} />
             </div>
-            <p className="w-full my-2">{productSummary.description}</p>
-            <div className="grid grid-cols gap-2">
-                {productSummary.links.map((linkItem, index) => <LinkButton key={index} linkItem={linkItem} /> )}
+            <div>
+                <p className="w-full my-2">{productSummary.description}</p>
             </div>
+            { productSummary.mvLinks.length > 0 && 
+                <div className="my-2 text-center">
+                    <span className="p-2">Music video</span>
+                    <div className="grid grid-cols gap-2">
+                        {productSummary.mvLinks.map((linkItem, index) => <MusicVideoLinkButton key={index} linkItem={linkItem} /> )}
+                    </div>
+                </div>
+            }
+            { productSummary.storeLinks.length > 0 && 
+                <div className="my-2 text-center">
+                    <span className="p-2">Store</span>
+                    <div className="grid grid-cols gap-2">
+                        {productSummary.storeLinks.map((linkItem, index) => <StoreLinkButton key={index} linkItem={linkItem} /> )}
+                    </div>
+                </div>
+            }
+            
         </article>
     </>
 };

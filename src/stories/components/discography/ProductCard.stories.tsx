@@ -17,9 +17,11 @@ productCard.args = {
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: "1st EP M3-2022春 お-07a頒布で頒布・Boothにて販売",
-        links: [
+        mvLinks: [
             {name: "クロスフェード", url: "https://youtu.be/FmVb7r21Z-M"},
-            {name: "Booth", url: "https://461okmy.booth.pm/items/3756256"}
+        ],
+        storeLinks: [
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3756256"},
         ]
     }
 };

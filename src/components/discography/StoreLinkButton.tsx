@@ -5,7 +5,7 @@ type Props = {
     linkItem: LinkItem;
 };
 
-const LinkButton: React.FC<Props> = ({linkItem}) => {
+const StoreLinkButton: React.FC<Props> = ({linkItem}) => {
     return <a 
         href={linkItem.url} 
         target="_blank" 
@@ -16,4 +16,4 @@ const LinkButton: React.FC<Props> = ({linkItem}) => {
     </a>
 };
 
-export default LinkButton;
+export default StoreLinkButton;
