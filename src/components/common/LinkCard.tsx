@@ -13,12 +13,10 @@ const LinkCard: React.FC<Props> = ({title, caption, url}) => {
     const anchorProps = isInternalLink
         ? {className: className, href: url} 
         : {className: className, href: url, target:"_blank", rel: "noopener noreferrer"};
-    
-    const postCaption = isInternalLink ? "" : " (外部リンク)";
     return <>
         <a {...anchorProps} >
             <h2 className="mb-5 text-2xl">{title}</h2>
-            <p className="text-xl">{caption}{postCaption}</p>
+            <p className="text-xl">{caption}</p>
         </a>
     </>;
 };
