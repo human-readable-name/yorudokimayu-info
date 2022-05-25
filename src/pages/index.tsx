@@ -26,8 +26,10 @@ const Home: NextPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2">
                         <LinkCard title="Biography" caption="アーティスト紹介・出演歴" url={path.biography} />
                         <LinkCard title="Discograpy" caption="楽曲リリース情報" url={path.discography} />
-                        <LinkCard title="Goods" caption="Booth" url={externalLink.booth} />
-                        <LinkCard title="Fan Community" caption="pixiv FANBOX" url={externalLink.fanbox} />
+                        <LinkCard title="Twitter" caption="告知・最新情報はこちら" url={externalLink.twitter} />
+                        <LinkCard title="YouTube" caption="楽曲MV・メンバー限定配信" url={externalLink.youtube} />
+                        <LinkCard title="Store" caption="グッズ・音源を販売" url={externalLink.booth} />
+                        <LinkCard title="Fan community" caption="制作裏話・支援者限定情報" url={externalLink.fanbox} />
                     </div>
                 </section>
             </main>

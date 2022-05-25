@@ -12,8 +12,10 @@ const navListItems: NavItem[] = [
     {name: "Home", url: path.home},
     {name: "Biography", url: path.biography},
     {name: "Discograpy", url: path.discography},
-    {name: "Goods", url: externalLink.booth},
-    {name: "Fan Community", url: externalLink.fanbox},
+    {name: "Twitter", url: externalLink.twitter},
+    {name: "YouTube", url: externalLink.youtube},
+    {name: "Store", url: externalLink.booth},
+    {name: "Fan community", url: externalLink.fanbox},
 ];
 
 const PageHeader: React.FC = () => {
