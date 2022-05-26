@@ -12,12 +12,12 @@ const Home: NextPage = () => {
     return (
         <>
             <NextSeo
-                title="拠鳥きまゆ非公式アーティストページ"
+                title="拠鳥きまゆアーティスト情報まとめ"
                 description="VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報"
             />
             <PageHeader />
             <main className="flex flex-col items-center align-center m-8">
-                <PageTitle text="拠鳥きまゆ非公式アーティストページ" />
+                <PageTitle text="拠鳥きまゆアーティスト情報まとめ" />
                 <section>
                     <SectionTitle text="About this site" />
                     <p className="p8">

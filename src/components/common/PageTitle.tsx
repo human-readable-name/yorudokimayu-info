@@ -5,7 +5,7 @@ type Props = {
 };
 
 const PageTitle: React.FC<Props> = ({text}) => {
-    return <h1 className="my-4 text-2xl">{text}</h1>
+    return <h1 className="my-4 text-2xl md:text-4xl">{text}</h1>
 };
 
 export default PageTitle;
