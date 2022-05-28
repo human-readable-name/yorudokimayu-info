@@ -17,6 +17,11 @@ productCard.args = {
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: "1st EP M3-2022春 お-07a頒布で頒布・Boothにて販売",
+        credits: [
+            "作曲・Tr2作詞 マッチ",
+            "Tr5作詞 esora uma [浮遊信号]",
+            "Tr3Tr4Tr6作詞・ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "クロスフェード", url: "https://youtu.be/FmVb7r21Z-M"},
         ],

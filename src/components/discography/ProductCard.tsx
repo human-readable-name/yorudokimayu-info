@@ -12,12 +12,17 @@ type Props = {
 const ProductCard: React.FC<Props> = ({productSummary}) => {
     return <>
         <article className="p-4">
-            <h3 className="text-lg font-bold">{productSummary.name}</h3>
+            <h3 className="text-xl font-bold">{productSummary.name}</h3>
             <div className="flex space-x-4">
                 <DateOfRleaseLabel dateOfRelease={productSummary.dateOfRelease} />
                 <GenreLabel genre={productSummary.genre} />
             </div>
-            <div>
+            <div className="my-2">
+                { productSummary.credits.length > 0 && 
+                    <ul>
+                        {productSummary.credits.map((name, index) => <li className="text-sm" key={index}>{name}</li>)}
+                    </ul>
+                }
                 <p className="w-full my-2">{productSummary.description}</p>
             </div>
             { productSummary.mvLinks.length > 0 && 

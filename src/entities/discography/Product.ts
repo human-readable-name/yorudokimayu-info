@@ -12,6 +12,7 @@ export type ProductSummary = {
     genre: Genre;
     dateOfRelease: Date;
     description: string;
+    credits: string[];
     mvLinks: LinkItem[];
     storeLinks: LinkItem[];
 };
@@ -24,6 +25,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: "1st EP M3-2022春",
+        credits: [
+            "作曲・Tr2作詞 マッチ",
+            "Tr5作詞 esora uma [浮遊信号]",
+            "Tr3Tr4Tr6作詞・ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "Crossfade Demo", url: "https://youtu.be/FmVb7r21Z-M"},
             {name: "sparkler", url: "https://youtu.be/YUH6igD6brE"},
@@ -41,6 +47,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-12-28"),
         description: "14th single",
+        credits: [
+            "作詞・作曲 esora uma [浮遊信号]",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "うたかたとかして", url: "https://youtu.be/9nNzSRtW-AE"},
         ],
@@ -56,6 +66,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-12-10"),
         description: "13th single",
+        credits: [
+            "作詞・作曲 mampuku",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "KARISOME BREAKER", url: "https://youtu.be/jFADO6wBgUo"},
         ],
@@ -71,6 +85,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2021-11-10"),
         description: "12th single",
+        credits: [
+            "作詞・作曲 マッチ",
+            "ベース 四谷ゲンロク",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "レオニズの降る夜に", url: "https://youtu.be/C0EH5CzDKCY"},
         ],
@@ -86,6 +105,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-10-10"),
         description: "11th single 活動開始1周年記念",
+        credits: [
+            "作曲 胡桃もよ",
+            "作詞 朝比奈こん",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "PENGUIN EMERGENCE", url: "https://youtu.be/4EqjcReGmZM"},
         ],
@@ -101,6 +125,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2021-10-01"),
         description: "10th single",
+        credits: [
+            "作詞・作曲 マッチ",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "Memorable", url: "https://youtu.be/x591--tK0wk"},
         ],
@@ -116,6 +144,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-09-10"),
         description: "9th single",
+        credits: [
+            "作詞・作曲 r0y",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "境界のアイリス", url: "https://youtu.be/w7oDQo2ZNDc"},
         ],
@@ -131,6 +163,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-08-10"),
         description: "8th single",
+        credits: [
+            "作詞・作曲 アザミ",
+            "ベース なおちゃん",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "ロンリーディーバ", url: "https://youtu.be/yUXNaH2JjW8"},
         ],
@@ -146,6 +183,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2021-07-25"),
         description: "7th single",
+        credits: [
+            "作詞・作曲 マッチ",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "Dear My Enemy", url: "https://youtu.be/GtWwzw54zVQ"},
         ],
@@ -161,6 +202,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Electronic",
         dateOfRelease: new Date("2021-07-10"),
         description: "6th single",
+        credits: [
+            "作詞・作曲 picco",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "希求モーニング", url: "https://youtu.be/DpalPxOPZRo"},
         ],
@@ -176,6 +221,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Pop",
         dateOfRelease: new Date("2021-06-10"),
         description: "5th single",
+        credits: [
+            "作曲 sumeshiii a.k.a.バーチャルお寿司",
+            "作詞 内野達哉",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "茜色の公園で", url: "https://youtu.be/xFaoFG-9ZDM"},
         ],
@@ -191,6 +241,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-05-10"),
         description: "4th single",
+        credits: [
+            "作曲 天野ドウジ [カクレゴ]",
+            "ベース 四谷ゲンロク",
+            "作詞・ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "RULER ", url: "https://youtu.be/uJCP_Vcqju8"},
         ],
@@ -206,6 +261,10 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-04-25"),
         description: "3rd single",
+        credits: [
+            "作詞・作曲 esora uma [浮遊信号]",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "カラの鼓動はソラになる", url: "https://youtu.be/7jS6tDpvko4"},
         ],
@@ -221,6 +280,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2021-04-11"),
         description: "2nd single",
+        credits: [
+            "作詞・作曲 隣町本舗",
+            "ラップ作詞 Fra [BOOGEY VOXX]",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "真夜中メロウライン", url: "https://youtu.be/_R3eE6D2rBw"},
         ],
@@ -236,6 +300,11 @@ export const productSummaries: ProductSummary[] = [
         genre: "Rock",
         dateOfRelease: new Date("2020-10-10"),
         description: "1st single デビュー曲",
+        credits: [
+            "作曲 胡桃もよ",
+            "作詞 朝比奈こん",
+            "ボーカル 拠鳥きまゆ",
+        ],
         mvLinks: [
             {name: "Penguin Nova", url: "https://youtu.be/DaVGqYTlCCk"},
         ],
