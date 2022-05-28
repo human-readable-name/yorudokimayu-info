@@ -40,7 +40,7 @@ const Biography: NextPage = () => {
                             <li>2021-04-10 9か月連続リリース企画 #nova_next 開始</li>
                             <li>2021-10-24 3D お 披 露</li>
                             <li>2021-12-28 #nova_next 完結</li>
-                            <li>2022-04-24 初のM3 参加、自身初の作詞に挑戦した1st EP sparklerをリリース</li>
+                            <li>2022-04-24 初のM3 参加、1st EP sparklerをリリース</li>
                         </ul>
                     </section>
 
