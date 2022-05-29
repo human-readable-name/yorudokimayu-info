@@ -15,6 +15,7 @@ export type ProductSummary = {
     credits: string[];
     mvLinks: LinkItem[];
     storeLinks: LinkItem[];
+    supplementalInformationLinks?: LinkItem[];
 };
 
 export const productSummaries: ProductSummary[] = [
@@ -57,6 +58,9 @@ export const productSummaries: ProductSummary[] = [
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/7qE6cdZz"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3528690"},
+        ],
+        supplementalInformationLinks: [
+            {name: "漫画・MV用アートワーク", url: "https://www.pixiv.net/artworks/95674341"},
         ]
     },
     {
@@ -211,7 +215,7 @@ export const productSummaries: ProductSummary[] = [
         ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/0Rz8ACCd"},
-            {name: "Official store", url: "https://461okmy.booth.pm/items/3107770"}
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107770"},
         ]
     },
     {
@@ -231,7 +235,7 @@ export const productSummaries: ProductSummary[] = [
         ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/HY6DrPGd"},
-            {name: "Official store", url: "https://461okmy.booth.pm/items/3107757"}
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107757"},
         ]
     },
     {
@@ -251,7 +255,7 @@ export const productSummaries: ProductSummary[] = [
         ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/vRVnqU5v"},
-            {name: "Official store", url: "https://461okmy.booth.pm/items/3107710"}
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107710"},
         ]
     },
     {
@@ -270,7 +274,7 @@ export const productSummaries: ProductSummary[] = [
         ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/eGzYDu1Y"},
-            {name: "Official store", url: "https://461okmy.booth.pm/items/3107732"}
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107732"},
         ]
     },
     {
@@ -290,7 +294,10 @@ export const productSummaries: ProductSummary[] = [
         ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/NQZabT0H"},
-            {name: "Official store", url: "https://461okmy.booth.pm/items/3107691"}
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107691"},
+        ],
+        supplementalInformationLinks: [
+            {name: "ライナーノート", url: "https://tonarimachi.fanbox.cc/posts/2113546"},
         ]
     },
     {
@@ -310,7 +317,7 @@ export const productSummaries: ProductSummary[] = [
         ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/XRHzUnrA"},
-            {name: "Official store", url: "https://461okmy.booth.pm/items/3107608"}
+            {name: "Official store", url: "https://461okmy.booth.pm/items/3107608"},
         ]
     },
 ];

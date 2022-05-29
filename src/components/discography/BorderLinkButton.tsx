@@ -5,7 +5,7 @@ type Props = {
     linkItem: LinkItem;
 };
 
-const MusicVideoLinkButton: React.FC<Props> = ({linkItem}) => {
+const BorderLinkButton: React.FC<Props> = ({linkItem}) => {
     return <a 
         href={linkItem.url} 
         target="_blank" 
@@ -16,4 +16,4 @@ const MusicVideoLinkButton: React.FC<Props> = ({linkItem}) => {
     </a>
 };
 
-export default MusicVideoLinkButton;
+export default BorderLinkButton;

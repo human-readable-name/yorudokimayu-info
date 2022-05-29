@@ -1,8 +1,8 @@
 import React from "react";
 import DateOfRleaseLabel from "./DateOfReleaseLabel";
 import GenreLabel from "./GenreLabel";
-import MusicVideoLinkButton from "./MusicVideoLinkButton";
-import StoreLinkButton from "./StoreLinkButton";
+import BorderLinkButton from "./BorderLinkButton";
+import FilledLinkButton from "./FilledLinkButton";
 import { ProductSummary } from "../../entities/discography/Product"; 
 
 type Props = {
@@ -29,7 +29,7 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
                 <div className="my-2 text-center">
                     <span className="p-2">Music video</span>
                     <div className="grid grid-cols gap-2">
-                        {productSummary.mvLinks.map((linkItem, index) => <MusicVideoLinkButton key={index} linkItem={linkItem} /> )}
+                        {productSummary.mvLinks.map((linkItem, index) => <FilledLinkButton key={index} linkItem={linkItem} /> )}
                     </div>
                 </div>
             }
@@ -37,8 +37,17 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
                 <div className="my-2 text-center">
                     <span className="p-2">Store</span>
                     <div className="grid grid-cols gap-2">
-                        {productSummary.storeLinks.map((linkItem, index) => <StoreLinkButton key={index} linkItem={linkItem} /> )}
+                        {productSummary.storeLinks.map((linkItem, index) => <BorderLinkButton key={index} linkItem={linkItem} /> )}
                     </div>
+                </div>
+            }
+            { productSummary.supplementalInformationLinks != null && productSummary.supplementalInformationLinks.length > 0 && 
+                <div className="my-2 text-center">
+                    <span className="p-2">Supplemental information</span>
+                    <div className="grid grid-cols gap-2">
+                        {productSummary.supplementalInformationLinks.map((linkItem, index) => <BorderLinkButton key={index} linkItem={linkItem} /> )}
+                    </div>
+
                 </div>
             }
             
