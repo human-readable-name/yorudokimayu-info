@@ -11,14 +11,17 @@ const Discography: NextPage = () => {
         <>
             <NextSeo
                 title="拠鳥きまゆ Discography"
-                description="楽曲リリース情報"
+                description="楽曲リリース情報 MVなど関連情報へのリンク"
                 openGraph={
                     {
                         type: "website",
                         title: "拠鳥きまゆ Discography",
-                        description: "楽曲リリース情報",
-                        site_name: "拠鳥きまゆ非公式アーティストページ",
+                        description: "楽曲リリース情報 MVなど関連情報へのリンク",
+                        site_name: "拠鳥きまゆアーティスト情報まとめ",
                         locale: "ja_JP",
+                        images: [
+                            {url: "https://kimayu.rocks/favicon.svg"},
+                        ],
                     }
                 }
                 additionalMetaTags={
