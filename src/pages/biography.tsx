@@ -58,15 +58,15 @@ const Biography: NextPage = () => {
                             </li>
                             <li>
                                 2021-07-31 VirtuaROCK FEST.vol.1
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/Kve3pP-KSek" target="_blank" rel="noopener noreferrer">アーカイブ</a></span>
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/VH0s6ngrVR4" target="_blank" rel="noopener noreferrer">拠鳥きまゆ出演部分ダイジェスト</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/Kve3pP-KSek" target="_blank" rel="noopener noreferrer">アーカイブ</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/VH0s6ngrVR4" target="_blank" rel="noopener noreferrer">拠鳥きまゆ出演部分ダイジェスト</a></span>
                             </li>
                             <li>
                                 2021-08-07 VirtuaDive
                             </li>
                             <li>
                                 2021-11-20 #ぶいじゃむ vol.1
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/57bW0nKoOOo" target="_blank" rel="noopener noreferrer">アーカイブ</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/57bW0nKoOOo" target="_blank" rel="noopener noreferrer">アーカイブ</a></span>
                             </li>
                             <li>2021-12-31 エンタス大晦日</li>
                         </ul>
@@ -76,26 +76,26 @@ const Biography: NextPage = () => {
                         <ul className="leading-6 list-inside list-disc">
                             <li>
                                 2021-04-01 #ぶいっと Bloomer 歌唱 
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/ZVsIPmfkWAg" target="_blank" rel="noopener noreferrer">Music video</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/ZVsIPmfkWAg" target="_blank" rel="noopener noreferrer">Music video</a></span>
                             </li>
                             <li>
                                 2021-05-21 #ぶいっとコンピ セイメイトリガー 歌唱 
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/CcvQX-tCBco" target="_blank" rel="noopener noreferrer">Music video</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/CcvQX-tCBco" target="_blank" rel="noopener noreferrer">Music video</a></span>
                             </li>
                             <li>
                                 2021-06-08 blue magic garden ワンダーラスト・アルカディア 動画・ハンドライティング 
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/C0SHjl6xZLw" target="_blank" rel="noopener noreferrer">Music video</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/C0SHjl6xZLw" target="_blank" rel="noopener noreferrer">Music video</a></span>
                             </li>
                             <li>
                                 2021-07-25 VirtuaROCK FEST. vol.1 Visibility 歌唱
                             </li>
                             <li>
                                 2021-11-08 竜乃エナジー Rainy ハンドライティング 
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/ZZ548wxw_e4" target="_blank" rel="noopener noreferrer">Music video</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/ZZ548wxw_e4" target="_blank" rel="noopener noreferrer">Music video</a></span>
                             </li>
                             <li>
                                 2021-12-05 百鬼夜行 ATTRACTORS 歌唱
-                                <span className="mx-2 underline text-indigo-400"><a href="https://youtu.be/YePQNFVRHFk" target="_blank" rel="noopener noreferrer">Music video</a></span>
+                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/YePQNFVRHFk" target="_blank" rel="noopener noreferrer">Music video</a></span>
                             </li>
                         </ul>
                     </section>
