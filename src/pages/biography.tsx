@@ -12,7 +12,19 @@ const Biography: NextPage = () => {
         <>
             <NextSeo
                 title="拠鳥きまゆ Biography"
-                description="アーティスト情報 ライブ・イベント出演歴"
+                description="アーティスト情報 ライブ・イベント出演歴 コラボ情報"
+                openGraph={
+                    {
+                        type: "website",
+                        title: "拠鳥きまゆ Biography",
+                        description: "アーティスト情報 ライブ・イベント出演歴 コラボ情報",
+                        site_name: "拠鳥きまゆアーティスト情報まとめ",
+                        locale: "ja_JP",
+                        images: [
+                            {url: "https://kimayu.rocks/favicon.svg"},
+                        ],
+                    }
+                }
             />
             <PageHeader />
             <main className="flex flex-col items-center m-8">
