@@ -13,12 +13,12 @@ const Home: NextPage = () => {
         <>
             <NextSeo
                 title="拠鳥きまゆアーティスト情報まとめ"
-                description="VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報"
+                description="VSinger拠鳥きまゆのアーティスト情報・楽曲情報"
                 openGraph={
                     {
                         type: "website",
                         title: "拠鳥きまゆアーティスト情報まとめ",
-                        description: "楽曲リリース情報 MVなど関連情報へのリンク",
+                        description: "VSinger拠鳥きまゆのアーティスト情報・楽曲情報",
                         site_name: "拠鳥きまゆアーティスト情報まとめ",
                         locale: "ja_JP",
                         images: [
@@ -33,11 +33,11 @@ const Home: NextPage = () => {
                 <section>
                     <SectionTitle text="About this site" />
                     <p className="p8">
-                        VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報をまとめています
+                        VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報をまとめています
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2">
-                        <LinkCard title="Biography" caption="アーティスト紹介・出演歴" url={path.biography} />
-                        <LinkCard title="Discograpy" caption="楽曲リリース情報" url={path.discography} />
+                        <LinkCard title="Biography" caption="アーティスト情報・ライブ出演歴・コラボ情報" url={path.biography} />
+                        <LinkCard title="Discograpy" caption="楽曲リリース情報やMVなど関連情報へのリンク" url={path.discography} />
                         <LinkCard title="Twitter" caption="告知・最新情報はこちら" url={externalLink.twitter} />
                         <LinkCard title="YouTube" caption="楽曲MV・メンバー限定配信" url={externalLink.youtube} />
                         <LinkCard title="Store" caption="グッズ・音源を販売" url={externalLink.booth} />
