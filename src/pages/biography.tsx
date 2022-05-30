@@ -12,12 +12,12 @@ const Biography: NextPage = () => {
         <>
             <NextSeo
                 title="拠鳥きまゆ Biography"
-                description="アーティスト情報・イベント出演歴・コラボ情報"
+                description="アーティスト情報・ライブ出演歴・コラボ情報"
                 openGraph={
                     {
                         type: "website",
                         title: "拠鳥きまゆ Biography",
-                        description: "アーティスト情報・イベント出演歴・コラボ情報",
+                        description: "アーティスト情報・ライブ出演歴・コラボ情報",
                         site_name: "拠鳥きまゆアーティスト情報まとめ",
                         locale: "ja_JP",
                         images: [
