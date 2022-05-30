@@ -14,6 +14,18 @@ const Home: NextPage = () => {
             <NextSeo
                 title="拠鳥きまゆアーティスト情報まとめ"
                 description="VSinger拠鳥きまゆのアーティスト情報・出演歴・楽曲情報"
+                openGraph={
+                    {
+                        type: "website",
+                        title: "拠鳥きまゆアーティスト情報まとめ",
+                        description: "楽曲リリース情報 MVなど関連情報へのリンク",
+                        site_name: "拠鳥きまゆアーティスト情報まとめ",
+                        locale: "ja_JP",
+                        images: [
+                            {url: "https://kimayu.rocks/share.png"},
+                        ],
+                    }
+                }
             />
             <PageHeader />
             <main className="flex flex-col items-center align-center m-8">
