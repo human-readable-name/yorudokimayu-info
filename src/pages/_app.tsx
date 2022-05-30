@@ -17,17 +17,17 @@ const App = ({ Component, pageProps }: AppProps) => {
     </Head>
     <DefaultSeo 
         title="拠鳥きまゆアーティスト情報まとめ"
-        description="VSinger拠鳥きまゆのアーティスト情報・イベント出演歴・楽曲リリース"
+        description="VSinger拠鳥きまゆのアーティスト情報・イベント出演歴・楽曲情報"
         openGraph={
             {
                 type: "website",
                 title: "拠鳥きまゆアーティスト情報まとめ",
-                description: "VSinger拠鳥きまゆのアーティスト情報・イベント出演歴・楽曲リリース",
+                description: "VSinger拠鳥きまゆのアーティスト情報・イベント出演歴・楽曲情報",
                 site_name: "拠鳥きまゆアーティスト情報まとめ",
                 locale: "ja_JP",
                 images: [
-                  {url: "https://kimayu.rocks/favicon.svg"},
-              ],
+                    {url: "https://kimayu.rocks/share.png"},
+                ],
             }
         }
     />
