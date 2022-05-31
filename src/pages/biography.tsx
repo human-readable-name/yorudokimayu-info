@@ -47,7 +47,7 @@ const Biography: NextPage = () => {
                             2021年には9か月連続リリース企画#nova_nextを実施し、期間中13曲をリリース。<br />
                             歌唱のほかに動画・ハンドライティング・作詞・VTuberロゴデザインなど活動は多岐にわたる。<br />
                         </p>
-                        <ul className="leading-6 list-inside list-disc">
+                        <ul className="leading-6 list-inside list-none">
                             <li>2020-10-10 1st Single Penguin Novaリリースと同時に活動開始</li>
                             <li>2021-04-10 9か月連続リリース企画 #nova_next 開始</li>
                             <li>2021-10-24 3D お 披 露</li>
@@ -58,7 +58,7 @@ const Biography: NextPage = () => {
 
                     <section>
                         <SectionTitle text="Live/Event" />
-                        <ul className="leading-6 list-inside list-disc">
+                        <ul className="leading-6 list-inside list-none">
                             <li>
                                 2020-11-02 #ぶいっと
                             </li>
@@ -84,8 +84,8 @@ const Biography: NextPage = () => {
                         </ul>
                     </section>
                     <section>
-                        <SectionTitle text="Collaboration" />
-                        <ul className="leading-6 list-inside list-disc">
+                        <SectionTitle text="Collaboration/Works" />
+                        <ul className="leading-6 list-inside list-none">
                             <li>
                                 2021-04-01 #ぶいっと Bloomer 歌唱 
                                 <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/ZVsIPmfkWAg" target="_blank" rel="noopener noreferrer">Music video</a></span>
