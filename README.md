@@ -9,8 +9,9 @@
         * YouTubeにアーカイブの残らないライブ出演
     * TuneCoreのアーティストページでは未配信楽曲が漏れる
 * サイト来訪者想定とコンバージョンゴール
-    * 初見リスナー -> 楽曲視聴 -> YouTubeチャネル登録&Twitterフォロー
-    * 将来のビジネスパートナー -> 楽曲視聴 -> Twitterフォロー&DM問い合わせ
+    * 拠鳥きまゆ を初めて知った人が
+      アーティスト情報の閲覧・楽曲視聴などを経て、
+      YouTubeチャネル登録とTwitterのフォローに至ること
 
 # 要件定義
 
@@ -23,7 +24,6 @@
 * 楽曲情報
     * 視聴動線を必ず設ける
 
-サイト来訪者がCookieのオプトインができるようにする
 
 ## 非機能要件
 
@@ -40,7 +40,7 @@
 * `/` トップページ (更新履歴・内部およびTwitter/YouTube/TuneCore/Fanbox/Boothなどへのリンク)
     * `/biography` アーティスト紹介・イベント出演歴
     * `/discography` 楽曲一覧ページ
-        * `/discography/{シングル・アルバム・EPなどの英語名称}` リリース単位 TuneCore/Booth/MVがあればYouTubeリンク
+        * 【未実装】 `/discography/{シングル・アルバム・EPなどの英語名称}` リリース単位 TuneCore/Booth/MVがあればYouTubeリンク
 
 ## ページ構成
 
@@ -113,3 +113,9 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
 * `yarn install` で必要なパッケージのインストール
 * `yarn dev` でNext.jsの開発サーバを起動
 * ブラウザから [http://localhost:3000](http://localhost:3000) にアクセス
+
+# インフラ
+
+- AWS を利用
+    - HostingはAmplify
+    - ドメインは取得も含めてRoute53
