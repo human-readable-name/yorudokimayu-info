@@ -22,7 +22,7 @@ const PageHeader: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => { setIsMenuOpen(!isMenuOpen); };
 
-    return <header>
+    return <header className="border-b">
         {/** SPなどではハンバーガーメニュー */}
         <div className="md:hidden m-4">
             <div className="mt-2 space-y-2" onClick={toggleMenu}>
