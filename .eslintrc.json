@@ -3,5 +3,5 @@
     "next/core-web-vitals",
     "plugin:storybook/recommended"
   ],
-  "ignorePatterns": ["*.config.js"],
+  "ignorePatterns": ["*.config.js"]
 }
