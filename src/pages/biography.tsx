@@ -4,8 +4,11 @@ import PageFooter from '../components/common/PageFooter';
 import PageHeader from '../components/common/PageHeader';
 import PageTitle from '../components/common/PageTitle';
 import SectionTitle from '../components/common/SectionTitle';
+import EventHistoryCard from '../components/biography/EventHistoryCard';
 import SnsLinkItem from '../components/biography/SnsLinkItem';
 import externalLink from '../constants/externalLink';
+
+import { eventHistories } from '../entities/biography/EventHistory';
 
 const Biography: NextPage = () => {
     return (
@@ -58,30 +61,9 @@ const Biography: NextPage = () => {
 
                     <section>
                         <SectionTitle text="Live/Event" />
-                        <ul className="leading-6 list-inside list-none">
-                            <li>
-                                2020-11-02 #ぶいっと
-                            </li>
-                            <li>
-                                2020-12-04 エンタス忘年会
-                            </li>
-                            <li>
-                                2020-12-11 #ぶいっと
-                            </li>
-                            <li>
-                                2021-07-31 VirtuaROCK FEST.vol.1
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/Kve3pP-KSek" target="_blank" rel="noopener noreferrer">アーカイブ</a></span>
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/VH0s6ngrVR4" target="_blank" rel="noopener noreferrer">拠鳥きまゆ出演部分ダイジェスト</a></span>
-                            </li>
-                            <li>
-                                2021-08-07 VirtuaDive
-                            </li>
-                            <li>
-                                2021-11-20 #ぶいじゃむ vol.1
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/57bW0nKoOOo" target="_blank" rel="noopener noreferrer">アーカイブ</a></span>
-                            </li>
-                            <li>2021-12-31 エンタス大晦日</li>
-                        </ul>
+                        <div className="grid divide-y">
+                            { eventHistories.map((eventHistory, index) => <EventHistoryCard eventHistory={eventHistory} key={index}/>)}
+                        </div>
                     </section>
                     <section>
                         <SectionTitle text="Collaboration/Works" />
