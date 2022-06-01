@@ -7,8 +7,9 @@ import SectionTitle from '../components/common/SectionTitle';
 import EventHistoryCard from '../components/biography/EventHistoryCard';
 import SnsLinkItem from '../components/biography/SnsLinkItem';
 import externalLink from '../constants/externalLink';
-
+import { collaborations } from '../entities/biography/Collaboration';
 import { eventHistories } from '../entities/biography/EventHistory';
+import CollaborationCard from '../components/biography/CollaborationCard';
 
 const Biography: NextPage = () => {
     return (
@@ -67,31 +68,9 @@ const Biography: NextPage = () => {
                     </section>
                     <section>
                         <SectionTitle text="Collaboration/Works" />
-                        <ul className="leading-6 list-inside list-none">
-                            <li>
-                                2021-04-01 #ぶいっと Bloomer 歌唱 
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/ZVsIPmfkWAg" target="_blank" rel="noopener noreferrer">Music video</a></span>
-                            </li>
-                            <li>
-                                2021-05-21 #ぶいっとコンピ セイメイトリガー 歌唱 
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/CcvQX-tCBco" target="_blank" rel="noopener noreferrer">Music video</a></span>
-                            </li>
-                            <li>
-                                2021-06-08 blue magic garden ワンダーラスト・アルカディア 動画・ハンドライティング 
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/C0SHjl6xZLw" target="_blank" rel="noopener noreferrer">Music video</a></span>
-                            </li>
-                            <li>
-                                2021-07-25 VirtuaROCK FEST. vol.1 Visibility 歌唱
-                            </li>
-                            <li>
-                                2021-11-08 竜乃エナジー Rainy ハンドライティング 
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/ZZ548wxw_e4" target="_blank" rel="noopener noreferrer">Music video</a></span>
-                            </li>
-                            <li>
-                                2021-12-05 百鬼夜行 ATTRACTORS 歌唱
-                                <span className="mx-2 underline text-indigo-800"><a href="https://youtu.be/YePQNFVRHFk" target="_blank" rel="noopener noreferrer">Music video</a></span>
-                            </li>
-                        </ul>
+                        <div className="grid divide-y">
+                            { collaborations.map((collaboration, index) => <CollaborationCard collaboration={collaboration} key={index} />)}
+                        </div>
                     </section>
                 </div>
             </main>
