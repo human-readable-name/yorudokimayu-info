@@ -10,6 +10,7 @@ import externalLink from '../constants/externalLink';
 import { collaborations } from '../entities/biography/Collaboration';
 import { eventHistories } from '../entities/biography/EventHistory';
 import CollaborationCard from '../components/biography/CollaborationCard';
+import OutlookTweet from '../components/biography/OutlookTweet';
 
 const Biography: NextPage = () => {
     return (
@@ -40,6 +41,9 @@ const Biography: NextPage = () => {
                             拠鳥 きまゆ<br />
                             (よるど きまゆ)<br />
                         </p>
+                        <div className="flex justify-center">
+                            <OutlookTweet />
+                        </div>
                         <ul className="py-4 flex space-x-4 justify-center">
                             <li><SnsLinkItem name="YouTube" url={externalLink.youtube} /></li>
                             <li><SnsLinkItem name="Twitter" url={externalLink.twitter} /></li>
@@ -59,6 +63,7 @@ const Biography: NextPage = () => {
                             <li>2022-04-24 初のM3 参加、1st EP sparklerをリリース</li>
                         </ul>
                     </section>
+                    
 
                     <section>
                         <SectionTitle text="Live/Event" />
