@@ -6,7 +6,7 @@ type Props = {
     meta: Meta;
 };
 
-const Meta: React.FC<Props> = ({meta}: Props) => {
+const PageMeta: React.FC<Props> = ({meta}: Props) => {
     const openGraph = {
         type: "website",
         title: meta.title,
@@ -24,4 +24,4 @@ const Meta: React.FC<Props> = ({meta}: Props) => {
     />
 };
 
-export default Meta;
+export default PageMeta;
