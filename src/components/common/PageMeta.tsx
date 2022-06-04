@@ -21,6 +21,7 @@ const PageMeta: React.FC<Props> = ({meta}: Props) => {
         title={meta.title}
         description={meta.description}
         openGraph={openGraph}
+        canonical={meta.canonical}
         languageAlternates={meta.languageAlternates}
     />
 };
