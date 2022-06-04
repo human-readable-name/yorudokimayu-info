@@ -1,6 +1,6 @@
 export type Profile = {
     name: string;
-    nameCaption: string;
+    nameCaption?: string;
     introductions: string[];
     activities: string[];
 };

@@ -5,13 +5,14 @@ import SectionTitle from '../../components/common/SectionTitle';
 import { ContentLink } from "../../entities/home/ContentLink";
 
 export type Props = {
+    siteName: string;
     siteDescription: string;
     links: ContentLink[];
 };
 
-const Index: React.FC<Props> = ({siteDescription, links}) => {
+const Index: React.FC<Props> = ({siteName, siteDescription, links}) => {
     return <main className="flex flex-col items-center align-center m-8">
-        <PageTitle text="拠鳥きまゆアーティスト情報まとめ" />
+        <PageTitle text={siteName} />
         <section>
             <SectionTitle text="About this site" />
             <p className="p8">
