@@ -2,22 +2,26 @@ import type { NextPage, InferGetStaticPropsType } from 'next';
 import PageFooter from '../components/common/PageFooter';
 import PageHeader from '../components/common/PageHeader';
 import PageMeta from '../components/common/PageMeta';
-import { productSummaries } from '../entities/discography/Product';
 
 import Index, {Props as DiscographyProps} from '../components/discography/Index';
-import { Meta } from '../entities/common/Meta';
+import { getDiscographyMeta } from '../services/common/MetaDataService';
+import { listProductSummaries } from '../services/discography/ProductService';
+import { SupportedLocale } from '../constants/i18n';
+import { ensureSupportedLocale } from '../utilities/i18n';
 
-export const getStaticProps = async () => {
+
+interface GetStaticProps {
+    locale: string;
+}
+
+export const getStaticProps = async ({locale}: GetStaticProps) => {
+    const validatedLocale = ensureSupportedLocale(locale);
     return {
         props: {
-            meta: {
-                title: "拠鳥きまゆ Discography",
-                description: "楽曲リリース情報やMVなど関連情報へのリンク",
-                siteName: "拠鳥きまゆアーティスト情報まとめ",
-                locale: "ja_JP",
-            } as Meta,
+            locale: validatedLocale as SupportedLocale,
+            meta: getDiscographyMeta(validatedLocale),
             discographyProps: {
-                productSummaries: productSummaries,
+                productSummaries: listProductSummaries(validatedLocale),
             } as DiscographyProps,
         },
     };
@@ -25,13 +29,13 @@ export const getStaticProps = async () => {
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const DiscographyPage: NextPage<Props> = ({meta, discographyProps}) => {
+const DiscographyPage: NextPage<Props> = ({locale, meta, discographyProps}) => {
     return (
         <>
             <PageMeta meta={meta} />
-            <PageHeader />
+            <PageHeader currentLocale={locale} currentPageType="Discography" />
             <Index {...discographyProps} />
-            <PageFooter />
+            <PageFooter locale={locale} />
         </>
     );
 };

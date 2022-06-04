@@ -1,3 +1,5 @@
+export type PageType = "Home" | "Biography" | "Discography";
+
 type Path = {
     home: string;
     biography: string;

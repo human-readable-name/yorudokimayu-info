@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   i18n: {
-    locales: ["ja"],
+    locales: ["ja", "en"],
     defaultLocale: "ja",
   },
   webpackDevMiddleware: config => {
