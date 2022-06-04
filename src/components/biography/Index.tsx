@@ -37,13 +37,13 @@ const Index: React.FC<Props> = ({profile, eventHistories, collaborations}: Props
                     <li><SnsLinkItem name="TikTok" url={externalLink.tiktok} /></li>
                 </ul>
                 <p className="text-sm p-4 leading-6">
-                    { profile.introductions.map((intro, index) => {
+                    { profile.introductions.map((intro) => {
                         return <>{intro}<br/></>
                     })}
                 </p>
                 <ul className="leading-6 list-inside list-none">
                     { profile.activities.map((act, index) => {
-                        return <li>{act}</li>
+                        return <li key={index}>{act}</li>
                     })}
                 </ul>
             </section>
