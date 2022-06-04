@@ -8,5 +8,6 @@ export type Meta = {
     description: string;
     siteName: string;
     locale: string;
+    canonical: string;
     languageAlternates: Alternate[];
 };
