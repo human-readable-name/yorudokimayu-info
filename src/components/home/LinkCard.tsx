@@ -1,13 +1,13 @@
 import React from "react";
+import { ContentLink } from "../../entities/home/ContentLink";
 import { isInternal } from "../../utilities/link";
 
 type Props = {
-    title: string;
-    caption: string;
-    url: string;
+    contentLink: ContentLink;
 };
 
-const LinkCard: React.FC<Props> = ({title, caption, url}) => {
+const LinkCard: React.FC<Props> = ({contentLink}: Props) => {
+    const {title, caption, url} = contentLink;
     const isInternalLink  = isInternal(url);
     const className = "m-4 p-6 border border-solid rounded-lg max-w-xs border-slate-800 hover:border-indigo-800 hover:text-indigo-800";
     const anchorProps = isInternalLink
