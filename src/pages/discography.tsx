@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const Discography: NextPage<Props> = ({meta, discographyProps}) => {
+const DiscographyPage: NextPage<Props> = ({meta, discographyProps}) => {
     return (
         <>
             <PageMeta meta={meta} />
@@ -36,4 +36,4 @@ const Discography: NextPage<Props> = ({meta, discographyProps}) => {
     );
 };
 
-export default Discography;
+export default DiscographyPage;
