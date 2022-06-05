@@ -9,3 +9,7 @@ export default {
 
 const Template: ComponentStory<typeof PageHeader> = (args) => <PageHeader {...args} />;
 export const pageHeader = Template.bind({});
+pageHeader.args = {
+    currentLocale: 'ja',
+    currentPageType: 'Home',
+};
