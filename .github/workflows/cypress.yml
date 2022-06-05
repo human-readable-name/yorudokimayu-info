@@ -1,0 +1,23 @@
+name: Cypress
+
+on: 
+  pull_request:
+    branches:    
+      - main
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Run cypress
+        uses: cypress-io/github-action@v3
+        with:
+          install: false
+          build: yarn build
+          start: yarn start
+          wait-on: http://localhost:3000
