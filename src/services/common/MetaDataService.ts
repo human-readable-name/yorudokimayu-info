@@ -44,7 +44,7 @@ export const getHomeMeta = (locale: SupportedLocale): Meta => {
                 canonical: createCanonical(locale, path.home),
                 languageAlternates: languageAlternates,
             };
-        default:
+        case "ja":
             return {
                 title: "拠鳥きまゆアーティスト情報まとめ",
                 description: "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報",
@@ -81,7 +81,7 @@ export const getBiographyMeta = (locale: SupportedLocale): Meta => {
                 canonical: createCanonical(locale, path.biography),
                 languageAlternates: languageAlternates,
             };
-        default:
+        case "ja":
             return {
                 title: "拠鳥きまゆ Biography",
                 description: "アーティスト情報・ライブ出演歴・コラボ情報",
@@ -97,15 +97,15 @@ export const getDiscographyMeta = (locale: SupportedLocale): Meta => {
     const languageAlternates = [
         {
             hrefLang: "x-default",
-            href: createCanonical("ja", path.biography),
+            href: createCanonical("ja", path.discography),
         },
         {
             hrefLang: "ja",
-            href: createCanonical("ja", path.biography),
+            href: createCanonical("ja", path.discography),
         },
         {
             hrefLang: "en",
-            href: createCanonical("en", path.biography),
+            href: createCanonical("en", path.discography),
         },
     ];
     switch(locale) {
@@ -115,16 +115,16 @@ export const getDiscographyMeta = (locale: SupportedLocale): Meta => {
                 description: "Released songs, music videos, and other related information",
                 siteName: translateSitename(locale),
                 locale: convertLocale(locale),
-                canonical: createCanonical(locale, path.biography),
+                canonical: createCanonical(locale, path.discography),
                 languageAlternates: languageAlternates,
             };
-        default:
+        case "ja":
             return {
                 title: "拠鳥きまゆ Discography",
                 description: "楽曲リリース情報やMVなど関連情報へのリンク",
                 siteName: translateSitename(locale),
                 locale: convertLocale(locale),
-                canonical: createCanonical(locale, path.biography),
+                canonical: createCanonical(locale, path.discography),
                 languageAlternates: languageAlternates,
             };
     } 
