@@ -2,19 +2,8 @@ import React from "react";
 import Link from "next/link";
 
 import { SupportedLocale } from "../../constants/i18n";
-import path, { PageType } from '../../constants/path';
-
-const pageTypeToPath = (pageType: PageType, locale: SupportedLocale): string => {
-    const prefix = (locale === "ja") ? "" : `/${locale}`;
-    switch(pageType) {
-        case "Biography":
-            return `${prefix}${path.biography}`;
-        case "Discography":
-            return `${prefix}${path.discography}`;
-        default:
-            return `${prefix}${path.home}`;
-    }
-};
+import { PageType } from '../../constants/path';
+import { pageTypeToPath } from '../../utilities/link';
 
 type LanguageLinkProps = {
     locale: SupportedLocale;
@@ -23,13 +12,12 @@ type LanguageLinkProps = {
 };
 
 const LanguageLink: React.FC<LanguageLinkProps> = ({locale, pageType, selected}) => {
-    const path = pageTypeToPath(pageType, locale);
+    const path = pageTypeToPath(pageType);
     const localeToDisplay = "->" + locale.toUpperCase();
-    const listClassName = "font-medium text-center p-4";
     if (selected) {
         return null;
     } else {
-        return (<Link href={path} locale={false}><a><li className="listClassName">{localeToDisplay}</li></a></Link>);
+        return (<Link href={path} locale={locale}><a><li className="font-medium text-center">{localeToDisplay}</li></a></Link>);
     }
 };
 
