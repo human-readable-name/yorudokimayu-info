@@ -1,7 +1,7 @@
 # SEO
 
-ページ数が少なく、基本的に検索エンジンにクロールはさせてよいので、クローラを制御する仕組みは特にやらない
-
+- sitemap.xmlとrobots.txt対応
+    - next-sitemapを使ってビルド時に自動生成
 - 各ページでmetaタグのname属性にrobotsを指定した上書きはしない
 
 ## metaタグ
@@ -9,24 +9,29 @@
 name属性
 
 - description
+    - i18n対応
 
 property属性
 
 - og:title
+    - i18n対応
 - og:description
     - descriptionと同じ
+    - i18n対応
 - og:image
-    - TBD
+    - 現状ではfaviconと同じものをPNG化して設定
 - og:site_name
+    - i18n対応
 - og:type
     - "website" 固定
 - og:locale
-    - 現状、 "ja_JP"固定
+    - i18n対応
+        - "ja_JP" と "en_US"を出し分け
 
 ## linkタグ
 
 rel属性
 
-- canonical : ドメインが1つでhttpはhttpsにリダイレクトかけるのでまだやってない
-
+- canonical : Next.jsのi18nでデフォルトロケールを設定しても、/ja/*が有効なので設定している
+- alternate : i18n対応のため
 
