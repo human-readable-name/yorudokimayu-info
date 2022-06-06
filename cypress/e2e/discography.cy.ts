@@ -13,9 +13,6 @@ describe('Discography(default locale)', () => {
     });
     it('has 3 alternates (default, ja, en)', () => {
         cy.get('link[rel=alternate]').should('have.length', 3);
-    });
-    it('has 3 alternates (default, ja, en)', () => {
-        cy.get('link[rel=alternate]').should('have.length', 3);
         cy.get('link[rel=alternate]')
             .filter('link[hrefLang=x-default]')
             .filter('link[href=https://kimayu.rocks/discography]')
