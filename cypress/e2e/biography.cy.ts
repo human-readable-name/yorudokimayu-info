@@ -13,6 +13,18 @@ describe('Biography (default locale)', () => {
     });
     it('has 3 alternates (default, ja, en)', () => {
         cy.get('link[rel=alternate]').should('have.length', 3);
+        cy.get('link[rel=alternate]')
+            .filter('link[hrefLang=x-default]')
+            .filter('link[href=https://kimayu.rocks/biography]')
+            .should('have.length', 1);
+        cy.get('link[rel=alternate]')
+            .filter('link[hrefLang=ja]')
+            .filter('link[href=https://kimayu.rocks/biography]')
+            .should('have.length', 1);
+        cy.get('link[rel=alternate]')
+            .filter('link[hrefLang=en]')
+            .filter('link[href=https://kimayu.rocks/en/biography]')
+            .should('have.length', 1);
     });
 });
 
@@ -29,5 +41,17 @@ describe('Biography (en locale)', () => {
     });
     it('has 3 alternates (default, ja, en)', () => {
         cy.get('link[rel=alternate]').should('have.length', 3);
+        cy.get('link[rel=alternate]')
+            .filter('link[hrefLang=x-default]')
+            .filter('link[href=https://kimayu.rocks/biography]')
+            .should('have.length', 1);
+        cy.get('link[rel=alternate]')
+            .filter('link[hrefLang=ja]')
+            .filter('link[href=https://kimayu.rocks/biography]')
+            .should('have.length', 1);
+        cy.get('link[rel=alternate]')
+            .filter('link[hrefLang=en]')
+            .filter('link[href=https://kimayu.rocks/en/biography]')
+            .should('have.length', 1);
     });
 });
