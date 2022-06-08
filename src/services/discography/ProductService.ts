@@ -39,7 +39,7 @@ export const japanese: ProductSummary[] = [
             {name: "うたかたとかして", url: "https://youtu.be/9nNzSRtW-AE"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/7qE6cdZz"},
+            {name: "Subscription / Download", url: "https://linkco.re/7qE6cdZz?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3528690"},
         ],
         supplementalInformationLinks: [
@@ -61,7 +61,7 @@ export const japanese: ProductSummary[] = [
             {name: "KARISOME BREAKER", url: "https://youtu.be/jFADO6wBgUo"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/mM5ds6zM"},
+            {name: "Subscription / Download", url: "https://linkco.re/mM5ds6zM?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3492316"},
         ]
     },
@@ -81,7 +81,7 @@ export const japanese: ProductSummary[] = [
             {name: "レオニズの降る夜に", url: "https://youtu.be/C0EH5CzDKCY"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/sd6XHQxB"},
+            {name: "Subscription / Download", url: "https://linkco.re/sd6XHQxB?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3419090"},
         ]
     },
@@ -101,7 +101,7 @@ export const japanese: ProductSummary[] = [
             {name: "PENGUIN EMERGENCE", url: "https://youtu.be/4EqjcReGmZM"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/D53C67Bu"},
+            {name: "Subscription / Download", url: "https://linkco.re/D53C67Bu?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3419079"},
         ]
     },
@@ -120,7 +120,7 @@ export const japanese: ProductSummary[] = [
             {name: "Memorable", url: "https://youtu.be/x591--tK0wk"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/H9494e5u"},
+            {name: "Subscription / Download", url: "https://linkco.re/H9494e5u?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3318455"},
         ]
     },
@@ -139,7 +139,7 @@ export const japanese: ProductSummary[] = [
             {name: "境界のアイリス", url: "https://youtu.be/w7oDQo2ZNDc"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/c78bSYh9"},
+            {name: "Subscription / Download", url: "https://linkco.re/c78bSYh9?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3265250"},
         ]
     },
@@ -159,7 +159,7 @@ export const japanese: ProductSummary[] = [
             {name: "ロンリーディーバ", url: "https://youtu.be/yUXNaH2JjW8"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/pCpgzUMU"},
+            {name: "Subscription / Download", url: "https://linkco.re/pCpgzUMU?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3185868"},
         ]
     },
@@ -178,7 +178,7 @@ export const japanese: ProductSummary[] = [
             {name: "Dear My Enemy", url: "https://youtu.be/GtWwzw54zVQ"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/AvPtrznD"},
+            {name: "Subscription / Download", url: "https://linkco.re/AvPtrznD?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3143568"},
         ]
     },
@@ -197,7 +197,7 @@ export const japanese: ProductSummary[] = [
             {name: "希求モーニング", url: "https://youtu.be/DpalPxOPZRo"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/0Rz8ACCd"},
+            {name: "Subscription / Download", url: "https://linkco.re/0Rz8ACCd?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107770"},
         ]
     },
@@ -217,7 +217,7 @@ export const japanese: ProductSummary[] = [
             {name: "茜色の公園で", url: "https://youtu.be/xFaoFG-9ZDM"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/HY6DrPGd"},
+            {name: "Subscription / Download", url: "https://linkco.re/HY6DrPGd?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107757"},
         ]
     },
@@ -237,7 +237,7 @@ export const japanese: ProductSummary[] = [
             {name: "RULER ", url: "https://youtu.be/uJCP_Vcqju8"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/vRVnqU5v"},
+            {name: "Subscription / Download", url: "https://linkco.re/vRVnqU5v?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107710"},
         ]
     },
@@ -256,7 +256,7 @@ export const japanese: ProductSummary[] = [
             {name: "カラの鼓動はソラになる", url: "https://youtu.be/7jS6tDpvko4"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/eGzYDu1Y"},
+            {name: "Subscription / Download", url: "https://linkco.re/eGzYDu1Y?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107732"},
         ]
     },
@@ -276,7 +276,7 @@ export const japanese: ProductSummary[] = [
             {name: "真夜中メロウライン", url: "https://youtu.be/_R3eE6D2rBw"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/NQZabT0H"},
+            {name: "Subscription / Download", url: "https://linkco.re/NQZabT0H?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107691"},
         ],
         supplementalInformationLinks: [
@@ -299,7 +299,7 @@ export const japanese: ProductSummary[] = [
             {name: "Penguin Nova", url: "https://youtu.be/DaVGqYTlCCk"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/XRHzUnrA"},
+            {name: "Subscription / Download", url: "https://linkco.re/XRHzUnrA?lang=ja"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107608"},
         ]
     },
@@ -344,7 +344,7 @@ export const english: ProductSummary[] = [
             {name: "Utakatatokashite", url: "https://youtu.be/9nNzSRtW-AE"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/7qE6cdZz"},
+            {name: "Subscription / Download", url: "https://linkco.re/7qE6cdZz?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3528690"},
         ],
         supplementalInformationLinks: [
@@ -366,7 +366,7 @@ export const english: ProductSummary[] = [
             {name: "KARISOME BREAKER", url: "https://youtu.be/jFADO6wBgUo"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/mM5ds6zM"},
+            {name: "Subscription / Download", url: "https://linkco.re/mM5ds6zM?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3492316"},
         ]
     },
@@ -386,7 +386,7 @@ export const english: ProductSummary[] = [
             {name: "Leonids Reminds Me of the Starry Night", url: "https://youtu.be/C0EH5CzDKCY"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/sd6XHQxB"},
+            {name: "Subscription / Download", url: "https://linkco.re/sd6XHQxB?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3419090"},
         ]
     },
@@ -406,7 +406,7 @@ export const english: ProductSummary[] = [
             {name: "PENGUIN EMERGENCE", url: "https://youtu.be/4EqjcReGmZM"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/D53C67Bu"},
+            {name: "Subscription / Download", url: "https://linkco.re/D53C67Bu?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3419079"},
         ]
     },
@@ -425,7 +425,7 @@ export const english: ProductSummary[] = [
             {name: "Memorable", url: "https://youtu.be/x591--tK0wk"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/H9494e5u"},
+            {name: "Subscription / Download", url: "https://linkco.re/H9494e5u?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3318455"},
         ]
     },
@@ -444,7 +444,7 @@ export const english: ProductSummary[] = [
             {name: "Kyoukai no Iris", url: "https://youtu.be/w7oDQo2ZNDc"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/c78bSYh9"},
+            {name: "Subscription / Download", url: "https://linkco.re/c78bSYh9?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3265250"},
         ]
     },
@@ -464,7 +464,7 @@ export const english: ProductSummary[] = [
             {name: "Lonely Diva", url: "https://youtu.be/yUXNaH2JjW8"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/pCpgzUMU"},
+            {name: "Subscription / Download", url: "https://linkco.re/pCpgzUMU?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3185868"},
         ]
     },
@@ -483,7 +483,7 @@ export const english: ProductSummary[] = [
             {name: "Dear My Enemy", url: "https://youtu.be/GtWwzw54zVQ"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/AvPtrznD"},
+            {name: "Subscription / Download", url: "https://linkco.re/AvPtrznD?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3143568"},
         ]
     },
@@ -502,7 +502,7 @@ export const english: ProductSummary[] = [
             {name: "Kikyu Morinig", url: "https://youtu.be/DpalPxOPZRo"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/0Rz8ACCd"},
+            {name: "Subscription / Download", url: "https://linkco.re/0Rz8ACCd?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107770"},
         ]
     },
@@ -522,7 +522,7 @@ export const english: ProductSummary[] = [
             {name: "AkaneironoKouende", url: "https://youtu.be/xFaoFG-9ZDM"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/HY6DrPGd"},
+            {name: "Subscription / Download", url: "https://linkco.re/HY6DrPGd?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107757"},
         ]
     },
@@ -542,7 +542,7 @@ export const english: ProductSummary[] = [
             {name: "RULER ", url: "https://youtu.be/uJCP_Vcqju8"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/vRVnqU5v"},
+            {name: "Subscription / Download", url: "https://linkco.re/vRVnqU5v?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107710"},
         ]
     },
@@ -561,7 +561,7 @@ export const english: ProductSummary[] = [
             {name: "karano kodouha soraninaru", url: "https://youtu.be/7jS6tDpvko4"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/eGzYDu1Y"},
+            {name: "Subscription / Download", url: "https://linkco.re/eGzYDu1Y?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107732"},
         ]
     },
@@ -581,7 +581,7 @@ export const english: ProductSummary[] = [
             {name: "mayonaka melowline", url: "https://youtu.be/_R3eE6D2rBw"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/NQZabT0H"},
+            {name: "Subscription / Download", url: "https://linkco.re/NQZabT0H?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107691"},
         ],
         supplementalInformationLinks: [
@@ -604,7 +604,7 @@ export const english: ProductSummary[] = [
             {name: "Penguin Nova", url: "https://youtu.be/DaVGqYTlCCk"},
         ],
         storeLinks: [
-            {name: "Subscription / Download", url: "https://linkco.re/XRHzUnrA"},
+            {name: "Subscription / Download", url: "https://linkco.re/XRHzUnrA?lang=en"},
             {name: "Official store", url: "https://461okmy.booth.pm/items/3107608"},
         ]
     },
