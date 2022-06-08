@@ -12,7 +12,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "作曲・Tr2作詞 マッチ",
             "Tr5作詞 esora uma [浮遊信号]",
-            "Tr3Tr4Tr6作詞・Vocal KimayuYorudo",
+            "Tr3Tr4Tr6作詞・Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "Crossfade Demo", url: "https://youtu.be/FmVb7r21Z-M"},
@@ -33,7 +33,7 @@ export const japanese: ProductSummary[] = [
         description: "14th single",
         credits: [
             "Music/Lyrics esora uma [浮遊信号]",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "うたかたとかして", url: "https://youtu.be/9nNzSRtW-AE"},
@@ -55,7 +55,7 @@ export const japanese: ProductSummary[] = [
         description: "13th single",
         credits: [
             "Music/Lyrics mampuku",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "KARISOME BREAKER", url: "https://youtu.be/jFADO6wBgUo"},
@@ -75,7 +75,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "Music/Lyrics マッチ",
             "ベース 四谷ゲンロク",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "レオニズの降る夜に", url: "https://youtu.be/C0EH5CzDKCY"},
@@ -95,7 +95,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "作曲 胡桃もよ",
             "作詞 朝比奈こん",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "PENGUIN EMERGENCE", url: "https://youtu.be/4EqjcReGmZM"},
@@ -114,7 +114,7 @@ export const japanese: ProductSummary[] = [
         description: "10th single",
         credits: [
             "Music/Lyrics マッチ",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "Memorable", url: "https://youtu.be/x591--tK0wk"},
@@ -133,7 +133,7 @@ export const japanese: ProductSummary[] = [
         description: "9th single",
         credits: [
             "Music/Lyrics r0y",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "境界のアイリス", url: "https://youtu.be/w7oDQo2ZNDc"},
@@ -153,7 +153,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "Music/Lyrics アザミ",
             "ベース なおちゃん",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "ロンリーディーバ", url: "https://youtu.be/yUXNaH2JjW8"},
@@ -172,7 +172,7 @@ export const japanese: ProductSummary[] = [
         description: "7th single",
         credits: [
             "Music/Lyrics マッチ",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "Dear My Enemy", url: "https://youtu.be/GtWwzw54zVQ"},
@@ -191,7 +191,7 @@ export const japanese: ProductSummary[] = [
         description: "6th single",
         credits: [
             "Music/Lyrics picco",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "希求モーニング", url: "https://youtu.be/DpalPxOPZRo"},
@@ -211,7 +211,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "作曲 sumeshiii a.k.a.バーチャルお寿司",
             "作詞 内野達哉",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "茜色の公園で", url: "https://youtu.be/xFaoFG-9ZDM"},
@@ -231,7 +231,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "作曲 天野ドウジ [カクレゴ]",
             "ベース 四谷ゲンロク",
-            "作詞・Vocal KimayuYorudo",
+            "作詞・Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "RULER ", url: "https://youtu.be/uJCP_Vcqju8"},
@@ -250,7 +250,7 @@ export const japanese: ProductSummary[] = [
         description: "3rd single",
         credits: [
             "Music/Lyrics esora uma [浮遊信号]",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "カラの鼓動はソラになる", url: "https://youtu.be/7jS6tDpvko4"},
@@ -270,7 +270,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "Music/Lyrics 隣町本舗",
             "ラップ作詞 Fra [BOOGEY VOXX]",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "真夜中メロウライン", url: "https://youtu.be/_R3eE6D2rBw"},
@@ -293,7 +293,7 @@ export const japanese: ProductSummary[] = [
         credits: [
             "作曲 胡桃もよ",
             "作詞 朝比奈こん",
-            "Vocal KimayuYorudo",
+            "Vocal 拠鳥きまゆ",
         ],
         mvLinks: [
             {name: "Penguin Nova", url: "https://youtu.be/DaVGqYTlCCk"},
