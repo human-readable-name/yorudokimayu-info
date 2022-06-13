@@ -29,7 +29,7 @@ const PageHeader: React.FC<Props> = ({currentLocale, currentPageType}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => { setIsMenuOpen(!isMenuOpen); };
 
-    return <header className="border-b">
+    return <header className="sticky top-0 z-50 bg-white border-b">
         {/** SPなどではハンバーガーメニュー */}
         <div className="md:hidden">
             <div className="flex justify-between items-center">
