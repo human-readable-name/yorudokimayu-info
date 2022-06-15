@@ -9,7 +9,7 @@ type Props = {
 
 const LinkCard: React.FC<Props> = ({contentLink}: Props) => {
     const {title, caption, url} = contentLink;
-    const anchorClassName = "m-4 p-6 border border-solid rounded-lg max-w-xs border-slate-800 hover:border-indigo-800 hover:text-indigo-800";
+    const anchorClassName = "m-4 p-6 border border-solid rounded-lg w-80 border-slate-800 hover:border-indigo-800 hover:text-indigo-800 justify-self-center";
     if (isInternal(url)) {
         return (
             <Link href={url}>
