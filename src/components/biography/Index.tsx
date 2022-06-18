@@ -32,14 +32,12 @@ const Index: React.FC<Props> = ({profile, eventHistories, collaborations}: Props
                     <OutlookTweet />
                 </div>
                 <ul className="py-4 flex space-x-4 justify-center">
-                    <li><SnsLinkItem name="YouTube" url={externalLink.youtube} /></li>
-                    <li><SnsLinkItem name="Twitter" url={externalLink.twitter} /></li>
-                    <li><SnsLinkItem name="TikTok" url={externalLink.tiktok} /></li>
+                    <li key="sns-link-youtube"><SnsLinkItem name="YouTube" url={externalLink.youtube} /></li>
+                    <li key="sns-link-twitter"><SnsLinkItem name="Twitter" url={externalLink.twitter} /></li>
+                    <li key="sns-link-tiktok"><SnsLinkItem name="TikTok" url={externalLink.tiktok} /></li>
                 </ul>
-                <p className="text-sm p-4 leading-6">
-                    { profile.introductions.map((intro) => {
-                        return <>{intro}<br/></>
-                    })}
+                <p className="text-sm p-4 leading-6 whitespace-pre-wrap">
+                    { profile.introductions.join("\n") }
                 </p>
                 <ul className="leading-6 list-inside list-none">
                     { profile.activities.map((act, index) => {
