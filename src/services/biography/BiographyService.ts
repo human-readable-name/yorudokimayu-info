@@ -57,6 +57,15 @@ export const japaneseCollaborations = [
         partOfTheWork: "歌唱",
         link: {name: "Music video", url: "https://youtu.be/YePQNFVRHFk"},
     },
+    {
+        date: new Date("2022-06-18"),
+        product: {
+            name: "寿司ラ〜メン、そしてとんかつ2〜イカれたパーティーふたたび〜",
+            artist: "",
+        },
+        partOfTheWork: "Tr3 寿司ラ〜メン、そしてとんかつ 歌唱",
+        link: {name: "Subscription / Download", url: "https://linkco.re/PSSeRxzR?lang=ja"},
+    },
 ];
 
 export const englishCollaborations = [
@@ -112,6 +121,15 @@ export const englishCollaborations = [
         },
         partOfTheWork: "Vocal",
         link: {name: "Music video", url: "https://youtu.be/YePQNFVRHFk"},
+    },
+    {
+        date: new Date("2022-06-18"),
+        product: {
+            name: "Sushi Ramen , and Tonkatsu Party2 ~Crazy Party Again~",
+            artist: "",
+        },
+        partOfTheWork: "Tr3 Sushi Ramen , and Tonkatsu Vocal",
+        link: {name: "Subscription / Download", url: "https://linkco.re/PSSeRxzR?lang=en"},
     },
 ];
 
