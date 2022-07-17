@@ -178,6 +178,10 @@ export const japaneseEventHistories: EventHistory[] = [
         date: new Date("2021-12-31"),
         name: "エンタス大晦日"
     },
+    {
+        date: new Date("2022-07-16"),
+        name: "エンタス夏祭り DAY1"
+    },
 ];
 
 export const englishEventHistories: EventHistory[] = [
@@ -215,6 +219,10 @@ export const englishEventHistories: EventHistory[] = [
     {
         date: new Date("2021-12-31"),
         name: "Akihabara ENTAS new year's eve party"
+    },
+    {
+        date: new Date("2022-07-16"),
+        name: "Akihabara ENTAS summer festival DAY1"
     },
 ];
 
