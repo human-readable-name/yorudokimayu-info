@@ -20,8 +20,8 @@ const CollaborationCard: React.FC<Props> = ({collaboration}) => {
         </div>
         <div className="flex flex-wrap space-x-4 jusitfy-start items-center">
             <span className="text-sm">{collaboration.partOfTheWork}</span>
-            { collaboration.link &&  
-                <CollaborationLinkItem collaborationLink={collaboration.link} />
+            { collaboration.links.length > 0 && 
+                collaboration.links.map((link, index) => <CollaborationLinkItem key={index} collaborationLink={link} /> )
             }
         </div>
         

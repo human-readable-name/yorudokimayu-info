@@ -3,7 +3,7 @@ import { Collaboration } from "../../entities/biography/Collaboration";
 import { EventHistory } from "../../entities/biography/EventHistory";
 import { Profile } from "../../entities/biography/Profile";
 
-export const japaneseCollaborations = [
+export const japaneseCollaborations: Collaboration[] = [
     {
         date: new Date("2021-04-01"),
         product: { 
@@ -11,7 +11,10 @@ export const japaneseCollaborations = [
             artist: "#ぶいっと",
         },
         partOfTheWork: "歌唱",
-        link: {name: "Music video", url: "https://youtu.be/ZVsIPmfkWAg"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/ZVsIPmfkWAg"},
+            {name: "Subscription / Download", url: "https://linkco.re/7BmE5qH1?lang=ja"},
+        ],
     },
     {
         date: new Date("2021-05-21"),
@@ -20,7 +23,10 @@ export const japaneseCollaborations = [
             artist: "",
         },
         partOfTheWork: "Tr11 セイメイトリガー 歌唱",
-        link: {name: "Music video", url: "https://youtu.be/CcvQX-tCBco"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/CcvQX-tCBco"},
+            {name: "Subscription / Download", url: "https://linkco.re/y1ghFgts?lang=ja"},
+        ],
     },
     {
         date: new Date("2021-06-08"),
@@ -29,7 +35,9 @@ export const japaneseCollaborations = [
             artist: "blue magic garden",
         },
         partOfTheWork: "MV制作・ハンドライティング",
-        link: {name: "Music video", url: "https://youtu.be/C0SHjl6xZLw"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/C0SHjl6xZLw"},
+        ],
     },
     {
         date: new Date("2021-07-25"),
@@ -38,6 +46,9 @@ export const japaneseCollaborations = [
             artist: "",
         },
         partOfTheWork: "Tr1 Visibility 歌唱",
+        links: [
+            {name: "Subscription / Download", url: "https://linkco.re/ZyAZsbNt?lang=ja"},
+        ],
     },
     {
         date: new Date("2021-11-08"),
@@ -46,7 +57,9 @@ export const japaneseCollaborations = [
             artist: "竜乃エナジー",
         },
         partOfTheWork: "MVハンドライティング ",
-        link: {name: "Music video", url: "https://youtu.be/ZZ548wxw_e4"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/ZZ548wxw_e4"},
+        ],
     },
     {
         date: new Date("2021-12-05"),
@@ -55,7 +68,9 @@ export const japaneseCollaborations = [
             artist: "カクレゴ",
         },
         partOfTheWork: "歌唱",
-        link: {name: "Music video", url: "https://youtu.be/YePQNFVRHFk"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/YePQNFVRHFk"},
+        ],
     },
     {
         date: new Date("2022-06-18"),
@@ -64,11 +79,25 @@ export const japaneseCollaborations = [
             artist: "",
         },
         partOfTheWork: "Tr3 寿司ラ〜メン、そしてとんかつ 歌唱",
-        link: {name: "Subscription / Download", url: "https://linkco.re/PSSeRxzR?lang=ja"},
+        links: [
+            {name: "Subscription / Download", url: "https://linkco.re/PSSeRxzR?lang=ja"},
+        ],
+    },
+    {
+        date: new Date("2022-07-23"),
+        product: {
+            name: "VirtuaROCK FEST. vol.2",
+            artist: ""
+        },
+        partOfTheWork: "Tr2 Twinkle Gift 歌唱",
+        links: [
+            {name: "Music Video", url: "https://youtu.be/LBGGQ5bwf6k"},
+            {name: "Subscription / Download", url: "https://linkco.re/R9gNmV5p?lang=ja"},
+        ],
     },
 ];
 
-export const englishCollaborations = [
+export const englishCollaborations: Collaboration[] = [
     {
         date: new Date("2021-04-01"),
         product: { 
@@ -76,7 +105,10 @@ export const englishCollaborations = [
             artist: "#Vtuber_Motto",
         },
         partOfTheWork: "Vocal",
-        link: {name: "Music video", url: "https://youtu.be/ZVsIPmfkWAg"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/ZVsIPmfkWAg"},
+            {name: "Subscription / Download", url: "https://linkco.re/7BmE5qH1?lang=en"},
+        ],
     },
     {
         date: new Date("2021-05-21"),
@@ -85,7 +117,10 @@ export const englishCollaborations = [
             artist: "Various Artists",
         },
         partOfTheWork: "Vocal Tr11 Seimei Triger",
-        link: {name: "Music video", url: "https://youtu.be/CcvQX-tCBco"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/CcvQX-tCBco"},
+            {name: "Subscription / Download", url: "https://linkco.re/y1ghFgts?lang=en"},
+        ],
     },
     {
         date: new Date("2021-06-08"),
@@ -94,7 +129,9 @@ export const englishCollaborations = [
             artist: "Asahina Kon",
         },
         partOfTheWork: "Music video production and hand writing",
-        link: {name: "Music video", url: "https://youtu.be/C0SHjl6xZLw"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/C0SHjl6xZLw"},
+        ],
     },
     {
         date: new Date("2021-07-25"),
@@ -103,6 +140,9 @@ export const englishCollaborations = [
             artist: "",
         },
         partOfTheWork: "Vocal Tr1 Visibility",
+        links: [
+            {name: "Subscription / Download", url: "https://linkco.re/ZyAZsbNt?lang=en"},
+        ],
     },
     {
         date: new Date("2021-11-08"),
@@ -111,7 +151,9 @@ export const englishCollaborations = [
             artist: "Draconic Energy",
         },
         partOfTheWork: "Hand writing",
-        link: {name: "Music video", url: "https://youtu.be/ZZ548wxw_e4"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/ZZ548wxw_e4"},
+        ],
     },
     {
         date: new Date("2021-12-05"),
@@ -120,7 +162,9 @@ export const englishCollaborations = [
             artist: "KAKULEGO",
         },
         partOfTheWork: "Vocal",
-        link: {name: "Music video", url: "https://youtu.be/YePQNFVRHFk"},
+        links: [
+            {name: "Music video", url: "https://youtu.be/YePQNFVRHFk"},
+        ],
     },
     {
         date: new Date("2022-06-18"),
@@ -128,8 +172,22 @@ export const englishCollaborations = [
             name: "Sushi Ramen , and Tonkatsu Party2 ~Crazy Party Again~",
             artist: "",
         },
-        partOfTheWork: "Tr3 Sushi Ramen , and Tonkatsu Vocal",
-        link: {name: "Subscription / Download", url: "https://linkco.re/PSSeRxzR?lang=en"},
+        partOfTheWork: "Vocal Tr3 Sushi Ramen , and Tonkatsu",
+        links: [
+            {name: "Subscription / Download", url: "https://linkco.re/PSSeRxzR?lang=en"},
+        ],
+    },
+    {
+        date: new Date("2022-07-23"),
+        product: {
+            name: "VirtuaROCK FEST. vol.2",
+            artist: ""
+        },
+        partOfTheWork: "Vocal Tr2 Twinkle Gift",
+        links: [
+            {name: "Music Video", url: "https://youtu.be/LBGGQ5bwf6k"},
+            {name: "Subscription / Download", url: "https://linkco.re/R9gNmV5p?lang=en"},
+        ],
     },
 ];
 
