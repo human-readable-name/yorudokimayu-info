@@ -12,5 +12,5 @@ export type Collaboration = {
     date: Date;
     product: CollaborationProduct;
     partOfTheWork: string;
-    link?: CollaborationLink;
+    links: CollaborationLink[];
 };
