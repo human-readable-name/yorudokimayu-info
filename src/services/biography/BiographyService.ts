@@ -240,6 +240,13 @@ export const japaneseEventHistories: EventHistory[] = [
         date: new Date("2022-07-16"),
         name: "エンタス夏祭り DAY1"
     },
+    {
+        date: new Date("2022-07-31"),
+        name: "VirtuaROCK FEST. vol.2 DAY2",
+        links: [
+            {name: "アーカイブ", url: "https://youtu.be/b17k1Gppzzk"},
+        ],
+    },
 ];
 
 export const englishEventHistories: EventHistory[] = [
@@ -281,6 +288,13 @@ export const englishEventHistories: EventHistory[] = [
     {
         date: new Date("2022-07-16"),
         name: "Akihabara ENTAS summer festival DAY1"
+    },
+    {
+        date: new Date("2022-07-31"),
+        name: "VirtuaROCK FEST. vol.2 DAY2",
+        links: [
+            {name: "Live streaming archive", url: "https://youtu.be/b17k1Gppzzk"},
+        ],
     },
 ];
 
