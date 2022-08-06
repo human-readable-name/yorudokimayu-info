@@ -95,6 +95,18 @@ export const japaneseCollaborations: Collaboration[] = [
             {name: "Subscription / Download", url: "https://linkco.re/R9gNmV5p?lang=ja"},
         ],
     },
+    {
+        date: new Date("2022-08-14"),
+        product: {
+            name: "Myosotis",
+            artist: "",
+        },
+        partOfTheWork: "作詞・歌唱",
+        links: [
+            {name: "Music Video", url: "https://youtu.be/vKp6LdALi0k"},
+            {name: "Subscription / Download", url: "https://linkco.re/mTXg3aM2?lang=ja"},
+        ],
+    },
 ];
 
 export const englishCollaborations: Collaboration[] = [
@@ -187,6 +199,18 @@ export const englishCollaborations: Collaboration[] = [
         links: [
             {name: "Music Video", url: "https://youtu.be/LBGGQ5bwf6k"},
             {name: "Subscription / Download", url: "https://linkco.re/R9gNmV5p?lang=en"},
+        ],
+    },
+    {
+        date: new Date("2022-08-14"),
+        product: {
+            name: "Myosotis",
+            artist: ""
+        },
+        partOfTheWork: "Lyrics/Vocal",
+        links: [
+            {name: "Music Video", url: "https://youtu.be/vKp6LdALi0k"},
+            {name: "Subscription / Download", url: "https://linkco.re/mTXg3aM2?lang=en"},
         ],
     },
 ];
