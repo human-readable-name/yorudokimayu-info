@@ -3,6 +3,23 @@ import { ProductSummary } from "../../entities/discography/Product";
 
 export const japanese: ProductSummary[] = [
     {
+        id: "15th-single",
+        name: "夏色スタートライン",
+        kind: "Single",
+        genre: "Electronic",
+        dateOfRelease: new Date("2022-08-31"),
+        description: "",
+        credits: [
+            "Music/Lyrics めかおん",
+            "Vocal 拠鳥きまゆ",
+        ],
+        mvLinks: [],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/5G3y37dh?lang=ja"},
+            {name: "Official store", url: "https://booth.pm/ja/items/4130595"},
+        ],
+    },
+    {
         id: "1st-ep",
         name: "sparkler",
         kind: "EP",
@@ -307,6 +324,23 @@ export const japanese: ProductSummary[] = [
 
 
 export const english: ProductSummary[] = [
+    {
+        id: "15th-single",
+        name: "NatsuiroStartline",
+        kind: "Single",
+        genre: "Electronic",
+        dateOfRelease: new Date("2022-08-31"),
+        description: "",
+        credits: [
+            "Music/Lyrics Mekaon",
+            "Vocal KimayuYorudo",
+        ],
+        mvLinks: [],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/5G3y37dh?lang=en"},
+            {name: "Official store", url: "https://booth.pm/ja/items/4130595"},
+        ],
+    },
     {
         id: "1st-ep",
         name: "sparkler",
