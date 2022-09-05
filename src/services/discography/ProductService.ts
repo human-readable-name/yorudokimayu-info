@@ -13,7 +13,9 @@ export const japanese: ProductSummary[] = [
             "Music/Lyrics めかおん",
             "Vocal 拠鳥きまゆ",
         ],
-        mvLinks: [],
+        mvLinks: [
+            {name: "夏色スタートライン", url: "https://youtu.be/yjO39YuU5pg"},
+        ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/5G3y37dh?lang=ja"},
             {name: "Official store", url: "https://booth.pm/ja/items/4130595"},
@@ -335,7 +337,9 @@ export const english: ProductSummary[] = [
             "Music/Lyrics Mekaon",
             "Vocal KimayuYorudo",
         ],
-        mvLinks: [],
+        mvLinks: [
+            {name: "NatsuiroStartline", url: "https://youtu.be/yjO39YuU5pg"},
+        ],
         storeLinks: [
             {name: "Subscription / Download", url: "https://linkco.re/5G3y37dh?lang=en"},
             {name: "Official store", url: "https://booth.pm/ja/items/4130595"},
