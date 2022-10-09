@@ -107,12 +107,10 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
 * VisualStudioCodeに[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)と[Remote - Containers](https://marketplace.visualstudio.com)の拡張を入れる
 
 
-ローカル環境でページを閲覧したい場合
+手元のPCで開発途中のページを閲覧したい場合
 
-* VisualStudioCodeのEXPLORERから`docker-compose.yml`を右クックし、`Compose Up`でDockerコンテナを起動
-* VisualStudioCodeのDOCKERのCONTAINERSから起動したコンテナを右クリックし、`Attach Shell`で起動したコンテナに入る
-* `yarn install` で必要なパッケージのインストール
-* `yarn dev` でNext.jsの開発サーバを起動
+* VisualStudioCodeのTERMINALから `docker-compose run local install` で必要なパッケージのインストール
+* VisualStudioCodeのTERMINALから `docker-compose up` でNext.jsの開発サーバを起動
 * ブラウザから [http://localhost:3000](http://localhost:3000) にアクセス
 
 # インフラ
