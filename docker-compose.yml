@@ -12,3 +12,5 @@ services:
     volumes:
     - .:/yorudokimayu-info
     working_dir: /yorudokimayu-info
+    entrypoint: yarn
+    command: dev
