@@ -3,6 +3,25 @@ import { ProductSummary } from "../../entities/discography/Product";
 
 export const japanese: ProductSummary[] = [
     {
+        id: "16th-single",
+        name: "PENGUIN REALISE",
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2022-10-10"),
+        description: "活動開始2周年記念",
+        credits: [
+            "Music/Lyrics マッチ",
+            "Vocal 拠鳥きまゆ",
+        ],
+        mvLinks: [
+            {name: "PENGUIN REALISE", url: "https://youtu.be/od3go3oDixU"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/vm0mu1Ac?lang=ja"},
+            {name: "Official store", url: "https://booth.pm/ja/items/4220956"},
+        ]
+    },
+    {
         id: "15th-single",
         name: "夏色スタートライン",
         kind: "Single",
@@ -326,6 +345,25 @@ export const japanese: ProductSummary[] = [
 
 
 export const english: ProductSummary[] = [
+    {
+        id: "16th-single",
+        name: "PENGUIN REALISE",
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2022-10-10"),
+        description: "second anniversary song",
+        credits: [
+            "Music/Lyrics Matchy",
+            "Vocal KimayuYorudo",
+        ],
+        mvLinks: [
+            {name: "PENGUIN REALISE", url: "https://youtu.be/od3go3oDixU"},
+        ],
+        storeLinks: [
+            {name: "Subscription / Download", url: "https://linkco.re/vm0mu1Ac?lang=en"},
+            {name: "Official store", url: "https://booth.pm/ja/items/4220956"},
+        ]
+    },
     {
         id: "15th-single",
         name: "NatsuiroStartline",

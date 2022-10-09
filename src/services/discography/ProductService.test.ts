@@ -16,7 +16,7 @@ test('listProductSummaries', () => {
     const japaneseTuneCoreLinks = listProductSummaries("ja").flatMap((summary) => 
         summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"))
     );
-    expect(japaneseTuneCoreLinks.length).toBe(15);
+    expect(japaneseTuneCoreLinks.length).toBe(16);
     japaneseTuneCoreLinks.forEach((link) => {
         expect(link.url).toContain("lang=ja")
     });
@@ -36,7 +36,7 @@ test('listProductSummaries', () => {
     const englishTuneCoreLinks = listProductSummaries("en").flatMap((summary) => 
         summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"))
     );
-    expect(englishTuneCoreLinks.length).toBe(15);
+    expect(englishTuneCoreLinks.length).toBe(16);
     englishTuneCoreLinks.forEach((link) => {
         expect(link.url).toContain("lang=en")
     });
