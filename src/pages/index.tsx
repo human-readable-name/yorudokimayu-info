@@ -8,6 +8,7 @@ import { listContentLinks } from '../services/home/ContentLinkService';
 import { getHomeMeta } from '../services/common/MetaDataService';
 import { SupportedLocale } from '../constants/i18n';
 import { ensureSupportedLocale, translateSiteDescription, translateSitename } from '../utilities/i18n';
+import { listNews } from '../services/home/NewsService';
 
 interface GetStaticProps {
     locale: string;
@@ -22,6 +23,7 @@ export const getStaticProps = async ({locale}: GetStaticProps) => {
             homeProps: {
                 siteName: translateSitename(validatedLocale),
                 siteDescription: translateSiteDescription(validatedLocale),
+                news: listNews(validatedLocale),
                 links: listContentLinks(validatedLocale),
             } as HomeProps,
         },

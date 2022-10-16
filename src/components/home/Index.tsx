@@ -1,16 +1,19 @@
 import React from "react";
+import NewsCard from "./NewsCard";
 import LinkCard from './LinkCard';
 import PageTitle from '../../components/common/PageTitle';
 import SectionTitle from '../../components/common/SectionTitle';
 import { ContentLink } from "../../entities/home/ContentLink";
+import { NewsItem } from "../../entities/home/NewsItem";
 
 export type Props = {
     siteName: string;
     siteDescription: string;
+    news: NewsItem[];
     links: ContentLink[];
 };
 
-const Index: React.FC<Props> = ({siteName, siteDescription, links}) => {
+const Index: React.FC<Props> = ({siteName, siteDescription, news, links}) => {
     return <main className="flex flex-col items-center align-center m-8">
         <PageTitle text={siteName} />
         <section>
@@ -18,6 +21,11 @@ const Index: React.FC<Props> = ({siteName, siteDescription, links}) => {
             <p className="p8">
                 {siteDescription}
             </p>
+            <SectionTitle text="News" />
+            <div className="grid divide-y">
+                {news.map((newItem, index) => <NewsCard newsItem={newItem} key={index} />)}
+            </div>
+            <SectionTitle text="Table of contents" />
             <div className="grid grid-cols-1 md:grid-cols-2">
                 {links.map((contentLink, index) => <LinkCard contentLink={contentLink} key={index} />)}
             </div>
