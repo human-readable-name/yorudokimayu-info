@@ -44,6 +44,13 @@ describe('TranslatableValues', () => {
                     ["ja", "English"],
                 ])
             }).toThrow();
-        })
+        });
+        test('ロケールが足りない場合はエラーにする', () => {
+            expect(() => {
+                TranslatableValues.createValues([
+                    ["ja", "日本語"],
+                ])
+            }).toThrow();
+        });
     });
 });

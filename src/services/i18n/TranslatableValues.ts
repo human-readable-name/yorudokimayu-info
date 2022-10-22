@@ -1,4 +1,4 @@
-import { SupportedLocale } from "../../constants/i18n";
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 
 export class TranslatableValues {
     protected values: Map<SupportedLocale,string>;
@@ -20,6 +20,9 @@ export class TranslatableValues {
         const dintinctLocales = new Set(locales);
         if (candidates.length != dintinctLocales.size) {
             throw new Error(`locale is duplicated: ${candidates}`);
+        }
+        if (dintinctLocales.size != SUPPORTED_LOCALES.length) {
+            throw new Error(`locale size is invalid: ${candidates}`);
         }
         return new Map<SupportedLocale, string>(candidates);
     };
