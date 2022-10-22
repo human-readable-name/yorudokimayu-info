@@ -1,2 +1,2 @@
-export type SupportedLocale = "en" | "ja";
-export const SUPPORTED_LOCALES: SupportedLocale[] = ["en", "ja"]; 
+export type SupportedLocale = "ja" | "en";
+export const SUPPORTED_LOCALES: SupportedLocale[] = ["ja", "en"]; 

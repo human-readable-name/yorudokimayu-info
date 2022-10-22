@@ -1,6 +1,6 @@
 import React from "react";
 import { NextSeo } from 'next-seo';
-import { Meta } from '../../entities/common/Meta';
+import { Meta } from '../../services/common/MetaDataService';
 
 type Props = {
     meta: Meta;

@@ -4,10 +4,10 @@ import PageHeader from '../components/common/PageHeader';
 import PageMeta from '../components/common/PageMeta';
 
 import Index, {Props as BiographyProps} from '../components/biography/Index';
-import { getBiographyMeta } from '../services/common/MetaDataService';
 import { SupportedLocale } from '../constants/i18n';
 import { ensureSupportedLocale } from '../utilities/i18n';
 import { InMemoryBiographyService } from '../services/biography/InMemoryBiographyService';
+import { InMemoryMetaDataService } from '../services/common/InMemoryMetaDataService';
 
 
 interface GetStaticProps {
@@ -16,11 +16,12 @@ interface GetStaticProps {
 
 export const getStaticProps = async ({locale}: GetStaticProps) => {
     const validatedLocale = ensureSupportedLocale(locale);
+    const metaDataService = new InMemoryMetaDataService();
     const biographyService = new InMemoryBiographyService();
     return {
         props: {
             locale: validatedLocale as SupportedLocale,
-            meta: getBiographyMeta(validatedLocale),
+            meta: metaDataService.getBiographyMeta(validatedLocale),
             biographyProps: {
                 profile: biographyService.getProfile(validatedLocale),
                 eventHistories: biographyService.listEventHistories(validatedLocale),
