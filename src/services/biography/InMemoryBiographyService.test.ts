@@ -1,8 +1,113 @@
 import { SupportedLocale } from "../../constants/i18n";
 import { 
-    japaneseCollaborations, englishCollaborations,
-    japaneseProfile, englishProfile, InMemoryBiographyService, EventLinkMaster, EventHistoryMaster 
+    japaneseProfile, englishProfile, InMemoryBiographyService, EventLinkMaster, EventHistoryMaster, CollaborationLinkMaster, CollaborationMaster 
 } from "./InMemoryBiographyService";
+
+describe('CollaborationLinkMaster', () => {
+    describe('getUrl', () => {
+        test('TuneCoreでなければそのまま', () => {
+            const master = new CollaborationLinkMaster({
+                url: "https://youtu.be/ZVsIPmfkWAg",
+                nameValues: new Map<SupportedLocale, string>(),
+            });
+            expect(master.getUrl("ja")).toBe("https://youtu.be/ZVsIPmfkWAg")
+        });
+        test('TuneCoreの場合はlangのクエリパラメータを付ける', () => {
+            const master = new CollaborationLinkMaster({
+                url: "https://linkco.re/7BmE5qH1",
+                nameValues: new Map<SupportedLocale, string>(),
+            });
+            expect(master.getUrl("ja")).toBe("https://linkco.re/7BmE5qH1?lang=ja");
+            expect(master.getUrl("en")).toBe("https://linkco.re/7BmE5qH1?lang=en");
+        });
+    });
+    describe('getCollaborationLink', () => {
+        test('ViewModelに変換できる', () => {
+            const master = new CollaborationLinkMaster({
+                url: "https://linkco.re/7BmE5qH1",
+                nameValues: new Map<SupportedLocale, string>([
+                    ["ja", "配信・ダウンロード"],
+                    ["en", "Subscription / Download"],
+                ]),
+            });
+            expect(
+                master.getCollaborationLink("ja")
+            ).toEqual({
+                name: "配信・ダウンロード",
+                url: "https://linkco.re/7BmE5qH1?lang=ja"
+            });
+            expect(
+                master.getCollaborationLink("en")
+            ).toEqual({
+                name: "Subscription / Download",
+                url: "https://linkco.re/7BmE5qH1?lang=en"
+            });
+        });
+
+    });
+});
+
+describe('CollaborationMaster', () => {
+    describe('getCollaboration', () => {
+        const master = new CollaborationMaster({
+            date: new Date("2021-04-01"),
+            productNameValues: new Map<SupportedLocale,string>([
+                ["ja", "Bloomer"],
+                ["en", "Bloomer"],
+            ]),
+            productArtistValues: new Map<SupportedLocale,string>([
+                ["ja", "#ぶいっと"],
+                ["en", "#Vtuber_Motto"],
+            ]),
+            partOfTheWorkValues: new Map<SupportedLocale,string>([
+                ["ja", "歌唱"],
+                ["en", "Vocal"],
+            ]),
+            links: [
+                new CollaborationLinkMaster({
+                    url: "https://youtu.be/ZVsIPmfkWAg",
+                    nameValues: new Map<SupportedLocale,string>([
+                        ["ja", "ミュージックビデオ"],
+                        ["en", "Music video"],
+                    ]),
+                }),
+                new CollaborationLinkMaster({
+                    url: "https://linkco.re/7BmE5qH1",
+                    nameValues: new Map<SupportedLocale,string>([
+                        ["ja", "配信・ダウンロード"],
+                        ["en", "Subscription / Download"]
+                    ]),
+                })
+            ],
+        });
+        expect(master.getCollaboration("ja")).toEqual({
+            date: new Date("2021-04-01"),
+            product: {
+                name: "Bloomer",
+                artist: "#ぶいっと"
+                
+            },
+            partOfTheWork: "歌唱",
+            links: [
+                {name: "ミュージックビデオ", url: "https://youtu.be/ZVsIPmfkWAg"},
+                {name: "配信・ダウンロード", url: "https://linkco.re/7BmE5qH1?lang=ja"},
+            ]
+        });
+        expect(master.getCollaboration("en")).toEqual({
+            date: new Date("2021-04-01"),
+            product: {
+                name: "Bloomer",
+                artist: "#Vtuber_Motto"
+            },
+            partOfTheWork: "Vocal",
+            links: [
+                {name: "Music video", url: "https://youtu.be/ZVsIPmfkWAg"},
+                {name: "Subscription / Download", url: "https://linkco.re/7BmE5qH1?lang=en"},
+            ]
+        });
+        
+    });
+});
 
 describe('EventLinkMaster', () => {
     test('getEventLink', () => {
@@ -67,24 +172,20 @@ describe('EventHistoryMaster', () => {
 
 describe('InMemoryBiographyService', () => {
     test('listCollaborations', () => {
-        const service = new InMemoryBiographyService();
-        expect(
-            service.listCollaborations("ja")
-        ).toEqual(japaneseCollaborations);
-        expect(
-            service.listCollaborations("en")
-        ).toEqual(englishCollaborations);
+        expect(() => {
+            // 翻訳漏れに例外を投げるようになっているので、そうなってないことを担保
+            const service = new InMemoryBiographyService();
+            service.listCollaborations("ja");
+            service.listCollaborations("en");
+        }).not.toThrow();
     });
     test('listEventHistories', () => {
-        const service = new InMemoryBiographyService();
-        
-        try {
+        expect(() => {
             // 翻訳漏れに例外を投げるようになっているので、そうなってないことを担保
+            const service = new InMemoryBiographyService();
             service.listEventHistories("ja");
             service.listEventHistories("en");
-        } catch (e) {
-            throw e;
-        }
+        }).not.toThrow();
     });
     test('getProfile', () => {
         const service = new InMemoryBiographyService();
