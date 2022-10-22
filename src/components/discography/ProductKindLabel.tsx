@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductKind } from "../../entities/discography/Product";
+import { ProductKind } from "../../services/discography/ProductService"; 
 
 type Props = {
     productKind: ProductKind;

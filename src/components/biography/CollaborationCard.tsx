@@ -1,7 +1,7 @@
 import React from "react";
 import DateLabel from "./DateLabel";
 
-import { Collaboration } from "../../entities/biography/Collaboration";
+import { Collaboration } from "../../services/biography/BiographyService";
 import CollaborationLinkItem from "./CollaborationLinkItem";
 
 type Props = {

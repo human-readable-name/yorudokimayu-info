@@ -3,8 +3,8 @@ import NewsCard from "./NewsCard";
 import LinkCard from './LinkCard';
 import PageTitle from '../../components/common/PageTitle';
 import SectionTitle from '../../components/common/SectionTitle';
-import { ContentLink } from "../../entities/home/ContentLink";
-import { NewsItem } from "../../entities/home/NewsItem";
+import { ContentLink } from "../../services/home/ContentLinkService";
+import { NewsItem } from "../../services/home/NewsService";
 
 export type Props = {
     siteName: string;

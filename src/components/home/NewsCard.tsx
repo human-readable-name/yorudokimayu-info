@@ -1,4 +1,4 @@
-import { NewsItem } from "../../entities/home/NewsItem"
+import { NewsItem } from "../../services/home/NewsService"
 import NewsArticleLink from "./NewsArticleLink";
 
 type Props = {

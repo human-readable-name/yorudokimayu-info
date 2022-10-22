@@ -3,7 +3,7 @@ import DateOfRleaseLabel from "./DateOfReleaseLabel";
 import GenreLabel from "./GenreLabel";
 import BorderLinkButton from "./BorderLinkButton";
 import FilledLinkButton from "./FilledLinkButton";
-import { ProductSummary } from "../../entities/discography/Product"; 
+import { ProductSummary } from "../../services/discography/ProductService"; 
 
 type Props = {
     productSummary: ProductSummary;

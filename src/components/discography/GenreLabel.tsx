@@ -1,5 +1,5 @@
 import React from "react";
-import { Genre } from "../../entities/discography/Product";
+import { Genre } from "../../services/discography/ProductService";
 
 type Props = {
     genre: Genre;

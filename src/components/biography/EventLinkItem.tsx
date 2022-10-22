@@ -1,5 +1,5 @@
 import React from "react";
-import { EventLink } from "../../entities/biography/EventHistory";
+import { EventLink } from "../../services/biography/BiographyService";
 
 type Props = {
     eventLink: EventLink;

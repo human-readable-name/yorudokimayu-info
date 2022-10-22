@@ -4,10 +4,10 @@ import PageHeader from '../components/common/PageHeader';
 import PageMeta from '../components/common/PageMeta';
 
 import Index, {Props as DiscographyProps} from '../components/discography/Index';
-import { getDiscographyMeta } from '../services/common/MetaDataService';
-import { listProductSummaries } from '../services/discography/ProductService';
+import { InMemoryProductService } from '../services/discography/InMemoryProductService';
 import { SupportedLocale } from '../constants/i18n';
 import { ensureSupportedLocale } from '../utilities/i18n';
+import { InMemoryMetaDataService } from '../services/common/InMemoryMetaDataService';
 
 
 interface GetStaticProps {
@@ -16,12 +16,14 @@ interface GetStaticProps {
 
 export const getStaticProps = async ({locale}: GetStaticProps) => {
     const validatedLocale = ensureSupportedLocale(locale);
+    const metaDataService = new InMemoryMetaDataService();
+    const productService = new InMemoryProductService();
     return {
         props: {
             locale: validatedLocale as SupportedLocale,
-            meta: getDiscographyMeta(validatedLocale),
+            meta: metaDataService.getDiscographyMeta(validatedLocale),
             discographyProps: {
-                productSummaries: listProductSummaries(validatedLocale),
+                productSummaries: productService.listProductSummaries(validatedLocale),
             } as DiscographyProps,
         },
     };

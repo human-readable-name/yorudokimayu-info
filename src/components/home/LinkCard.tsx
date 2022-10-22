@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ContentLink } from "../../entities/home/ContentLink";
+import { ContentLink } from "../../services/home/ContentLinkService";
 import { isInternal } from "../../utilities/link";
 
 type Props = {

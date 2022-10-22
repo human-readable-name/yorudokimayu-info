@@ -4,11 +4,11 @@ import PageHeader from '../components/common/PageHeader';
 import PageMeta from '../components/common/PageMeta';
 import Index, {Props as HomeProps} from '../components/home/Index';
 
-import { listContentLinks } from '../services/home/ContentLinkService';
-import { getHomeMeta } from '../services/common/MetaDataService';
 import { SupportedLocale } from '../constants/i18n';
-import { ensureSupportedLocale, translateSiteDescription, translateSitename } from '../utilities/i18n';
-import { listNews } from '../services/home/NewsService';
+import { ensureSupportedLocale } from '../utilities/i18n';
+import { InMemoryContentLinkService } from '../services/home/InMemoryContentLinkService';
+import { InMemoryNewsService } from '../services/home/InMemoryNewsService';
+import { InMemoryMetaDataService } from '../services/common/InMemoryMetaDataService';
 
 interface GetStaticProps {
     locale: string;
@@ -16,15 +16,18 @@ interface GetStaticProps {
 
 export const getStaticProps = async ({locale}: GetStaticProps) => {
     const validatedLocale = ensureSupportedLocale(locale);
+    const metaDataService = new InMemoryMetaDataService();
+    const newsService = new InMemoryNewsService();
+    const contentLinkService = new InMemoryContentLinkService();
     return {
         props: {
             locale: validatedLocale as SupportedLocale,
-            meta: getHomeMeta(validatedLocale),
+            meta: metaDataService.getHomeMeta(validatedLocale),
             homeProps: {
-                siteName: translateSitename(validatedLocale),
-                siteDescription: translateSiteDescription(validatedLocale),
-                news: listNews(validatedLocale),
-                links: listContentLinks(validatedLocale),
+                siteName: metaDataService.getSiteName(validatedLocale),
+                siteDescription: metaDataService.getSiteDescription(validatedLocale),
+                news: newsService.listNews(validatedLocale),
+                links: contentLinkService.listContentLinks(validatedLocale),
             } as HomeProps,
         },
     };
