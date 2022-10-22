@@ -5,15 +5,15 @@ import { BiographyService, Profile, EventHistory, Collaboration, CollaborationLi
 
 export class CollaborationLinkMaster  {
     private url: string;
-    private nameValues: TranslatableValues;
-    constructor(props: {url: string, nameValues: Map<SupportedLocale, string>}) {
-        this.nameValues = new TranslatableValues({values: props.nameValues});
+    private name: TranslatableValues;
+    constructor(props: {url: string, name: TranslatableValues}) {
+        this.name = props.name;
         this.url = props.url;
     }
     getCollaborationLink(locale: SupportedLocale): CollaborationLink {
         return {
             url: this.getUrl(locale),
-            name: this.nameValues.getLocalizedValue(locale),
+            name: this.name.getLocalizedValue(locale),
         }
     }
     getUrl(locale: SupportedLocale): string {
@@ -27,33 +27,31 @@ export class CollaborationLinkMaster  {
 
 export class CollaborationMaster {
     private date: Date;
-    private productNameValues: TranslatableValues;
-    private productArtistValues?: TranslatableValues;
-    private partOfTheWorkValues: TranslatableValues;
+    private productName: TranslatableValues;
+    private productArtist?: TranslatableValues;
+    private partOfTheWork: TranslatableValues;
     private links: CollaborationLinkMaster[];
     constructor(props: {
         date: Date,
-        productNameValues: Map<SupportedLocale, string>,
-        productArtistValues?: Map<SupportedLocale, string>,
-        partOfTheWorkValues: Map<SupportedLocale, string>,
+        productName: TranslatableValues,
+        productArtist?: TranslatableValues,
+        partOfTheWork: TranslatableValues,
         links?: CollaborationLinkMaster[],
     }) {
         this.date = props.date;
-        this.productNameValues = new TranslatableValues({values: props.productNameValues});
-        if (props?.productArtistValues != null) {
-            this.productArtistValues = new TranslatableValues({values: props.productArtistValues});
-        }
-        this.partOfTheWorkValues = new TranslatableValues({values: props.partOfTheWorkValues});
+        this.productName = props.productName;
+        this.productArtist = props.productArtist;
+        this.partOfTheWork = props.partOfTheWork;
         this.links = props.links || [];
     }
     getCollaboration(locale: SupportedLocale): Collaboration {
         return {
             date: this.date,
             product: {
-                name: this.productNameValues.getLocalizedValue(locale),
-                artist: this.productArtistValues?.getLocalizedValue(locale) || "",
+                name: this.productName.getLocalizedValue(locale),
+                artist: this.productArtist?.getLocalizedValue(locale) || "",
             },
-            partOfTheWork: this.partOfTheWorkValues.getLocalizedValue(locale),
+            partOfTheWork: this.partOfTheWork.getLocalizedValue(locale),
             links: this.links.map((linkMaster) => {
                 return linkMaster.getCollaborationLink(locale);
             }),
@@ -64,28 +62,28 @@ export class CollaborationMaster {
 const collaborationMasterData: CollaborationMaster[] = [
     new CollaborationMaster({
         date: new Date("2021-04-01"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "Bloomer"],
             ["en", "Bloomer"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", "#ぶいっと"],
             ["en", "#Vtuber_Motto"]
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "歌唱"],
             ["en", "Vocal"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music video"],
                     ["en", "Music video"],
                 ]), 
                 url: "https://youtu.be/ZVsIPmfkWAg"
             }),
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
@@ -95,28 +93,28 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2021-05-21"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "#ぶいっとコンピ"],
             ["en", "#buittocompi"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", ""],
             ["en", "Various Artists"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "Tr11 セイメイトリガー 歌唱"],
             ["en", "Vocal Tr11 Seimei Triger"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music video"],
                     ["en", "Music video"],
                  ]),
                 url: "https://youtu.be/CcvQX-tCBco",
             }),
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -126,21 +124,21 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2021-06-08"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "ワンダーラスト・アルカディア"],
             ["en", "wonderlast arcadia"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", "朝比奈 こん"],
             ["en", "Asahina Kon"]
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "MV制作・ハンドライティング"],
             ["en", "Music video production and hand writing"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music video"],
                     ["en", "Music video"],
                 ]),
@@ -150,21 +148,21 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2021-07-25"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "VirtuaROCK FEST. vol.1"],
             ["en", "VirtuaROCK FEST. vol.1"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", ""],
             ["en", "Various Artists"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "Tr1 Visibility 歌唱"],
             ["en", "Vocal Tr1 Visibility"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -174,21 +172,21 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2021-11-08"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "Rainy"],
             ["en", "Rainy"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", "竜乃エナジー"],
             ["en", "Draconic Energy"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "MVハンドライティング "],
             ["en", "Hand writing"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music video"],
                     ["en", "Music video"],
                 ]),
@@ -198,21 +196,21 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2021-12-05"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "ATTRACTORS"],
             ["en", "ATTRACTORS"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", "カクレゴ"],
             ["en", "KAKULEGO"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "歌唱"],
             ["en", "Vocal"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music video"],
                     ["en", "Music video"],
                 ]),
@@ -222,21 +220,21 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2022-06-18"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "寿司ラ〜メン、そしてとんかつ2〜イカれたパーティーふたたび〜"],
             ["en", "Sushi Ramen , and Tonkatsu Party2 ~Crazy Party Again~"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", ""],
             ["en", "Various Artists"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "Tr3 寿司ラ〜メン、そしてとんかつ 歌唱"],
             ["en", "Vocal Tr3 Sushi Ramen , and Tonkatsu"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -246,28 +244,28 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2022-07-23"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "VirtuaROCK FEST. vol.2"],
             ["en", "VirtuaROCK FEST. vol.2"],
         ]),
-        productArtistValues: TranslatableValues.createValues([
+        productArtist: new TranslatableValues([
             ["ja", ""],
             ["en", "Various Artists"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "Tr2 Twinkle Gift 歌唱"],
             ["en", "Vocal Tr2 Twinkle Gift"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music Video"],
                     ["en", "Music Video"],
                 ]),
                 url: "https://youtu.be/LBGGQ5bwf6k",
             }),
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -277,24 +275,24 @@ const collaborationMasterData: CollaborationMaster[] = [
     }),
     new CollaborationMaster({
         date: new Date("2022-08-14"),
-        productNameValues: TranslatableValues.createValues([
+        productName: new TranslatableValues([
             ["ja", "Myosotis"],
             ["en", "Myosotis"],
         ]),
-        partOfTheWorkValues: TranslatableValues.createValues([
+        partOfTheWork: new TranslatableValues([
             ["ja", "作詞・歌唱"],
             ["en", "Lyrics/Vocal"],
         ]),
         links: [
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Music Video"],
                     ["en", "Music Video"],
                 ]),
                 url: "https://youtu.be/vKp6LdALi0k",
             }),
             new CollaborationLinkMaster({
-                nameValues: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -306,14 +304,14 @@ const collaborationMasterData: CollaborationMaster[] = [
 
 export class EventLinkMaster {
     private url: string;
-    private nameValues: TranslatableValues;
-    constructor(props: {names: Map<SupportedLocale,string>, url: string}) {
-        this.nameValues = new TranslatableValues({values: props.names});
+    private name: TranslatableValues;
+    constructor(props: {name: TranslatableValues, url: string}) {
+        this.name = props.name;
         this.url = props.url;
     }
     getEventLink(locale: SupportedLocale): EventLink {
         return {
-            name: this.nameValues.getLocalizedValue(locale),
+            name: this.name.getLocalizedValue(locale),
             url: this.url,
         }
     }
@@ -321,21 +319,21 @@ export class EventLinkMaster {
 
 export class EventHistoryMaster {
     private date: Date;
-    private nameValues: TranslatableValues;
+    private name: TranslatableValues;
     private links: EventLinkMaster[];
     constructor(props: {
-        names: Map<SupportedLocale,string>,
+        name: TranslatableValues,
         date: Date,
         links?: EventLinkMaster[],
     }) {
-        this.nameValues = new TranslatableValues({values: props.names});
+        this.name = props.name;
         this.date = props.date;
         this.links = props.links || [];
     }
     getEventHistory(locale: SupportedLocale): EventHistory {
         return {
             date: this.date,
-            name: this.nameValues.getLocalizedValue(locale),
+            name: this.name.getLocalizedValue(locale),
             links: this.links.map((linkMaster) => {
                 return linkMaster.getEventLink(locale)    
             }),
@@ -346,42 +344,42 @@ export class EventHistoryMaster {
 const eventHistoryMasterData: EventHistoryMaster[] = [
     new EventHistoryMaster({
         date: new Date("2020-11-02"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "#ぶいっと"],
             ["en", "#Vtuber_Motto"]
         ]),
     }),
     new EventHistoryMaster({
         date: new Date("2020-12-04"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja",  "エンタス忘年会"],
             ["en", "Akihabara ENTAS year-end party"],
         ]),
     }),
     new EventHistoryMaster({
         date: new Date("2020-12-11"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "#ぶいっと"],
             ["en", "#Vtuber_Motto"],
         ]),
     }),
     new EventHistoryMaster({
         date: new Date("2021-07-31"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja" ,"VirtuaROCK FEST.vol.1"],
             ["en", "VirtuaROCK FEST.vol.1"],
         ]),
         links: [
             new EventLinkMaster({
                 url: "https://youtu.be/Kve3pP-KSek",
-                names: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "アーカイブ"],
                     ["en", "Live streaming archive"],
                 ]),
             }),
             new EventLinkMaster({
                 url: "https://youtu.be/VH0s6ngrVR4",
-                names: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "拠鳥きまゆ出演ダイジェスト"],
                     ["en", "Digest"],
                 ]),
@@ -390,21 +388,21 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
     }),
     new EventHistoryMaster({
         date: new Date("2021-08-07"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "VirtuaDive"],
             ["en", "VirtuaDive"],
         ]),
     }),
     new EventHistoryMaster({
         date: new Date("2021-11-20"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "#ぶいじゃむ vol.1"],
             ["en", "#V-jam vol.1 (Copy band sessions of major artists)"],
         ]),
         links: [
             new EventLinkMaster({
                 url: "https://youtu.be/57bW0nKoOOo",
-                names: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "アーカイブ"],
                     ["en", "Live streaming archive"],
                 ]),
@@ -413,28 +411,28 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
     }),
     new EventHistoryMaster({
         date: new Date("2021-12-31"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "エンタス大晦日"],
             ["en", "Akihabara ENTAS new year's eve party"],
         ]),
     }),
     new EventHistoryMaster({
         date: new Date("2022-07-16"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "エンタス夏祭り DAY1"],
             ["en", "Akihabara ENTAS summer festival DAY1"],
         ]),
     }),
     new EventHistoryMaster({
         date: new Date("2022-07-31"),
-        names: TranslatableValues.createValues([
+        name: new TranslatableValues([
             ["ja", "VirtuaROCK FEST. vol.2 DAY2"],
             ["en", "VirtuaROCK FEST. vol.2 DAY2"],
         ]),
         links: [
             new EventLinkMaster({
                 url: "https://youtu.be/b17k1Gppzzk",
-                names: TranslatableValues.createValues([
+                name: new TranslatableValues([
                     ["ja", "アーカイブ"],
                     ["en", "Live streaming archive"]
                 ]),

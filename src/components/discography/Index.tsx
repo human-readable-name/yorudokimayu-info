@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductSummary } from "../../entities/discography/Product";
+import { ProductSummary } from "../../services/discography/ProductService"; 
 import PageTitle from "../common/PageTitle";
 import ProductCard from "./ProductCard";
 

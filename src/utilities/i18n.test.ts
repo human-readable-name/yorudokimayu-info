@@ -1,4 +1,3 @@
-import { SupportedLocale } from "../constants/i18n";
 import { ensureSupportedLocale } from "./i18n";
 
 describe('ensureSupportedLocale', () => {

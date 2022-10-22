@@ -1,4 +1,4 @@
-import { SupportedLocale } from "../../constants/i18n";
+import { TranslatableValues } from "../i18n/TranslatableValues";
 import { 
     japaneseProfile, englishProfile, InMemoryBiographyService, EventLinkMaster, EventHistoryMaster, CollaborationLinkMaster, CollaborationMaster 
 } from "./InMemoryBiographyService";
@@ -8,14 +8,20 @@ describe('CollaborationLinkMaster', () => {
         test('TuneCoreでなければそのまま', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://youtu.be/ZVsIPmfkWAg",
-                nameValues: new Map<SupportedLocale, string>(),
+                name: new TranslatableValues([
+                    ["ja", "日本語"],
+                    ["en", "English"],
+                ]),
             });
             expect(master.getUrl("ja")).toBe("https://youtu.be/ZVsIPmfkWAg")
         });
         test('TuneCoreの場合はlangのクエリパラメータを付ける', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://linkco.re/7BmE5qH1",
-                nameValues: new Map<SupportedLocale, string>(),
+                name: new TranslatableValues([
+                    ["ja", "日本語"],
+                    ["en", "English"],
+                ]),
             });
             expect(master.getUrl("ja")).toBe("https://linkco.re/7BmE5qH1?lang=ja");
             expect(master.getUrl("en")).toBe("https://linkco.re/7BmE5qH1?lang=en");
@@ -25,7 +31,7 @@ describe('CollaborationLinkMaster', () => {
         test('ViewModelに変換できる', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://linkco.re/7BmE5qH1",
-                nameValues: new Map<SupportedLocale, string>([
+                name: new TranslatableValues([
                     ["ja", "配信・ダウンロード"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -51,29 +57,29 @@ describe('CollaborationMaster', () => {
     describe('getCollaboration', () => {
         const master = new CollaborationMaster({
             date: new Date("2021-04-01"),
-            productNameValues: new Map<SupportedLocale,string>([
+            productName: new TranslatableValues([
                 ["ja", "Bloomer"],
                 ["en", "Bloomer"],
             ]),
-            productArtistValues: new Map<SupportedLocale,string>([
+            productArtist: new TranslatableValues([
                 ["ja", "#ぶいっと"],
                 ["en", "#Vtuber_Motto"],
             ]),
-            partOfTheWorkValues: new Map<SupportedLocale,string>([
+            partOfTheWork: new TranslatableValues([
                 ["ja", "歌唱"],
                 ["en", "Vocal"],
             ]),
             links: [
                 new CollaborationLinkMaster({
                     url: "https://youtu.be/ZVsIPmfkWAg",
-                    nameValues: new Map<SupportedLocale,string>([
+                    name: new TranslatableValues([
                         ["ja", "ミュージックビデオ"],
                         ["en", "Music video"],
                     ]),
                 }),
                 new CollaborationLinkMaster({
                     url: "https://linkco.re/7BmE5qH1",
-                    nameValues: new Map<SupportedLocale,string>([
+                    name: new TranslatableValues([
                         ["ja", "配信・ダウンロード"],
                         ["en", "Subscription / Download"]
                     ]),
@@ -113,7 +119,7 @@ describe('EventLinkMaster', () => {
     test('getEventLink', () => {
         const master = new EventLinkMaster({
             url: "https://youtu.be/Kve3pP-KSek",
-            names: new Map<SupportedLocale,string>([
+            name: new TranslatableValues([
                 ["ja", "アーカイブ"],
                 ["en", "Live streaming archive"],
             ]),
@@ -133,14 +139,14 @@ describe('EventHistoryMaster', () => {
     test('getEventHistory', () => {
         const master = new EventHistoryMaster({
             date: new Date("2021-11-20"),
-            names: new Map<SupportedLocale,string>([
+            name: new TranslatableValues([
                 ["ja", "#ぶいじゃむ vol.1"],
                 ["en", "#V-jam vol.1 (Copy band sessions of major artists)"],
             ]),
             links: [
                 new EventLinkMaster({
                     url: "https://youtu.be/57bW0nKoOOo",
-                    names: new Map<SupportedLocale,string>([
+                    name: new TranslatableValues([
                         ["ja", "アーカイブ"],
                         ["en", "Live streaming archive"],
                     ]),

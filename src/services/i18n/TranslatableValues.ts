@@ -2,8 +2,8 @@ import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 
 export class TranslatableValues {
     protected values: Map<SupportedLocale,string>;
-    constructor(props: {values: Map<SupportedLocale,string>}) {
-        this.values = props.values;
+    constructor(candidates: [SupportedLocale, string][]) {
+        this.values = TranslatableValues.createValues(candidates);
     }
     getLocalizedValue(locale: SupportedLocale): string {
         const result = this.values.get(locale)

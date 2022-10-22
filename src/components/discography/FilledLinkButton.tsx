@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkItem } from "../../entities/discography/Product";
+import { LinkItem } from "../../services/discography/ProductService";
 
 type Props = {
     linkItem: LinkItem;
