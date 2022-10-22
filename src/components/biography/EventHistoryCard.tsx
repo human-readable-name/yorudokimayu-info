@@ -1,7 +1,7 @@
 import React from "react";
 import DateLabel from "./DateLabel";
 import EventLinkItem from "./EventLinkItem";
-import { EventHistory } from "../../entities/biography/EventHistory";
+import { EventHistory } from "../../services/biography/BiographyService";
 
 type Props = {
     eventHistory: EventHistory;

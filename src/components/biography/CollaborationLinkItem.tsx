@@ -1,5 +1,5 @@
 import React from "react";
-import { CollaborationLink } from "../../entities/biography/Collaboration";
+import { CollaborationLink } from "../../services/biography/BiographyService";
 
 type Props = {
     collaborationLink: CollaborationLink;

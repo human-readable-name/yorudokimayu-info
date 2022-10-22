@@ -6,11 +6,8 @@ import SectionTitle from "../../components/common/SectionTitle";
 import OutlookTweet from "./OutlookTweet";
 import SnsLinkItem from "./SnsLinkItem";
 
-import { Profile } from "../../entities/biography/Profile";
-
 import externalLink from "../../constants/externalLink";
-import { EventHistory } from "../../entities/biography/EventHistory";
-import { Collaboration } from "../../entities/biography/Collaboration";
+import { Profile, EventHistory, Collaboration } from "../../services/biography/BiographyService";
 
 export type Props = {
     profile: Profile;
