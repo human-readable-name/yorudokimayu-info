@@ -85,30 +85,30 @@ export class ProductMaster {
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
         id: "16th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "PENGUIN REALISE"],
             ["en", "PENGUIN REALISE"],
         ]),
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2022-10-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "活動開始2周年記念"],
             ["en", "second anniversary song"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
                 ["en", "Music/Lyrics Matchy"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "PENGUIN REALISE"],
                     ["en", "PENGUIN REALISE"],
                 ]), 
@@ -117,14 +117,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/vm0mu1Ac"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -134,7 +134,7 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "15th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "夏色スタートライン"],
             ["en", "NatsuiroStartline"],
         ]),
@@ -142,18 +142,18 @@ const productMasterData: ProductMaster[] = [
         genre: "Electronic",
         dateOfRelease: new Date("2022-08-31"),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics めかおん"],
                 ["en", "Music/Lyrics Mekaon"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "夏色スタートライン"],
                     ["en", "NatsuiroStartline"],
                 ]), 
@@ -162,14 +162,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/5G3y37dh"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -179,55 +179,55 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "1st-ep",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "sparkler"],
             ["en", "sparkler"],
         ]),
         kind: "EP",
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "1st EP M3-2022春"],
             ["en", "1st EP M3-2022-Spring"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作曲・Tr2作詞 マッチ"],
                 ["en", "Music・Tr2Lyrics Matchy"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Tr5作詞 esora uma [浮遊信号]"],
                 ["en", "Tr5Lyrics esora uma [Fuyu-Singo]"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Tr3Tr4Tr6作詞・Vocal 拠鳥きまゆ"],
                 ["en", "Tr3,4,6Lyrics/Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Crossfade Demo"], 
                     ["en", "Crossfade Demo"],
                 ]),
                 url: "https://youtu.be/FmVb7r21Z-M"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "sparkler"], 
                     ["en", "sparkler"],
                 ]),
                 url: "https://youtu.be/YUH6igD6brE"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Enchanted"],
                     ["en", "Enchanted"],
                 ]), 
                 url: "https://youtu.be/RHlFEVZdsrs"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "CUTE AGGRESSION!!!!"],
                     ["en", "CUTE AGGRESSION!!!!"],
                 ]), 
@@ -236,7 +236,7 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -246,30 +246,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "14th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "うたかたとかして"],
             ["en", "Utakatatokashite"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-12-28"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "14th single"],
             ["en", "14th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics esora uma [浮遊信号]"],
                 ["en", "Music/Lyrics esora uma [Fuyu-Singo]"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "うたかたとかして"],
                     ["en", "Utakatatokashite"],
                 ]), 
@@ -278,14 +278,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/7qE6cdZz"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -294,7 +294,7 @@ const productMasterData: ProductMaster[] = [
         ],
         supplementalInformationLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "漫画・MV用アートワーク"],
                     ["en", "Artworks"],
                 ]), 
@@ -304,30 +304,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "13th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "KARISOME BREAKER"],
             ["en", "KARISOME BREAKER"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-12-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "13th single"],
             ["en", "13th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics mampuku"],
                 ["en", "Music/Lyrics mampuku"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "KARISOME BREAKER"],
                     ["en", "KARISOME BREAKER"],
                 ]), 
@@ -336,14 +336,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/mM5ds6zM"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -353,34 +353,34 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "12th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "レオニズの降る夜に"],
             ["en", "Leonids Reminds Me of the Starry Night"],
         ]),
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-11-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "12th single"],
             ["en", "12th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
                 ["en", "Music/Lyrics Matchy"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "ベース 四谷ゲンロク"],
                 ["en", "Bass performance Genroku Yotsuya"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "レオニズの降る夜に"],
                     ["en", "Leonids Reminds Me of the Starry Night"],
                 ]), 
@@ -389,14 +389,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/sd6XHQxB"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -406,34 +406,34 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "11th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "PENGUIN EMERGENCE"],
             ["en", "PENGUIN EMERGENCE"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-10-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "11th single 活動開始1周年記念"],
             ["en", "11th single / first anniversary song"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作曲 胡桃もよ"],
                 ["en", "Music MoyoKurumi"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作詞 朝比奈こん"],
                 ["en", "Lyrics KonAsahina"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "PENGUIN EMERGENCE"],
                     ["en", "PENGUIN EMERGENCE"],
                 ]), 
@@ -442,14 +442,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/D53C67Bu"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -459,30 +459,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "10th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "Memorable"],
             ["en", "Memorable"],
         ]),
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-10-01"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "10th single"],
             ["en", "10th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
                 ["en", "Music/Lyrics Matchy"],
             ]), 
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]), 
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Memorable"],
                     ["en", "Memorable"],
                 ]), 
@@ -491,14 +491,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),  
                 url: "https://linkco.re/H9494e5u"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]),  
@@ -508,30 +508,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "9th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "境界のアイリス"],
             ["en", "Kyoukai no Iris"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-09-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "9th single"],
             ["en", "9th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics r0y"],
                 ["en", "Music/Lyrics r0y"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "境界のアイリス"],
                     ["en", "Kyoukai no Iris"],
                 ]), 
@@ -540,14 +540,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/c78bSYh9"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -557,35 +557,35 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "8th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "ロンリーディーバ"],
             ["en", "Lonely Diva"],
         ]), 
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-08-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "8th single"],
             ["en", "8th single"],
         ]), 
 
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics アザミ"],
                 ["en", "Music/Lyrics Azami"],
             ]), 
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "ベース なおちゃん"],
                 ["en", "Bass nao"],
             ]), 
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]), 
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "ロンリーディーバ"],
                     ["en", "Lonely Diva"],
                 ]), 
@@ -594,14 +594,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),  
                 url: "https://linkco.re/pCpgzUMU"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]),  
@@ -611,30 +611,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "7th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "Dear My Enemy"],
             ["en", "Dear My Enemy"],
         ]), 
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-07-25"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "7th single"],
             ["en", "7th single"],
         ]), 
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
                 ["en", "Music/Lyrics Matchy"],
             ]), 
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]), 
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Dear My Enemy"],
                     ["en", "Dear My Enemy"],
                 ]), 
@@ -643,14 +643,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),  
                 url: "https://linkco.re/AvPtrznD"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]),  
@@ -660,30 +660,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "6th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "希求モーニング"],
             ["en", "Kikyu Morinig"],
         ]),
         kind: "Single",
         genre: "Electronic",
         dateOfRelease: new Date("2021-07-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "6th single"],
             ["en", "6th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics picco"],
                 ["en", "Music/Lyrics picco"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "希求モーニング"],
                     ["en", "Kikyu Morinig"],
                 ]), 
@@ -692,14 +692,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/0Rz8ACCd"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -709,34 +709,34 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "5th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "茜色の公園で"],
             ["en", "AkaneironoKouende"],
         ]),
         kind: "Single",
         genre: "Pop",
         dateOfRelease: new Date("2021-06-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "5th single"],
             ["en", "5th single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作曲 sumeshiii a.k.a.バーチャルお寿司"],
                 ["en", "Music sumeshiii a.k.a.virtual osushi"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作詞 内野達哉"],
                 ["en", "Lyrics Tatsuya Uchino"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "茜色の公園で"],
                     ["en", "AkaneironoKouende"],
                 ]), 
@@ -745,14 +745,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/HY6DrPGd"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -762,34 +762,34 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "4th-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "RULER"],
             ["en", "RULER"],
         ]), 
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-05-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "4th single"],
             ["en", "4th single"],
         ]), 
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作曲 天野ドウジ [カクレゴ]"],
                 ["en", "Music Douji Amano [KAKULEGO]"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "ベース 四谷ゲンロク"],
                 ["en", "Bass Genroku Yotsuya"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作詞・Vocal 拠鳥きまゆ"],
                 ["en", "Lyrics/Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "RULER"],
                     ["en", "RULER"],
                 ]), 
@@ -798,14 +798,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
                 url: "https://linkco.re/vRVnqU5v"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]),  
@@ -815,30 +815,30 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "3rd-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "カラの鼓動はソラになる"],
             ["en", "karano kodouha soraninaru"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-04-25"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "3rd single"],
             ["en", "3rd single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics esora uma [浮遊信号]"],
                 ["en", "Music/Lyrics esora uma [Fuyu-Singo]"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "カラの鼓動はソラになる"],
                     ["en", "karano kodouha soraninaru"],
                 ]), 
@@ -847,14 +847,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/eGzYDu1Y"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -864,34 +864,34 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "2nd-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "真夜中メロウライン"],
             ["en", "mayonaka melowline"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-04-11"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "2nd single"],
             ["en", "2nd single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Music/Lyrics 隣町本舗"],
                 ["en", "Music/Lyrics tonarimachi-honpo"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "ラップ作詞 Fra [BOOGEY VOXX]"],
                 ["en", "Rap Lyrics Fra [BOOGEY VOXX]"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "真夜中メロウライン"],
                     ["en", "mayonaka melowline"],
                 ]), 
@@ -900,14 +900,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/NQZabT0H"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 
@@ -916,7 +916,7 @@ const productMasterData: ProductMaster[] = [
         ],
         supplementalInformationLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "ライナーノート"],
                     ["en", "Liner note"],
                 ]), 
@@ -926,34 +926,34 @@ const productMasterData: ProductMaster[] = [
     }),
     new ProductMaster({
         id: "1st-single",
-        name: new TranslatableValues([
+        name: TranslatableValues.create([
             ["ja", "Penguin Nova"],
             ["en", "Penguin Nova"],
         ]),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2020-10-10"),
-        description: new TranslatableValues([
+        description: TranslatableValues.create([
             ["ja", "1st single デビュー曲"],
             ["en", "1st single"],
         ]),
         credits: [
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作曲 胡桃もよ"],
                 ["en", "Music MoyoKurumi"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "作詞 朝比奈こん"],
                 ["en", "Lyrics KonAsahina"],
             ]),
-            new TranslatableValues([
+            TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Penguin Nova"],
                     ["en", "Penguin Nova"],
                 ]), 
@@ -962,14 +962,14 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]), 
                 url: "https://linkco.re/XRHzUnrA"
             }),
             new ProductLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Official store"],
                     ["en", "Official store"],
                 ]), 

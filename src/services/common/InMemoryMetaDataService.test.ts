@@ -1,59 +1,70 @@
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { InMemoryMetaDataService } from "./InMemoryMetaDataService";
 
 describe('InMemoryMetaDataService', () => {
     const service = new InMemoryMetaDataService();
-    test('getHomeMeta', () => {
-        expect(
-            service.getHomeMeta('ja')
-        ).toEqual(
-            {
-                title: "拠鳥きまゆアーティスト情報まとめ",
-                description: "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報",
-                siteName: "拠鳥きまゆアーティスト情報まとめ",
-                locale: "ja_JP",
-                canonical: "https://kimayu.rocks/",
-                languageAlternates: [
-                    {
-                        hrefLang: "x-default",
-                        href: "https://kimayu.rocks/",
-                    },
-                    {
-                        hrefLang: "ja",
-                        href: "https://kimayu.rocks/",
-                    },
-                    {
-                        hrefLang: "en",
-                        href: "https://kimayu.rocks/en/",
-                    },
-                ],
-            }
-        );
-        expect(
-            service.getHomeMeta('en')
-        ).toEqual(
-            {
-                title: "Kimayu Yorudo Information",
-                description: "This website is a collection of links about KimayuYorudo's music and live performances.",
-                siteName: "Kimayu Yorudo Information",
-                locale: "en_US",
-                canonical: "https://kimayu.rocks/en/",
-                languageAlternates: [
-                    {
-                        hrefLang: "x-default",
-                        href: "https://kimayu.rocks/",
-                    },
-                    {
-                        hrefLang: "ja",
-                        href: "https://kimayu.rocks/",
-                    },
-                    {
-                        hrefLang: "en",
-                        href: "https://kimayu.rocks/en/",
-                    },
-                ],
-            }
-        );
+    describe('getHomeMeta', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
+            expect(() => {
+                service.getHomeMeta(locale);
+            }).not.toThrow();
+        });
+        test('正しく翻訳できてること', () => {
+            expect(
+                service.getHomeMeta('ja')
+            ).toEqual(
+                {
+                    title: "拠鳥きまゆアーティスト情報まとめ",
+                    description: "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報",
+                    siteName: "拠鳥きまゆアーティスト情報まとめ",
+                    locale: "ja_JP",
+                    canonical: "https://kimayu.rocks/",
+                    languageAlternates: [
+                        {
+                            hrefLang: "x-default",
+                            href: "https://kimayu.rocks/",
+                        },
+                        {
+                            hrefLang: "ja",
+                            href: "https://kimayu.rocks/",
+                        },
+                        {
+                            hrefLang: "en",
+                            href: "https://kimayu.rocks/en/",
+                        },
+                    ],
+                }
+            );
+            expect(
+                service.getHomeMeta('en')
+            ).toEqual(
+                {
+                    title: "Kimayu Yorudo Information",
+                    description: "This website is a collection of links about KimayuYorudo's music and live performances.",
+                    siteName: "Kimayu Yorudo Information",
+                    locale: "en_US",
+                    canonical: "https://kimayu.rocks/en/",
+                    languageAlternates: [
+                        {
+                            hrefLang: "x-default",
+                            href: "https://kimayu.rocks/",
+                        },
+                        {
+                            hrefLang: "ja",
+                            href: "https://kimayu.rocks/",
+                        },
+                        {
+                            hrefLang: "en",
+                            href: "https://kimayu.rocks/en/",
+                        },
+                    ],
+                }
+            );
+        });
+
     });
+    
+    
     test('getBiographyMeta', () => {
         expect(
             service.getBiographyMeta('ja')

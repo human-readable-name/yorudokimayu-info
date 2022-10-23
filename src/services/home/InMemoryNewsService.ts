@@ -36,20 +36,20 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: new TranslatableValues([
+        text: TranslatableValues.create([
             ["ja", "2022秋M3 (2022-10-30) パンケーキキャッツ 1stEP ノンストップエモーション！ 1曲担当"],
             ["en", "M32022Autumn (2022-10-30) pancakecats 1stEP Non-Stop Emotion!"],
         ]),
         links: [
             new NewsLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "特設サイト"],
                     ["en", "Web site"],
                 ]), 
                 url: "https://pccs-vtuber.studio.site/",
             }),
             new NewsLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "クロスフェードデモ"],
                     ["en", "Crossfade Demo"],
                 ]), 
@@ -58,13 +58,13 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),
     new NewsMaster({
-        text: new TranslatableValues([
+        text: TranslatableValues.create([
             ["ja", "柚子花主催LIVE -Planet Station- STAGE.5 (2022-11-26) 出演予定"],
             ["en", "LIVE sponsored by Yuzuha -Planet Station- STAGE.5 (2022-11-26) "],
         ]),
         links: [
             new NewsLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.create([
                     ["ja", "Z-aN"],
                     ["en", "Z-aN"],
                 ]), 

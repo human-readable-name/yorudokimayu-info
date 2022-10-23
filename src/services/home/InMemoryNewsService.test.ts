@@ -1,4 +1,4 @@
-import { SUPPORTED_LOCALES } from "../../constants/i18n";
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
 import { InMemoryNewsService, NewsLinkMaster, NewsMaster } from "./InMemoryNewsService";
 
@@ -6,7 +6,7 @@ describe('NewsLinkMaster', () => {
     describe('getNewsItemLink', () => {
         test('ViewModelに変換できること', () => {
             const master = new NewsLinkMaster({
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "日本語"],
                     ["en", "English"],
                 ]),
@@ -28,20 +28,20 @@ describe('NewsMaster', () => {
     describe('getNewsItem', () => {
         test('ViewModelに変換できること', () => {
             const master = new NewsMaster({
-                text: new TranslatableValues([
+                text: TranslatableValues.createForTest([
                     ["ja", "2022秋M3 (2022-10-30) パンケーキキャッツ 1stEP ノンストップエモーション！ 1曲担当"],
                     ["en", "M32022Autumn (2022-10-30) pancakecats 1stEP Non-Stop Emotion!"],
                 ]),
                 links: [
                     new NewsLinkMaster({
-                        name: new TranslatableValues([
+                        name: TranslatableValues.createForTest([
                             ["ja", "特設サイト"],
                             ["en", "Web site"],
                         ]), 
                         url: "https://pccs-vtuber.studio.site/",
                     }),
                     new NewsLinkMaster({
-                        name: new TranslatableValues([
+                        name: TranslatableValues.createForTest([
                             ["ja", "クロスフェードデモ"],
                             ["en", "Crossfade Demo"],
                         ]), 
@@ -68,14 +68,12 @@ describe('NewsMaster', () => {
 });
 
 describe('InMemoryNewsService', () => {
+    const service = new InMemoryNewsService();
     describe('listNews', () => {
-        test('翻訳漏れの実行時エラーにならないことを担保', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
             expect(() => {
-                const service = new InMemoryNewsService();
-                SUPPORTED_LOCALES.forEach((locale) => {
-                    service.listNews(locale);
-                });
-            });
+                service.listNews(locale);
+            }).not.toThrow();
         });
     });
 });
