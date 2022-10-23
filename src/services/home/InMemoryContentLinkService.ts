@@ -4,7 +4,7 @@ import externalLink from "../../constants/externalLink";
 import { TranslatableValues } from "../i18n/TranslatableValues";
 import { ContentLink } from "./ContentLinkService";
 
-class ContentLinkMaster {
+export class ContentLinkMaster {
     private title: TranslatableValues;
     private caption: TranslatableValues;
     private url: string;

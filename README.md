@@ -33,7 +33,7 @@
 * アクセス解析
 * 譲渡・運営移管が楽にできるようにする
 
-# 設計
+# 基本設計
 
 ## サイトマップ
 
@@ -80,41 +80,7 @@
         * 英語の場合はパスは `/en/*`
         * ただし、デフォルト言語は 日本語 でこの場合だけパスは ja省略して `/*`
 
-# 開発技術
 
-* Webフレームワーク Next.js
-    * 動的要素は必要ないはずなのでStaticSiteGeneratorを使うだけ
-* 言語 TypeScript
-* CSSフレームワーク Tailwind
-    * スタイルのスコープはコンポーネント内に閉じる (グローバルなCSSは極力書かない)
+# 開発者向け情報
 
-https://nextjs.org/docs/api-reference/create-next-app を使ってひな形を作り、
-apiディレクトリを削除してsrcディレクトリにpagesとstylesを移動している。
-
-## ローカル開発環境
-
-* Node16が動けばなんでもいい
-* 起動コマンドは[package.json](./package.json)を見てください
-    * コンポーネント開発は [Storybook](https://storybook.js.org/) 使ってください
-* Dockerを使う場合は、[docker-compose.yml](./docker-compose.yml)を見てください
-
-### WindowsでVisualStudioCodeからDockerを使う場合の具体的な手順
-
-実行環境の準備 (1回だけやればOK)
-
-* [Docker for Windowsをインストール](https://docs.docker.jp/docker-for-windows/install.html)
-* [VisualStudioCodeをインストール](https://code.visualstudio.com/)
-* VisualStudioCodeに[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)と[Remote - Containers](https://marketplace.visualstudio.com)の拡張を入れる
-
-
-手元のPCで開発途中のページを閲覧したい場合
-
-* VisualStudioCodeのTERMINALから `docker-compose run local install` で必要なパッケージのインストール
-* VisualStudioCodeのTERMINALから `docker-compose up` でNext.jsの開発サーバを起動
-* ブラウザから [http://localhost:3000](http://localhost:3000) にアクセス
-
-# インフラ
-
-- AWS を利用
-    - HostingはAmplify
-    - ドメインは取得も含めてRoute53
+[SPEC.md](./SPEC.md) を参照

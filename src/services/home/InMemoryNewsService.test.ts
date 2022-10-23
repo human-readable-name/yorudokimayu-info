@@ -75,7 +75,7 @@ describe('InMemoryNewsService', () => {
                 SUPPORTED_LOCALES.forEach((locale) => {
                     service.listNews(locale);
                 });
-            });
+            }).not.toThrow();
         });
     });
 });
