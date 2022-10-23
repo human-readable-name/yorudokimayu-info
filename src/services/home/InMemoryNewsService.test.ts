@@ -1,4 +1,4 @@
-import { SUPPORTED_LOCALES } from "../../constants/i18n";
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
 import { InMemoryNewsService, NewsLinkMaster, NewsMaster } from "./InMemoryNewsService";
 
@@ -68,13 +68,11 @@ describe('NewsMaster', () => {
 });
 
 describe('InMemoryNewsService', () => {
+    const service = new InMemoryNewsService();
     describe('listNews', () => {
-        test('翻訳漏れの実行時エラーにならないことを担保', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
             expect(() => {
-                const service = new InMemoryNewsService();
-                SUPPORTED_LOCALES.forEach((locale) => {
-                    service.listNews(locale);
-                });
+                service.listNews(locale);
             }).not.toThrow();
         });
     });

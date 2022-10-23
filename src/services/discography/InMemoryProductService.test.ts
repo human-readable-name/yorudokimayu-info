@@ -1,3 +1,4 @@
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
 import { InMemoryProductService, ProductLinkMaster } from "./InMemoryProductService"
 
@@ -48,10 +49,14 @@ describe('ProductLinkMaster', () => {
 });
 
 describe('InMemoryProductService', () => {
+    const service = new InMemoryProductService();
     describe('listProductSummaries', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
+            expect(() => {
+                service.listProductSummaries(locale);
+            }).not.toThrow();
+        });
         test('正しく翻訳できてること', () => {
-            const service = new InMemoryProductService();
-        
             const japaneseCredits = service.listProductSummaries("ja").flatMap((summary) => summary.credits).join("");
             expect(
                 japaneseCredits

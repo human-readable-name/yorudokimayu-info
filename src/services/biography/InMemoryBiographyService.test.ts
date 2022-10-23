@@ -1,3 +1,4 @@
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
 import { 
     japaneseProfile, englishProfile, InMemoryBiographyService, EventLinkMaster, EventHistoryMaster, CollaborationLinkMaster, CollaborationMaster 
@@ -177,29 +178,26 @@ describe('EventHistoryMaster', () => {
 });
 
 describe('InMemoryBiographyService', () => {
-    test('listCollaborations', () => {
-        expect(() => {
-            // 翻訳漏れに例外を投げるようになっているので、そうなってないことを担保
-            const service = new InMemoryBiographyService();
-            service.listCollaborations("ja");
-            service.listCollaborations("en");
-        }).not.toThrow();
+    const service = new InMemoryBiographyService();
+    describe('listCollaborations', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
+            expect(() => {
+                service.listCollaborations(locale);
+            }).not.toThrow();
+        });
     });
-    test('listEventHistories', () => {
-        expect(() => {
-            // 翻訳漏れに例外を投げるようになっているので、そうなってないことを担保
-            const service = new InMemoryBiographyService();
-            service.listEventHistories("ja");
-            service.listEventHistories("en");
-        }).not.toThrow();
+    describe('listEventHistories', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
+            expect(() => {
+                service.listEventHistories(locale);
+            }).not.toThrow();
+        });
     });
-    test('getProfile', () => {
-        const service = new InMemoryBiographyService();
-        expect(
-            service.getProfile("ja")
-        ).toEqual(japaneseProfile);
-        expect(
-            service.getProfile("en")
-        ).toEqual(englishProfile);
+    describe('getProfile', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
+            expect(() => {
+                service.getProfile(locale);
+            }).not.toThrow();
+        });
     });
 });

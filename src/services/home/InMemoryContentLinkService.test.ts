@@ -1,4 +1,4 @@
-import { SUPPORTED_LOCALES } from "../../constants/i18n";
+import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
 import { ContentLinkMaster, InMemoryContentLinkService } from "./InMemoryContentLinkService";
 
@@ -31,13 +31,11 @@ describe('ContentLinkMaster', () => {
 })
 
 describe('InMemoryContentLinkService', () => {
+    const service = new InMemoryContentLinkService();
     describe('listContentLinks', () => {
-        test('翻訳漏れの実行時エラーにならないことを担保', () => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
             expect(() => {
-                const service = new InMemoryContentLinkService();
-                SUPPORTED_LOCALES.forEach((locale) => {
-                    service.listContentLinks(locale);
-                });
+                service.listContentLinks(locale);
             }).not.toThrow();
         });
    }); 
