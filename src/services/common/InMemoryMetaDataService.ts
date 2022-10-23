@@ -5,11 +5,11 @@ import { TranslatableValues } from "../i18n/TranslatableValues";
 
 const baseUrl = "https://kimayu.rocks";
 
-const siteName = new TranslatableValues([
+const siteName = TranslatableValues.create([
     ["ja",  "拠鳥きまゆアーティスト情報まとめ"],
     ["en", "Kimayu Yorudo Information"],
 ]);
-const siteDescription = new TranslatableValues([
+const siteDescription = TranslatableValues.create([
     ["ja", "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報をまとめています"],
     ["en", "This website is a collection of links about KimayuYorudo's music and live performances."],
 ]);
@@ -61,11 +61,11 @@ class MetaDataMaster {
 }
 
 const homeMetaDataMaster = new MetaDataMaster({
-    title: new TranslatableValues([
+    title: TranslatableValues.create([
         ["ja", "拠鳥きまゆアーティスト情報まとめ"],
         ["en", "Kimayu Yorudo Information"],
     ]),
-    description: new TranslatableValues([
+    description: TranslatableValues.create([
         ["ja", "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報"],
         ["en", "This website is a collection of links about KimayuYorudo's music and live performances."],
     ]),
@@ -73,11 +73,11 @@ const homeMetaDataMaster = new MetaDataMaster({
 });
 
 const biographyMetaDataMaster = new MetaDataMaster({
-    title: new TranslatableValues([
+    title: TranslatableValues.create([
         ["ja", "拠鳥きまゆ Biography"],
         ["en", "Kimayu Yorudo Biography"],
     ]),
-    description: new TranslatableValues([
+    description: TranslatableValues.create([
         ["ja", "アーティスト情報・ライブ出演歴・コラボ情報"],
         ["en", "Artist introduction, live performance history, etc"],
     ]),
@@ -85,11 +85,11 @@ const biographyMetaDataMaster = new MetaDataMaster({
 }); 
 
 const discographyMetaDataMaster = new MetaDataMaster({
-    title: new TranslatableValues([
+    title: TranslatableValues.create([
         ["ja", "拠鳥きまゆ Discography"],
         ["en", "Kimayu Yorudo Discograpy"],
     ]),
-    description: new TranslatableValues([
+    description: TranslatableValues.create([
         ["ja", "楽曲リリース情報やMVなど関連情報へのリンク"],
         ["en", "Released songs, music videos, and other related information"],
     ]),

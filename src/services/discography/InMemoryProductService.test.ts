@@ -6,7 +6,7 @@ describe('ProductLinkMaster', () => {
         test('TuneCoreでなければそのまま', () => {
             const master = new ProductLinkMaster({
                 url: "https://booth.pm/ja/items/4220956",
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "日本語"],
                     ["en", "English"],
                 ]),
@@ -16,7 +16,7 @@ describe('ProductLinkMaster', () => {
         test('TuneCoreの場合はlangのクエリパラメータを付ける', () => {
             const master = new ProductLinkMaster({
                 url: "https://linkco.re/vm0mu1Ac",
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "日本語"],
                     ["en", "English"],
                 ]),
@@ -30,7 +30,7 @@ describe('ProductLinkMaster', () => {
         test('ViewModelに変換できる', () => {
             const master = new ProductLinkMaster({
                 url: "https://linkco.re/vm0mu1Ac",
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "配信・ダウンロード"],
                     ["en", "Subscription / Download"],
                 ]),

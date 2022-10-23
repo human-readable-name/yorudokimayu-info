@@ -8,7 +8,7 @@ describe('CollaborationLinkMaster', () => {
         test('TuneCoreでなければそのまま', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://youtu.be/ZVsIPmfkWAg",
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "日本語"],
                     ["en", "English"],
                 ]),
@@ -18,7 +18,7 @@ describe('CollaborationLinkMaster', () => {
         test('TuneCoreの場合はlangのクエリパラメータを付ける', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://linkco.re/7BmE5qH1",
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "日本語"],
                     ["en", "English"],
                 ]),
@@ -31,7 +31,7 @@ describe('CollaborationLinkMaster', () => {
         test('ViewModelに変換できる', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://linkco.re/7BmE5qH1",
-                name: new TranslatableValues([
+                name: TranslatableValues.createForTest([
                     ["ja", "配信・ダウンロード"],
                     ["en", "Subscription / Download"],
                 ]),
@@ -57,29 +57,29 @@ describe('CollaborationMaster', () => {
     describe('getCollaboration', () => {
         const master = new CollaborationMaster({
             date: new Date("2021-04-01"),
-            productName: new TranslatableValues([
+            productName: TranslatableValues.createForTest([
                 ["ja", "Bloomer"],
                 ["en", "Bloomer"],
             ]),
-            productArtist: new TranslatableValues([
+            productArtist: TranslatableValues.createForTest([
                 ["ja", "#ぶいっと"],
                 ["en", "#Vtuber_Motto"],
             ]),
-            partOfTheWork: new TranslatableValues([
+            partOfTheWork: TranslatableValues.createForTest([
                 ["ja", "歌唱"],
                 ["en", "Vocal"],
             ]),
             links: [
                 new CollaborationLinkMaster({
                     url: "https://youtu.be/ZVsIPmfkWAg",
-                    name: new TranslatableValues([
+                    name: TranslatableValues.createForTest([
                         ["ja", "ミュージックビデオ"],
                         ["en", "Music video"],
                     ]),
                 }),
                 new CollaborationLinkMaster({
                     url: "https://linkco.re/7BmE5qH1",
-                    name: new TranslatableValues([
+                    name: TranslatableValues.createForTest([
                         ["ja", "配信・ダウンロード"],
                         ["en", "Subscription / Download"]
                     ]),
@@ -119,7 +119,7 @@ describe('EventLinkMaster', () => {
     test('getEventLink', () => {
         const master = new EventLinkMaster({
             url: "https://youtu.be/Kve3pP-KSek",
-            name: new TranslatableValues([
+            name: TranslatableValues.createForTest([
                 ["ja", "アーカイブ"],
                 ["en", "Live streaming archive"],
             ]),
@@ -139,14 +139,14 @@ describe('EventHistoryMaster', () => {
     test('getEventHistory', () => {
         const master = new EventHistoryMaster({
             date: new Date("2021-11-20"),
-            name: new TranslatableValues([
+            name: TranslatableValues.createForTest([
                 ["ja", "#ぶいじゃむ vol.1"],
                 ["en", "#V-jam vol.1 (Copy band sessions of major artists)"],
             ]),
             links: [
                 new EventLinkMaster({
                     url: "https://youtu.be/57bW0nKoOOo",
-                    name: new TranslatableValues([
+                    name: TranslatableValues.createForTest([
                         ["ja", "アーカイブ"],
                         ["en", "Live streaming archive"],
                     ]),
