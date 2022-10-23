@@ -48,6 +48,13 @@ const newsMasterData: NewsMaster[] = [
                 ]), 
                 url: "https://pccs-vtuber.studio.site/",
             }),
+            new NewsLinkMaster({
+                name: new TranslatableValues([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]), 
+                url: "https://youtu.be/stfsWwIFDtE",
+            }),
         ],
     }),
     new NewsMaster({
