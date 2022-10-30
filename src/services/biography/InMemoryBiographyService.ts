@@ -298,7 +298,34 @@ const collaborationMasterData: CollaborationMaster[] = [
                 url: "https://linkco.re/mTXg3aM2"
             })
         ],
-    })
+    }),
+    new CollaborationMaster({
+        date: new Date("2022-10-30"),
+        productName: TranslatableValues.create([
+            ["ja", "ノンストップエモーション！"],
+            ["en", "Non-Stop Emotion!"],
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "Tr2 ライトコンパス 歌唱"],
+            ["en", "Tr2 Vo"],
+        ]),
+        links: [
+            new CollaborationLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]), 
+                url: "https://pccs-vtuber.studio.site/",
+            }),
+            new CollaborationLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]), 
+                url: "https://youtu.be/stfsWwIFDtE",
+            }),
+        ],
+    }),
 ];
 
 export class EventLinkMaster {
