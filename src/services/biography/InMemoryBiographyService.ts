@@ -296,18 +296,18 @@ const collaborationMasterData: CollaborationMaster[] = [
                     ["en", "Subscription / Download"],
                 ]),
                 url: "https://linkco.re/mTXg3aM2"
-            })
+            }),
         ],
     }),
     new CollaborationMaster({
         date: new Date("2022-10-30"),
         productName: TranslatableValues.create([
-            ["ja", "ノンストップエモーション！"],
-            ["en", "Non-Stop Emotion!"],
+            ["ja", "パンケーキキャッツ ノンストップエモーション！"],
+            ["en", "PancakeCats Non-Stop Emotion!"],
         ]),
         partOfTheWork: TranslatableValues.create([
-            ["ja", "Tr2 ライトコンパス 歌唱"],
-            ["en", "Tr2 Vo"],
+            ["ja", "Tr2 ライトコンパス (feat. 拠鳥きまゆ) 歌唱"],
+            ["en", "Vocal Tr2 Light Compass (feat. Yorudo Kimayu)"],
         ]),
         links: [
             new CollaborationLinkMaster({
@@ -324,6 +324,13 @@ const collaborationMasterData: CollaborationMaster[] = [
                 ]), 
                 url: "https://youtu.be/stfsWwIFDtE",
             }),
+            new CollaborationLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Subscription / Download"],
+                    ["en", "Subscription / Download"],
+                ]),
+                url: "https://linkco.re/px6PvpE4"
+            })
         ],
     }),
 ];
