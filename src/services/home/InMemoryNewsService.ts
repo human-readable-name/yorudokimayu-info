@@ -50,6 +50,21 @@ const newsMasterData: NewsMaster[] = [
             }),
         ]
     }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ["ja", "エンタス忘年会 (2022-12-17) 出演予定"],
+            ["en", "Akihabara ENTAS year-end party (2022-12-17) "],
+        ]),
+        links: [
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "秋葉原エンタス"],
+                    ["en", "Akihabara ENTAS"],
+                ]),
+                url: "https://www.entas.jp/"
+            }),
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
