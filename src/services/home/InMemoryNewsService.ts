@@ -58,10 +58,17 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new NewsLinkMaster({
                 name: TranslatableValues.create([
-                    ["ja", "秋葉原エンタス"],
-                    ["en", "Akihabara ENTAS"],
+                    ["ja", "現地チケット"],
+                    ["en", "Ticket"],
                 ]),
-                url: "https://www.entas.jp/"
+                url: "https://passmarket.yahoo.co.jp/event/show/detail/02wdimrm1mq21.html"
+            }),
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Twitch(無料配信)"],
+                    ["en", "Streaming (for free)"],
+                ]),
+                url: "https://www.twitch.tv/takuya_the_bringer"
             }),
         ]
     }),
