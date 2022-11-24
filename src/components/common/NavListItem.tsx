@@ -13,7 +13,7 @@ const NavListItem: React.FC<Props> = ({name, url}) => {
 
     if (isInternal(url)) {
         return <li className={listClassName}>
-            <Link href={url}><a className={anchorClassName}>{name}</a></Link>
+            <Link href={url}><span className={anchorClassName}>{name}</span></Link>
         </li>
     } else {
         return <li className={listClassName}>
