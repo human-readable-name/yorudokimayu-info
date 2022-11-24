@@ -17,7 +17,7 @@ const LanguageLink: React.FC<LanguageLinkProps> = ({locale, pageType, selected})
     if (selected) {
         return null;
     } else {
-        return (<Link href={path} locale={locale}><li className="font-medium text-center">{localeToDisplay}</li></Link>);
+        return (<Link href={path} locale={locale}><a><li className="font-medium text-center">{localeToDisplay}</li></a></Link>);
     }
 };
 
