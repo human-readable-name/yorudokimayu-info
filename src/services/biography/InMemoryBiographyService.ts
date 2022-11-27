@@ -472,6 +472,22 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             })
         ],
     }),
+    new EventHistoryMaster({
+        date: new Date("2022-11-26"),
+        name: TranslatableValues.create([
+            ["ja", "柚子花主催LIVE -Planet Station- STAGE.5"],
+            ["en", "Planet Station STAGE.5 Virtual Artist Music Live Hosted by YUZUHA"],
+        ]),
+        links: [
+            new EventLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Z-aN"],
+                    ["en", "Z-aN"],
+                ]), 
+                url: "https://www.zan-live.com/live/detail/10251"
+            }),
+        ]
+    }),
 ];
 
 export const japaneseProfile: Profile = {

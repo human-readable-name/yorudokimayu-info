@@ -37,14 +37,14 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ["ja", "柚子花主催LIVE -Planet Station- STAGE.5 (2022-11-26) 出演予定"],
-            ["en", "LIVE sponsored by Yuzuha -Planet Station- STAGE.5 (2022-11-26) "],
+            ["ja", "柚子花主催LIVE -Planet Station- STAGE.5 (2022-11-26) 出演"],
+            ["en", "Planet Station STAGE.5 Virtual Artist Music Live Hosted by YUZUHA (2022-11-26) "],
         ]),
         links: [
             new NewsLinkMaster({
                 name: TranslatableValues.create([
-                    ["ja", "Z-aN"],
-                    ["en", "Z-aN"],
+                    ["ja", "Z-aN (アーカイブ視聴 2022年12月3日 21:00迄)"],
+                    ["en", "Z-aN (The archive of the live will be available until Dec.3)"],
                 ]), 
                 url: "https://www.zan-live.com/live/detail/10251"
             }),
