@@ -486,6 +486,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 ]), 
                 url: "https://www.zan-live.com/live/detail/10251"
             }),
+            new EventLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "レオニズの降る夜に [Live ver. from #プラステ5 ]"],
+                    ["en", "Leonids Reminds Me of the Starry Night (Live ver.)"],
+                ]), 
+                url: "https://youtu.be/Vroy6pW-oBI"
+            }),
         ]
     }),
 ];

@@ -385,7 +385,14 @@ const productMasterData: ProductMaster[] = [
                     ["en", "Leonids Reminds Me of the Starry Night"],
                 ]), 
                 url: "https://youtu.be/C0EH5CzDKCY"
-        }),
+            }),
+            new ProductLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "プラステ5 Live ver."],
+                    ["en", "Live ver. at PlatnetStation STAGE.5"],
+                ]), 
+                url: "https://youtu.be/Vroy6pW-oBI"
+            }),
         ],
         storeLinks: [
             new ProductLinkMaster({

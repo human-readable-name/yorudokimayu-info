@@ -22,7 +22,7 @@ const Index: React.FC<Props> = ({siteName, siteDescription, news, links}) => {
                 {siteDescription}
             </p>
             <SectionTitle text="News" />
-            <div className="grid divide-y">
+            <div className="grid gap-y-1 divide-y">
                 {news.map((newItem, index) => <NewsCard newsItem={newItem} key={index} />)}
             </div>
             <SectionTitle text="Table of contents" />
