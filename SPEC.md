@@ -31,6 +31,11 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
 * VisualStudioCodeのTERMINALから `docker-compose up` でNext.jsの開発サーバを起動
 * ブラウザから [http://localhost:3000](http://localhost:3000) にアクセス
 
+コンポーネントの見た目だけ確認したい場合
+
+* `docker-compose run --service-ports local storybook`
+* ブラウザから [http://localhost:6006](http://localhost:6006) にアクセス
+
 
 # ディレクトリ構成
 
