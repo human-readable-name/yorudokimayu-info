@@ -34,30 +34,7 @@ export class NewsMaster {
     }
 }
 
-const newsMasterData: NewsMaster[] = [
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ["ja", "エンタス忘年会 (2022-12-17) 出演予定"],
-            ["en", "Akihabara ENTAS year-end party (2022-12-17) "],
-        ]),
-        links: [
-            new NewsLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "現地チケット"],
-                    ["en", "Ticket"],
-                ]),
-                url: "https://passmarket.yahoo.co.jp/event/show/detail/02wdimrm1mq21.html"
-            }),
-            new NewsLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Twitch(無料配信)"],
-                    ["en", "Streaming (for free)"],
-                ]),
-                url: "https://www.twitch.tv/takuya_the_bringer"
-            }),
-        ]
-    }),
-];
+const newsMasterData: NewsMaster[] = [];
 
 export class InMemoryNewsService implements NewsService {
     listNews(locale: SupportedLocale): NewsItem[] {

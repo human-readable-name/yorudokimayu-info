@@ -1,10 +1,10 @@
 import React from "react";
-import NewsCard from "./NewsCard";
 import LinkCard from './LinkCard';
 import PageTitle from '../../components/common/PageTitle';
 import SectionTitle from '../../components/common/SectionTitle';
 import { ContentLink } from "../../services/home/ContentLinkService";
 import { NewsItem } from "../../services/home/NewsService";
+import News from "./News";
 
 export type Props = {
     siteName: string;
@@ -21,10 +21,7 @@ const Index: React.FC<Props> = ({siteName, siteDescription, news, links}) => {
             <p className="p8">
                 {siteDescription}
             </p>
-            <SectionTitle text="News" />
-            <div className="grid gap-y-1 divide-y">
-                {news.map((newItem, index) => <NewsCard newsItem={newItem} key={index} />)}
-            </div>
+            <News news={news} />
             <SectionTitle text="Table of contents" />
             <div className="grid grid-cols-1 md:grid-cols-2">
                 {links.map((contentLink, index) => <LinkCard contentLink={contentLink} key={index} />)}

@@ -448,6 +448,15 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             ["ja", "エンタス大晦日"],
             ["en", "Akihabara ENTAS new year's eve party"],
         ]),
+        links: [
+            new EventLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"],
+                ]),
+                url: "https://www.twitch.tv/videos/1250667831"
+            }),
+        ]
     }),
     new EventHistoryMaster({
         date: new Date("2022-07-16"),
@@ -455,6 +464,15 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             ["ja", "エンタス夏祭り DAY1"],
             ["en", "Akihabara ENTAS summer festival DAY1"],
         ]),
+        links: [
+            new EventLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"],
+                ]),
+                url: "https://www.twitch.tv/videos/1535339421"
+            }),
+        ]
     }),
     new EventHistoryMaster({
         date: new Date("2022-07-31"),
@@ -495,6 +513,22 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ]
     }),
+    new EventHistoryMaster({
+        date: new Date("2022-12-17"),
+        name: TranslatableValues.create([
+            ["ja", "エンタス忘年会"],
+            ["en", "Akihabara ENTAS year-end party"],
+        ]),
+        links: [
+            new EventLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"],
+                ]),
+                url: "https://www.twitch.tv/videos/1681281496"
+            }),
+        ]
+    })
 ];
 
 export const japaneseProfile: Profile = {
