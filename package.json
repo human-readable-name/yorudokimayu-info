@@ -1,6 +1,9 @@
 {
   "name": "yorudokimayu-info",
   "version": "1.2.10",
+  "engines": {
+    "node": "18.x"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
