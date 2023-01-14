@@ -333,6 +333,30 @@ const collaborationMasterData: CollaborationMaster[] = [
             })
         ],
     }),
+    new CollaborationMaster({
+        date: new Date("2023-01-13"),
+        productName: TranslatableValues.create([
+            ["ja", "凪の来るまで feat.拠鳥きまゆ"],
+            ["en", "凪の来るまで feat.拠鳥きまゆ (English translation is not available)"],
+        ]),
+        productArtist: TranslatableValues.create([
+            ["ja", "esora uma"],
+            ["en", "esora uma"],
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "歌唱"],
+            ["en", "Vocal"],
+        ]),
+        links: [
+            new CollaborationLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Download for free"],
+                    ["en", "Download for free"],
+                ]),
+                url: "https://umav.booth.pm/items/4473357"
+            })
+        ],
+    }),
 ];
 
 export class EventLinkMaster {
