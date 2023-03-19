@@ -5,6 +5,7 @@ import { ensureSupportedLocale } from "../../utilities/i18n";
 type FooterMessage = {
     analytics: string;
     correction: string;
+    github: string;
 }
 
 const translate = (locale: SupportedLocale): FooterMessage => {
@@ -12,12 +13,14 @@ const translate = (locale: SupportedLocale): FooterMessage => {
         case "en":
             return {
                 analytics: "This site uses GoogleAnalytics for access analysis.",
-                correction: "Update history: ",
+                correction: "If there are any omissions of information,",
+                github: "make an issue on GitHub",
             }
         default: 
             return {
                 analytics: "アクセス解析にGoogleAnalyticsを使っています。",
-                correction: "記載情報修正",
+                correction: "記載情報の抜け漏れがあれば、",
+                github: "GitHubにIssueを作ってください"
             }
     }
 }
@@ -31,7 +34,7 @@ const PageFooter: React.FC<Props> = ({locale}) => {
     return <footer className="flex justify-center align-center mt-8 border-t">
         <div className="justify-center text-center text-sm m-8">
             {tlanslatedMessage.analytics}<br/>
-            {tlanslatedMessage.correction} <span className="underline"><a href="https://docs.google.com/spreadsheets/d/1mpA4WlCHcOBv9KY8MWdiueU4HGsE-7-Nkc8tbtgvZoQ/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Spreadsheet</a></span><br/>
+            {tlanslatedMessage.correction} <span className="underline"><a href="https://github.com/01G271BR9H8WH1VNE8QHKYGDCX/yorudokimayu-info/issues/new/choose" target="_blank" rel="noopener noreferrer">{tlanslatedMessage.github}</a></span><br/>
         </div>
     </footer>
 };
