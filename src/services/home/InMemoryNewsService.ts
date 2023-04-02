@@ -34,7 +34,23 @@ export class NewsMaster {
     }
 }
 
-const newsMasterData: NewsMaster[] = [];
+const newsMasterData: NewsMaster[] = [
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2023-04-30 M3-2023春 M-11b および Booth にて ファーストアルバム "Say," をリリース'],
+            ['en', '2023-04-30 1st album "Say," will be released at M3-2023spring (M-11b) and Booth']
+        ]),
+        links: [
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '告知Tweet (ジャケット画像・収録楽曲一覧)'],
+                    ['en', 'Announcement tweet (song list and jacket)'],
+                ]),
+                url: 'https://twitter.com/461Okmy/status/1642466905247326209',
+            }),
+        ]
+    })
+];
 
 export class InMemoryNewsService implements NewsService {
     listNews(locale: SupportedLocale): NewsItem[] {
