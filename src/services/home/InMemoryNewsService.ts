@@ -43,10 +43,10 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new NewsLinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '告知Tweet (ジャケット画像・収録楽曲一覧)'],
-                    ['en', 'Announcement tweet (song list and jacket)'],
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
                 ]),
-                url: 'https://twitter.com/461Okmy/status/1642466905247326209',
+                url: 'https://youtu.be/ZOmXJgo6epE',
             }),
         ]
     })
