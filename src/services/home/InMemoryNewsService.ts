@@ -48,8 +48,30 @@ const newsMasterData: NewsMaster[] = [
                 ]),
                 url: 'https://youtu.be/ZOmXJgo6epE',
             }),
-        ]
-    })
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Say, MV"],
+                    ["en", "Say, music video"],
+                ]),
+                url: 'https://youtu.be/uP-z-i1J9jE',
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2023-04-30 M3-2023春 パンケーキキャッツ EP サニーソング 1曲担当'],
+            ['en', '2023-04-30 Guest vocalist on pancakecats EP "sunnysong" will be released at M3-2023Spring']
+        ]),
+        links: [
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: "https://sunnysong.studio.site/",
+            }),
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
