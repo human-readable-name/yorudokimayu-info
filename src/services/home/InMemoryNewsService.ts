@@ -55,6 +55,13 @@ const newsMasterData: NewsMaster[] = [
                 ]),
                 url: 'https://youtu.be/uP-z-i1J9jE',
             }),
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Savior MV"],
+                    ["en", "Savior music video"],
+                ]),
+                url: 'https://youtu.be/DJJwNdhzwE4',
+            }),
         ],
     }),
     new NewsMaster({
@@ -69,6 +76,13 @@ const newsMasterData: NewsMaster[] = [
                     ["en", "Web site"],
                 ]),
                 url: "https://sunnysong.studio.site/",
+            }),
+            new NewsLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+                url: "https://youtu.be/H5zN6zqcPKE",
             }),
         ],
     }),
