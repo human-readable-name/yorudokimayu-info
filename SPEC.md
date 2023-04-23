@@ -12,7 +12,7 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
 
 # ローカル開発環境
 
-* Node16が動けばなんでもいい
+* Node18が動けばなんでもいい
 * 起動コマンドは[package.json](./package.json)を見てください
     * コンポーネント開発は [Storybook](https://storybook.js.org/) 使ってください
 * Dockerを使う場合は、[docker-compose.yml](./docker-compose.yml)を見てください
