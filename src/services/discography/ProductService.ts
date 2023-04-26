@@ -1,6 +1,6 @@
 import { SupportedLocale } from "../../constants/i18n";
 
-export type ProductKind = "Single" | "EP";
+export type ProductKind = "Single" | "EP" | "Album";
 export type Genre = "Rock" | "Alternative" | "Electronic" | "Pop";
 export type LinkItem = {
     name: string;

@@ -10,7 +10,7 @@ export type Props = {
 const Index: React.FC<Props> = ({productSummaries}) => {
     return <main className="flex flex-col items-center m-8">
         <PageTitle text="Discography" />
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             {productSummaries.map((productSummary, index) => <ProductCard key={index} productSummary={productSummary} />)}
         </div>
     </main>
