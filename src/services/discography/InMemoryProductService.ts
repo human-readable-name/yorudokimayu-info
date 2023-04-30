@@ -18,9 +18,12 @@ export class ProductLinkMaster {
     getUrl(locale: SupportedLocale): string {
         if (this.url.startsWith("https://linkco.re/")) {
             return `${this.url}?lang=${locale}`; 
-        } else {
-            return this.url;
+        } 
+        if (this.url.startsWith("https://booth.pm/")) {
+            // TODO: 暫定対応なので、ProductLinkMasterクラスのURL部分のリファクタをやる
+            return this.url.replace("https://booth.pm/ja/items/", `https://booth.pm/${locale}/items/`)
         }
+        return this.url;
     }
 };
 

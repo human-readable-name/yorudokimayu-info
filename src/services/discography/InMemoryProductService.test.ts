@@ -25,7 +25,17 @@ describe('ProductLinkMaster', () => {
             expect(master.getUrl("ja")).toBe("https://linkco.re/vm0mu1Ac?lang=ja");
             expect(master.getUrl("en")).toBe("https://linkco.re/vm0mu1Ac?lang=en");
         });
-
+        test('Boothの場合はパス中のlangを置換する', () => {
+            const master = new ProductLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Official store"],
+                    ["en", "Official store"],
+                ]), 
+                url: "https://booth.pm/ja/items/4220956"
+            });
+            expect(master.getUrl("ja")).toBe("https://booth.pm/ja/items/4220956");
+            expect(master.getUrl("en")).toBe("https://booth.pm/en/items/4220956");
+        });
     });
     describe('getLinkItem', () => {
         test('ViewModelに変換できる', () => {
