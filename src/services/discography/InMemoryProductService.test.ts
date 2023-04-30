@@ -1,51 +1,63 @@
 import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
-import { InMemoryProductService, ProductLinkMaster } from "./InMemoryProductService"
+import { InMemoryProductService, ProductLinkMaster, StoreLinkMaster } from "./InMemoryProductService"
 
 describe('ProductLinkMaster', () => {
-    describe('getUrl', () => {
-        test('TuneCoreでなければそのまま', () => {
-            const master = new ProductLinkMaster({
-                url: "https://booth.pm/ja/items/4220956",
-                name: TranslatableValues.createForTest([
-                    ["ja", "日本語"],
-                    ["en", "English"],
-                ]),
-            });
-            expect(master.getUrl("ja")).toBe("https://booth.pm/ja/items/4220956")
-        });
-        test('TuneCoreの場合はlangのクエリパラメータを付ける', () => {
-            const master = new ProductLinkMaster({
-                url: "https://linkco.re/vm0mu1Ac",
-                name: TranslatableValues.createForTest([
-                    ["ja", "日本語"],
-                    ["en", "English"],
-                ]),
-            });
-            expect(master.getUrl("ja")).toBe("https://linkco.re/vm0mu1Ac?lang=ja");
-            expect(master.getUrl("en")).toBe("https://linkco.re/vm0mu1Ac?lang=en");
-        });
-        test('Boothの場合はパス中のlangを置換する', () => {
+    describe('getLinkItem', () => {
+        test('ロケールに応じた翻訳のViewModelに変換できる', () => {
             const master = new ProductLinkMaster({
                 name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
+                    ["ja", "カラの鼓動はソラになる"],
+                    ["en", "karano kodouha soraninaru"],
                 ]), 
-                url: "https://booth.pm/ja/items/4220956"
+                url: "https://youtu.be/7jS6tDpvko4"
             });
-            expect(master.getUrl("ja")).toBe("https://booth.pm/ja/items/4220956");
-            expect(master.getUrl("en")).toBe("https://booth.pm/en/items/4220956");
+            expect(master.getLinkItem("ja")).toEqual({
+                name: "カラの鼓動はソラになる",
+                url: "https://youtu.be/7jS6tDpvko4",
+            });
+            expect(master.getLinkItem("en")).toEqual({
+                name: "karano kodouha soraninaru",
+                url: "https://youtu.be/7jS6tDpvko4",
+            });
         });
     });
-    describe('getLinkItem', () => {
-        test('ViewModelに変換できる', () => {
-            const master = new ProductLinkMaster({
-                url: "https://linkco.re/vm0mu1Ac",
+});
+
+describe('StoreLinkMaster', () => {
+    describe('createForTuneCore', () => {
+        test('全ロケールのTuneCoreリンクを作成できる', () => {
+            const master = StoreLinkMaster.createForTuneCore({id: 'vm0mu1Ac'});
+            expect(master).toStrictEqual(new StoreLinkMaster({
                 name: TranslatableValues.createForTest([
                     ["ja", "配信・ダウンロード"],
                     ["en", "Subscription / Download"],
                 ]),
-            });
+                url: TranslatableValues.createForTest([
+                    ["ja", "https://linkco.re/vm0mu1Ac?lang=ja"],
+                    ["en", "https://linkco.re/vm0mu1Ac?lang=en"],
+                ]),
+            }))
+        });
+    });
+    describe('createForOfficialStoe', () => {
+        test('全ロケールのBoothリンクを作成できる', () => {
+            const master = StoreLinkMaster.createForOfficialStore({id: '4220956'});
+            expect(master).toStrictEqual(new StoreLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Official store"],
+                    ["en", "Official store"],
+                ]),
+                url: TranslatableValues.createForTest([
+                    ["ja", "https://booth.pm/ja/items/4220956"],
+                    ["en", "https://booth.pm/en/items/4220956"],
+                ]),
+            }))
+        });
+    });
+    describe('getLinkItem', () => {
+        test('ロケールに応じた翻訳のViewModelに変換できる', () => {
+            const master = StoreLinkMaster.createForTuneCore({id: 'vm0mu1Ac'});
             expect(master.getLinkItem("ja")).toEqual({
                 name: "配信・ダウンロード",
                 url: "https://linkco.re/vm0mu1Ac?lang=ja",
@@ -55,19 +67,21 @@ describe('ProductLinkMaster', () => {
                 url: "https://linkco.re/vm0mu1Ac?lang=en",
             });
         });
-    });
+    })
 });
 
 describe('InMemoryProductService', () => {
     const service = new InMemoryProductService();
     describe('listProductSummaries', () => {
-        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと', (locale: SupportedLocale) => {
+        test.each(SUPPORTED_LOCALES)('翻訳漏れの実行時エラーにならないこと %s', (locale: SupportedLocale) => {
             expect(() => {
                 service.listProductSummaries(locale);
             }).not.toThrow();
         });
         test('正しく翻訳できてること', () => {
-            const japaneseCredits = service.listProductSummaries("ja").flatMap((summary) => summary.credits).join("");
+            const jaSummaries = service.listProductSummaries("ja");
+
+            const japaneseCredits = jaSummaries.flatMap((summary) => summary.credits).join("");
             expect(
                 japaneseCredits
             ).toEqual(expect.stringContaining("拠鳥きまゆ"));
@@ -75,15 +89,24 @@ describe('InMemoryProductService', () => {
                 japaneseCredits
             ).toEqual(expect.not.stringContaining("KimayuYorudo"));
         
-            const japaneseTuneCoreLinks = service.listProductSummaries("ja").flatMap((summary) => 
-                summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"))
-            );
+            const japaneseTuneCoreLinks = jaSummaries.flatMap((summary) => {
+                return summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"));
+            });
             expect(japaneseTuneCoreLinks.length).toBe(16);
             japaneseTuneCoreLinks.forEach((link) => {
                 expect(link.url).toContain("lang=ja")
             });
+
+            const japaneseOfficialStoreLinks =  jaSummaries.flatMap((summary) => {
+                return summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://booth.pm/"));
+            });
+            japaneseOfficialStoreLinks.forEach((link) => {
+                expect(link.url).toContain("/ja/items/")
+            });
+
+            const enSummaries = service.listProductSummaries("en");
         
-            const englishCredits = service.listProductSummaries("en").flatMap((summary) => summary.credits).join("");
+            const englishCredits = enSummaries.flatMap((summary) => summary.credits).join("");
             expect(
                 englishCredits
             ).toEqual(expect.stringContaining("KimayuYorudo"));
@@ -91,12 +114,19 @@ describe('InMemoryProductService', () => {
                 englishCredits
             ).toEqual(expect.not.stringContaining("拠鳥きまゆ"));
         
-            const englishTuneCoreLinks = service.listProductSummaries("en").flatMap((summary) => 
-                summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"))
-            );
+            const englishTuneCoreLinks = enSummaries.flatMap((summary) => {
+                return summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"));
+            });
             expect(englishTuneCoreLinks.length).toBe(16);
             englishTuneCoreLinks.forEach((link) => {
                 expect(link.url).toContain("lang=en")
+            });
+
+            const englishOfficialStoreLinks =  enSummaries.flatMap((summary) => {
+                return summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://booth.pm/"));
+            });
+            englishOfficialStoreLinks.forEach((link) => {
+                expect(link.url).toContain("/en/items/")
             });
         });
     });

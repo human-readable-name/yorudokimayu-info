@@ -1,5 +1,7 @@
-import { SupportedLocale } from "../../constants/i18n";
+import { SUPPORTED_LOCALES, SupportedLocale } from "../../constants/i18n";
+import { createBoothUrl } from "../i18n/Booth";
 import { TranslatableValues } from "../i18n/TranslatableValues";
+import { createTuneCoreUrl } from "../i18n/TuneCore";
 import { Genre, LinkItem, ProductKind, ProductService, ProductSummary } from "./ProductService";
 
 export class ProductLinkMaster {
@@ -11,21 +13,54 @@ export class ProductLinkMaster {
     }
     getLinkItem(locale: SupportedLocale): LinkItem {
         return {
-            url: this.getUrl(locale),
+            url: this.url,
             name: this.name.getLocalizedValue(locale),
         }
     }
-    getUrl(locale: SupportedLocale): string {
-        if (this.url.startsWith("https://linkco.re/")) {
-            return `${this.url}?lang=${locale}`; 
-        } 
-        if (this.url.startsWith("https://booth.pm/")) {
-            // TODO: 暫定対応なので、ProductLinkMasterクラスのURL部分のリファクタをやる
-            return this.url.replace("https://booth.pm/ja/items/", `https://booth.pm/${locale}/items/`)
-        }
-        return this.url;
-    }
 };
+
+export class StoreLinkMaster {
+    private url: TranslatableValues;
+    private name: TranslatableValues;
+    constructor(props: { url: TranslatableValues; name: TranslatableValues}) {
+        this.url = props.url;
+        this.name = props.name;
+    }
+    getLinkItem(locale: SupportedLocale): LinkItem {
+        return {
+            url: this.url.getLocalizedValue(locale),
+            name: this.name.getLocalizedValue(locale),
+        };
+    }
+    static createForTuneCore(props: {id: string}): StoreLinkMaster {
+        const {id} = props;
+        return new StoreLinkMaster({
+            url: TranslatableValues.create(
+                SUPPORTED_LOCALES.map((locale) => {
+                    return [locale, createTuneCoreUrl({id,locale})]
+                })
+            ),
+            name: TranslatableValues.create([
+                ["ja", "配信・ダウンロード"],
+                ["en", "Subscription / Download"],
+            ]), 
+        });
+    }
+    static createForOfficialStore(props: {id: string}): StoreLinkMaster {
+        const {id} = props;
+        return new StoreLinkMaster({
+            url: TranslatableValues.create(
+                SUPPORTED_LOCALES.map((locale) => {
+                    return [locale, createBoothUrl({id,locale})]
+                })
+            ),
+            name: TranslatableValues.create([
+                ["ja", "Official store"],
+                ["en", "Official store"],
+            ]),
+        });
+    }
+}
 
 export class ProductMaster {
     private id: string;
@@ -36,7 +71,7 @@ export class ProductMaster {
     private description?: TranslatableValues;
     private credits: TranslatableValues[];
     private mvLinks: ProductLinkMaster[];
-    private storeLinks: ProductLinkMaster[];
+    private storeLinks: StoreLinkMaster[];
     private supplementalInformationLinks?: ProductLinkMaster[];
     constructor(props: {
         id: string,
@@ -47,7 +82,7 @@ export class ProductMaster {
         description?: TranslatableValues;
         credits: TranslatableValues[],
         mvLinks: ProductLinkMaster[],
-        storeLinks: ProductLinkMaster[],
+        storeLinks: StoreLinkMaster[],
         supplementalInformationLinks?: ProductLinkMaster[],
     }) {
         this.id = props.id;
@@ -154,13 +189,7 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]),
-                url: 'https://booth.pm/ja/items/4670069',
-            })
+            StoreLinkMaster.createForOfficialStore({id: '4670069'}),
         ],
     }),
     new ProductMaster({
@@ -196,20 +225,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/vm0mu1Ac"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://booth.pm/ja/items/4220956"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'vm0mu1Ac'}),
+            StoreLinkMaster.createForOfficialStore({id:'4220956'}),
         ],
     }),
     new ProductMaster({
@@ -241,20 +258,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/5G3y37dh"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://booth.pm/ja/items/4130595"
-            }),
+            StoreLinkMaster.createForTuneCore({id: '5G3y37dh'}),
+            StoreLinkMaster.createForOfficialStore({id: '4130595'}),
         ],
     }),
     new ProductMaster({
@@ -315,13 +320,7 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3756256"
-            }),
+            StoreLinkMaster.createForOfficialStore({id: '3756256'}),
         ]
     }),
     new ProductMaster({
@@ -357,20 +356,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/7qE6cdZz"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3528690"
-            }),
+            StoreLinkMaster.createForTuneCore({id: '7qE6cdZz'}),
+            StoreLinkMaster.createForOfficialStore({id: '3528690'}),
         ],
         supplementalInformationLinks: [
             new ProductLinkMaster({
@@ -415,20 +402,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/mM5ds6zM"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3492316"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'mM5ds6zM'}),
+            StoreLinkMaster.createForOfficialStore({id: '3492316'}),
         ]
     }),
     new ProductMaster({
@@ -475,20 +450,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/sd6XHQxB"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3419090"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'sd6XHQxB'}),
+            StoreLinkMaster.createForOfficialStore({id: '3419090'}),
         ]
     }),
     new ProductMaster({
@@ -528,20 +491,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/D53C67Bu"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3419079"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'D53C67Bu'}),
+            StoreLinkMaster.createForOfficialStore({id: '3419079'}),
         ],
     }),
     new ProductMaster({
@@ -577,20 +528,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),  
-                url: "https://linkco.re/H9494e5u"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]),  
-                url: "https://461okmy.booth.pm/items/3318455"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'H9494e5u'}),
+            StoreLinkMaster.createForOfficialStore({id: '3318455'}),
         ]
     }),
     new ProductMaster({
@@ -626,20 +565,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/c78bSYh9"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3265250"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'c78bSYh9'}),
+            StoreLinkMaster.createForOfficialStore({id: '3265250'}),
         ]
     }),
     new ProductMaster({
@@ -680,20 +607,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),  
-                url: "https://linkco.re/pCpgzUMU"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]),  
-                url: "https://461okmy.booth.pm/items/3185868"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'pCpgzUMU'}),
+            StoreLinkMaster.createForOfficialStore({id: '3185868'}),
         ]
     }),
     new ProductMaster({
@@ -729,20 +644,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),  
-                url: "https://linkco.re/AvPtrznD"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]),  
-                url: "https://461okmy.booth.pm/items/3143568"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'AvPtrznD'}),
+            StoreLinkMaster.createForOfficialStore({id: '3143568'}),
         ]
     }),
     new ProductMaster({
@@ -778,20 +681,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/0Rz8ACCd"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3107770"
-            }),
+            StoreLinkMaster.createForTuneCore({id: '0Rz8ACCd'}),
+            StoreLinkMaster.createForOfficialStore({id: '3107770'}),
         ]
     }),
     new ProductMaster({
@@ -831,20 +722,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/HY6DrPGd"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3107757"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'HY6DrPGd'}),
+            StoreLinkMaster.createForOfficialStore({id: '3107757'}),
         ]
     }),
     new ProductMaster({
@@ -884,20 +763,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/vRVnqU5v"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]),  
-                url: "https://461okmy.booth.pm/items/3107710"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'vRVnqU5v'}),
+            StoreLinkMaster.createForOfficialStore({id: '3107710'}),
         ]
     }),
     new ProductMaster({
@@ -933,20 +800,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/eGzYDu1Y"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3107732"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'eGzYDu1Y'}),
+            StoreLinkMaster.createForOfficialStore({id: '3107732'}),
         ]
     }),
     new ProductMaster({
@@ -986,20 +841,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/NQZabT0H"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3107691"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'NQZabT0H'}),
+            StoreLinkMaster.createForOfficialStore({id: '3107691'}),
         ],
         supplementalInformationLinks: [
             new ProductLinkMaster({
@@ -1048,20 +891,8 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/XRHzUnrA"
-            }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Official store"],
-                    ["en", "Official store"],
-                ]), 
-                url: "https://461okmy.booth.pm/items/3107608"
-            }),
+            StoreLinkMaster.createForTuneCore({id: 'XRHzUnrA'}),
+            StoreLinkMaster.createForOfficialStore({id: '3107608'}),
         ]
     }),
 ];
