@@ -84,6 +84,83 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "1st-album",
+        name: TranslatableValues.create([
+            ["ja", "Say,"],
+            ["en", "Say,"],
+        ]),
+        kind: "Album",
+        genre: "Rock",
+        dateOfRelease: new Date("2023-04-30"),
+        description: TranslatableValues.create([
+            ["ja", "1st Album M3-2023春"],
+            ["en", "1st Album M3-2023-Spring"],
+        ]),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Tr1,2,5,6,10 Music / Tr6,10 Lyrics マッチ"],
+                ["en", "Tr1,2,5,6,10 Music / Tr6,10 Lyrics  Matchy"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr2 Lyrics esora uma [浮遊信号]"],
+                ["en", "Tr2 Lyrics esora uma [Fuyu-Singo]"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr3,8 Music / Tr3 Lyrics 園田優"],
+                ["en", "Tr3,8 Music / Tr3 Lyrics SuguruSonoda"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr4,7,9 Music 天野ドウジ [カクレゴ]"],
+                ["en", "Tr4,7,9 Music DoujiAmano [KAKULEGO]"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr4 Lyrics 座敷乃てまり [カクレゴ]"],
+                ["en", "Tr4 Lyrics TemariZashikino [KAKULEGO]"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr7 Lyrics 戌杜いたる"],
+                ["en", "Tr7 Lyrics ItaruInumori"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr12 Music / Tr12 Lyrics 犬絵"],
+                ["en", "Tr12 Music / Tr12 Lyrics Catpicture"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr12 Bass 四谷ゲンロク"],
+                ["en", "Tr12 Bass GenrokuYotsuya"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr5,8,11 Lyrics / Vocal 拠鳥きまゆ"],
+                ["en", "Tr5,8,11 Lyrics / Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new ProductLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Say,"],
+                    ["en", "Say,"],
+                ]),
+                url: 'https://youtu.be/uP-z-i1J9jE',
+            }),
+            new ProductLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Savior MV"],
+                    ["en", "Savior music video"],
+                ]),
+                url: 'https://youtu.be/DJJwNdhzwE4',
+            }),
+        ],
+        storeLinks: [
+            new ProductLinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "Official store"],
+                    ["en", "Official store"],
+                ]),
+                url: 'https://booth.pm/ja/items/4670069',
+            })
+        ],
+    }),
+    new ProductMaster({
         id: "16th-single",
         name: TranslatableValues.create([
             ["ja", "PENGUIN REALISE"],
@@ -192,15 +269,15 @@ const productMasterData: ProductMaster[] = [
         ]),
         credits: [
             TranslatableValues.create([
-                ["ja", "作曲・Tr2作詞 マッチ"],
-                ["en", "Music・Tr2Lyrics Matchy"],
+                ["ja", "Music/Tr2Lyrics マッチ"],
+                ["en", "Music/Tr2Lyrics Matchy"],
             ]),
             TranslatableValues.create([
-                ["ja", "Tr5作詞 esora uma [浮遊信号]"],
+                ["ja", "Tr5Lyrics esora uma [浮遊信号]"],
                 ["en", "Tr5Lyrics esora uma [Fuyu-Singo]"],
             ]),
             TranslatableValues.create([
-                ["ja", "Tr3Tr4Tr6作詞・Vocal 拠鳥きまゆ"],
+                ["ja", "Tr3,4,6Lyrics/Vocal 拠鳥きまゆ"],
                 ["en", "Tr3,4,6Lyrics/Vocal KimayuYorudo"],
             ]),
         ],
@@ -370,7 +447,7 @@ const productMasterData: ProductMaster[] = [
                 ["en", "Music/Lyrics Matchy"],
             ]),
             TranslatableValues.create([
-                ["ja", "ベース 四谷ゲンロク"],
+                ["ja", "Bass 四谷ゲンロク"],
                 ["en", "Bass performance Genroku Yotsuya"],
             ]),
             TranslatableValues.create([
@@ -426,11 +503,11 @@ const productMasterData: ProductMaster[] = [
         ]),
         credits: [
             TranslatableValues.create([
-                ["ja", "作曲 胡桃もよ"],
+                ["ja", "Music 胡桃もよ"],
                 ["en", "Music MoyoKurumi"],
             ]),
             TranslatableValues.create([
-                ["ja", "作詞 朝比奈こん"],
+                ["ja", "Lyrics 朝比奈こん"],
                 ["en", "Lyrics KonAsahina"],
             ]),
             TranslatableValues.create([
@@ -582,7 +659,7 @@ const productMasterData: ProductMaster[] = [
                 ["en", "Music/Lyrics Azami"],
             ]), 
             TranslatableValues.create([
-                ["ja", "ベース なおちゃん"],
+                ["ja", "Bass なおちゃん"],
                 ["en", "Bass nao"],
             ]), 
             TranslatableValues.create([
@@ -729,12 +806,12 @@ const productMasterData: ProductMaster[] = [
         ]),
         credits: [
             TranslatableValues.create([
-                ["ja", "作曲 sumeshiii a.k.a.バーチャルお寿司"],
+                ["ja", "Music sumeshiii a.k.a.バーチャルお寿司"],
                 ["en", "Music sumeshiii a.k.a.virtual osushi"],
             ]),
             TranslatableValues.create([
-                ["ja", "作詞 内野達哉"],
-                ["en", "Lyrics Tatsuya Uchino"],
+                ["ja", "Lyrics 内野達哉"],
+                ["en", "Lyrics TatsuyaUchino"],
             ]),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
@@ -782,15 +859,15 @@ const productMasterData: ProductMaster[] = [
         ]), 
         credits: [
             TranslatableValues.create([
-                ["ja", "作曲 天野ドウジ [カクレゴ]"],
-                ["en", "Music Douji Amano [KAKULEGO]"],
+                ["ja", "Music 天野ドウジ [カクレゴ]"],
+                ["en", "Music DoujiAmano [KAKULEGO]"],
             ]),
             TranslatableValues.create([
-                ["ja", "ベース 四谷ゲンロク"],
-                ["en", "Bass Genroku Yotsuya"],
+                ["ja", "Bass 四谷ゲンロク"],
+                ["en", "Bass GenrokuYotsuya"],
             ]),
             TranslatableValues.create([
-                ["ja", "作詞・Vocal 拠鳥きまゆ"],
+                ["ja", "Lyrics/Vocal 拠鳥きまゆ"],
                 ["en", "Lyrics/Vocal KimayuYorudo"],
             ]),
         ],
@@ -888,7 +965,7 @@ const productMasterData: ProductMaster[] = [
                 ["en", "Music/Lyrics tonarimachi-honpo"],
             ]),
             TranslatableValues.create([
-                ["ja", "ラップ作詞 Fra [BOOGEY VOXX]"],
+                ["ja", "Rap Lyrics Fra [BOOGEY VOXX]"],
                 ["en", "Rap Lyrics Fra [BOOGEY VOXX]"],
             ]),
             TranslatableValues.create([
@@ -946,11 +1023,11 @@ const productMasterData: ProductMaster[] = [
         ]),
         credits: [
             TranslatableValues.create([
-                ["ja", "作曲 胡桃もよ"],
+                ["ja", "Music 胡桃もよ"],
                 ["en", "Music MoyoKurumi"],
             ]),
             TranslatableValues.create([
-                ["ja", "作詞 朝比奈こん"],
+                ["ja", "Lyrics 朝比奈こん"],
                 ["en", "Lyrics KonAsahina"],
             ]),
             TranslatableValues.create([
