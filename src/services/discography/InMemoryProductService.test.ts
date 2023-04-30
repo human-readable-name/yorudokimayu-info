@@ -30,7 +30,7 @@ describe('StoreLinkMaster', () => {
             const master = StoreLinkMaster.createForTuneCore({id: 'vm0mu1Ac'});
             expect(master).toStrictEqual(new StoreLinkMaster({
                 name: TranslatableValues.createForTest([
-                    ["ja", "配信・ダウンロード"],
+                    ["ja", "Subscription / Download"],
                     ["en", "Subscription / Download"],
                 ]),
                 url: TranslatableValues.createForTest([
@@ -57,7 +57,16 @@ describe('StoreLinkMaster', () => {
     });
     describe('getLinkItem', () => {
         test('ロケールに応じた翻訳のViewModelに変換できる', () => {
-            const master = StoreLinkMaster.createForTuneCore({id: 'vm0mu1Ac'});
+            const master = new StoreLinkMaster({
+                name: TranslatableValues.createForTest([
+                    ["ja", "配信・ダウンロード"],
+                    ["en", "Subscription / Download"],
+                ]),
+                url: TranslatableValues.createForTest([
+                    ["ja", "https://linkco.re/vm0mu1Ac?lang=ja"],
+                    ["en", "https://linkco.re/vm0mu1Ac?lang=en"],
+                ]),
+            });
             expect(master.getLinkItem("ja")).toEqual({
                 name: "配信・ダウンロード",
                 url: "https://linkco.re/vm0mu1Ac?lang=ja",

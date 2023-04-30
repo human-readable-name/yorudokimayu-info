@@ -1,12 +1,13 @@
 import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
+import { createTuneCoreUrl } from "../i18n/TuneCore";
 import { 
     japaneseProfile, englishProfile, InMemoryBiographyService, EventLinkMaster, EventHistoryMaster, CollaborationLinkMaster, CollaborationMaster 
 } from "./InMemoryBiographyService";
 
 describe('CollaborationLinkMaster', () => {
     describe('getUrl', () => {
-        test('TuneCoreでなければそのまま', () => {
+        test('プリミティブな文字列の場合はそのままの値を返す', () => {
             const master = new CollaborationLinkMaster({
                 url: "https://youtu.be/ZVsIPmfkWAg",
                 name: TranslatableValues.createForTest([
@@ -14,11 +15,15 @@ describe('CollaborationLinkMaster', () => {
                     ["en", "English"],
                 ]),
             });
-            expect(master.getUrl("ja")).toBe("https://youtu.be/ZVsIPmfkWAg")
+            expect(master.getUrl("ja")).toBe("https://youtu.be/ZVsIPmfkWAg");
+            expect(master.getUrl("en")).toBe("https://youtu.be/ZVsIPmfkWAg")
         });
-        test('TuneCoreの場合はlangのクエリパラメータを付ける', () => {
+        test('翻訳リソースならそのロケールの翻訳を返す', () => {
             const master = new CollaborationLinkMaster({
-                url: "https://linkco.re/7BmE5qH1",
+                url: TranslatableValues.createForTest([
+                    ["ja", "https://linkco.re/7BmE5qH1?lang=ja"],
+                    ["en", "https://linkco.re/7BmE5qH1?lang=en"],
+                ]),
                 name: TranslatableValues.createForTest([
                     ["ja", "日本語"],
                     ["en", "English"],
@@ -31,7 +36,10 @@ describe('CollaborationLinkMaster', () => {
     describe('getCollaborationLink', () => {
         test('ViewModelに変換できる', () => {
             const master = new CollaborationLinkMaster({
-                url: "https://linkco.re/7BmE5qH1",
+                url: TranslatableValues.createForTest([
+                    ["ja", "https://linkco.re/7BmE5qH1?lang=ja"],
+                    ["en", "https://linkco.re/7BmE5qH1?lang=en"],
+                ]),
                 name: TranslatableValues.createForTest([
                     ["ja", "配信・ダウンロード"],
                     ["en", "Subscription / Download"],
@@ -71,20 +79,8 @@ describe('CollaborationMaster', () => {
                 ["en", "Vocal"],
             ]),
             links: [
-                new CollaborationLinkMaster({
-                    url: "https://youtu.be/ZVsIPmfkWAg",
-                    name: TranslatableValues.createForTest([
-                        ["ja", "ミュージックビデオ"],
-                        ["en", "Music video"],
-                    ]),
-                }),
-                new CollaborationLinkMaster({
-                    url: "https://linkco.re/7BmE5qH1",
-                    name: TranslatableValues.createForTest([
-                        ["ja", "配信・ダウンロード"],
-                        ["en", "Subscription / Download"]
-                    ]),
-                })
+                CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'ZVsIPmfkWAg'}),
+                CollaborationLinkMaster.createForTuneCore({id: '7BmE5qH1'}),
             ],
         });
         expect(master.getCollaboration("ja")).toEqual({
@@ -96,8 +92,8 @@ describe('CollaborationMaster', () => {
             },
             partOfTheWork: "歌唱",
             links: [
-                {name: "ミュージックビデオ", url: "https://youtu.be/ZVsIPmfkWAg"},
-                {name: "配信・ダウンロード", url: "https://linkco.re/7BmE5qH1?lang=ja"},
+                {name: "Music video", url: "https://youtu.be/ZVsIPmfkWAg"},
+                {name: "Subscription / Download", url: "https://linkco.re/7BmE5qH1?lang=ja"},
             ]
         });
         expect(master.getCollaboration("en")).toEqual({
