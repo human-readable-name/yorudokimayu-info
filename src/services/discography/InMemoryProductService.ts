@@ -41,7 +41,7 @@ export class StoreLinkMaster {
                 })
             ),
             name: TranslatableValues.create([
-                ["ja", "配信・ダウンロード"],
+                ["ja", "Subscription / Download"],
                 ["en", "Subscription / Download"],
             ]), 
         });

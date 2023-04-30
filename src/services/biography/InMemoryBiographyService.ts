@@ -1,11 +1,12 @@
-import { SupportedLocale } from "../../constants/i18n";
+import { SUPPORTED_LOCALES, SupportedLocale } from "../../constants/i18n";
 import { TranslatableValues } from "../i18n/TranslatableValues";
+import { createTuneCoreUrl } from "../i18n/TuneCore";
 import { BiographyService, Profile, EventHistory, Collaboration, CollaborationLink, EventLink } from "./BiographyService";
 
-export class CollaborationLinkMaster  {
-    private url: string;
+export class CollaborationLinkMaster {
+    private url: string | TranslatableValues;
     private name: TranslatableValues;
-    constructor(props: {url: string, name: TranslatableValues}) {
+    constructor(props: {url: string | TranslatableValues, name: TranslatableValues}) {
         this.name = props.name;
         this.url = props.url;
     }
@@ -16,11 +17,32 @@ export class CollaborationLinkMaster  {
         }
     }
     getUrl(locale: SupportedLocale): string {
-        if (this.url.startsWith("https://linkco.re/")) {
-            return `${this.url}?lang=${locale}`; 
-        } else {
-            return this.url;
+        if ( this.url instanceof TranslatableValues) {
+            return this.url.getLocalizedValue(locale); 
         }
+        return this.url;
+    }
+    static createMusicVideoOnYouTube(props: {id: string}): CollaborationLinkMaster {
+        return new CollaborationLinkMaster({
+            name: TranslatableValues.create([
+                ["ja", "Music video"],
+                ["en", "Music video"],
+            ]), 
+            url: `https://youtu.be/${props.id}`,
+        });
+    }
+    static createForTuneCore(props: {id: string}): CollaborationLinkMaster {
+        return new CollaborationLinkMaster({
+            url: TranslatableValues.create(
+                SUPPORTED_LOCALES.map((locale) => {
+                    return [locale, createTuneCoreUrl({id: props.id, locale})]
+                })
+            ),
+            name: TranslatableValues.create([
+                ["ja", "Subscription / Download"],
+                ["en", "Subscription / Download"],
+            ]), 
+        })
     }
 }
 
@@ -74,20 +96,8 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Vocal"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music video"],
-                    ["en", "Music video"],
-                ]), 
-                url: "https://youtu.be/ZVsIPmfkWAg"
-            }),
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]), 
-                url: "https://linkco.re/7BmE5qH1"
-            }),
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'ZVsIPmfkWAg'}),
+            CollaborationLinkMaster.createForTuneCore({id: '7BmE5qH1'}),
         ],
     }),
     new CollaborationMaster({
@@ -105,20 +115,8 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Vocal Tr11 Seimei Triger"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music video"],
-                    ["en", "Music video"],
-                 ]),
-                url: "https://youtu.be/CcvQX-tCBco",
-            }),
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/y1ghFgts?lang",
-            }),
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'CcvQX-tCBco'}),
+            CollaborationLinkMaster.createForTuneCore({id: 'y1ghFgts'}),
         ],
     }),
     new CollaborationMaster({
@@ -136,13 +134,7 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Music video production and hand writing"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music video"],
-                    ["en", "Music video"],
-                ]),
-                url: "https://youtu.be/C0SHjl6xZLw"
-            })
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'C0SHjl6xZLw'}),
         ],
     }),
     new CollaborationMaster({
@@ -160,13 +152,7 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Vocal Tr1 Visibility"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/ZyAZsbNt",
-            }),
+            CollaborationLinkMaster.createForTuneCore({id: 'ZyAZsbNt'}),
         ],
     }),
     new CollaborationMaster({
@@ -184,13 +170,7 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Hand writing"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music video"],
-                    ["en", "Music video"],
-                ]),
-                url: "https://youtu.be/ZZ548wxw_e4",
-            })
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'ZZ548wxw_e4'}),
         ],
     }),
     new CollaborationMaster({
@@ -208,13 +188,7 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Vocal"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music video"],
-                    ["en", "Music video"],
-                ]),
-                url: "https://youtu.be/YePQNFVRHFk",
-            }),
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'YePQNFVRHFk'}),
         ],
     }),
     new CollaborationMaster({
@@ -232,13 +206,7 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Vocal Tr3 Sushi Ramen , and Tonkatsu"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/PSSeRxzR",
-            }),
+            CollaborationLinkMaster.createForTuneCore({id: 'PSSeRxzR'}),
         ],
     }),
     new CollaborationMaster({
@@ -256,20 +224,8 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Vocal Tr2 Twinkle Gift"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music Video"],
-                    ["en", "Music Video"],
-                ]),
-                url: "https://youtu.be/LBGGQ5bwf6k",
-            }),
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/R9gNmV5p",
-            }),
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'LBGGQ5bwf6k'}),
+            CollaborationLinkMaster.createForTuneCore({id: 'R9gNmV5p'}),
         ],
     }),
     new CollaborationMaster({
@@ -283,20 +239,8 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "Lyrics/Vocal"],
         ]),
         links: [
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Music Video"],
-                    ["en", "Music Video"],
-                ]),
-                url: "https://youtu.be/vKp6LdALi0k",
-            }),
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/mTXg3aM2"
-            }),
+            CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'vKp6LdALi0k'}),
+            CollaborationLinkMaster.createForTuneCore({id: 'mTXg3aM2'}),
         ],
     }),
     new CollaborationMaster({
@@ -324,13 +268,7 @@ const collaborationMasterData: CollaborationMaster[] = [
                 ]), 
                 url: "https://youtu.be/stfsWwIFDtE",
             }),
-            new CollaborationLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Subscription / Download"],
-                    ["en", "Subscription / Download"],
-                ]),
-                url: "https://linkco.re/px6PvpE4"
-            })
+            CollaborationLinkMaster.createForTuneCore({id: 'px6PvpE4'}),
         ],
     }),
     new CollaborationMaster({
