@@ -1,19 +1,17 @@
 import { NewsItem } from "../../services/home/NewsService"
-import NewsArticleLink from "./NewsArticleLink";
+import LinkList from "../common/LinkList";
 
 type Props = {
     newsItem: NewsItem;
 };
 
 const NewsCard: React.FC<Props> = ({newsItem}: Props) => {
-    return <article>
+    return <article className="p-2">
         <p>
             {newsItem.text}
         </p>
         { newsItem.links && newsItem.links.length > 0 && 
-            <ul className="flex flex-wrap space-x-2">
-                {newsItem.links.map((newsItemLink, index) => <NewsArticleLink newsItemLink={newsItemLink} key={index} />)}
-            </ul>
+            <LinkList linkItems={newsItem.links} />
         }
     </article>
 };

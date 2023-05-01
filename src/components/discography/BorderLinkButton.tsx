@@ -1,4 +1,5 @@
 import React from "react";
+import { Color } from "../../constants/tailwind";
 import { LinkItem } from "../../services/discography/ProductService";
 
 type Props = {
@@ -10,7 +11,7 @@ const BorderLinkButton: React.FC<Props> = ({linkItem}) => {
         href={linkItem.url} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="w-full rounded-lg border border-solid border-indigo-800 text-indigo-800 text-center leading-8"
+        className={`w-full rounded-lg border border-solid border-${Color.Link} text-${Color.Link} text-center leading-8`}
     >
         {linkItem.name}
     </a>

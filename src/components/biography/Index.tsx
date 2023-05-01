@@ -46,13 +46,13 @@ const Index: React.FC<Props> = ({profile, eventHistories, collaborations}: Props
 
             <section>
                 <SectionTitle text="Live/Event" />
-                <div className="grid gap-y-1 divide-y">
+                <div className="grid grid-cols-1 divide-y">
                     { eventHistories.map((eventHistory, index) => <EventHistoryCard eventHistory={eventHistory} key={index}/>)}
                 </div>
             </section>
             <section>
                 <SectionTitle text="Collaboration/Works" />
-                <div className="grid gap-y-1 divide-y">
+                <div className="grid grid-cols-1 divide-y">
                     { collaborations.map((collaboration, index) => <CollaborationCard collaboration={collaboration} key={index} />)}
                 </div>
             </section>

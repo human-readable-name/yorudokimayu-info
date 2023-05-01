@@ -12,7 +12,7 @@ const News: React.FC<Props>  = ({news}) => {
 
     return <>
         <SectionTitle text="News" />
-        <div className="grid gap-y-1 divide-y" data-test-id="news">
+        <div className="grid grid-cols-1 divide-y" data-test-id="news">
             {news.map((newItem, index) => <NewsCard newsItem={newItem} key={index} />)}
         </div>
     </>

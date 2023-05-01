@@ -1,26 +1,12 @@
 import { SupportedLocale } from "../../constants/i18n";
+import { LinkMaster } from "../common/Link";
 import { TranslatableValues } from "../i18n/TranslatableValues";
-import { NewsItem, NewsItemLink, NewsService } from "./NewsService";
-
-export class NewsLinkMaster {
-    private name: TranslatableValues;
-    private url: string;
-    constructor(props: {name: TranslatableValues, url: string}) {
-        this.name = props.name;
-        this.url = props.url;
-    }
-    getNewsItemLink(locale: SupportedLocale): NewsItemLink {
-        return {
-            name: this.name.getLocalizedValue(locale),
-            url: this.url,
-        }
-    }
-}
+import { NewsItem, NewsService } from "./NewsService";
 
 export class NewsMaster {
     private text: TranslatableValues;
-    private links?: NewsLinkMaster[];
-    constructor(props: {text: TranslatableValues, links?: NewsLinkMaster[]}) {
+    private links?: LinkMaster[];
+    constructor(props: {text: TranslatableValues, links?: LinkMaster[]}) {
         this.text = props.text;
         this.links = props.links;
     }
@@ -28,7 +14,7 @@ export class NewsMaster {
         return {
             text: this.text.getLocalizedValue(locale),
             links: this.links?.map((linkMaster) => {
-                return linkMaster.getNewsItemLink(locale);
+                return linkMaster.getLinkItem(locale);
             })
         }
     }
@@ -41,26 +27,26 @@ const newsMasterData: NewsMaster[] = [
             ['en', '2023-04-30 1st album "Say," will be released at M3-2023spring (M-11b) and Booth']
         ]),
         links: [
-            new NewsLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "クロスフェードデモ"],
                     ["en", "Crossfade Demo"],
                 ]),
-                url: 'https://youtu.be/ZOmXJgo6epE',
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/ZOmXJgo6epE'),
             }),
-            new NewsLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "Say, MV"],
                     ["en", "Say, music video"],
                 ]),
-                url: 'https://youtu.be/uP-z-i1J9jE',
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/uP-z-i1J9jE'),
             }),
-            new NewsLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "Savior MV"],
                     ["en", "Savior music video"],
                 ]),
-                url: 'https://youtu.be/DJJwNdhzwE4',
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/DJJwNdhzwE4'),
             }),
         ],
     }),
@@ -70,19 +56,19 @@ const newsMasterData: NewsMaster[] = [
             ['en', '2023-04-30 Guest vocalist on pancakecats EP "sunnysong" will be released at M3-2023Spring']
         ]),
         links: [
-            new NewsLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "特設サイト"],
                     ["en", "Web site"],
                 ]),
-                url: "https://sunnysong.studio.site/",
+                url: TranslatableValues.createUnifiedStatement("https://sunnysong.studio.site/"),
             }),
-            new NewsLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "クロスフェードデモ"],
                     ["en", "Crossfade Demo"],
                 ]),
-                url: "https://youtu.be/H5zN6zqcPKE",
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/H5zN6zqcPKE"),
             }),
         ],
     }),
