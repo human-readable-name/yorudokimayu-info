@@ -1,15 +1,14 @@
 import React from "react";
 import DateLabel from "./DateLabel";
-
 import { Collaboration } from "../../services/biography/BiographyService";
-import CollaborationLinkItem from "./CollaborationLinkItem";
+import LinkList from "../common/LinkList";
 
 type Props = {
     collaboration: Collaboration;    
 };
 
 const CollaborationCard: React.FC<Props> = ({collaboration}) => {
-    return <article>
+    return <article className="p-2">
         <div className="flex flex-wrap space-x-4">
             <DateLabel date={collaboration.date} />
             <span className="text-sm">
@@ -21,10 +20,9 @@ const CollaborationCard: React.FC<Props> = ({collaboration}) => {
         <div className="flex flex-wrap space-x-4 jusitfy-start items-center">
             <span className="text-sm">{collaboration.partOfTheWork}</span>
             { collaboration.links.length > 0 && 
-                collaboration.links.map((link, index) => <CollaborationLinkItem key={index} collaborationLink={link} /> )
+                <LinkList linkItems={collaboration.links} />
             }
         </div>
-        
     </article>;
 };
 

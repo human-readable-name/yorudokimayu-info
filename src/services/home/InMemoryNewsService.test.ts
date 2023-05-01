@@ -1,28 +1,7 @@
 import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
+import { LinkMaster } from "../common/Link";
 import { TranslatableValues } from "../i18n/TranslatableValues";
-import { InMemoryNewsService, NewsLinkMaster, NewsMaster } from "./InMemoryNewsService";
-
-describe('NewsLinkMaster', () => {
-    describe('getNewsItemLink', () => {
-        test('ViewModelに変換できること', () => {
-            const master = new NewsLinkMaster({
-                name: TranslatableValues.createForTest([
-                    ["ja", "日本語"],
-                    ["en", "English"],
-                ]),
-                url: "https://www.zan-live.com/live/detail/10251",
-            });
-            expect(master.getNewsItemLink("ja")).toEqual({
-                name: "日本語",
-                url: "https://www.zan-live.com/live/detail/10251",
-            });
-            expect(master.getNewsItemLink("en")).toEqual({
-                name: "English",
-                url: "https://www.zan-live.com/live/detail/10251",
-            });
-        });
-    });
-});
+import { InMemoryNewsService, NewsMaster } from "./InMemoryNewsService";
 
 describe('NewsMaster', () => {
     describe('getNewsItem', () => {
@@ -33,19 +12,19 @@ describe('NewsMaster', () => {
                     ["en", "M32022Autumn (2022-10-30) pancakecats 1stEP Non-Stop Emotion!"],
                 ]),
                 links: [
-                    new NewsLinkMaster({
+                    new LinkMaster({
                         name: TranslatableValues.createForTest([
                             ["ja", "特設サイト"],
                             ["en", "Web site"],
                         ]), 
-                        url: "https://pccs-vtuber.studio.site/",
+                        url: TranslatableValues.createUnifiedStatement("https://pccs-vtuber.studio.site/"),
                     }),
-                    new NewsLinkMaster({
+                    new LinkMaster({
                         name: TranslatableValues.createForTest([
                             ["ja", "クロスフェードデモ"],
                             ["en", "Crossfade Demo"],
                         ]), 
-                        url: "https://youtu.be/stfsWwIFDtE",
+                        url: TranslatableValues.createUnifiedStatement("https://youtu.be/stfsWwIFDtE"),
                     }),
                 ],
             });

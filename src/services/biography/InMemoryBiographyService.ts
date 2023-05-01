@@ -423,6 +423,7 @@ export const japaneseProfile: Profile = {
         "2021-10-24 3D お 披 露",
         "2021-12-28 #nova_next 完結",
         "2022-04-24 初のM3 参加、1st EP sparklerをリリース",
+        "2023-04-30 1st Album Say,をリリース",
     ],
 };
 
@@ -441,6 +442,7 @@ export const englishProfile: Profile = {
         "2021-10-24 Unveiled 3D model",
         "2021-12-28 Completed #nova_next project",
         "2022-04-24 Participated in M3 for the first time and released 1st EP sparkler",
+        "2022-04-24 Relased 1st Album Say,",
     ],
 }
 

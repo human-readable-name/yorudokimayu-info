@@ -1,13 +1,9 @@
 import { SupportedLocale } from "../../constants/i18n";
-
-export type NewsItemLink = {
-    name: string;
-    url: string;
-}
+import { LinkItem } from "../common/Link";
 
 export type NewsItem = {
     text: string;
-    links?: NewsItemLink[];
+    links?: LinkItem[];
 };
 
 

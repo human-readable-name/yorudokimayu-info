@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Color } from "../../constants/tailwind";
 import { ContentLink } from "../../services/home/ContentLinkService";
 import { isInternal } from "../../utilities/link";
 
@@ -9,7 +10,7 @@ type Props = {
 
 const LinkCard: React.FC<Props> = ({contentLink}: Props) => {
     const {title, caption, url} = contentLink;
-    const anchorClassName = "m-4 p-6 border border-solid rounded-lg w-80 border-slate-800 hover:border-indigo-800 hover:text-indigo-800 justify-self-center";
+    const anchorClassName = `m-4 p-6 border border-solid rounded-lg w-80 border-${Color.Link} text-${Color.Link} justify-self-center`;
     if (isInternal(url)) {
         return (
             <Link href={url} className={anchorClassName}>

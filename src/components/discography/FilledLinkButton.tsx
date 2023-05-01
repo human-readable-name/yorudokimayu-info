@@ -1,4 +1,5 @@
 import React from "react";
+import { Color } from "../../constants/tailwind";
 import { LinkItem } from "../../services/discography/ProductService";
 
 type Props = {
@@ -10,7 +11,7 @@ const FilledLinkButton: React.FC<Props> = ({linkItem}) => {
         href={linkItem.url} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="w-full rounded-lg bg-indigo-800 text-white text-center leading-8"
+        className={`w-full rounded-lg bg-${Color.Link} text-white text-center leading-8`}
     >
         {linkItem.name}
     </a>
