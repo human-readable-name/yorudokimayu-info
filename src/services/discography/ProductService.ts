@@ -21,5 +21,6 @@ export type ProductSummary = {
 };
 
 export interface ProductService {
+    getLyricNote(locale: SupportedLocale): string;
     listProductSummaries(locale: SupportedLocale): ProductSummary[];
 }

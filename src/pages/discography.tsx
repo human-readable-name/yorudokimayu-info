@@ -23,6 +23,7 @@ export const getStaticProps = async ({locale}: GetStaticProps) => {
             locale: validatedLocale as SupportedLocale,
             meta: metaDataService.getDiscographyMeta(validatedLocale),
             discographyProps: {
+                lyricNote: productService.getLyricNote(validatedLocale),
                 productSummaries: productService.listProductSummaries(validatedLocale),
             } as DiscographyProps,
         },
