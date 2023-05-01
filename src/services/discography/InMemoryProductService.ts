@@ -733,7 +733,14 @@ const productMasterData: ProductMaster[] = [
     }),
 ];
 
+
 export class InMemoryProductService implements ProductService {
+    getLyricNote(locale: SupportedLocale): string {
+        return TranslatableValues.create([
+            ["ja", ""],
+            ["en", "Lyrics are available on TuneCore website / YouTube (for which a music video is available) / Booklet attached to the CD (for which a music video is not available)."],
+        ]).getLocalizedValue(locale);
+    }
     listProductSummaries(locale: SupportedLocale): ProductSummary[] {
         return productMasterData.map((master) => {
             return master.getProductSummary(locale);
