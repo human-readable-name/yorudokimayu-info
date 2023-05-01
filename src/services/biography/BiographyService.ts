@@ -1,15 +1,11 @@
 import { SupportedLocale } from "../../constants/i18n";
+import { LinkItem } from "../common/Link";
 
 export type Profile = {
     name: string;
     nameCaption?: string;
     introductions: string[];
     activities: string[];
-};
-
-export type CollaborationLink = {
-    name: string;
-    url: string;
 };
 
 export type CollaborationProduct = {
@@ -21,18 +17,13 @@ export type Collaboration = {
     date: Date;
     product: CollaborationProduct;
     partOfTheWork: string;
-    links: CollaborationLink[];
-};
-
-export type EventLink = {
-    name: string;
-    url: string;
+    links: LinkItem[];
 };
 
 export type EventHistory = {
     date: Date;
     name: string;
-    links?: EventLink[];
+    links?: LinkItem[];
 };
 
 export interface BiographyService {

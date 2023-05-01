@@ -1,66 +1,7 @@
 import { SupportedLocale, SUPPORTED_LOCALES } from "../../constants/i18n";
+import { LinkMaster } from "../common/Link";
 import { TranslatableValues } from "../i18n/TranslatableValues";
-import { createTuneCoreUrl } from "../i18n/TuneCore";
-import { 
-    japaneseProfile, englishProfile, InMemoryBiographyService, EventLinkMaster, EventHistoryMaster, CollaborationLinkMaster, CollaborationMaster 
-} from "./InMemoryBiographyService";
-
-describe('CollaborationLinkMaster', () => {
-    describe('getUrl', () => {
-        test('プリミティブな文字列の場合はそのままの値を返す', () => {
-            const master = new CollaborationLinkMaster({
-                url: "https://youtu.be/ZVsIPmfkWAg",
-                name: TranslatableValues.createForTest([
-                    ["ja", "日本語"],
-                    ["en", "English"],
-                ]),
-            });
-            expect(master.getUrl("ja")).toBe("https://youtu.be/ZVsIPmfkWAg");
-            expect(master.getUrl("en")).toBe("https://youtu.be/ZVsIPmfkWAg")
-        });
-        test('翻訳リソースならそのロケールの翻訳を返す', () => {
-            const master = new CollaborationLinkMaster({
-                url: TranslatableValues.createForTest([
-                    ["ja", "https://linkco.re/7BmE5qH1?lang=ja"],
-                    ["en", "https://linkco.re/7BmE5qH1?lang=en"],
-                ]),
-                name: TranslatableValues.createForTest([
-                    ["ja", "日本語"],
-                    ["en", "English"],
-                ]),
-            });
-            expect(master.getUrl("ja")).toBe("https://linkco.re/7BmE5qH1?lang=ja");
-            expect(master.getUrl("en")).toBe("https://linkco.re/7BmE5qH1?lang=en");
-        });
-    });
-    describe('getCollaborationLink', () => {
-        test('ViewModelに変換できる', () => {
-            const master = new CollaborationLinkMaster({
-                url: TranslatableValues.createForTest([
-                    ["ja", "https://linkco.re/7BmE5qH1?lang=ja"],
-                    ["en", "https://linkco.re/7BmE5qH1?lang=en"],
-                ]),
-                name: TranslatableValues.createForTest([
-                    ["ja", "配信・ダウンロード"],
-                    ["en", "Subscription / Download"],
-                ]),
-            });
-            expect(
-                master.getCollaborationLink("ja")
-            ).toEqual({
-                name: "配信・ダウンロード",
-                url: "https://linkco.re/7BmE5qH1?lang=ja"
-            });
-            expect(
-                master.getCollaborationLink("en")
-            ).toEqual({
-                name: "Subscription / Download",
-                url: "https://linkco.re/7BmE5qH1?lang=en"
-            });
-        });
-
-    });
-});
+import { InMemoryBiographyService, EventHistoryMaster, CollaborationMaster } from "./InMemoryBiographyService";
 
 describe('CollaborationMaster', () => {
     describe('getCollaboration', () => {
@@ -79,8 +20,8 @@ describe('CollaborationMaster', () => {
                 ["en", "Vocal"],
             ]),
             links: [
-                CollaborationLinkMaster.createMusicVideoOnYouTube({id: 'ZVsIPmfkWAg'}),
-                CollaborationLinkMaster.createForTuneCore({id: '7BmE5qH1'}),
+                LinkMaster.createMusicVideoOnYouTube({id: 'ZVsIPmfkWAg'}),
+                LinkMaster.createForTuneCore({id: '7BmE5qH1'}),
             ],
         });
         expect(master.getCollaboration("ja")).toEqual({
@@ -112,26 +53,6 @@ describe('CollaborationMaster', () => {
     });
 });
 
-describe('EventLinkMaster', () => {
-    test('getEventLink', () => {
-        const master = new EventLinkMaster({
-            url: "https://youtu.be/Kve3pP-KSek",
-            name: TranslatableValues.createForTest([
-                ["ja", "アーカイブ"],
-                ["en", "Live streaming archive"],
-            ]),
-        });
-        expect(master.getEventLink("ja")).toEqual({
-            url: "https://youtu.be/Kve3pP-KSek",
-            name: "アーカイブ",
-        });
-        expect(master.getEventLink("en")).toEqual({
-            url: "https://youtu.be/Kve3pP-KSek",
-            name: "Live streaming archive",
-        });
-    });
-});
-
 describe('EventHistoryMaster', () => {
     test('getEventHistory', () => {
         const master = new EventHistoryMaster({
@@ -141,8 +62,8 @@ describe('EventHistoryMaster', () => {
                 ["en", "#V-jam vol.1 (Copy band sessions of major artists)"],
             ]),
             links: [
-                new EventLinkMaster({
-                    url: "https://youtu.be/57bW0nKoOOo",
+                new LinkMaster({
+                    url: TranslatableValues.createUnifiedStatement("https://youtu.be/57bW0nKoOOo"),
                     name: TranslatableValues.createForTest([
                         ["ja", "アーカイブ"],
                         ["en", "Live streaming archive"],

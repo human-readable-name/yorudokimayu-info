@@ -1,66 +1,7 @@
-import { SUPPORTED_LOCALES, SupportedLocale } from "../../constants/i18n";
-import { createBoothUrl } from "../i18n/Booth";
+import { SupportedLocale } from "../../constants/i18n";
+import { LinkMaster } from "../common/Link";
 import { TranslatableValues } from "../i18n/TranslatableValues";
-import { createTuneCoreUrl } from "../i18n/TuneCore";
-import { Genre, LinkItem, ProductKind, ProductService, ProductSummary } from "./ProductService";
-
-export class ProductLinkMaster {
-    private url: string;
-    private name: TranslatableValues;
-    constructor(props: {url: string, name: TranslatableValues}) {
-        this.url = props.url;
-        this.name = props.name;
-    }
-    getLinkItem(locale: SupportedLocale): LinkItem {
-        return {
-            url: this.url,
-            name: this.name.getLocalizedValue(locale),
-        }
-    }
-};
-
-export class StoreLinkMaster {
-    private url: TranslatableValues;
-    private name: TranslatableValues;
-    constructor(props: { url: TranslatableValues; name: TranslatableValues}) {
-        this.url = props.url;
-        this.name = props.name;
-    }
-    getLinkItem(locale: SupportedLocale): LinkItem {
-        return {
-            url: this.url.getLocalizedValue(locale),
-            name: this.name.getLocalizedValue(locale),
-        };
-    }
-    static createForTuneCore(props: {id: string}): StoreLinkMaster {
-        const {id} = props;
-        return new StoreLinkMaster({
-            url: TranslatableValues.create(
-                SUPPORTED_LOCALES.map((locale) => {
-                    return [locale, createTuneCoreUrl({id,locale})]
-                })
-            ),
-            name: TranslatableValues.create([
-                ["ja", "Subscription / Download"],
-                ["en", "Subscription / Download"],
-            ]), 
-        });
-    }
-    static createForOfficialStore(props: {id: string}): StoreLinkMaster {
-        const {id} = props;
-        return new StoreLinkMaster({
-            url: TranslatableValues.create(
-                SUPPORTED_LOCALES.map((locale) => {
-                    return [locale, createBoothUrl({id,locale})]
-                })
-            ),
-            name: TranslatableValues.create([
-                ["ja", "Official store"],
-                ["en", "Official store"],
-            ]),
-        });
-    }
-}
+import { Genre, ProductKind, ProductService, ProductSummary } from "./ProductService";
 
 export class ProductMaster {
     private id: string;
@@ -70,9 +11,9 @@ export class ProductMaster {
     private dateOfRelease: Date;
     private description?: TranslatableValues;
     private credits: TranslatableValues[];
-    private mvLinks: ProductLinkMaster[];
-    private storeLinks: StoreLinkMaster[];
-    private supplementalInformationLinks?: ProductLinkMaster[];
+    private mvLinks: LinkMaster[];
+    private storeLinks: LinkMaster[];
+    private supplementalInformationLinks?: LinkMaster[];
     constructor(props: {
         id: string,
         name: TranslatableValues,
@@ -81,9 +22,9 @@ export class ProductMaster {
         dateOfRelease: Date,
         description?: TranslatableValues;
         credits: TranslatableValues[],
-        mvLinks: ProductLinkMaster[],
-        storeLinks: StoreLinkMaster[],
-        supplementalInformationLinks?: ProductLinkMaster[],
+        mvLinks: LinkMaster[],
+        storeLinks: LinkMaster[],
+        supplementalInformationLinks?: LinkMaster[],
     }) {
         this.id = props.id;
         this.name = props.name;
@@ -110,8 +51,8 @@ export class ProductMaster {
             mvLinks: this.mvLinks.map((mvLinkMaster) => {
                 return mvLinkMaster.getLinkItem(locale);
             }),
-            storeLinks: this.storeLinks.map((storeLinkMaster) => {
-                return storeLinkMaster.getLinkItem(locale);
+            storeLinks: this.storeLinks.map((LinkMaster) => {
+                return LinkMaster.getLinkItem(locale);
             }),
             supplementalInformationLinks: this.supplementalInformationLinks?.map((supplementalInformationLinkMaster) => {
                 return supplementalInformationLinkMaster.getLinkItem(locale);
@@ -123,10 +64,7 @@ export class ProductMaster {
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
         id: "1st-album",
-        name: TranslatableValues.create([
-            ["ja", "Say,"],
-            ["en", "Say,"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("Say,"),
         kind: "Album",
         genre: "Rock",
         dateOfRelease: new Date("2023-04-30"),
@@ -173,31 +111,29 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
-                    ["ja", "Say,"],
-                    ["en", "Say,"],
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
                 ]),
-                url: 'https://youtu.be/uP-z-i1J9jE',
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/ZOmXJgo6epE'),
             }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Savior MV"],
-                    ["en", "Savior music video"],
-                ]),
-                url: 'https://youtu.be/DJJwNdhzwE4',
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("Say,"),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/uP-z-i1J9jE'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("Savior"),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/DJJwNdhzwE4'),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForOfficialStore({id: '4670069'}),
+            LinkMaster.createForOfficialStore({id: '4670069'}),
         ],
     }),
     new ProductMaster({
         id: "16th-single",
-        name: TranslatableValues.create([
-            ["ja", "PENGUIN REALISE"],
-            ["en", "PENGUIN REALISE"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("PENGUIN REALISE"),
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2022-10-10"),
@@ -216,17 +152,14 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "PENGUIN REALISE"],
-                    ["en", "PENGUIN REALISE"],
-                ]), 
-                url: "https://youtu.be/od3go3oDixU"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("PENGUIN REALISE"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/od3go3oDixU"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'vm0mu1Ac'}),
-            StoreLinkMaster.createForOfficialStore({id:'4220956'}),
+            LinkMaster.createForTuneCore({id: 'vm0mu1Ac'}),
+            LinkMaster.createForOfficialStore({id:'4220956'}),
         ],
     }),
     new ProductMaster({
@@ -249,25 +182,22 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "夏色スタートライン"],
                     ["en", "NatsuiroStartline"],
                 ]), 
-                url: "https://youtu.be/yjO39YuU5pg"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/yjO39YuU5pg"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: '5G3y37dh'}),
-            StoreLinkMaster.createForOfficialStore({id: '4130595'}),
+            LinkMaster.createForTuneCore({id: '5G3y37dh'}),
+            LinkMaster.createForOfficialStore({id: '4130595'}),
         ],
     }),
     new ProductMaster({
         id: "1st-ep",
-        name: TranslatableValues.create([
-            ["ja", "sparkler"],
-            ["en", "sparkler"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("sparkler"),
         kind: "EP",
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
@@ -290,37 +220,28 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
-                    ["ja", "Crossfade Demo"], 
+                    ["ja", "クロスフェードデモ"],
                     ["en", "Crossfade Demo"],
                 ]),
-                url: "https://youtu.be/FmVb7r21Z-M"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/FmVb7r21Z-M"),
             }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "sparkler"], 
-                    ["en", "sparkler"],
-                ]),
-                url: "https://youtu.be/YUH6igD6brE"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("sparkler"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/YUH6igD6brE"),
             }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Enchanted"],
-                    ["en", "Enchanted"],
-                ]), 
-                url: "https://youtu.be/RHlFEVZdsrs"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("Enchanted"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/RHlFEVZdsrs"),
             }),
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "CUTE AGGRESSION!!!!"],
-                    ["en", "CUTE AGGRESSION!!!!"],
-                ]), 
-                url: "https://youtu.be/fhc5ifdIvec"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("CUTE AGGRESSION!!!!"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/fhc5ifdIvec"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForOfficialStore({id: '3756256'}),
+            LinkMaster.createForOfficialStore({id: '3756256'}),
         ]
     }),
     new ProductMaster({
@@ -332,10 +253,7 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-12-28"),
-        description: TranslatableValues.create([
-            ["ja", "14th single"],
-            ["en", "14th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("14th single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics esora uma [浮遊信号]"],
@@ -347,63 +265,51 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "うたかたとかして"],
                     ["en", "Utakatatokashite"],
                 ]), 
-                url: "https://youtu.be/9nNzSRtW-AE"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/9nNzSRtW-AE"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: '7qE6cdZz'}),
-            StoreLinkMaster.createForOfficialStore({id: '3528690'}),
+            LinkMaster.createForTuneCore({id: '7qE6cdZz'}),
+            LinkMaster.createForOfficialStore({id: '3528690'}),
         ],
         supplementalInformationLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "漫画・MV用アートワーク"],
                     ["en", "Artworks"],
                 ]), 
-                url: "https://www.pixiv.net/artworks/95674341"
+                url: TranslatableValues.createUnifiedStatement("https://www.pixiv.net/artworks/95674341"),
             }),
         ]
     }),
     new ProductMaster({
         id: "13th-single",
-        name: TranslatableValues.create([
-            ["ja", "KARISOME BREAKER"],
-            ["en", "KARISOME BREAKER"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("KARISOME BREAKER"),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-12-10"),
-        description: TranslatableValues.create([
-            ["ja", "13th single"],
-            ["en", "13th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("13th single"),
         credits: [
-            TranslatableValues.create([
-                ["ja", "Music/Lyrics mampuku"],
-                ["en", "Music/Lyrics mampuku"],
-            ]),
+            TranslatableValues.createUnifiedStatement("Music/Lyrics mampuku"),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "KARISOME BREAKER"],
-                    ["en", "KARISOME BREAKER"],
-                ]), 
-                url: "https://youtu.be/jFADO6wBgUo"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("KARISOME BREAKER"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/jFADO6wBgUo"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'mM5ds6zM'}),
-            StoreLinkMaster.createForOfficialStore({id: '3492316'}),
+            LinkMaster.createForTuneCore({id: 'mM5ds6zM'}),
+            LinkMaster.createForOfficialStore({id: '3492316'}),
         ]
     }),
     new ProductMaster({
@@ -415,10 +321,7 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-11-10"),
-        description: TranslatableValues.create([
-            ["ja", "12th single"],
-            ["en", "12th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("12th single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
@@ -434,32 +337,29 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "レオニズの降る夜に"],
                     ["en", "Leonids Reminds Me of the Starry Night"],
                 ]), 
-                url: "https://youtu.be/C0EH5CzDKCY"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/C0EH5CzDKCY"),
             }),
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "プラステ5 Live ver."],
                     ["en", "Live ver. at PlatnetStation STAGE.5"],
                 ]), 
-                url: "https://youtu.be/Vroy6pW-oBI"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/Vroy6pW-oBI"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'sd6XHQxB'}),
-            StoreLinkMaster.createForOfficialStore({id: '3419090'}),
+            LinkMaster.createForTuneCore({id: 'sd6XHQxB'}),
+            LinkMaster.createForOfficialStore({id: '3419090'}),
         ]
     }),
     new ProductMaster({
         id: "11th-single",
-        name: TranslatableValues.create([
-            ["ja", "PENGUIN EMERGENCE"],
-            ["en", "PENGUIN EMERGENCE"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("PENGUIN EMERGENCE"),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-10-10"),
@@ -482,32 +382,23 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "PENGUIN EMERGENCE"],
-                    ["en", "PENGUIN EMERGENCE"],
-                ]), 
-                url: "https://youtu.be/4EqjcReGmZM"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("PENGUIN EMERGENCE"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/4EqjcReGmZM"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'D53C67Bu'}),
-            StoreLinkMaster.createForOfficialStore({id: '3419079'}),
+            LinkMaster.createForTuneCore({id: 'D53C67Bu'}),
+            LinkMaster.createForOfficialStore({id: '3419079'}),
         ],
     }),
     new ProductMaster({
         id: "10th-single",
-        name: TranslatableValues.create([
-            ["ja", "Memorable"],
-            ["en", "Memorable"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("Memorable"),
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-10-01"),
-        description: TranslatableValues.create([
-            ["ja", "10th single"],
-            ["en", "10th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("10th single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
@@ -519,17 +410,14 @@ const productMasterData: ProductMaster[] = [
             ]), 
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Memorable"],
-                    ["en", "Memorable"],
-                ]), 
-                url: "https://youtu.be/x591--tK0wk"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("Memorable"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/x591--tK0wk"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'H9494e5u'}),
-            StoreLinkMaster.createForOfficialStore({id: '3318455'}),
+            LinkMaster.createForTuneCore({id: 'H9494e5u'}),
+            LinkMaster.createForOfficialStore({id: '3318455'}),
         ]
     }),
     new ProductMaster({
@@ -541,32 +429,26 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-09-10"),
-        description: TranslatableValues.create([
-            ["ja", "9th single"],
-            ["en", "9th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("9th single"),
         credits: [
-            TranslatableValues.create([
-                ["ja", "Music/Lyrics r0y"],
-                ["en", "Music/Lyrics r0y"],
-            ]),
+            TranslatableValues.createUnifiedStatement("Music/Lyrics r0y"),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "境界のアイリス"],
                     ["en", "Kyoukai no Iris"],
                 ]), 
-                url: "https://youtu.be/w7oDQo2ZNDc"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/w7oDQo2ZNDc"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'c78bSYh9'}),
-            StoreLinkMaster.createForOfficialStore({id: '3265250'}),
+            LinkMaster.createForTuneCore({id: 'c78bSYh9'}),
+            LinkMaster.createForOfficialStore({id: '3265250'}),
         ]
     }),
     new ProductMaster({
@@ -578,11 +460,7 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-08-10"),
-        description: TranslatableValues.create([
-            ["ja", "8th single"],
-            ["en", "8th single"],
-        ]), 
-
+        description: TranslatableValues.createUnifiedStatement("8th single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics アザミ"],
@@ -598,32 +476,26 @@ const productMasterData: ProductMaster[] = [
             ]), 
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "ロンリーディーバ"],
                     ["en", "Lonely Diva"],
                 ]), 
-                url: "https://youtu.be/yUXNaH2JjW8"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/yUXNaH2JjW8"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'pCpgzUMU'}),
-            StoreLinkMaster.createForOfficialStore({id: '3185868'}),
+            LinkMaster.createForTuneCore({id: 'pCpgzUMU'}),
+            LinkMaster.createForOfficialStore({id: '3185868'}),
         ]
     }),
     new ProductMaster({
         id: "7th-single",
-        name: TranslatableValues.create([
-            ["ja", "Dear My Enemy"],
-            ["en", "Dear My Enemy"],
-        ]), 
+        name: TranslatableValues.createUnifiedStatement("Dear My Enemy"), 
         kind: "Single",
         genre: "Alternative",
         dateOfRelease: new Date("2021-07-25"),
-        description: TranslatableValues.create([
-            ["ja", "7th single"],
-            ["en", "7th single"],
-        ]), 
+        description: TranslatableValues.createUnifiedStatement("7th single"), 
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics マッチ"],
@@ -635,17 +507,14 @@ const productMasterData: ProductMaster[] = [
             ]), 
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Dear My Enemy"],
-                    ["en", "Dear My Enemy"],
-                ]), 
-                url: "https://youtu.be/GtWwzw54zVQ"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("Dear My Enemy"), 
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/GtWwzw54zVQ"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'AvPtrznD'}),
-            StoreLinkMaster.createForOfficialStore({id: '3143568'}),
+            LinkMaster.createForTuneCore({id: 'AvPtrznD'}),
+            LinkMaster.createForOfficialStore({id: '3143568'}),
         ]
     }),
     new ProductMaster({
@@ -657,32 +526,26 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Electronic",
         dateOfRelease: new Date("2021-07-10"),
-        description: TranslatableValues.create([
-            ["ja", "6th single"],
-            ["en", "6th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("6th single"),
         credits: [
-            TranslatableValues.create([
-                ["ja", "Music/Lyrics picco"],
-                ["en", "Music/Lyrics picco"],
-            ]),
+            TranslatableValues.createUnifiedStatement("Music/Lyrics picco"),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "希求モーニング"],
                     ["en", "Kikyu Morinig"],
                 ]), 
-                url: "https://youtu.be/DpalPxOPZRo"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/DpalPxOPZRo"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: '0Rz8ACCd'}),
-            StoreLinkMaster.createForOfficialStore({id: '3107770'}),
+            LinkMaster.createForTuneCore({id: '0Rz8ACCd'}),
+            LinkMaster.createForOfficialStore({id: '3107770'}),
         ]
     }),
     new ProductMaster({
@@ -694,10 +557,7 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Pop",
         dateOfRelease: new Date("2021-06-10"),
-        description: TranslatableValues.create([
-            ["ja", "5th single"],
-            ["en", "5th single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("5th single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music sumeshiii a.k.a.バーチャルお寿司"],
@@ -713,32 +573,26 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "茜色の公園で"],
                     ["en", "AkaneironoKouende"],
                 ]), 
-                url: "https://youtu.be/xFaoFG-9ZDM"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/xFaoFG-9ZDM"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'HY6DrPGd'}),
-            StoreLinkMaster.createForOfficialStore({id: '3107757'}),
+            LinkMaster.createForTuneCore({id: 'HY6DrPGd'}),
+            LinkMaster.createForOfficialStore({id: '3107757'}),
         ]
     }),
     new ProductMaster({
         id: "4th-single",
-        name: TranslatableValues.create([
-            ["ja", "RULER"],
-            ["en", "RULER"],
-        ]), 
+        name: TranslatableValues.createUnifiedStatement("RULER"), 
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-05-10"),
-        description: TranslatableValues.create([
-            ["ja", "4th single"],
-            ["en", "4th single"],
-        ]), 
+        description: TranslatableValues.createUnifiedStatement("4th single"), 
         credits: [
             TranslatableValues.create([
                 ["ja", "Music 天野ドウジ [カクレゴ]"],
@@ -754,17 +608,14 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "RULER"],
-                    ["en", "RULER"],
-                ]), 
-                url: "https://youtu.be/uJCP_Vcqju8"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("RULER"), 
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/uJCP_Vcqju8"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'vRVnqU5v'}),
-            StoreLinkMaster.createForOfficialStore({id: '3107710'}),
+            LinkMaster.createForTuneCore({id: 'vRVnqU5v'}),
+            LinkMaster.createForOfficialStore({id: '3107710'}),
         ]
     }),
     new ProductMaster({
@@ -776,10 +627,7 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-04-25"),
-        description: TranslatableValues.create([
-            ["ja", "3rd single"],
-            ["en", "3rd single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("3rd single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics esora uma [浮遊信号]"],
@@ -791,17 +639,17 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "カラの鼓動はソラになる"],
                     ["en", "karano kodouha soraninaru"],
                 ]), 
-                url: "https://youtu.be/7jS6tDpvko4"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/7jS6tDpvko4"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'eGzYDu1Y'}),
-            StoreLinkMaster.createForOfficialStore({id: '3107732'}),
+            LinkMaster.createForTuneCore({id: 'eGzYDu1Y'}),
+            LinkMaster.createForOfficialStore({id: '3107732'}),
         ]
     }),
     new ProductMaster({
@@ -813,53 +661,44 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2021-04-11"),
-        description: TranslatableValues.create([
-            ["ja", "2nd single"],
-            ["en", "2nd single"],
-        ]),
+        description: TranslatableValues.createUnifiedStatement("2nd single"),
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyrics 隣町本舗"],
                 ["en", "Music/Lyrics tonarimachi-honpo"],
             ]),
-            TranslatableValues.create([
-                ["ja", "Rap Lyrics Fra [BOOGEY VOXX]"],
-                ["en", "Rap Lyrics Fra [BOOGEY VOXX]"],
-            ]),
+            TranslatableValues.createUnifiedStatement("Rap Lyrics Fra [BOOGEY VOXX]"),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "真夜中メロウライン"],
                     ["en", "mayonaka melowline"],
                 ]), 
-                url: "https://youtu.be/_R3eE6D2rBw"
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/_R3eE6D2rBw"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'NQZabT0H'}),
-            StoreLinkMaster.createForOfficialStore({id: '3107691'}),
+            LinkMaster.createForTuneCore({id: 'NQZabT0H'}),
+            LinkMaster.createForOfficialStore({id: '3107691'}),
         ],
         supplementalInformationLinks: [
-            new ProductLinkMaster({
+            new LinkMaster({
                 name: TranslatableValues.create([
                     ["ja", "ライナーノート"],
                     ["en", "Liner note"],
                 ]), 
-                url: "https://tonarimachi.fanbox.cc/posts/2113546"
+                url: TranslatableValues.createUnifiedStatement("https://tonarimachi.fanbox.cc/posts/2113546"),
             }),
         ]
     }),
     new ProductMaster({
         id: "1st-single",
-        name: TranslatableValues.create([
-            ["ja", "Penguin Nova"],
-            ["en", "Penguin Nova"],
-        ]),
+        name: TranslatableValues.createUnifiedStatement("Penguin Nova"),
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2020-10-10"),
@@ -882,17 +721,14 @@ const productMasterData: ProductMaster[] = [
             ]),
         ],
         mvLinks: [
-            new ProductLinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "Penguin Nova"],
-                    ["en", "Penguin Nova"],
-                ]), 
-                url: "https://youtu.be/DaVGqYTlCCk"
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("Penguin Nova"), 
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/DaVGqYTlCCk"),
             }),
         ],
         storeLinks: [
-            StoreLinkMaster.createForTuneCore({id: 'XRHzUnrA'}),
-            StoreLinkMaster.createForOfficialStore({id: '3107608'}),
+            LinkMaster.createForTuneCore({id: 'XRHzUnrA'}),
+            LinkMaster.createForOfficialStore({id: '3107608'}),
         ]
     }),
 ];

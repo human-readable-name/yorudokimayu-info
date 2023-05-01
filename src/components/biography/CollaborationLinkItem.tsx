@@ -1,8 +1,9 @@
 import React from "react";
-import { CollaborationLink } from "../../services/biography/BiographyService";
+import { LinkItem } from "../../services/common/Link";
+
 
 type Props = {
-    collaborationLink: CollaborationLink;
+    collaborationLink: LinkItem;
 };
 
 const CollaborationLinkItem: React.FC<Props> = ({collaborationLink}) => {
