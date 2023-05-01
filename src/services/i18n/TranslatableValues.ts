@@ -27,6 +27,24 @@ export class TranslatableValues {
         return new TranslatableValues(TranslatableValues.createValues(candidates));
     }
     /**
+     * ファクトリメソッド
+     * 
+     * TuneCoreやYouTubeのMVのなど、表示文言を英語で統一する場合、
+     * 全ロケールを網羅したインスタンスを生成する。
+     * @param statement string
+     * @returns TranslatableValues
+     * @throws Error
+     */
+    static createUnifiedStatement(statement: string): TranslatableValues {
+        return new TranslatableValues(
+            new Map(
+                SUPPORTED_LOCALES.map((locale) => {
+                    return [locale, statement];
+                })
+            )
+        );
+    }
+    /**
      * 単体テストコード用のファクトリメソッド
      * 
      * createValuesメソッドによる対応ロケールのチェックがされない。

@@ -1,8 +1,8 @@
 import React from "react";
-import { EventLink } from "../../services/biography/BiographyService";
+import { LinkItem } from "../../services/common/Link";
 
 type Props = {
-    eventLink: EventLink;
+    eventLink: LinkItem;
 };
 
 const EventLinkItem: React.FC<Props> = ({eventLink}: Props) => {

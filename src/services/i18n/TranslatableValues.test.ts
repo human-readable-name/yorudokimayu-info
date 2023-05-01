@@ -1,4 +1,4 @@
-import { SupportedLocale } from "../../constants/i18n";
+import { SUPPORTED_LOCALES, SupportedLocale } from "../../constants/i18n";
 import { TranslatableValues } from "./TranslatableValues";
 
 describe('TranslatableValues', () => {
@@ -28,7 +28,15 @@ describe('TranslatableValues', () => {
             ).toBeInstanceOf(TranslatableValues);
         });
     });
-
+    describe('createUnifiedStatement', () => {
+        test('全ロケールに対する統一文言インスタンスを作成できる', () => {
+            const actual = TranslatableValues.createUnifiedStatement("Subscription / Download");
+            expect(actual).toBeInstanceOf(TranslatableValues);
+            SUPPORTED_LOCALES.forEach((locale) => {
+                expect(actual.getLocalizedValue(locale)).toBe("Subscription / Download");
+            });
+        });
+    });
     describe('getLocalizedValue', () => {
         test('正常系', () => {
             const instance = TranslatableValues.createForTest([
