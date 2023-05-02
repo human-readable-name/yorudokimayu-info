@@ -2,27 +2,26 @@ import React from "react";
 import DateLabel from "./DateLabel";
 import { Collaboration } from "../../services/biography/BiographyService";
 import LinkList from "../common/LinkList";
+import { Padding } from "../../constants/tailwind";
 
 type Props = {
     collaboration: Collaboration;    
 };
 
 const CollaborationCard: React.FC<Props> = ({collaboration}) => {
-    return <article className="p-2">
+    return <article className={`${Padding.Small}`}>
         <div className="flex flex-wrap space-x-4">
             <DateLabel date={collaboration.date} />
-            <span className="text-sm">
+            <span>
                 {collaboration.product.artist}
                 {collaboration.product.artist.length > 0 ? " " : ""}
                 {collaboration.product.name}
             </span>
+            <span>{collaboration.partOfTheWork}</span>
         </div>
-        <div className="flex flex-wrap space-x-4 jusitfy-start items-center">
-            <span className="text-sm">{collaboration.partOfTheWork}</span>
-            { collaboration.links.length > 0 && 
-                <LinkList linkItems={collaboration.links} />
-            }
-        </div>
+        { collaboration.links.length > 0 && 
+            <LinkList linkItems={collaboration.links} />
+        }
     </article>;
 };
 
