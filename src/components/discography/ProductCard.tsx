@@ -2,9 +2,8 @@ import React from "react";
 import DateOfRleaseLabel from "./DateOfReleaseLabel";
 import GenreLabel from "./GenreLabel";
 import BorderLinkButton from "./BorderLinkButton";
-import FilledLinkButton from "./FilledLinkButton";
+import MvLinkButton from "./MvLinkButton";
 import { ProductSummary } from "../../services/discography/ProductService"; 
-import { FontSize, Padding } from "../../constants/tailwind";
 
 type Props = {
     productSummary: ProductSummary;
@@ -12,8 +11,8 @@ type Props = {
 
 const ProductCard: React.FC<Props> = ({productSummary}) => {
     return <>
-        <article className={`${Padding.Middle}`}>
-            <h3 className={`${FontSize.ProductName} font-bold`}>{productSummary.name}</h3>
+        <article className="p-4">
+            <h3 className="text-large font-bold">{productSummary.name}</h3>
             <div className="flex space-x-4">
                 <DateOfRleaseLabel dateOfRelease={productSummary.dateOfRelease} />
                 <GenreLabel genre={productSummary.genre} />
@@ -28,15 +27,15 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
             </div>
             { productSummary.mvLinks.length > 0 && 
                 <div className="my-2 text-center">
-                    <span className={`${Padding.Small}`}>Music video</span>
+                    <span className="p-2">Music video</span>
                     <div className="grid grid-cols gap-2">
-                        {productSummary.mvLinks.map((linkItem, index) => <FilledLinkButton key={index} linkItem={linkItem} /> )}
+                        {productSummary.mvLinks.map((linkItem, index) => <MvLinkButton key={index} linkItem={linkItem} /> )}
                     </div>
                 </div>
             }
             { productSummary.storeLinks.length > 0 && 
                 <div className="my-2 text-center">
-                    <span className={`${Padding.Small}`}>Store</span>
+                    <span className="p-2">Store</span>
                     <div className="grid grid-cols gap-2">
                         {productSummary.storeLinks.map((linkItem, index) => <BorderLinkButton key={index} linkItem={linkItem} /> )}
                     </div>
@@ -44,7 +43,7 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
             }
             { productSummary.supplementalInformationLinks != null && productSummary.supplementalInformationLinks.length > 0 && 
                 <div className="my-2 text-center">
-                    <span className={`${Padding.Small}`}>Supplemental information</span>
+                    <span className="p-2">Supplemental information</span>
                     <div className="grid grid-cols gap-2">
                         {productSummary.supplementalInformationLinks.map((linkItem, index) => <BorderLinkButton key={index} linkItem={linkItem} /> )}
                     </div>

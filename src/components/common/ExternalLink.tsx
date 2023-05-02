@@ -1,5 +1,4 @@
 import React from "react";
-import { Color } from "../../constants/tailwind";
 import { LinkItem } from "../../services/common/Link"
 
 type Props = {
@@ -11,7 +10,7 @@ const ExternalLink: React.FC<Props> = ({linkItem}: Props) => {
         href={linkItem.url}
         target="_blank"
         rel="noopener noreferrer" 
-        className={`text-sm font-medium text-${Color.Link} border-b border-${Color.Link}`}
+        className="text-sm font-medium text-indigo-800 border-b border-indigo-800"
     >
         {linkItem.name}
     </a>;
