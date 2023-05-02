@@ -2,14 +2,13 @@ import React from "react";
 import DateLabel from "./DateLabel";
 import { Collaboration } from "../../services/biography/BiographyService";
 import LinkList from "../common/LinkList";
-import { Padding } from "../../constants/tailwind";
 
 type Props = {
     collaboration: Collaboration;    
 };
 
 const CollaborationCard: React.FC<Props> = ({collaboration}) => {
-    return <article className={`${Padding.Small}`}>
+    return <article className="p-2">
         <div className="flex flex-wrap space-x-4">
             <DateLabel date={collaboration.date} />
             <span>
