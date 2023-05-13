@@ -234,6 +234,33 @@ const collaborationMasterData: CollaborationMaster[] = [
             })
         ],
     }),
+    new CollaborationMaster({
+        date: new Date("2023-04-30"),
+        productName: TranslatableValues.create([
+            ["ja", "パンケーキキャッツ サニーソング"],
+            ["en", "PancakeCats sunnysong"]
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "Tr1 サニーソング (feat.拠鳥きまゆ) 歌唱"],
+            ["en", "Vocal Tr1 sunnysong (feat. Yorudo Kimayu)"],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://sunnysong.studio.site/"),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/H5zN6zqcPKE"),
+            }),
+        ],
+    }),
 ];
 
 export class EventHistoryMaster {
