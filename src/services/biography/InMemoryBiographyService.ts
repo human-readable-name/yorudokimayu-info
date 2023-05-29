@@ -432,6 +432,22 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 url: TranslatableValues.createUnifiedStatement("https://www.twitch.tv/videos/1681281496"),
             }),
         ]
+    }),
+    new EventHistoryMaster({
+        date: new Date("2023-05-28"),
+        name: TranslatableValues.create([
+            ["ja", "vortex主催『V³: Virtual Vortex Voyage』"],
+            ["en", "V³: Virtual Vortex Voyage hosted by vortex"],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://pjblue.zaiko.io/item/356598"),
+            }),
+        ]
     })
 ];
 
