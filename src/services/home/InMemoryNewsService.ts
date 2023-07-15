@@ -20,7 +20,30 @@ export class NewsMaster {
     }
 }
 
-const newsMasterData: NewsMaster[] = [];
+const newsMasterData: NewsMaster[] = [
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2023-10-07 拠鳥きまゆ 1st Oneman Live「PENGUIN A LIVE」'],
+            ['en', '2023-10-07 Kimayu Yorudo 1st solo concert "PENGUIN A LIVE"']
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/026vu3ycss431.html'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 赤坂navey floor'],
+                    ['en', 'Venue Akasaka navey floor'],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/live/detail/10311'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 Z-aN'],
+                    ['en', 'Streaming Z-aN'],
+                ]),
+            }),
+        ]
+    })
+];
 
 export class InMemoryNewsService implements NewsService {
     listNews(locale: SupportedLocale): NewsItem[] {
