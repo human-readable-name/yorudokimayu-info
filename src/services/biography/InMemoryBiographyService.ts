@@ -261,6 +261,21 @@ const collaborationMasterData: CollaborationMaster[] = [
             }),
         ],
     }),
+    new CollaborationMaster({
+        date: new Date('2023-07-31'),
+        productName: TranslatableValues.create([
+            ["ja", "サーチライト"],
+            ["en", "SearchLight"],
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "歌唱・ロゴ"],
+            ["en", "Vocal/Logo design"],
+        ]),
+        links: [
+            LinkMaster.createForTuneCore({id: '66EeHazf'}),
+            LinkMaster.createMusicVideoOnYouTube({id: 'NrdD9jrN1Jg'}),
+        ],
+    }),
 ];
 
 export class EventHistoryMaster {

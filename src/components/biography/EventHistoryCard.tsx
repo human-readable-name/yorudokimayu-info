@@ -8,7 +8,7 @@ type Props = {
 };
 
 const EventHistoryCard : React.FC<Props> = ({eventHistory}: Props) => {
-    return <article className="p-2">
+    return <article className="py-4">
         <div className="flex space-x-4 justify-start items-center">
             <DateLabel date={eventHistory.date} />
             <span>{eventHistory.name}</span>
