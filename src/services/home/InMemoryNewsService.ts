@@ -23,16 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2023-07-31 拠鳥きまゆ×閑地游「サーチライト」リリース'],
-            ['en', '2023-07-31 Collaboration song "SearchLight" by KimayuYorudo & YouKanti to be released']
-        ]),
-        links: [
-            LinkMaster.createForTuneCore({id: '66EeHazf'}),
-            LinkMaster.createMusicVideoOnYouTube({id: 'NrdD9jrN1Jg'}),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2023-10-07 拠鳥きまゆ 1st Oneman Live「PENGUIN A LIVE」'],
             ['en', '2023-10-07 Kimayu Yorudo 1st solo concert "PENGUIN A LIVE"']
         ]),

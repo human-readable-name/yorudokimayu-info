@@ -8,7 +8,7 @@ type Props = {
 };
 
 const CollaborationCard: React.FC<Props> = ({collaboration}) => {
-    return <article className="p-2">
+    return <article className="py-4">
         <div className="flex flex-wrap space-x-4">
             <DateLabel date={collaboration.date} />
             <span>
