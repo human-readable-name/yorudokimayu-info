@@ -22,6 +22,18 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2023-09-17 TRIATHLON ~presents by V³~ Day2'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/358789'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 ZAIKO'],
+                    ['en', 'Streaming on ZAIKO']
+                ]),
+            }),
+        ]
+    }),
+    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2023-10-07 拠鳥きまゆ 1st Oneman Live「PENGUIN A LIVE」'],
             ['en', '2023-10-07 Kimayu Yorudo 1st solo concert "PENGUIN A LIVE"']
