@@ -463,7 +463,20 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 url: TranslatableValues.createUnifiedStatement("https://pjblue.zaiko.io/item/356598"),
             }),
         ]
-    })
+    }),
+    new EventHistoryMaster({
+        date: new Date("2023-09-17"),
+        name: TranslatableValues.createUnifiedStatement("TRIATHLON ~presents by V³~ Day2"),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://pjblue.zaiko.io/item/358789"),
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"]
+                ]),
+            }),
+        ]
+    }),
 ];
 
 export const japaneseProfile: Profile = {

@@ -22,18 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2023-09-17 TRIATHLON ~presents by V³~ Day2'),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/358789'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 ZAIKO'],
-                    ['en', 'Streaming on ZAIKO']
-                ]),
-            }),
-        ]
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2023-09-30 ​Virtual Artist Fes VRide! Vol.2'),
         links: [
             new LinkMaster({
