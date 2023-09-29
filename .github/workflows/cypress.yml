@@ -9,13 +9,13 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js v18
         uses: actions/setup-node@v3
         with:
           node-version: '18'
       - name: Run cypress
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           browser: chrome
           build: yarn build

@@ -22,6 +22,19 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2023-09-29 新曲 イキガイショウタイム リリース'],
+            ['en', '2023-09-29 New song "Ikigai Showtime" was released'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('MV'),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/jkAGj03euDY"),
+            }),
+            LinkMaster.createForOfficialStore({id:'5129141'}),
+        ]
+    }),
+    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2023-09-30 ​Virtual Artist Fes VRide! Vol.2'),
         links: [
             new LinkMaster({
@@ -39,7 +52,7 @@ const newsMasterData: NewsMaster[] = [
                 ]),
             }),
             new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.youtube.com/@enogu'),
+                url: TranslatableValues.createUnifiedStatement('https://www.youtube.com/live/C-uYMHzzXDo'),
                 name: TranslatableValues.create([
                     ['ja', '配信 えのぐYouTubeチャネル'],
                     ['en', 'Streaming on enogu YouTube channel'],
