@@ -63,6 +63,39 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "17th-single",
+        name: TranslatableValues.create([
+            ["ja", "イキガイショウタイム"],
+            ["en", "Ikigai Showtime"],
+        ]),
+        kind: "Single",
+        genre: "Rock",
+        dateOfRelease: new Date("2023-09-29"),
+        description: undefined,
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music 天野ドウジ [カクレゴ]"],
+                ["en", "Music DoujiAmano [KAKULEGO]"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Lyrics/Vocal 拠鳥きまゆ"],
+                ["en", "Lyrics/Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "イキガイショウタイム"],
+                    ["en", "Ikigai showtime"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/jkAGj03euDY"),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForOfficialStore({id:'5129141'}),
+        ],
+    }),
+    new ProductMaster({
         id: "1st-album",
         name: TranslatableValues.createUnifiedStatement("Say,"),
         kind: "Album",
