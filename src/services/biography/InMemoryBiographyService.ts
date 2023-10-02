@@ -477,6 +477,26 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ]
     }),
+    new EventHistoryMaster({
+        date: new Date("2023-09-30"),
+        name: TranslatableValues.createUnifiedStatement("Virtual Artist Fes VRide! Vol.2"),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://www.real-virtual-live.com/vol2"),
+                name: TranslatableValues.create([
+                    ["ja", "公式サイト"],
+                    ["en", "Official web site"],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://www.youtube.com/live/C-uYMHzzXDo"),
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"],
+                ]),
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
