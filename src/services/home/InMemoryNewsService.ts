@@ -23,41 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2023-09-29 新曲 イキガイショウタイム リリース'],
-            ['en', '2023-09-29 New song "Ikigai Showtime" was released'],
-        ]),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement('MV'),
-                url: TranslatableValues.createUnifiedStatement("https://youtu.be/jkAGj03euDY"),
-            }),
-            LinkMaster.createForOfficialStore({id:'5129141'}),
-        ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2023-10-07 拠鳥きまゆ 1st Oneman Live「PENGUIN A LIVE」'],
-            ['en', '2023-10-07 Kimayu Yorudo 1st solo concert "PENGUIN A LIVE"']
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/026vu3ycss431.html'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 赤坂navey floor'],
-                    ['en', 'Venue Akasaka navey floor'],
-                ]),
-            }),
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/live/detail/10311'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 Z-aN'],
-                    ['en', 'Streaming Z-aN'],
-                ]),
-            }),
-        ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2023-10-21 わくわく！VTuberひろば Vol.35 ミュージックLIVE'],
             ['en', '2023-10-21 WAKUWAKU VTuber HIROBA Vol.35 music live'],
         ]),

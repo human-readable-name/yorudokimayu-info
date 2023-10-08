@@ -497,6 +497,29 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        date: new Date("2023-10-07"),
+        name: TranslatableValues.create([
+            ["ja", "拠鳥きまゆ 1st Oneman Live「PENGUIN A LIVE」"],
+            ["en", 'Kimayu Yorudo 1st solo concert "PENGUIN A LIVE"'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/026vu3ycss431.html'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 赤坂navey floor'],
+                    ['en', 'Venue Akasaka navey floor'],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/live/detail/10311'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 Z-aN'],
+                    ['en', 'Streaming Z-aN'],
+                ]),
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
@@ -515,6 +538,7 @@ export const japaneseProfile: Profile = {
         "2021-12-28 #nova_next 完結",
         "2022-04-24 初のM3 参加、1st EP sparklerをリリース",
         "2023-04-30 1st Album Say,をリリース",
+        "2023-10-07 1st Oneman Live「PENGUIN A LIVE」を開催",
     ],
 };
 
@@ -534,6 +558,7 @@ export const englishProfile: Profile = {
         "2021-12-28 Completed #nova_next project",
         "2022-04-24 Participated in M3 for the first time and released 1st EP sparkler",
         "2022-04-24 Relased 1st Album Say,",
+        '2023-10-07 1st solo concert "PENGUIN A LIVE"',
     ],
 }
 
