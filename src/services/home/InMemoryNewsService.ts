@@ -23,6 +23,28 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2023-10-07 拠鳥きまゆ 1st Oneman Live「PENGUIN A LIVE」'],
+            ['en', '2023-10-07 Kimayu Yorudo 1st solo concert "PENGUIN A LIVE"']
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/live/detail/10311'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 Z-aN (アーカイブは2023-10-31まで視聴可能)'],
+                    ['en', 'Streaming Z-aN (The archive will be available until 2023-10-31'],
+                ]),
+            }),
+        ]
+    }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2023-10-10 New song "PENGUIN ALIVE" to be released'),
+        links: [
+            LinkMaster.createMusicVideoOnYouTube({id: "jM5AdQGVZ4g"}),
+            LinkMaster.createForTuneCore({id: "vMh6myS4"}),
+        ]
+    }), 
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2023-10-21 わくわく！VTuberひろば Vol.35 ミュージックLIVE'],
             ['en', '2023-10-21 WAKUWAKU VTuber HIROBA Vol.35 music live'],
         ]),
