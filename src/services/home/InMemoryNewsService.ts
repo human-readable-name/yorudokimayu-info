@@ -37,10 +37,11 @@ const newsMasterData: NewsMaster[] = [
         ]
     }),
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2023-10-10 New song "PENGUIN ALIVE" to be released'),
+        text: TranslatableValues.createUnifiedStatement('2023-10-10 New song "PENGUIN ALIVE"'),
         links: [
             LinkMaster.createMusicVideoOnYouTube({id: "jM5AdQGVZ4g"}),
             LinkMaster.createForTuneCore({id: "vMh6myS4"}),
+            LinkMaster.createForOfficialStore({id: "5153499"}),
         ]
     }), 
     new NewsMaster({
