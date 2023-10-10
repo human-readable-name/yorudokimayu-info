@@ -63,6 +63,41 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "18th-single",
+        name: TranslatableValues.createUnifiedStatement("PENGUIN ALIVE"),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2023-10-10"),
+        description: TranslatableValues.create([
+            ["ja", "活動開始3周年記念"],
+            ["en", "third anniversary song"],
+        ]),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music 犬絵"],
+                ["en", "Music Catpicture"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Bass 四谷ゲンロク"],
+                ["en", "Bass GenrokuYotsuya"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Lyrics/Vocal 拠鳥きまゆ"],
+                ["en", "Lyrics/Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/jM5AdQGVZ4g"),
+                name: TranslatableValues.createUnifiedStatement("PENGUIN ALIVE"),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: "vMh6myS4"}),
+            LinkMaster.createForOfficialStore({id: "5153499"}),
+        ],
+    }),
+    new ProductMaster({
         id: "17th-single",
         name: TranslatableValues.create([
             ["ja", "イキガイショウタイム"],

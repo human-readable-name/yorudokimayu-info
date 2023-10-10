@@ -23,7 +23,7 @@ describe('InMemoryProductService', () => {
             const japaneseTuneCoreLinks = jaSummaries.flatMap((summary) => {
                 return summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"));
             });
-            expect(japaneseTuneCoreLinks.length).toBe(16);
+            expect(japaneseTuneCoreLinks.length).toBe(17);
             japaneseTuneCoreLinks.forEach((link) => {
                 expect(link.url).toContain("lang=ja")
             });
@@ -48,7 +48,7 @@ describe('InMemoryProductService', () => {
             const englishTuneCoreLinks = enSummaries.flatMap((summary) => {
                 return summary.storeLinks.filter((linkItem) => linkItem.url.startsWith("https://linkco.re/"));
             });
-            expect(englishTuneCoreLinks.length).toBe(16);
+            expect(englishTuneCoreLinks.length).toBe(17);
             englishTuneCoreLinks.forEach((link) => {
                 expect(link.url).toContain("lang=en")
             });
