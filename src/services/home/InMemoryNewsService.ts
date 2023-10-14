@@ -31,9 +31,16 @@ const newsMasterData: NewsMaster[] = [
                 url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/live/detail/10311'),
                 name: TranslatableValues.create([
                     ['ja', '配信 Z-aN (アーカイブは2023-10-31まで視聴可能)'],
-                    ['en', 'Streaming Z-aN (The archive will be available until 2023-10-31'],
+                    ['en', 'Streaming Z-aN (The archive will be available until 2023-10-31)'],
                 ]),
             }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://panora.tokyo/archives/73141'),
+                name: TranslatableValues.create([
+                    ['ja', 'ライブレポート (ネタバレ注意)'],
+                    ['en', 'Report on PANORA (spoiler alert)'],
+                ])
+            })
         ]
     }),
     new NewsMaster({
