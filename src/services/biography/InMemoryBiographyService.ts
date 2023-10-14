@@ -518,6 +518,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                     ['en', 'Streaming Z-aN'],
                 ]),
             }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://panora.tokyo/archives/73141'),
+                name: TranslatableValues.create([
+                    ['ja', 'ライブレポート'],
+                    ['en', 'Report on PANORA'],
+                ])
+            }),
         ],
     }),
 ];
