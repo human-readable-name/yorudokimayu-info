@@ -238,11 +238,11 @@ const collaborationMasterData: CollaborationMaster[] = [
         date: new Date("2023-04-30"),
         productName: TranslatableValues.create([
             ["ja", "パンケーキキャッツ サニーソング"],
-            ["en", "PancakeCats sunnysong"]
+            ["en", "PancakeCats Sunny Song"]
         ]),
         partOfTheWork: TranslatableValues.create([
             ["ja", "Tr1 サニーソング (feat.拠鳥きまゆ) 歌唱"],
-            ["en", "Vocal Tr1 sunnysong (feat. Yorudo Kimayu)"],
+            ["en", "Vocal Tr1 Sunny Song (feat. Yorudo Kimayu)"],
         ]),
         links: [
             new LinkMaster({
@@ -259,6 +259,7 @@ const collaborationMasterData: CollaborationMaster[] = [
                 ]),
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/H5zN6zqcPKE"),
             }),
+            LinkMaster.createForTuneCore({id: "SMzvnrya"}),
         ],
     }),
     new CollaborationMaster({
@@ -274,6 +275,33 @@ const collaborationMasterData: CollaborationMaster[] = [
         links: [
             LinkMaster.createForTuneCore({id: '66EeHazf'}),
             LinkMaster.createMusicVideoOnYouTube({id: 'NrdD9jrN1Jg'}),
+        ],
+    }),
+    new CollaborationMaster({
+        date: new Date('2023-10-30'),
+        productName: TranslatableValues.create([
+            ["ja", "パンケーキキャッツ Re:collection"],
+            ["en", "PancakeCats Re:collection"]
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "Tr.06 シゲキ的ドラスティックチューン(feat.拠鳥きまゆ) 歌唱"],
+            ["en", "Vocal Tr.06 シゲキ的ドラスティックチューン(feat.拠鳥きまゆ) (English translation is not available)"],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://re-collection.studio.site/"),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/yUUtXN25b9Q"),
+            }),
         ],
     }),
 ];
@@ -527,6 +555,22 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'わくわく！VTuberひろば Vol.35 ミュージックLIVE'],
+            ['en', 'WAKUWAKU VTuber HIROBA Vol.35 music live'],
+        ]),
+        date: new Date('2023-10-21'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.youtube.com/live/QsQogxbnXUQ'),
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ]),
+            })
+        ]
+    })
 ];
 
 export const japaneseProfile: Profile = {
