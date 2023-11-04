@@ -285,7 +285,7 @@ const collaborationMasterData: CollaborationMaster[] = [
         ]),
         partOfTheWork: TranslatableValues.create([
             ["ja", "Tr.06 シゲキ的ドラスティックチューン(feat.拠鳥きまゆ) 歌唱"],
-            ["en", "Vocal Tr.06 シゲキ的ドラスティックチューン(feat.拠鳥きまゆ) (English translation is not available)"],
+            ["en", "Vocal Tr.06 Shigeki-like drastic tune (feat. Yorudo Kimayu)"],
         ]),
         links: [
             new LinkMaster({
@@ -302,6 +302,7 @@ const collaborationMasterData: CollaborationMaster[] = [
                 ]),
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/yUUtXN25b9Q"),
             }),
+            LinkMaster.createForTuneCore({id: "ye8Hb3C0"}),
         ],
     }),
 ];
