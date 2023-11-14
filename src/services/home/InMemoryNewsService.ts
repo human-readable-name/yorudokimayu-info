@@ -20,7 +20,23 @@ export class NewsMaster {
     }
 }
 
-const newsMasterData: NewsMaster[] = [];
+const newsMasterData: NewsMaster[] = [
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ["ja", "2023-12-10 V³アワード 出演"],
+            ["en", "2023-12-10 V³ AWARD"]
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "配信 ZAIKO"],
+                    ["en", "Live straming on ZAIKO"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://pjblue.zaiko.io/item/360532"),
+            })
+        ]
+    })
+];
 
 export class InMemoryNewsService implements NewsService {
     listNews(locale: SupportedLocale): NewsItem[] {
