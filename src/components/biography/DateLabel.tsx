@@ -1,12 +1,11 @@
 import React from "react";
-import { format } from "date-fns";
 
 type Props = {
-    date: Date;
+    date: string; // yyyy-MM-dd
 };
 
 const DateLabel: React.FC<Props> = ({date}) => {
-    return <span className="text-slate-800 text-sm text-center">{format(date, "yyyy-MM-dd")}</span>
+    return <span className="text-slate-800 text-sm text-center">{date}</span>
 };
 
 export default DateLabel;

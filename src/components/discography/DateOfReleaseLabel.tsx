@@ -1,12 +1,11 @@
 import React from "react";
-import { format } from "date-fns";
 
 type Props = {
-    dateOfRelease: Date;
+    dateOfRelease: string; // yyyy-MM-dd
 };
 
 const DateOfRleaseLabel: React.FC<Props> = ({dateOfRelease}) => {
-    return <span className="text-slate-600 text-base">{format(dateOfRelease, "yyyy-MM-dd")}</span>
+    return <span className="text-slate-600 text-base">{dateOfRelease}</span>
 };
 
 export default DateOfRleaseLabel;

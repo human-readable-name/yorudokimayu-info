@@ -15,7 +15,7 @@ productCard.args = {
         name: "sparkler",
         kind: "EP",
         genre: "Alternative",
-        dateOfRelease: new Date("2022-04-24"),
+        dateOfRelease: "2022-04-24",
         description: "1st EP M3-2022春 お-07a頒布で頒布・Boothにて販売",
         credits: [
             "作曲・Tr2作詞 マッチ",

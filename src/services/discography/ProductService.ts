@@ -12,7 +12,7 @@ export type ProductSummary = {
     name: string;
     kind: ProductKind;
     genre: Genre;
-    dateOfRelease: Date;
+    dateOfRelease: string; // yyyy-MM-dd;
     description: string;
     credits: string[];
     mvLinks: LinkItem[];

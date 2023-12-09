@@ -14,14 +14,14 @@ export type CollaborationProduct = {
 }
 
 export type Collaboration = {
-    date: Date;
+    date: string; // yyyy-MM-dd
     product: CollaborationProduct;
     partOfTheWork: string;
     links: LinkItem[];
 };
 
 export type EventHistory = {
-    date: Date;
+    date: string; // yyyy-MM-dd
     name: string;
     links?: LinkItem[];
 };
