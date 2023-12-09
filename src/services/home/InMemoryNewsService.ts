@@ -23,8 +23,8 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ["ja", "2023-12-10 V³アワード 出演"],
-            ["en", "2023-12-10 V³ AWARD"]
+            ["ja", "V³アワード 出演 (2024年に延期)"],
+            ["en", "V³ AWARD (postponed to 2024)"]
         ]),
         links: [
             new LinkMaster({
