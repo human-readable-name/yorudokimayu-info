@@ -3,7 +3,7 @@ import { LinkItem } from "../common/Link";
 
 export type Profile = {
     name: string;
-    nameCaption?: string;
+    nameCaption: string | null;
     introductions: string[];
     activities: string[];
 };
@@ -23,7 +23,7 @@ export type Collaboration = {
 export type EventHistory = {
     date: string; // yyyy-MM-dd
     name: string;
-    links?: LinkItem[];
+    links: LinkItem[];
 };
 
 export interface BiographyService {

@@ -17,7 +17,7 @@ export type ProductSummary = {
     credits: string[];
     mvLinks: LinkItem[];
     storeLinks: LinkItem[];
-    supplementalInformationLinks?: LinkItem[];
+    supplementalInformationLinks: LinkItem[];
 };
 
 export interface ProductService {

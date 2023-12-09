@@ -55,9 +55,9 @@ export class ProductMaster {
             storeLinks: this.storeLinks.map((LinkMaster) => {
                 return LinkMaster.getLinkItem(locale);
             }),
-            supplementalInformationLinks: this.supplementalInformationLinks?.map((supplementalInformationLinkMaster) => {
+            supplementalInformationLinks: this.supplementalInformationLinks ? this.supplementalInformationLinks.map((supplementalInformationLinkMaster) => {
                 return supplementalInformationLinkMaster.getLinkItem(locale);
-            }),
+            }) : [],
         };
     }
 }

@@ -597,7 +597,7 @@ export const japaneseProfile: Profile = {
 
 export const englishProfile: Profile = {
     name: "Kimayu Yorudo",
-    nameCaption: undefined,
+    nameCaption: null,
     introductions: [
         "She is a virtual artist who focus on rock music.",
         "She respects PENGUIN RESEARCH and posts covers of PENGUIN RESEARCH and kemu songs on her YouTube channel.",

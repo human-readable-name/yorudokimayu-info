@@ -27,6 +27,7 @@ productCard.args = {
         ],
         storeLinks: [
             {name: "Official store", url: "https://461okmy.booth.pm/items/3756256"},
-        ]
+        ],
+        supplementalInformationLinks: [],
     }
 };
