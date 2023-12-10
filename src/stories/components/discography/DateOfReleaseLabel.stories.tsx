@@ -9,4 +9,4 @@ export default {
 
 const Template: ComponentStory<typeof DateOfRleaseLabel> = (args) => <DateOfRleaseLabel {...args} />;
 export const label = Template.bind({});
-label.args = { dateOfRelease: new Date("2020-10-10")};
+label.args = { dateOfRelease: "2020-10-10"};

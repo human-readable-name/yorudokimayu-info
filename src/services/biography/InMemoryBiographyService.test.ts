@@ -25,7 +25,7 @@ describe('CollaborationMaster', () => {
             ],
         });
         expect(master.getCollaboration("ja")).toEqual({
-            date: new Date("2021-04-01"),
+            date: "2021-04-01",
             product: {
                 name: "Bloomer",
                 artist: "#ぶいっと"
@@ -38,7 +38,7 @@ describe('CollaborationMaster', () => {
             ]
         });
         expect(master.getCollaboration("en")).toEqual({
-            date: new Date("2021-04-01"),
+            date: "2021-04-01",
             product: {
                 name: "Bloomer",
                 artist: "#Vtuber_Motto"
@@ -72,7 +72,7 @@ describe('EventHistoryMaster', () => {
             ],
         });
         expect(master.getEventHistory("ja")).toEqual({
-            date: new Date("2021-11-20"),
+            date: "2021-11-20",
             name: "#ぶいじゃむ vol.1",
             links: [
                 {
@@ -82,7 +82,7 @@ describe('EventHistoryMaster', () => {
             ]
         });
         expect(master.getEventHistory("en")).toEqual({
-            date: new Date("2021-11-20"),
+            date: "2021-11-20",
             name: "#V-jam vol.1 (Copy band sessions of major artists)",
             links: [
                 {

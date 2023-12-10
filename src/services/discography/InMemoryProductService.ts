@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { SupportedLocale } from "../../constants/i18n";
 import { LinkMaster } from "../common/Link";
 import { TranslatableValues } from "../i18n/TranslatableValues";
@@ -43,7 +44,7 @@ export class ProductMaster {
             name: this.name.getLocalizedValue(locale),
             kind: this.kind,
             genre: this.genre,
-            dateOfRelease: this.dateOfRelease,
+            dateOfRelease: format(this.dateOfRelease, 'yyyy-MM-dd'),
             description: this.description?.getLocalizedValue(locale) || "",
             credits: this.credits.map((creditMaster) => {
                 return creditMaster.getLocalizedValue(locale);
@@ -54,9 +55,9 @@ export class ProductMaster {
             storeLinks: this.storeLinks.map((LinkMaster) => {
                 return LinkMaster.getLinkItem(locale);
             }),
-            supplementalInformationLinks: this.supplementalInformationLinks?.map((supplementalInformationLinkMaster) => {
+            supplementalInformationLinks: this.supplementalInformationLinks ? this.supplementalInformationLinks.map((supplementalInformationLinkMaster) => {
                 return supplementalInformationLinkMaster.getLinkItem(locale);
-            }),
+            }) : [],
         };
     }
 }

@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import { SUPPORTED_LOCALES, SupportedLocale } from "../../constants/i18n";
 import { LinkMaster } from "../common/Link";
 import { createBoothUrl } from "../i18n/Booth";
@@ -26,7 +27,7 @@ export class CollaborationMaster {
     }
     getCollaboration(locale: SupportedLocale): Collaboration {
         return {
-            date: this.date,
+            date: format(this.date, 'yyyy-MM-dd'),
             product: {
                 name: this.productName.getLocalizedValue(locale),
                 artist: this.productArtist?.getLocalizedValue(locale) || "",
@@ -322,7 +323,7 @@ export class EventHistoryMaster {
     }
     getEventHistory(locale: SupportedLocale): EventHistory {
         return {
-            date: this.date,
+            date: format(this.date, 'yyyy-MM-dd'),
             name: this.name.getLocalizedValue(locale),
             links: this.links.map((linkMaster) => {
                 return linkMaster.getLinkItem(locale)    
@@ -596,7 +597,7 @@ export const japaneseProfile: Profile = {
 
 export const englishProfile: Profile = {
     name: "Kimayu Yorudo",
-    nameCaption: undefined,
+    nameCaption: null,
     introductions: [
         "She is a virtual artist who focus on rock music.",
         "She respects PENGUIN RESEARCH and posts covers of PENGUIN RESEARCH and kemu songs on her YouTube channel.",
