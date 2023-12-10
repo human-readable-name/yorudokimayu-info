@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import DateOfRleaseLabel from '../../../components/discography/DateOfReleaseLabel';
+import DateOfRleaseLabel from '../../../../src/components/discography/DateOfReleaseLabel';
 
 export default {
     title: 'components/discography/DateOfRleaseLabel',

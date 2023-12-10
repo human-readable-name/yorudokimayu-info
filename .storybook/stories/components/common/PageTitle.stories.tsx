@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import PageTitle from '../../../components/common/PageTitle';
+import PageTitle from '../../../../src/components/common/PageTitle';
 
 export default {
     title: 'components/common/PageTitle',

@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import NewsCard from "../../../components/home/NewsCard";
+import NewsCard from "../../../../src/components/home/NewsCard";
 
 export default {
     title: 'components/home/NewsCard',

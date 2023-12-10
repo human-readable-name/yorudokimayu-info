@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ProductKindLabel from '../../../components/discography/ProductKindLabel';
+import ProductKindLabel from '../../../../src/components/discography/ProductKindLabel';
 
 export default {
     title: 'components/discography/ProductKindLabel',

@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import News from "../../../components/home/News";
+import News from "../../../../src/components/home/News";
 
 export default {
     title: 'components/home/News',

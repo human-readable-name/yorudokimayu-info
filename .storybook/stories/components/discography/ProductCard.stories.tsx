@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ProductCard from '../../../components/discography/ProductCard';
+import ProductCard from '../../../../src/components/discography/ProductCard';
 
 export default {
     title: 'components/discography/ProductCard',
