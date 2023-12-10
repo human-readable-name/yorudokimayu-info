@@ -1,13 +1,14 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ProductCard from '../../../components/discography/ProductCard';
+import React from 'react';
+import { StoryFn, Meta } from '@storybook/react';
+import ProductCard from '../../../../src/components/discography/ProductCard';
 
 export default {
     title: 'components/discography/ProductCard',
     component: ProductCard,
     parameters: {layout: 'fullscreen'},
-} as ComponentMeta<typeof ProductCard>;
+} as Meta<typeof ProductCard>;
 
-const Template: ComponentStory<typeof ProductCard> = (args) => <ProductCard {...args} />;
+const Template: StoryFn<typeof ProductCard> = (args) => <ProductCard {...args} />;
 export const productCard = Template.bind({});
 productCard.args = { 
     productSummary: {

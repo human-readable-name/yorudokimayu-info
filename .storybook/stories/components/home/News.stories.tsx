@@ -1,13 +1,14 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import News from "../../../components/home/News";
+import React from 'react';
+import { StoryFn, Meta } from "@storybook/react";
+import News from "../../../../src/components/home/News";
 
 export default {
     title: 'components/home/News',
     component: News,
     parameters: {layout: 'fullscreen'}
-} as ComponentMeta<typeof News>;
+} as Meta<typeof News>;
 
-const Template: ComponentStory<typeof News> = (args) => <News {...args} />;
+const Template: StoryFn<typeof News> = (args) => <News {...args} />;
 export const withNews = Template.bind({});
 withNews.args = {
     news: [

@@ -47,6 +47,7 @@ apiディレクトリを削除してsrcディレクトリにpagesとstylesを移
     - services/ 各ページで描画するデータを提供する
     - styles/ Tailwindのglobal.cssのみ置く 基本的にCSSは各コンポーネント内で閉じるので、グローバルは使わない
     - utilities/ コンポーネントやサービスなどを横断して使うもの
+- .stories/ Storybook用のファイル src/ディレクトリと同じ構成にしてある
 ```
 
 # このアプリケーションの詳細設計
