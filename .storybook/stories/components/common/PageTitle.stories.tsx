@@ -1,3 +1,4 @@
+import React from 'react';
 import { StoryFn, Meta } from '@storybook/react';
 import PageTitle from '../../../../src/components/common/PageTitle';
 

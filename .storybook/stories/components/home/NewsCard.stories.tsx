@@ -1,3 +1,4 @@
+import React from 'react';
 import { StoryFn, Meta } from "@storybook/react";
 import NewsCard from "../../../../src/components/home/NewsCard";
 
