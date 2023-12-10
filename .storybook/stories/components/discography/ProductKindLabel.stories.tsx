@@ -1,13 +1,13 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import ProductKindLabel from '../../../../src/components/discography/ProductKindLabel';
 
 export default {
     title: 'components/discography/ProductKindLabel',
     component: ProductKindLabel,
     parameters: {layout: 'fullscreen'}
-} as ComponentMeta<typeof ProductKindLabel>;
+} as Meta<typeof ProductKindLabel>;
 
-const Template: ComponentStory<typeof ProductKindLabel> = (args) => <ProductKindLabel {...args} />;
+const Template: StoryFn<typeof ProductKindLabel> = (args) => <ProductKindLabel {...args} />;
 export const Single = Template.bind({});
 Single.args = {productKind: "Single"};
 
