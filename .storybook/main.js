@@ -10,7 +10,11 @@ module.exports = {
   },
   "framework": {
     name: "@storybook/nextjs",
-    options: {}
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
   },
   docs: {
     autodocs: true
