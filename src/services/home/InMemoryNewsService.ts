@@ -23,8 +23,30 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ["ja", "V³アワード 出演 (2024年に延期)"],
-            ["en", "V³ AWARD (postponed to 2024)"]
+            ["ja", "2023-12-24 VIRTUALHOLIC歌枠リレー"],
+            ["en", "2023-12-24 VIRTUALHOLIC Singing Stream Relay"]
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "パブリックビューイング会場"],
+                    ["en", "Venue Music Bar ROCKAHOLIC Shimokitazawa"]
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://tiget.net/events/284427"),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "配信"],
+                    ["en", "Live Streaming"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://www.youtube.com/live/yBPC12XM3gg")
+            })
+        ]
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ["ja", "2024-02-04 V³アワード 出演"],
+            ["en", "2024-02-04 V³ AWARD"]
         ]),
         links: [
             new LinkMaster({
