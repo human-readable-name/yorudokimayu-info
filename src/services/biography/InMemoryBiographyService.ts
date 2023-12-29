@@ -572,6 +572,19 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 ]),
             })
         ]
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement("Vack-ON!! vol.2"),
+        date: new Date('2023-12-29'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://zaiko.io/event/360813"), 
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ]),
+            })
+        ]
     })
 ];
 
