@@ -36,25 +36,6 @@ const newsMasterData: NewsMaster[] = [
             })
         ]
     }),
-    new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement("2023-12-29 Vack-ON!! vol.2"),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "現地 Takara Osaka"],
-                    ["en", "Venue Takara Osaka"]
-                ]),
-                url: TranslatableValues.createUnifiedStatement("https://takara-live.com/osaka/"),
-            }),
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "配信 (アーカイブは2023-12-31まで)"],
-                    ["en", "Streaming (The archive will be available until 2023-12-31"]
-                ]),
-                url: TranslatableValues.createUnifiedStatement("https://zaiko.io/event/360813"),
-            }),
-        ]
-    })
 ];
 
 export class InMemoryNewsService implements NewsService {
