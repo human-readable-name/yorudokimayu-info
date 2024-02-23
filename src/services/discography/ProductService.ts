@@ -14,6 +14,7 @@ export type ProductSummary = {
     genre: Genre;
     dateOfRelease: string; // yyyy-MM-dd;
     description: string;
+    tracks: string[];
     credits: string[];
     mvLinks: LinkItem[];
     storeLinks: LinkItem[];

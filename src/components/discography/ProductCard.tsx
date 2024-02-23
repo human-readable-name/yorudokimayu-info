@@ -4,6 +4,7 @@ import GenreLabel from "./GenreLabel";
 import BorderLinkButton from "./BorderLinkButton";
 import MvLinkButton from "./MvLinkButton";
 import { ProductSummary } from "../../services/discography/ProductService"; 
+import TrackList from "../biography/TrackList";
 
 type Props = {
     productSummary: ProductSummary;
@@ -17,14 +18,20 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
                 <DateOfRleaseLabel dateOfRelease={productSummary.dateOfRelease} />
                 <GenreLabel genre={productSummary.genre} />
             </div>
-            <div className="my-2">
-                { productSummary.credits.length > 0 && 
+            { productSummary.tracks.length > 0 &&
+                <div className="my-2">
+                    <TrackList tracks={productSummary.tracks} />
+                </div>
+            }
+            { productSummary.credits.length > 0 && 
+                <div className="my-2">
+                    <span className="text-center">Credits</span>
                     <ul>
                         {productSummary.credits.map((name, index) => <li className="text-sm" key={index}>{name}</li>)}
                     </ul>
-                }
-                <p className="w-full my-2">{productSummary.description}</p>
-            </div>
+                </div>
+            }
+            <p className="w-full my-2">{productSummary.description}</p>
             { productSummary.mvLinks.length > 0 && 
                 <div className="my-2 text-center">
                     <span className="p-2">Music video</span>
