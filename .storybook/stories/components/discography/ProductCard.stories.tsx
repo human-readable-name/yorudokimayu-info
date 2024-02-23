@@ -18,6 +18,14 @@ productCard.args = {
         genre: "Alternative",
         dateOfRelease: "2022-04-24",
         description: "1st EP M3-2022春 お-07a頒布で頒布・Boothにて販売",
+        tracks: [
+            "Introduction",
+            "sparkler",
+            "monologue",
+            "CUTE AGGRESSION!!!!",
+            "Irony",
+            "Enchanted",
+        ],
         credits: [
             "作曲・Tr2作詞 マッチ",
             "Tr5作詞 esora uma [浮遊信号]",

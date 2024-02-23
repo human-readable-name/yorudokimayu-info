@@ -11,6 +11,7 @@ export class ProductMaster {
     private genre: Genre;
     private dateOfRelease: Date;
     private description?: TranslatableValues;
+    private tracks: TranslatableValues[];
     private credits: TranslatableValues[];
     private mvLinks: LinkMaster[];
     private storeLinks: LinkMaster[];
@@ -22,6 +23,7 @@ export class ProductMaster {
         genre: Genre,
         dateOfRelease: Date,
         description?: TranslatableValues;
+        tracks?: TranslatableValues[],
         credits: TranslatableValues[],
         mvLinks: LinkMaster[],
         storeLinks: LinkMaster[],
@@ -33,6 +35,7 @@ export class ProductMaster {
         this.genre = props.genre;
         this.dateOfRelease = props.dateOfRelease;
         this.description = props.description;
+        this.tracks = props.tracks ? props.tracks : [];
         this.credits = props.credits;
         this.mvLinks = props.mvLinks;
         this.storeLinks = props.storeLinks;
@@ -46,6 +49,9 @@ export class ProductMaster {
             genre: this.genre,
             dateOfRelease: format(this.dateOfRelease, 'yyyy-MM-dd'),
             description: this.description?.getLocalizedValue(locale) || "",
+            tracks: this.tracks.map((trackMaster) => {
+                return trackMaster.getLocalizedValue(locale);
+            }),
             credits: this.credits.map((creditMaster) => {
                 return creditMaster.getLocalizedValue(locale);
             }),
@@ -107,7 +113,6 @@ const productMasterData: ProductMaster[] = [
         kind: "Single",
         genre: "Rock",
         dateOfRelease: new Date("2023-09-29"),
-        description: undefined,
         credits: [
             TranslatableValues.create([
                 ["ja", "Music 天野ドウジ [カクレゴ]"],
@@ -138,9 +143,23 @@ const productMasterData: ProductMaster[] = [
         genre: "Rock",
         dateOfRelease: new Date("2023-04-30"),
         description: TranslatableValues.create([
-            ["ja", "1st Album M3-2023春"],
-            ["en", "1st Album M3-2023-Spring"],
+            ["ja", "1st Album M3-2023春 (サブスク配信なし・CD販売のみ)"],
+            ["en", "1st Album M3-2023-Spring (Only CD sales)"],
         ]),
+        tracks: [
+            TranslatableValues.createUnifiedStatement("I breathe here.(instrumental)"),
+            TranslatableValues.createUnifiedStatement("Say,"),
+            TranslatableValues.createUnifiedStatement("Film"),
+            TranslatableValues.createUnifiedStatement("KANATA"),
+            TranslatableValues.createUnifiedStatement("MORE SO,KICK YOU CORE!!!!"),
+            TranslatableValues.createUnifiedStatement("Glimmer"),
+            TranslatableValues.createUnifiedStatement("Skymellia"),
+            TranslatableValues.createUnifiedStatement("Chilldish"),
+            TranslatableValues.createUnifiedStatement("(un)forgettable"),
+            TranslatableValues.createUnifiedStatement("Lonely Rainy"),
+            TranslatableValues.createUnifiedStatement("BLOOMING PAINTERS"),
+            TranslatableValues.createUnifiedStatement("Savior"),
+        ],
         credits: [
             TranslatableValues.create([
                 ["ja", "Tr1,2,5,6,10 Music / Tr6,10 Lyrics マッチ"],
@@ -271,9 +290,17 @@ const productMasterData: ProductMaster[] = [
         genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: TranslatableValues.create([
-            ["ja", "1st EP M3-2022春"],
-            ["en", "1st EP M3-2022-Spring"],
+            ["ja", "1st EP M3-2022春 (サブスク配信なし・CD販売のみ)"],
+            ["en", "1st EP M3-2022-Spring (Only CD sales)"],
         ]),
+        tracks: [
+            TranslatableValues.createUnifiedStatement("Introduction"),
+            TranslatableValues.createUnifiedStatement("sparkler"),
+            TranslatableValues.createUnifiedStatement("monologue"),
+            TranslatableValues.createUnifiedStatement("CUTE AGGRESSION!!!!"),
+            TranslatableValues.createUnifiedStatement("Irony"),
+            TranslatableValues.createUnifiedStatement("Enchanted"),
+        ],
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Tr2Lyrics マッチ"],
