@@ -4,7 +4,7 @@ import GenreLabel from "./GenreLabel";
 import BorderLinkButton from "./BorderLinkButton";
 import MvLinkButton from "./MvLinkButton";
 import { ProductSummary } from "../../services/discography/ProductService"; 
-import TrackList from "../biography/TrackList";
+import TrackList from "./TrackList";
 
 type Props = {
     productSummary: ProductSummary;
