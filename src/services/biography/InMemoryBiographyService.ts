@@ -585,6 +585,27 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 ]),
             })
         ]
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ["ja", "V³アワード"],
+            ["en", "V³ AWARD"],
+        ]),
+        date: new Date('2024-02-04'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://zaiko.io/event/360532"), 
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ]),
+            })
+        ]
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement('COLOR UP! Vol.2'),
+        date: new Date('2024-02-18'),
+        links: []
     })
 ];
 
@@ -600,7 +621,7 @@ export const japaneseProfile: Profile = {
     activities: [
         "2020-10-10 1st Single Penguin Novaリリースと同時に活動開始",
         "2021-04-10 9か月連続リリース企画 #nova_next 開始",
-        "2021-10-24 3D お 披 露",
+        "2021-10-24 3D お披露目",
         "2021-12-28 #nova_next 完結",
         "2022-04-24 初のM3 参加、1st EP sparklerをリリース",
         "2023-04-30 1st Album Say,をリリース",
@@ -622,8 +643,8 @@ export const englishProfile: Profile = {
         "2021-04-10 Started #nova_next project",
         "2021-10-24 Unveiled 3D model",
         "2021-12-28 Completed #nova_next project",
-        "2022-04-24 Participated in M3 for the first time and released 1st EP sparkler",
-        "2022-04-24 Relased 1st Album Say,",
+        "2022-04-24 Released 1st EP sparkler",
+        "2022-04-24 Released 1st Album Say,",
         '2023-10-07 1st solo concert "PENGUIN A LIVE"',
     ],
 }
