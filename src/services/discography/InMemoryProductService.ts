@@ -70,6 +70,33 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "19th-single",
+        name: TranslatableValues.createUnifiedStatement("After Horizon"),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2024-04-25"),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music/Lyric さめのぽき"],
+                ["en", "Music/Lyric Samenopoki"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("After Horizon"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/0SydNfKuolA"),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: "umSx7PTc"}),
+            LinkMaster.createForOfficialStore({id: "5673484"}),
+        ],
+    }),
+    new ProductMaster({
         id: "18th-single",
         name: TranslatableValues.createUnifiedStatement("PENGUIN ALIVE"),
         kind: "Single",

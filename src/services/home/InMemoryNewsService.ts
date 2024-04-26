@@ -22,6 +22,14 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2024-04-25 New song "After Horizon"'),
+        links: [
+            LinkMaster.createMusicVideoOnYouTube({id: "0SydNfKuolA"}),
+            LinkMaster.createForTuneCore({id: "umSx7PTc"}),
+            LinkMaster.createForOfficialStore({id: "5673484"}),
+        ],
+    }),
+    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2024-05-17 ぶいかふぇ♪ vol.36 出演予定'],
             ['en', '2024-05-17 Vcafe vol.36'],
