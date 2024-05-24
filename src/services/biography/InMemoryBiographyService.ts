@@ -606,7 +606,20 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         name: TranslatableValues.createUnifiedStatement('COLOR UP! Vol.2'),
         date: new Date('2024-02-18'),
         links: []
-    })
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'ぶいかふぇ♪ vol.36'],
+            ['en', 'Vcafe vol.36'],
+        ]),
+        date: new Date('2024-05-17'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/6753'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            })
+        ]
+    }),
 ];
 
 export const japaneseProfile: Profile = {

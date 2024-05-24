@@ -22,29 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2024-04-25 New song "After Horizon"'),
-        links: [
-            LinkMaster.createMusicVideoOnYouTube({id: "0SydNfKuolA"}),
-            LinkMaster.createForTuneCore({id: "umSx7PTc"}),
-            LinkMaster.createForOfficialStore({id: "5673484"}),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2024-05-17 ぶいかふぇ♪ vol.36 出演予定'],
-            ['en', '2024-05-17 Vcafe vol.36'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/6753'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
-                ])
-            })
-        ]
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2024-06-01 Virtual Artist Fes VRide! Vol.10'),
         links: [
             new LinkMaster({
@@ -69,7 +46,22 @@ const newsMasterData: NewsMaster[] = [
                 ]),
             }),
         ]
-    })
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2024-06-09 vortex主催『#今日だけ最強ユニットLIVE』'],
+            ['en', '2024-06-09 LIVE "The most powerful music unit for one day only" hosted by vortex'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/364621'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 ZAIKO'],
+                    ['en', 'Streaming on ZAIKO']
+                ])
+            })
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
