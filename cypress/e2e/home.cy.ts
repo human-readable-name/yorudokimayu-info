@@ -26,6 +26,13 @@ describe('Home (default locale)', () => {
             .filter('link[href=https://kimayu.rocks/en/]')
             .should('have.length', 1);
     });
+    it('must be responsive', () => {
+        const viewports: Cypress.ViewportPreset[] = ['iphone-x', 'macbook-11'];
+        viewports.forEach((viewport) => {
+            cy.viewport(viewport);
+            cy.screenshot('screenshot-home-ja-' + viewport);
+        });
+    });
 });
 
 describe('Home (en locale)', () => {
@@ -53,5 +60,12 @@ describe('Home (en locale)', () => {
             .filter('link[hrefLang=en]')
             .filter('link[href=https://kimayu.rocks/en/]')
             .should('have.length', 1);
+    });
+    it('must be responsive', () => {
+        const viewports: Cypress.ViewportPreset[] = ['iphone-x', 'macbook-11'];
+        viewports.forEach((viewport) => {
+            cy.viewport(viewport);
+            cy.screenshot('screenshot-home-en-' + viewport);
+        });
     });
 });

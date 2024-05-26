@@ -26,6 +26,13 @@ describe('Discography(default locale)', () => {
             .filter('link[href=https://kimayu.rocks/en/discography]')
             .should('have.length', 1);
     });
+    it('must be responsive', () => {
+        const viewports: Cypress.ViewportPreset[] = ['iphone-x', 'macbook-11'];
+        viewports.forEach((viewport) => {
+            cy.viewport(viewport);
+            cy.screenshot('screenshot-discography-ja-' + viewport);
+        });
+    });
 });
 
 describe('Discography(en locale)', () => {
@@ -53,5 +60,12 @@ describe('Discography(en locale)', () => {
             .filter('link[hrefLang=en]')
             .filter('link[href=https://kimayu.rocks/en/discography]')
             .should('have.length', 1);
+    });
+    it('must be responsive', () => {
+        const viewports: Cypress.ViewportPreset[] = ['iphone-x', 'macbook-11'];
+        viewports.forEach((viewport) => {
+            cy.viewport(viewport);
+            cy.screenshot('screenshot-discography-en-' + viewport);
+        });
     });
 });
