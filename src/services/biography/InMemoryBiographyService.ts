@@ -639,6 +639,22 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 ]),
             }),
         ]
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'vortex主催『#今日だけ最強ユニットLIVE』'],
+            ['en', 'LIVE "The most powerful music unit for one day only" hosted by vortex'],
+        ]),
+        date: new Date('2024-06-09'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/364621'),
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ])
+            })
+        ]
     })
 ];
 
