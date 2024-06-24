@@ -21,21 +21,6 @@ export class NewsMaster {
 }
 
 const newsMasterData: NewsMaster[] = [
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2024-06-09 vortex主催『#今日だけ最強ユニットLIVE』'],
-            ['en', '2024-06-09 LIVE "The most powerful music unit for one day only" hosted by vortex'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/364621'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 ZAIKO'],
-                    ['en', 'Streaming on ZAIKO']
-                ])
-            })
-        ]
-    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
