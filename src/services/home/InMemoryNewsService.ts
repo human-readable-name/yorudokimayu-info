@@ -21,6 +21,21 @@ export class NewsMaster {
 }
 
 const newsMasterData: NewsMaster[] = [
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2024-07-27 ぶいかふぇ♪ vol.47 出演予定'],
+            ['en', '2024-07-27 Vcafe vol.47'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/7550'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
+                ])
+            })
+        ]
+    })
 ];
 
 export class InMemoryNewsService implements NewsService {
