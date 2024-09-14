@@ -35,6 +35,21 @@ const newsMasterData: NewsMaster[] = [
                 ])
             })
         ]
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2024-10-19 魔ノ姫こあく生誕3Dライブ～Showtime Syndrome～'],
+            ['en', '2024-10-19 Koaku Manohime Birthday 3D Live ~ Showtime Syndrome ~'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/366852'),
+                name: TranslatableValues.create([
+                    ["ja", "配信 ZAIKO"],
+                    ["en", "Live straming on ZAIKO"],
+                ])
+            })
+        ]
     })
 ];
 
