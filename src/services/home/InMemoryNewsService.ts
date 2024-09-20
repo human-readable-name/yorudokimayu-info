@@ -38,6 +38,15 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2024-09-28 新曲 浸夜'],
+            ['en', '2024-09-28 New single "Shinya"'],
+        ]),
+        links: [
+            LinkMaster.createForTuneCore({id: "y0SD1FXy"}),
+        ]
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2024-10-19 魔ノ姫こあく生誕3Dライブ～Showtime Syndrome～'],
             ['en', '2024-10-19 Koaku Manohime Birthday 3D Live ~ Showtime Syndrome ~'],
         ]),
