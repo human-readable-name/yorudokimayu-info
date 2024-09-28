@@ -70,6 +70,39 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "20th-single",
+        name: TranslatableValues.create([
+            ["ja", "浸夜"],
+            ["en", "Shinya"],
+        ]),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2024-09-28"),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music/Lyric 梔"],
+                ["en", "Music/Lyric Kuchinashi"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/v3bUpNOuXKc"),
+                name: TranslatableValues.create([
+                    ["ja", "浸夜"],
+                    ["en", "Shinya"],
+                ]),
+            })
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: "y0SD1FXy"}),
+            LinkMaster.createForOfficialStore({id: "6106639"}),
+        ],
+    }),
+    new ProductMaster({
         id: "19th-single",
         name: TranslatableValues.createUnifiedStatement("After Horizon"),
         kind: "Single",
