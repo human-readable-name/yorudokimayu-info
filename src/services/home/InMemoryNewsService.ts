@@ -23,14 +23,13 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2024-09-28 新曲 浸夜'],
-            ['en', '2024-09-28 New single "Shinya"'],
+            ['ja', '2024-10-10 新曲 人鳥新世界'],
+            ['en', '2024-10-10 New single "JinchoShinsekai"'],
         ]),
         links: [
-            LinkMaster.createForTuneCore({id: "y0SD1FXy"}),
-            LinkMaster.createForOfficialStore({id: "6106639"}),
+            LinkMaster.createForTuneCore({id: "mxZ53CBR"}),
             new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement("https://youtu.be/v3bUpNOuXKc"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/Iuliu6nhVdQ"),
                 name: TranslatableValues.createUnifiedStatement("MV"),
             }),
         ]
