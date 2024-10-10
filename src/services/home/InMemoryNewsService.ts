@@ -28,6 +28,7 @@ const newsMasterData: NewsMaster[] = [
         ]),
         links: [
             LinkMaster.createForTuneCore({id: "mxZ53CBR"}),
+            LinkMaster.createForOfficialStore({id: "6159917"}),
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/Iuliu6nhVdQ"),
                 name: TranslatableValues.createUnifiedStatement("MV"),
