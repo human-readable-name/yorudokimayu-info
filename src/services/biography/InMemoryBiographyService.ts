@@ -688,7 +688,7 @@ export const japaneseProfile: Profile = {
     name: "拠鳥 きまゆ",
     nameCaption: "(よるど きまゆ)",
     introductions: [
-        "「きみの背中を押す歌を届ける。」を掲げ、オリジナル曲はRock中心に活動。",
+        "オリジナル曲はRock中心に活動するVsinger。",
         "「夢はPENGUIN RESEARCHと対バン&楽曲提供」を公言しており、自身のYouTubeチャネルにはPENGUIN RESEARCHおよびkemuの楽曲のカバーを投稿している。",
         "2021年には9か月連続リリース企画#nova_nextを実施し、期間中13曲をリリース。",
         "歌唱のほかに動画・ハンドライティング・作詞・VTuberロゴデザインなど活動は多岐にわたる。",

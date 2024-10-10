@@ -10,7 +10,7 @@ const siteName = TranslatableValues.create([
     ["en", "Kimayu Yorudo Information"],
 ]);
 const siteDescription = TranslatableValues.create([
-    ["ja", "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報をまとめています"],
+    ["ja", "Vsinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報をまとめています"],
     ["en", "This website is a collection of links about KimayuYorudo's music and live performances."],
 ]);
 
