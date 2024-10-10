@@ -70,6 +70,43 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "21st-single",
+        name: TranslatableValues.create([
+            ["ja", "人鳥新世界"],
+            ["en", "JinchoShinsekai"],
+        ]),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2024-10-10"),
+        description: TranslatableValues.create([
+            ["ja", "活動開始4周年記念"],
+            ["en", "fourth anniversary song"],
+        ]),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music/Lyric コヤマヒデカズ"],
+                ["en", "KoyamaHidekazu"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/Iuliu6nhVdQ"),
+                name: TranslatableValues.create([
+                    ["ja", "人鳥新世界"],
+                    ["en", "JinchoShinsekai"],
+                ]),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: "mxZ53CBR"}),
+            LinkMaster.createForOfficialStore({id: "6159917"}),
+        ],
+    }),
+    new ProductMaster({
         id: "20th-single",
         name: TranslatableValues.create([
             ["ja", "浸夜"],
