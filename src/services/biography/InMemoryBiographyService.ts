@@ -682,6 +682,29 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             })
         ],
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', '魔ノ姫こあく生誕3Dライブ～Showtime Syndrome～'],
+            ['en', 'Koaku Manohime Birthday 3D Live ~ Showtime Syndrome ~'],
+        ]),
+        date: new Date('2024-10-19'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/item/366852'),
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ])
+            }),
+        ],
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'らいVおん vol.7'],
+            ['en', 'らいVおん (LIVE&1on1) vol.7'],
+        ]),
+        date: new Date('2024-10-26'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
