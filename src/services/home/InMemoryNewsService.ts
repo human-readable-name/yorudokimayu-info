@@ -50,21 +50,6 @@ const newsMasterData: NewsMaster[] = [
             })
         ]
     }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2024-10-26 らいVおん vol.7'],
-            ['en', '2024-10-26 らいVおん (LIVE&1on1) vol.7'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/b257j'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 Sound Bar Freja'],
-                    ['en', 'Venue Sound Bar Freja'],
-                ])
-            })
-        ],
-    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
