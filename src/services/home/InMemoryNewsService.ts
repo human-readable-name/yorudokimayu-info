@@ -36,6 +36,21 @@ const newsMasterData: NewsMaster[] = [
             }),
         ],
     }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-01-19 恋せよ男子2025 Virtual Sounds Borderlessコラボステージ'],
+            ['en', '2025-01-19 Collaboration stage of "恋せよ男子2025" and "Virtual Sounds Borderless"']
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/koiseyo2025'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (下北沢6会場) チケット'],
+                    ['en', 'Venue (6 live music club in Shimokitazawa) ticket']
+                ])
+            })
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
