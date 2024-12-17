@@ -50,6 +50,20 @@ const newsMasterData: NewsMaster[] = [
                 ])
             })
         ],
+    }),new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2024-12-20 ぶいかふぇ♪ vol.85'],
+            ['en', '2024-12-20 Vcafe vol.85'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/9731'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
+                ]),
+            }),
+        ],
     }),
 ];
 
