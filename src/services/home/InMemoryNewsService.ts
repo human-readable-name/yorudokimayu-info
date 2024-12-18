@@ -52,8 +52,8 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2024-12-20 ぶいかふぇ♪ vol.85'],
-            ['en', '2024-12-20 Vcafe vol.85'],
+            ['ja', '2025-01-26 ぶいかふぇ♪ vol.85'],
+            ['en', '2025-01-26 Vcafe vol.85'],
         ]),
         links: [
             new LinkMaster({
