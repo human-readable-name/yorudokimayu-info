@@ -23,21 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2024-12-20 ぶいかふぇ♪ vol.74'],
-            ['en', '2024-12-20 Vcafe vol.74'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/9179'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-01-19 恋せよ男子2025 Virtual Sounds Borderlessコラボステージ'],
             ['en', '2025-01-19 Collaboration stage of "恋せよ男子2025" and "Virtual Sounds Borderless"']
         ]),
