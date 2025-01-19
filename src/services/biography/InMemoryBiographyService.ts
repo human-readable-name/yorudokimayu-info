@@ -718,6 +718,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             })
         ],
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', '恋せよ男子2025 Virtual Sounds Borderlessコラボステージ'],
+            ['en', 'Collaboration stage of "恋せよ男子2025" and "Virtual Sounds Borderless"']
+        ]),
+        date: new Date('2025-01-19'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
