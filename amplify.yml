@@ -3,6 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
+        - corepack enable
+        - yarn set version berry
         - yarn install
     build:
       commands:

@@ -12,7 +12,7 @@
     "typecheck": "yarn tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "upgrade-storybook": "yarn upgrade storybook@latest @storybook/addon-actions@latest @storybook/addon-essentials@latest @storybook/addon-interactions@latest @storybook/addon-links@latest @storybook/nextjs@latest @storybook/react@latest",
+    "upgrade-storybook": "yarn up storybook@latest @storybook/addon-actions@latest @storybook/addon-essentials@latest @storybook/addon-interactions@latest @storybook/addon-links@latest @storybook/nextjs@latest @storybook/react@latest",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
   },
@@ -48,9 +48,11 @@
     "storybook": "^8.5.8",
     "tailwindcss": "^3.2.7",
     "ts-jest": "^29.1.1",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "webpack": "^5.98.0"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
-  }
+  },
+  "packageManager": "yarn@4.7.0"
 }
