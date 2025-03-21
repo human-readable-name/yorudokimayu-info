@@ -23,21 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-03-08 ぶいかふぇ♪ vol.95'],
-            ['en', '2025-03-08 Vcafe vol.95'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/10071'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-05-02 ぶいかふぇ♪ vol.112'],
             ['en', '2025-05-02 Vcafe vol.112'],
         ]),
@@ -47,6 +32,21 @@ const newsMasterData: NewsMaster[] = [
                 name: TranslatableValues.create([
                     ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
                     ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
+                ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-05-04 革命ロジック2025 Virtual Sounds Borderlessコラボステージ'],
+            ['en', '2025-05-04 Collaboration stage of "革命ロジック2025" and "Virtual Sounds Borderless"']
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/kakumei2025'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (下北沢8会場) チケット'],
+                    ['en', 'Venue (8 live music club in Shimokitazawa) ticket']
                 ]),
             }),
         ],
