@@ -306,6 +306,17 @@ const collaborationMasterData: CollaborationMaster[] = [
             LinkMaster.createForTuneCore({id: "ye8Hb3C0"}),
         ],
     }),
+    new CollaborationMaster({
+        date: new Date('2025-03-28'),
+        productName: TranslatableValues.createUnifiedStatement('Broaden My World'),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "歌唱・作詞 (魔ノ姫こあくと共作)"],
+            ["en", "Vocal/Lyric (co-written with KoakuManohime)"],
+        ]),
+        links: [
+            LinkMaster.createMusicVideoOnYouTube({id: 'L_QOpKQ5FeE'}),
+        ],
+    }),
 ];
 
 export class EventHistoryMaster {
@@ -788,7 +799,7 @@ export const englishProfile: Profile = {
         "2021-10-24 Unveiled 3D model",
         "2021-12-28 Completed #nova_next project",
         "2022-04-24 Released 1st EP sparkler",
-        "2022-04-24 Released 1st Album Say,",
+        "2023-04-30 Released 1st Album Say,",
         '2023-10-07 1st solo concert "PENGUIN A LIVE"',
     ],
 }
