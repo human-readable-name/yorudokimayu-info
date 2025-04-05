@@ -8,7 +8,7 @@ export class ProductMaster {
     private id: string;
     private name: TranslatableValues;
     private kind: ProductKind;
-    private genre: Genre;
+    private genre: Genre | null;
     private dateOfRelease: Date;
     private description?: TranslatableValues;
     private tracks: TranslatableValues[];
@@ -20,7 +20,7 @@ export class ProductMaster {
         id: string,
         name: TranslatableValues,
         kind: ProductKind,
-        genre: Genre,
+        genre: Genre | null,
         dateOfRelease: Date,
         description?: TranslatableValues;
         tracks?: TranslatableValues[],
@@ -70,6 +70,53 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "2nd-ep",
+        name: TranslatableValues.createUnifiedStatement("For,"),
+        kind: "EP",
+        genre: null,
+        dateOfRelease: new Date("2025-04-27"),
+        description: TranslatableValues.create([
+            ["ja", "2nd EP M3-2025春"],
+            ["en", "2nd EP M3-2025-Spring"],
+        ]),
+        tracks: [
+            TranslatableValues.createUnifiedStatement("Shoot down.(instrumental)"),
+            TranslatableValues.createUnifiedStatement("For,"),
+            TranslatableValues.createUnifiedStatement("あるこ～る♡どりりあむ"),
+            TranslatableValues.createUnifiedStatement("St4rlight"),
+            TranslatableValues.createUnifiedStatement("レグルスの本懐"),
+        ],
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Tr1,3,5 Music / Tr5 Lyrics マッチ"],
+                ["en", "Tr1,3,5 Music / Tr5 Lyrics  Matchy"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr2 Music/Lyrics 神田ジョン（from PENGUIN RESEARCH）"],
+                ["en", "Tr2 Music/Lyrics John Kanda (from PENGUIN RESEARCH)"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr4 Music/Lyrics 犬絵"],
+                ["en", "Tr4 Music/Lyrics Catpicture"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr3 Lyrics / Vocal 拠鳥きまゆ"],
+                ["en", "Tr3 Lyrics / Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/8NZKnncWR0s'),
+            }),
+
+        ],
+        storeLinks: [],
+    }),
+    new ProductMaster({
         id: "21st-single",
         name: TranslatableValues.create([
             ["ja", "人鳥新世界"],
@@ -85,7 +132,7 @@ const productMasterData: ProductMaster[] = [
         credits: [
             TranslatableValues.create([
                 ["ja", "Music/Lyric コヤマヒデカズ"],
-                ["en", "KoyamaHidekazu"],
+                ["en", "Music/Lyric KoyamaHidekazu"],
             ]),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
@@ -208,7 +255,7 @@ const productMasterData: ProductMaster[] = [
             ["en", "Ikigai Showtime"],
         ]),
         kind: "Single",
-        genre: "Rock",
+        genre: null,
         dateOfRelease: new Date("2023-09-29"),
         credits: [
             TranslatableValues.create([
@@ -237,7 +284,7 @@ const productMasterData: ProductMaster[] = [
         id: "1st-album",
         name: TranslatableValues.createUnifiedStatement("Say,"),
         kind: "Album",
-        genre: "Rock",
+        genre: null,
         dateOfRelease: new Date("2023-04-30"),
         description: TranslatableValues.create([
             ["ja", "1st Album M3-2023春 (サブスク配信なし・CD販売のみ)"],
@@ -384,7 +431,7 @@ const productMasterData: ProductMaster[] = [
         id: "1st-ep",
         name: TranslatableValues.createUnifiedStatement("sparkler"),
         kind: "EP",
-        genre: "Alternative",
+        genre: null,
         dateOfRelease: new Date("2022-04-24"),
         description: TranslatableValues.create([
             ["ja", "1st EP M3-2022春 (サブスク配信なし・CD販売のみ)"],

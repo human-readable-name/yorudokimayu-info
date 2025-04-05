@@ -23,6 +23,21 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2025-04-27 M3 2025 春 にて 2nd EP 「For,」をリリース'],
+            ['en', '2025-04-27 2nd EP "For," will be released at M3 2025 spring'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/8NZKnncWR0s'),
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2025-05-02 ぶいかふぇ♪ vol.112'],
             ['en', '2025-05-02 Vcafe vol.112'],
         ]),
