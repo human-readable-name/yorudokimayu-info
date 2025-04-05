@@ -11,7 +11,7 @@ export type ProductSummary = {
     id: string;
     name: string;
     kind: ProductKind;
-    genre: Genre;
+    genre: Genre | null;
     dateOfRelease: string; // yyyy-MM-dd;
     description: string;
     tracks: string[];

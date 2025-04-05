@@ -16,7 +16,7 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
             <h3 className="text-large font-bold">{productSummary.name}</h3>
             <div className="flex space-x-4">
                 <DateOfRleaseLabel dateOfRelease={productSummary.dateOfRelease} />
-                <GenreLabel genre={productSummary.genre} />
+                {productSummary.genre && <GenreLabel genre={productSummary.genre} /> }
             </div>
             { productSummary.tracks.length > 0 &&
                 <div className="my-2">
