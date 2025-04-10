@@ -112,7 +112,10 @@ const productMasterData: ProductMaster[] = [
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://youtu.be/8NZKnncWR0s'),
             }),
-
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("For,"),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Fqy9kbq5-o4'),
+            }),
         ],
         storeLinks: [],
     }),
