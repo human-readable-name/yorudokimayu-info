@@ -42,6 +42,28 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2025-04-27 M3 2025 春 パンケーキキャッツ Album マッチ・アップ・マーチ！ 1曲担当'],
+            ['en', '2025-04-27 Guest vocalist on PancakeCats Album "マッチ・アップ・マーチ！" will be released at M3 2025 Spring']
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://pancakecats2025.studio.site/"),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/cgAylXphnls"),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2025-05-02 ぶいかふぇ♪ vol.112'],
             ['en', '2025-05-02 Vcafe vol.112'],
         ]),
