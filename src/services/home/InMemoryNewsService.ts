@@ -38,6 +38,10 @@ const newsMasterData: NewsMaster[] = [
                 name: TranslatableValues.createUnifiedStatement('"For," music video'),
                 url: TranslatableValues.createUnifiedStatement('https://youtu.be/Fqy9kbq5-o4'),
             }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('"あるこ～る♡どりりあむ" music video'),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/dflT1tpBExU")
+            }),
         ],
     }),
     new NewsMaster({
