@@ -116,6 +116,10 @@ const productMasterData: ProductMaster[] = [
                 name: TranslatableValues.createUnifiedStatement("For,"),
                 url: TranslatableValues.createUnifiedStatement('https://youtu.be/Fqy9kbq5-o4'),
             }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement("あるこ～る♡どりりあむ"),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/dflT1tpBExU")
+            }),
         ],
         storeLinks: [],
     }),
