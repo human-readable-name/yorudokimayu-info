@@ -76,8 +76,8 @@ const productMasterData: ProductMaster[] = [
         genre: null,
         dateOfRelease: new Date("2025-04-27"),
         description: TranslatableValues.create([
-            ["ja", "2nd EP M3-2025春"],
-            ["en", "2nd EP M3-2025-Spring"],
+            ["ja", "2nd EP M3-2025春 (サブスク配信なし・CD販売のみ)"],
+            ["en", "2nd EP M3-2025-Spring (Only CD sales)"],
         ]),
         tracks: [
             TranslatableValues.createUnifiedStatement("Shoot down.(instrumental)"),
@@ -121,7 +121,9 @@ const productMasterData: ProductMaster[] = [
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/dflT1tpBExU")
             }),
         ],
-        storeLinks: [],
+        storeLinks: [
+            LinkMaster.createForOfficialStore({id: "6831246"}),
+        ],
     }),
     new ProductMaster({
         id: "21st-single",
