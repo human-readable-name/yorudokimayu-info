@@ -772,6 +772,7 @@ export const japaneseProfile: Profile = {
         "「夢はPENGUIN RESEARCHと対バン&楽曲提供」を公言しており、自身のYouTubeチャネルにはPENGUIN RESEARCHおよびkemuの楽曲のカバーを投稿している。",
         "2021年には9か月連続リリース企画#nova_nextを実施し、期間中13曲をリリース。",
         "歌唱のほかに動画・ハンドライティング・作詞・VTuberロゴデザインなど活動は多岐にわたる。",
+        "2025年にはPENGUIN RESEARCHの神田ジョンから楽曲提供を受け、夢の1つを実現。"
     ],
     activities: [
         "2020-10-10 1st Single Penguin Novaリリースと同時に活動開始",
@@ -781,6 +782,7 @@ export const japaneseProfile: Profile = {
         "2022-04-24 初のM3 参加、1st EP sparklerをリリース",
         "2023-04-30 1st Album Say,をリリース",
         "2023-10-07 1st Oneman Live「PENGUIN A LIVE」を開催",
+        "2025-04-27 2nd EP For,をリリース"
     ],
 };
 
@@ -792,6 +794,7 @@ export const englishProfile: Profile = {
         "She respects PENGUIN RESEARCH and posts covers of PENGUIN RESEARCH and kemu songs on her YouTube channel.",
         "In 2021 she released over 13 songs as a deliverable of #nova_next (original music release project for 9 consecutive months).",
         "She is also a multi-creator of videos, hand writing, lyrics, VTuber logo design, etc.",
+        "In 2025 one of her dreams came true when John Kanda (from PENGUIN RESEARCH) provided her with a song."
     ],
     activities: [
         "2020-10-10 Started activities with the release of Penguin Nova",
@@ -801,6 +804,7 @@ export const englishProfile: Profile = {
         "2022-04-24 Released 1st EP sparkler",
         "2023-04-30 Released 1st Album Say,",
         '2023-10-07 1st solo concert "PENGUIN A LIVE"',
+        "2025-04-27 Released 2nd EP For,"
     ],
 }
 
