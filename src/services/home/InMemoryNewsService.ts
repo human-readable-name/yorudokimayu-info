@@ -20,78 +20,18 @@ export class NewsMaster {
     }
 }
 
-const newsMasterData: NewsMaster[] = [
+const newsMasterData: NewsMaster[] = [    
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-04-27 M3 2025 春 にて 2nd EP 「For,」をリリース'],
-            ['en', '2025-04-27 2nd EP "For," will be released at M3 2025 spring'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://youtu.be/8NZKnncWR0s'),
-                name: TranslatableValues.create([
-                    ["ja", "クロスフェードデモ"],
-                    ["en", "Crossfade Demo"],
-                ]),
-            }),
-            new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement('"For," music video'),
-                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Fqy9kbq5-o4'),
-            }),
-            new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement('"あるこ～る♡どりりあむ" music video'),
-                url: TranslatableValues.createUnifiedStatement("https://youtu.be/dflT1tpBExU")
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-04-27 M3 2025 春 パンケーキキャッツ Album マッチ・アップ・マーチ！ 1曲担当'],
-            ['en', '2025-04-27 Guest vocalist on PancakeCats Album "マッチ・アップ・マーチ！" will be released at M3 2025 Spring']
-        ]),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "特設サイト"],
-                    ["en", "Web site"],
-                ]),
-                url: TranslatableValues.createUnifiedStatement("https://pancakecats2025.studio.site/"),
-            }),
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "クロスフェードデモ"],
-                    ["en", "Crossfade Demo"],
-                ]),
-                url: TranslatableValues.createUnifiedStatement("https://youtu.be/cgAylXphnls"),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-05-02 ぶいかふぇ♪ vol.112'],
+            ['ja', '2025-05-02 ぶいかふぇ♪ vol.112 '],
             ['en', '2025-05-02 Vcafe vol.112'],
         ]),
         links: [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/10721'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-05-04 革命ロジック2025 Virtual Sounds Borderlessコラボステージ'],
-            ['en', '2025-05-04 Collaboration stage of "革命ロジック2025" and "Virtual Sounds Borderless"']
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/kakumei2025'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (下北沢8会場) チケット'],
-                    ['en', 'Venue (8 live music club in Shimokitazawa) ticket']
+                    ['ja', '配信 (bitfan) チケット アーカイブは2025-05-08 23:59まで'],
+                    ['en', 'Streaming (bitfan) ticket will be available until 2025-05-08 23:59 (JST)'],
                 ]),
             }),
         ],

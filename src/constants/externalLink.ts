@@ -11,7 +11,7 @@ const externalLink: ExternalLink = {
     booth: "https://461okmy.booth.pm/",
     youtube: "https://www.youtube.com/channel/UCOJS80LKLRTLihZioG5l73g",
     twitter: "https://twitter.com/461Okmy",
-    tiktok: "https://www.tiktok.com/@461okmy",
+    tiktok: "https://www.tiktok.com/@tiktokimayu",
 };
 
 export default externalLink;
