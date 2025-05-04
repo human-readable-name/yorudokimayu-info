@@ -285,8 +285,8 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "PancakeCats Re:collection"]
         ]),
         partOfTheWork: TranslatableValues.create([
-            ["ja", "Tr.06 シゲキ的ドラスティックチューン(feat.拠鳥きまゆ) 歌唱"],
-            ["en", "Vocal Tr.06 Shigeki-like drastic tune (feat. Yorudo Kimayu)"],
+            ["ja", "Tr6 シゲキ的ドラスティックチューン(feat.拠鳥きまゆ) 歌唱"],
+            ["en", "Vocal Tr6 Shigeki-like drastic tune (feat. Yorudo Kimayu)"],
         ]),
         links: [
             new LinkMaster({
@@ -315,6 +315,30 @@ const collaborationMasterData: CollaborationMaster[] = [
         ]),
         links: [
             LinkMaster.createMusicVideoOnYouTube({id: 'L_QOpKQ5FeE'}),
+        ],
+    }),
+    new CollaborationMaster({
+        date: new Date('2025-04-27'),
+        productName: TranslatableValues.createUnifiedStatement('パンケーキキャッツ マッチ・アップ・マーチ！'),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", 'Tr2 rolling, shoelace, 歌唱'],
+            ["en", 'Vocal Tr2 rolling, shoelace,'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://pancakecats2025.studio.site/"),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "クロスフェードデモ"],
+                    ["en", "Crossfade Demo"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/cgAylXphnls"),
+            }),
         ],
     }),
 ];
@@ -761,6 +785,26 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 name: TranslatableValues.createUnifiedStatement('bitfan'),
             }),
         ],
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+                ['ja', 'ぶいかふぇ♪ vol.112'],
+                ['en', 'Vcafe vol.112'],
+            ]),
+        date: new Date('2025-05-02'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/10721'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            }),
+        ],
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', '革命ロジック2025 Virtual Sounds Borderlessコラボステージ'],
+            ['en', 'Collaboration stage of "革命ロジック2025" and "Virtual Sounds Borderless"']
+        ]),
+        date: new Date('2025-05-04'),
     }),
 ];
 
