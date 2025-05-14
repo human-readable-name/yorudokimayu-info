@@ -30,8 +30,8 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/9958'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原トークライブBAR from scratch) チケット'],
-                    ['en', 'Venue (Akihabara from scracth) ticket'],
+                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
                 ]),
             }),
         ],
