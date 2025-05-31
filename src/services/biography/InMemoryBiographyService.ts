@@ -341,6 +341,21 @@ const collaborationMasterData: CollaborationMaster[] = [
             }),
         ],
     }),
+    new CollaborationMaster({
+        date: new Date("2025-05-30"),
+        productName: TranslatableValues.createUnifiedStatement("Showtime Syndrome"),
+        productArtist: TranslatableValues.create([
+            ["ja", "魔ノ姫こあく"],
+            ["en", "KoakuManohime"]
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ["ja", "MV制作"],
+            ["en", "Music video production"],
+        ]),
+        links: [
+            LinkMaster.createMusicVideoOnYouTube({id: 'hZCoaVrcudY'}),
+        ],
+    }),
 ];
 
 export class EventHistoryMaster {
