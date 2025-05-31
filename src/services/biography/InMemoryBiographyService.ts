@@ -821,6 +821,26 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         ]),
         date: new Date('2025-05-04'),
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', '魔ノ姫こあく×拠鳥きまゆ 2man Live「Broaden My World」'],
+            ['en', 'Koaku Manohime and Kimayu Yorudo joint concert "Broaden My World"'],
+        ]),
+        date: new Date('2025-05-17'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/9958'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            }),
+        ],
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', '魔ノ姫こあく×拠鳥きまゆ 2man Live 振替公演「(RE:)Broaden My World」'],
+            ['en', 'Koaku Manohime and Kimayu Yorudo joint concert "(RE:)Broaden My World"'],
+        ]),
+        date: new Date('2025-05-28'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
@@ -841,7 +861,9 @@ export const japaneseProfile: Profile = {
         "2022-04-24 初のM3 参加、1st EP sparklerをリリース",
         "2023-04-30 1st Album Say,をリリース",
         "2023-10-07 1st Oneman Live「PENGUIN A LIVE」を開催",
-        "2025-04-27 2nd EP For,をリリース"
+        "2025-04-27 2nd EP For,をリリース",
+        "2025-05-17 魔ノ姫こあく×拠鳥きまゆ 2man Live「Broaden My World」を開催",
+        "2025-05-28 魔ノ姫こあく×拠鳥きまゆ 2man Live 振替公演「(RE:)Broaden My World」を開催",
     ],
 };
 
@@ -863,7 +885,9 @@ export const englishProfile: Profile = {
         "2022-04-24 Released 1st EP sparkler",
         "2023-04-30 Released 1st Album Say,",
         '2023-10-07 1st solo concert "PENGUIN A LIVE"',
-        "2025-04-27 Released 2nd EP For,"
+        "2025-04-27 Released 2nd EP For,",
+        '2025-05-17 Koaku Manohime and Kimayu Yorudo joint concert "Broaden My World"',
+        '2025-05-28 Koaku Manohime and Kimayu Yorudo joint concert "(RE:)Broaden My World"',
     ],
 }
 
