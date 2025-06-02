@@ -177,8 +177,8 @@ const collaborationMasterData: CollaborationMaster[] = [
         date: new Date("2022-08-14"),
         productName: TranslatableValues.createUnifiedStatement("Myosotis"),
         partOfTheWork: TranslatableValues.create([
-            ["ja", "作詞・歌唱"],
-            ["en", "Lyrics/Vocal"],
+            ["ja", "歌唱・作詞 (座敷乃てまり[カクレゴ]と共作)"],
+            ["en", "Vocal/Lyrics (co-written with TemariZashikino [KAKULEGO])"],
         ]),
         links: [
             LinkMaster.createMusicVideoOnYouTube({id: 'vKp6LdALi0k'}),
@@ -270,7 +270,7 @@ const collaborationMasterData: CollaborationMaster[] = [
             ["en", "SearchLight"],
         ]),
         partOfTheWork: TranslatableValues.create([
-            ["ja", "歌唱・ロゴ"],
+            ["ja", "歌唱・ロゴデザイン"],
             ["en", "Vocal/Logo design"],
         ]),
         links: [
@@ -304,6 +304,21 @@ const collaborationMasterData: CollaborationMaster[] = [
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/yUUtXN25b9Q"),
             }),
             LinkMaster.createForTuneCore({id: "ye8Hb3C0"}),
+        ],
+    }),
+    new CollaborationMaster({
+        date: new Date('2024-10-04'),
+        productName: TranslatableValues.createUnifiedStatement('ラブラビリンス'),
+        productArtist: TranslatableValues.create([
+            ['ja', '魔ノ姫こあく'],
+            ['en', 'KoakuManohime'],
+        ]),
+        partOfTheWork: TranslatableValues.create([
+            ['ja', 'ロゴデザイン'],
+            ['en', 'Logo design'],
+        ]),
+        links: [
+            LinkMaster.createMusicVideoOnYouTube({id: '-ioV8oxaiTs'}),
         ],
     }),
     new CollaborationMaster({
