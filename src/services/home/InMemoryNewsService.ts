@@ -36,6 +36,21 @@ const newsMasterData: NewsMaster[] = [
             }),
         ],
     }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-10-04 拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」'],
+            ['en', '2025-10-04 Kimayu Yorudo 2nd solo concert "Penguin carries the thunder shock."'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10603'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 下北沢レッグ / 配信 Z-aN チケット'],
+                    ['en', 'Venue Shimokitazawa ReG / Streaming Z-aN ticket'],
+                ]),
+            })
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
