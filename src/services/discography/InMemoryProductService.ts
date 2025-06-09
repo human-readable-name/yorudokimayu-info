@@ -73,18 +73,24 @@ const productMasterData: ProductMaster[] = [
         id: "2nd-ep",
         name: TranslatableValues.createUnifiedStatement("For,"),
         kind: "EP",
-        genre: null,
+        genre: "Alternative",
         dateOfRelease: new Date("2025-04-27"),
         description: TranslatableValues.create([
-            ["ja", "2nd EP M3-2025春 (サブスク配信なし・CD販売のみ)"],
-            ["en", "2nd EP M3-2025-Spring (Only CD sales)"],
+            ["ja", "2nd EP M3-2025春"],
+            ["en", "2nd EP M3-2025-Spring"],
         ]),
         tracks: [
             TranslatableValues.createUnifiedStatement("Shoot down.(instrumental)"),
             TranslatableValues.createUnifiedStatement("For,"),
-            TranslatableValues.createUnifiedStatement("あるこ～る♡どりりあむ"),
+            TranslatableValues.create([
+                ["ja", "あるこ～る♡どりりあむ"],
+                ["en", "ALCOHOL DREREAM"],
+            ]),
             TranslatableValues.createUnifiedStatement("St4rlight"),
-            TranslatableValues.createUnifiedStatement("レグルスの本懐"),
+            TranslatableValues.create([
+                ["ja", "レグルスの本懐"],
+                ["en", "RegulusNoHonkai"],
+            ]),
         ],
         credits: [
             TranslatableValues.create([
@@ -117,11 +123,15 @@ const productMasterData: ProductMaster[] = [
                 url: TranslatableValues.createUnifiedStatement('https://youtu.be/Fqy9kbq5-o4'),
             }),
             new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement("あるこ～る♡どりりあむ"),
+                name: TranslatableValues.create([
+                    ["ja", "あるこ～る♡どりりあむ"],
+                    ["en", "ALCOHOL DREREAM"]
+                ]),
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/dflT1tpBExU")
             }),
         ],
         storeLinks: [
+            LinkMaster.createForTuneCore({id: "28nzyz5d"}),
             LinkMaster.createForOfficialStore({id: "6831246"}),
         ],
     }),
