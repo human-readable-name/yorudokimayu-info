@@ -5,18 +5,18 @@ import { NewsItem, NewsService } from "./NewsService";
 
 export class NewsMaster {
     private text: TranslatableValues;
-    private links?: LinkMaster[];
+    private links: LinkMaster[];
     constructor(props: {text: TranslatableValues, links?: LinkMaster[]}) {
         this.text = props.text;
-        this.links = props.links;
+        this.links = props.links || [];
     }
     getNewsItem(locale: SupportedLocale): NewsItem {
         return {
             text: this.text.getLocalizedValue(locale),
-            links: this.links?.map((linkMaster) => {
+            links: this.links.map((linkMaster) => {
                 return linkMaster.getLinkItem(locale);
-            })
-        }
+            }),
+        };
     }
 }
 
@@ -35,6 +35,13 @@ const newsMasterData: NewsMaster[] = [
                 ]),
             }),
         ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-08-16 ねくすてーじ vol.6'],
+            ['en', '2025-08-16 nextage vol.6'],
+        ]),
+        links: [],
     }),
     new NewsMaster({
         text: TranslatableValues.create([
