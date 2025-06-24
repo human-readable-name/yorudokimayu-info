@@ -620,6 +620,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                     ['en', 'Report on PANORA'],
                 ])
             }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/hBUybF1HIF4'),
+                name: TranslatableValues.createUnifiedStatement('Digest movie'),
+            }),
         ],
     }),
     new EventHistoryMaster({
