@@ -30,6 +30,21 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2025-08-23 ぶいかふぇ♪vol.152'],
+            ['en', '2025-08-23 Vcafe vol.152'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/12343'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
+                ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2025-10-04 拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」'],
             ['en', '2025-10-04 Kimayu Yorudo 2nd solo concert "Penguin carries the thunder shock."'],
         ]),
