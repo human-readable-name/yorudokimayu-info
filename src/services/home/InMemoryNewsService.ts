@@ -26,7 +26,15 @@ const newsMasterData: NewsMaster[] = [
             ['ja', '2025-08-16 ねくすてーじ vol.6'],
             ['en', '2025-08-16 nextage vol.6'],
         ]),
-        links: [],
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/ng63t'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (Sound Bar Freja) チケット'],
+                    ['en', 'Venue (Sound Bar Freja) ticket'],
+                ]),
+            }),
+        ],
     }),
     new NewsMaster({
         text: TranslatableValues.create([
@@ -52,8 +60,8 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10603'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 下北沢レッグ / 配信 Z-aN チケット'],
-                    ['en', 'Venue Shimokitazawa ReG / Streaming Z-aN ticket'],
+                    ['ja', '現地 (下北沢レッグ) / 配信 (Z-aN) チケット'],
+                    ['en', 'Venue (Shimokitazawa ReG) / Streaming (Z-aN) ticket'],
                 ]),
             })
         ],
