@@ -354,6 +354,7 @@ const collaborationMasterData: CollaborationMaster[] = [
                 ]),
                 url: TranslatableValues.createUnifiedStatement("https://youtu.be/cgAylXphnls"),
             }),
+            LinkMaster.createForTuneCore({id: 'UsTuyRCx'}),
         ],
     }),
     new CollaborationMaster({
