@@ -20,7 +20,18 @@ export class NewsMaster {
     }
 }
 
-const newsMasterData: NewsMaster[] = [    
+const newsMasterData: NewsMaster[] = [  
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-07-31 新曲 雷鳴前夜'],
+            ['en', '2025-07-31 New single "Raimeizenya"'],
+        ]),
+        links: [
+            LinkMaster.createForTuneCore({id: 'qcXXGpBE'}),
+            LinkMaster.createForOfficialStore({id: '7243793'}),
+            LinkMaster.createMusicVideoOnYouTube({id: 'UBJgWA6bXww'}),
+        ],
+    }),  
     new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2025-08-16 ねくすてーじ vol.6'],

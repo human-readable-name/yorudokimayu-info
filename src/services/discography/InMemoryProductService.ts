@@ -70,6 +70,39 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "22nd-single",
+        name: TranslatableValues.create([
+            ["ja", "雷鳴前夜"],
+            ["en", "Raimeizenya"],
+        ]),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2025-07-31"),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music/Lyrics マッチ"],
+                ["en", "Music/Lyrics Matchy"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/UBJgWA6bXww"),
+                name: TranslatableValues.create([
+                    ["ja", "雷鳴前夜"],
+                    ["en", "Raimeizenya"],
+                ]),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: "qcXXGpBE"}),
+            LinkMaster.createForOfficialStore({id: "7243793"}),
+        ],
+    }),
+    new ProductMaster({
         id: "2nd-ep",
         name: TranslatableValues.createUnifiedStatement("For,"),
         kind: "EP",
