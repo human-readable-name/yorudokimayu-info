@@ -897,6 +897,7 @@ export const japaneseProfile: Profile = {
         "2025-04-27 2nd EP For,をリリース",
         "2025-05-17 魔ノ姫こあく×拠鳥きまゆ 2man Live「Broaden My World」を開催",
         "2025-05-28 魔ノ姫こあく×拠鳥きまゆ 2man Live 振替公演「(RE:)Broaden My World」を開催",
+        "2025-07-31 4か月連続リリース企画 #FOR_RISING 開始",
     ],
 };
 
@@ -921,6 +922,7 @@ export const englishProfile: Profile = {
         "2025-04-27 Released 2nd EP For,",
         '2025-05-17 Koaku Manohime and Kimayu Yorudo joint concert "Broaden My World"',
         '2025-05-28 Koaku Manohime and Kimayu Yorudo joint concert "(RE:)Broaden My World"',
+        "2025-07-31 Started #FOR_RISING project",
     ],
 }
 
