@@ -874,6 +874,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'ねくすてーじ vol.6'],
+            ['en', 'nextage vol.6'],
+        ]),
+        date: new Date('2025-08-16'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
