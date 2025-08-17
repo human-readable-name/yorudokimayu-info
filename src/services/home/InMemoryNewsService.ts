@@ -34,21 +34,6 @@ const newsMasterData: NewsMaster[] = [
     }),  
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-08-16 ねくすてーじ vol.6'],
-            ['en', '2025-08-16 nextage vol.6'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/ng63t'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (Sound Bar Freja) チケット'],
-                    ['en', 'Venue (Sound Bar Freja) ticket'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-08-23 ぶいかふぇ♪vol.152'],
             ['en', '2025-08-23 Vcafe vol.152'],
         ]),
