@@ -70,6 +70,38 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "23rd-single",
+        name: TranslatableValues.create([
+            ["ja", "ビリビリビリビリ"],
+            ["en", "BiriBiriBiriBiri"],
+        ]),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2025-08-31"),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music/Lyrics esora uma"],
+                ["en", "Music/Lyrics esora uma"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/XZd4mtHDYBQ"),
+                name: TranslatableValues.create([
+                    ["ja", "ビリビリビリビリ"],
+                    ["en", "BiriBiriBiriBiri"],
+                ]), 
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: 'yRNrZVsa'}),
+        ],
+    }),
+    new ProductMaster({
         id: "22nd-single",
         name: TranslatableValues.create([
             ["ja", "雷鳴前夜"],
