@@ -99,6 +99,7 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             LinkMaster.createForTuneCore({id: 'yRNrZVsa'}),
+            LinkMaster.createForOfficialStore({id: '7363456'}),
         ],
     }),
     new ProductMaster({
