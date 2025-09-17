@@ -47,6 +47,21 @@ const newsMasterData: NewsMaster[] = [
             })
         ],
     }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-10-21 #ぶいちゅっ vol.4'],
+            ['en', '2025-10-21 Virtual Tuesday vol.4']
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/02xk1rvdz7p41.html'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原エンタス) チケット'],
+                    ['en', 'Venue (Akihabara ENTAS) ticket']
+                ]),
+            }),
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
