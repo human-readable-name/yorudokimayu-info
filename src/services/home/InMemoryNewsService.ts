@@ -62,6 +62,21 @@ const newsMasterData: NewsMaster[] = [
             }),
         ],
     }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-11-08 ぶいかふぇ♪ vol.174'],
+            ['en', '2025-11-08 Vcafe vol.174'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13656'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
+                ]),
+            })
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
