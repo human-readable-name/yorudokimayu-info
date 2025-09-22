@@ -77,6 +77,25 @@ const newsMasterData: NewsMaster[] = [
             })
         ]
     }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2025-11-22 あるこーる・すぷらっしゅ vol.2'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/96tp9'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (Sound Bar Freja) チケット'],
+                    ['en', 'Venue (Sound Bar Freja) ticket'],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.stream-ticket.com/events/detail/2512.html'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 (Streamticket) チケット'],
+                    ['en', 'Streaming (Streamticket) ticket'],
+                ]),
+            })
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
