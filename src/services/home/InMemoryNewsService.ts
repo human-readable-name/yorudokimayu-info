@@ -23,17 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [  
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-08-31 新曲 ビリビリビリビリ'],
-            ['en', '2025-08-31 New single "BiriBiriBiriBiri"'],
-        ]),
-        links: [
-            LinkMaster.createForTuneCore({id: 'yRNrZVsa'}),
-            LinkMaster.createForOfficialStore({id: '7363456'}),
-            LinkMaster.createMusicVideoOnYouTube({id: 'XZd4mtHDYBQ'}),
-        ],
-    }),  
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-10-04 拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」'],
             ['en', '2025-10-04 Kimayu Yorudo 2nd solo concert "Penguin carries the thunder shock."'],
         ]),
@@ -58,6 +47,25 @@ const newsMasterData: NewsMaster[] = [
                 name: TranslatableValues.create([
                     ['ja', '現地 (秋葉原エンタス) チケット'],
                     ['en', 'Venue (Akihabara ENTAS) ticket']
+                ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2025-10-26 ​Virtual Artist Fes VRide! Vol.18'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.real-virtual-live.com/vol18'),
+                name: TranslatableValues.create([
+                    ['ja', '公式サイト'],
+                    ['en', 'Official web site']
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://l-tike.com/search/?keyword=VRide'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (渋谷GRIT) チケット'],
+                    ['en', 'Venue (Shibuya GRIT) ticket'],
                 ]),
             }),
         ],
