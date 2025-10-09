@@ -96,7 +96,15 @@ const productMasterData: ProductMaster[] = [
                 ["en", "Vocal KimayuYorudo"],
             ]),
         ],
-        mvLinks: [],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/ebP0sF8Xo0M'),
+                name: TranslatableValues.create([
+                    ["ja", "人鳥は雷震を運んで"],
+                    ["en", "PENGUIN RISING"],
+                ]),
+            }),
+        ],
         storeLinks: [
             LinkMaster.createForTuneCore({id: 'ZMspRA1M'}),
             LinkMaster.createForOfficialStore({id: '7511323'}),
