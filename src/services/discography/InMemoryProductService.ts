@@ -70,6 +70,39 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "24th-single",
+        name: TranslatableValues.create([
+            ["ja", "人鳥は雷震を運んで"],
+            ["en", "PENGUIN RISING"],
+        ]),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2025-10-10"),
+        description: TranslatableValues.create([
+            ["ja", "活動開始5周年記念"],
+            ["en", "fifth anniversary song"],
+        ]),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music 神田ジョン"],
+                ["en", "Music JonKanda"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Lyrics 山下うみ"],
+                ["en", "Lyrics Yamashita Umi"]
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: 'ZMspRA1M'}),
+            LinkMaster.createForOfficialStore({id: '7511323'}),
+        ],
+    }),
+    new ProductMaster({
         id: "23rd-single",
         name: TranslatableValues.create([
             ["ja", "ビリビリビリビリ"],
@@ -164,8 +197,8 @@ const productMasterData: ProductMaster[] = [
                 ["en", "Tr1,3,5 Music / Tr5 Lyrics  Matchy"],
             ]),
             TranslatableValues.create([
-                ["ja", "Tr2 Music/Lyrics 神田ジョン（from PENGUIN RESEARCH）"],
-                ["en", "Tr2 Music/Lyrics John Kanda (from PENGUIN RESEARCH)"],
+                ["ja", "Tr2 Music/Lyrics 神田ジョン"],
+                ["en", "Tr2 Music/Lyrics JonKanda"],
             ]),
             TranslatableValues.create([
                 ["ja", "Tr4 Music/Lyrics 犬絵"],
