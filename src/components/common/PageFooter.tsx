@@ -34,7 +34,7 @@ const PageFooter: React.FC<Props> = ({locale}) => {
     return <footer className="flex justify-center align-center mt-8 border-t">
         <div className="justify-center text-center text-sm m-8">
             {tlanslatedMessage.analytics}<br/>
-            {tlanslatedMessage.correction} <span className="underline"><a href="https://github.com/01G271BR9H8WH1VNE8QHKYGDCX/yorudokimayu-info/issues/new/choose" target="_blank" rel="noopener noreferrer">{tlanslatedMessage.github}</a></span><br/>
+            {tlanslatedMessage.correction} <span className="underline"><a href="https://github.com/human-readable-name/yorudokimayu-info/issues/new/choose" target="_blank" rel="noopener noreferrer">{tlanslatedMessage.github}</a></span><br/>
         </div>
     </footer>
 };
