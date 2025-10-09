@@ -38,6 +38,16 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2025-10-10 新曲 人鳥は雷震を運んで'],
+            ['en', '2025-10-10 New Single "PENGUIN RISING"'],
+        ]),
+        links: [
+            LinkMaster.createForTuneCore({id: 'ZMspRA1M'}),
+            LinkMaster.createForOfficialStore({id: '7511323'}),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2025-10-21 #ぶいちゅっ vol.4'],
             ['en', '2025-10-21 Virtual Tuesday vol.4']
         ]),
