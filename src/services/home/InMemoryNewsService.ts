@@ -30,8 +30,8 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10603'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 (下北沢レッグ) / 配信 (Z-aN) チケット'],
-                    ['en', 'Venue (Shimokitazawa ReG) / Streaming (Z-aN) ticket'],
+                    ['ja', '配信 (Z-aN) アーカイブは2025-10-31まで視聴可能'],
+                    ['en', 'Streaming (Z-aN) archive will be available until 2025-10-31'],
                 ]),
             })
         ],
