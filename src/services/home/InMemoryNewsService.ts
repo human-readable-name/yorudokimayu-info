@@ -122,6 +122,18 @@ const newsMasterData: NewsMaster[] = [
             })
         ],
     }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2025-12-13 NaNa Fes ROOTS Winter'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://t.livepocket.jp/e/ur6cm'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (心斎橋3会場) チケット '],
+                    ['en', 'Venue (3 music club in Shinsaibashi) ticket'],
+                ]),
+            })
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
