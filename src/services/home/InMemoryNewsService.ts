@@ -33,7 +33,14 @@ const newsMasterData: NewsMaster[] = [
                     ['ja', '配信 (Z-aN) アーカイブは2025-10-31まで視聴可能'],
                     ['en', 'Streaming (Z-aN) archive will be available until 2025-10-31'],
                 ]),
-            })
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://v-meguri.com/event/yorudokimayu-2nd-onemanlive/'),
+                name: TranslatableValues.create([
+                    ['ja', 'ライブレポート'],
+                    ['en', 'Report on V-meguri'],
+                ])
+            }),
         ],
     }),
     new NewsMaster({
