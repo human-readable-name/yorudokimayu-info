@@ -881,6 +881,29 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         ]),
         date: new Date('2025-08-16'),
     }),
+    new EventHistoryMaster({
+        date: new Date("2025-10-04"),
+        name: TranslatableValues.create([
+            ["ja", "拠鳥きまゆ 拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」"],
+            ["en", 'Kimayu Yorudo 2nd solo concert "Penguin carries the thunder shock."'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10603'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (下北沢レッグ) / 配信 (Z-aN) '],
+                    ['en', 'Venue (Shimokitazawa ReG) / Streaming (Z-aN)'],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://v-meguri.com/event/yorudokimayu-2nd-onemanlive/'),
+                name: TranslatableValues.create([
+                    ['ja', 'ライブレポート'],
+                    ['en', 'Report on V-meguri'],
+                ])
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
@@ -905,7 +928,7 @@ export const japaneseProfile: Profile = {
         "2025-05-17 魔ノ姫こあく×拠鳥きまゆ 2man Live「Broaden My World」を開催",
         "2025-05-28 魔ノ姫こあく×拠鳥きまゆ 2man Live 振替公演「(RE:)Broaden My World」を開催",
         "2025-07-31 4か月連続リリース企画 #FOR_RISING 開始",
-        "2025-10-10 2nd Oneman Live「人鳥は雷震を運んで」を開催",
+        "2025-10-04 2nd Oneman Live「人鳥は雷震を運んで」を開催",
     ],
 };
 
@@ -931,7 +954,7 @@ export const englishProfile: Profile = {
         '2025-05-17 Koaku Manohime and Kimayu Yorudo joint concert "Broaden My World"',
         '2025-05-28 Koaku Manohime and Kimayu Yorudo joint concert "(RE:)Broaden My World"',
         "2025-07-31 Started #FOR_RISING project",
-        '2025-10-10 2nd solo concert "Penguin carries the thunder shock."'
+        '2025-10-04 2nd solo concert "Penguin carries the thunder shock."'
     ],
 }
 
