@@ -70,6 +70,21 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),
     new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-10-26 M3 2025 秋 サークル アタリメ × Atelier LadyBird Album "Bitter Sweet Symphony" 1曲歌唱担当'],
+            ['en', '2025-10-26 Guest vocalist on Atelier LadyBird＆アタリメ Album "Bitter Sweet Symphony" will be released at M3 2025 Autumn'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://atarime7.github.io/bitter-sweet-symphony/')
+            })
+        ],
+    }),
+    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2025-10-26 ​Virtual Artist Fes VRide! Vol.18'),
         links: [
             new LinkMaster({
