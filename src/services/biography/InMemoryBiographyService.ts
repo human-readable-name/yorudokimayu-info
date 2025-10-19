@@ -860,6 +860,12 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             ['en', 'Koaku Manohime and Kimayu Yorudo joint concert "(RE:)Broaden My World"'],
         ]),
         date: new Date('2025-05-28'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/txbCKRzZr-o'),
+                name: TranslatableValues.createUnifiedStatement('Digest movie'),
+            }),
+        ],
     }),
     new EventHistoryMaster({
         name: TranslatableValues.create([
