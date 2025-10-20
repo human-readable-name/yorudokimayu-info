@@ -112,8 +112,8 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13656'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原トークライブBAR from scratch) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (Akihabara from scracth) / Streaming (bitfan) ticket'],
+                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
                 ]),
             })
         ]
@@ -148,6 +148,21 @@ const newsMasterData: NewsMaster[] = [
                 ]),
             })
         ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2025-12-27 ぶいかふぇ♪vol.191'],
+            ['en', '2025-12-27 Vcafe vol.191'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13933'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
+                ]),
+            })
+        ]
     }),
 ];
 
