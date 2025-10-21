@@ -56,21 +56,6 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-10-21 #ぶいちゅっ vol.4'],
-            ['en', '2025-10-21 Virtual Tuesday vol.4']
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/02xk1rvdz7p41.html'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原エンタス) チケット'],
-                    ['en', 'Venue (Akihabara ENTAS) ticket']
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-10-26 M3 2025 秋 サークル アタリメ × Atelier LadyBird Album "Bitter Sweet Symphony" 1曲歌唱担当'],
             ['en', '2025-10-26 Guest vocalist on Atelier LadyBird＆アタリメ Album "Bitter Sweet Symphony" will be released at M3 2025 Autumn'],
         ]),
