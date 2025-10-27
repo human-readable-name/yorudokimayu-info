@@ -372,6 +372,24 @@ const collaborationMasterData: CollaborationMaster[] = [
             LinkMaster.createMusicVideoOnYouTube({id: 'hZCoaVrcudY'}),
         ],
     }),
+    new CollaborationMaster({
+        date: new Date('2025-10-26'),
+        productName: TranslatableValues.createUnifiedStatement('Bitter Sweet Symphony'),
+        productArtist: TranslatableValues.createUnifiedStatement('アタリメ × Atelier LadyBird'),
+        partOfTheWork: TranslatableValues.create([
+            ['ja', 'Tr3 未来 歌唱'],
+            ['en', 'Vocal Tr3 未来'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ["ja", "特設サイト"],
+                    ["en", "Web site"],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://atarime7.github.io/bitter-sweet-symphony/')
+            })
+        ],
+    }),
 ];
 
 export class EventHistoryMaster {
@@ -916,6 +934,19 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             ['en', 'Virtual Tuesday vol.4']
         ]),
         date: new Date('2025-10-21'),
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement('​Virtual Artist Fes VRide! Vol.18'),
+        date: new Date('2025-10-26'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.real-virtual-live.com/vol18'),
+                name: TranslatableValues.create([
+                    ['ja', '公式サイト'],
+                    ['en', 'Official web site']
+                ]),
+            }),
+        ],
     }),
 ];
 
