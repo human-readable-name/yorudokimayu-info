@@ -45,51 +45,6 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-10-10 新曲 人鳥は雷震を運んで'],
-            ['en', '2025-10-10 New Single "PENGUIN RISING"'],
-        ]),
-        links: [
-            LinkMaster.createForTuneCore({id: 'ZMspRA1M'}),
-            LinkMaster.createForOfficialStore({id: '7511323'}),
-            LinkMaster.createMusicVideoOnYouTube({id: 'ebP0sF8Xo0M'}),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-10-26 M3 2025 秋 サークル アタリメ × Atelier LadyBird Album "Bitter Sweet Symphony" 1曲歌唱担当'],
-            ['en', '2025-10-26 Guest vocalist on Atelier LadyBird＆アタリメ Album "Bitter Sweet Symphony" will be released at M3 2025 Autumn'],
-        ]),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ["ja", "特設サイト"],
-                    ["en", "Web site"],
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://atarime7.github.io/bitter-sweet-symphony/')
-            })
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2025-10-26 ​Virtual Artist Fes VRide! Vol.18'),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.real-virtual-live.com/vol18'),
-                name: TranslatableValues.create([
-                    ['ja', '公式サイト'],
-                    ['en', 'Official web site']
-                ]),
-            }),
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://l-tike.com/search/?keyword=VRide'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (渋谷GRIT) チケット'],
-                    ['en', 'Venue (Shibuya GRIT) ticket'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-11-08 ぶいかふぇ♪ vol.174'],
             ['en', '2025-11-08 Vcafe vol.174'],
         ]),
