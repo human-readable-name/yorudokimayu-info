@@ -45,6 +45,16 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2025-10-30 新曲 The Crumble'],
+            ['en', '2025-10-30 New single The Crumble']
+        ]),
+        links: [
+            LinkMaster.createForTuneCore({id: 'RvpBPtzy'}),
+            LinkMaster.createMusicVideoOnYouTube({id: 's7bgWpUQtI8'}),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2025-11-08 ぶいかふぇ♪ vol.174'],
             ['en', '2025-11-08 Vcafe vol.174'],
         ]),
