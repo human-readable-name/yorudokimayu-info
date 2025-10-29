@@ -70,6 +70,33 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "25th-single",
+        name: TranslatableValues.createUnifiedStatement("The Crumble"),
+        kind: "Single",
+        genre: "Alternative",
+        dateOfRelease: new Date("2025-10-30"),
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Music/Lyrics 犬絵"],
+                ["en", "Music/Lyrics Catpicture"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Vocal 拠鳥きまゆ"],
+                ["en", "Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/s7bgWpUQtI8"),
+                name: TranslatableValues.createUnifiedStatement("The Crumble"),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForTuneCore({id: 'RvpBPtzy'}),
+            LinkMaster.createForOfficialStore({id: '7573752'}),
+        ],
+    }),
+    new ProductMaster({
         id: "24th-single",
         name: TranslatableValues.create([
             ["ja", "人鳥は雷震を運んで"],
@@ -257,8 +284,8 @@ const productMasterData: ProductMaster[] = [
         ]),
         credits: [
             TranslatableValues.create([
-                ["ja", "Music/Lyric コヤマヒデカズ"],
-                ["en", "Music/Lyric KoyamaHidekazu"],
+                ["ja", "Music/Lyrics コヤマヒデカズ"],
+                ["en", "Music/Lyrics KoyamaHidekazu"],
             ]),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
@@ -290,8 +317,8 @@ const productMasterData: ProductMaster[] = [
         dateOfRelease: new Date("2024-09-28"),
         credits: [
             TranslatableValues.create([
-                ["ja", "Music/Lyric 梔"],
-                ["en", "Music/Lyric Kuchinashi"],
+                ["ja", "Music/Lyrics 梔"],
+                ["en", "Music/Lyrics Kuchinashi"],
             ]),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
@@ -320,8 +347,8 @@ const productMasterData: ProductMaster[] = [
         dateOfRelease: new Date("2024-04-25"),
         credits: [
             TranslatableValues.create([
-                ["ja", "Music/Lyric さめのぽき"],
-                ["en", "Music/Lyric Samenopoki"],
+                ["ja", "Music/Lyrics さめのぽき"],
+                ["en", "Music/Lyrics Samenopoki"],
             ]),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],
