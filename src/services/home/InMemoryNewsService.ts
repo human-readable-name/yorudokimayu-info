@@ -50,6 +50,7 @@ const newsMasterData: NewsMaster[] = [
         ]),
         links: [
             LinkMaster.createForTuneCore({id: 'RvpBPtzy'}),
+            LinkMaster.createForOfficialStore({id: '7573752'}),
             LinkMaster.createMusicVideoOnYouTube({id: 's7bgWpUQtI8'}),
         ],
     }),
