@@ -946,6 +946,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                     ['en', 'Official web site']
                 ]),
             }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/vQGOoGp2y50"),
+                name: TranslatableValues.create([
+                    ["ja", "アーカイブ"],
+                    ["en", "Live streaming archive"],
+                ]),
+            }),
         ],
     }),
 ];
