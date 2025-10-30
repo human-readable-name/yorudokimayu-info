@@ -926,6 +926,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                     ['en', 'Report on V-meguri'],
                 ])
             }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Mgo37QMTsWY'),
+                name: TranslatableValues.createUnifiedStatement('Digest movie'),
+            }),
         ],
     }),
     new EventHistoryMaster({
