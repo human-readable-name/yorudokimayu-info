@@ -39,7 +39,11 @@ const newsMasterData: NewsMaster[] = [
                 name: TranslatableValues.create([
                     ['ja', 'ライブレポート'],
                     ['en', 'Report on V-meguri'],
-                ])
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Mgo37QMTsWY'),
+                name: TranslatableValues.createUnifiedStatement('Digest movie'),
             }),
         ],
     }),
