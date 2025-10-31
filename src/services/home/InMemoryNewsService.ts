@@ -23,32 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [  
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-10-04 拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」'],
-            ['en', '2025-10-04 Kimayu Yorudo 2nd solo concert "Penguin carries the thunder shock."'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10603'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 (Z-aN) アーカイブは2025-10-31まで視聴可能'],
-                    ['en', 'Streaming (Z-aN) archive will be available until 2025-10-31'],
-                ]),
-            }),
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://v-meguri.com/event/yorudokimayu-2nd-onemanlive/'),
-                name: TranslatableValues.create([
-                    ['ja', 'ライブレポート'],
-                    ['en', 'Report on V-meguri'],
-                ]),
-            }),
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Mgo37QMTsWY'),
-                name: TranslatableValues.createUnifiedStatement('Digest movie'),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2025-10-30 新曲 The Crumble'],
             ['en', '2025-10-30 New single The Crumble']
         ]),
