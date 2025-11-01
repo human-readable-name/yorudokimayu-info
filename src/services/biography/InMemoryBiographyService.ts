@@ -984,6 +984,7 @@ export const japaneseProfile: Profile = {
         "2025-05-28 魔ノ姫こあく×拠鳥きまゆ 2man Live 振替公演「(RE:)Broaden My World」を開催",
         "2025-07-31 4か月連続リリース企画 #FOR_RISING 開始",
         "2025-10-04 2nd Oneman Live「人鳥は雷震を運んで」を開催",
+        "2025-10-30 #FOR_RISING 完結",
     ],
 };
 
@@ -1009,7 +1010,8 @@ export const englishProfile: Profile = {
         '2025-05-17 Koaku Manohime and Kimayu Yorudo joint concert "Broaden My World"',
         '2025-05-28 Koaku Manohime and Kimayu Yorudo joint concert "(RE:)Broaden My World"',
         "2025-07-31 Started #FOR_RISING project",
-        '2025-10-04 2nd solo concert "Penguin carries the thunder shock."'
+        '2025-10-04 2nd solo concert "Penguin carries the thunder shock."',
+        "2025-10-30 Completed #FOR_RISING project",
     ],
 }
 
