@@ -22,32 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [  
     new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-10-30 新曲 The Crumble'],
-            ['en', '2025-10-30 New single The Crumble']
-        ]),
-        links: [
-            LinkMaster.createForTuneCore({id: 'RvpBPtzy'}),
-            LinkMaster.createForOfficialStore({id: '7573752'}),
-            LinkMaster.createMusicVideoOnYouTube({id: 's7bgWpUQtI8'}),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-11-08 ぶいかふぇ♪ vol.174'],
-            ['en', '2025-11-08 Vcafe vol.174'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13656'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
-                ]),
-            })
-        ]
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2025-11-22 あるこーる・すぷらっしゅ vol.2'),
         links: [
             new LinkMaster({

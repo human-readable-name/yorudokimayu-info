@@ -959,6 +959,19 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'ぶいかふぇ♪ vol.174'],
+            ['en', 'Vcafe vol.174'],
+        ]),
+        date: new Date('2025-11-08'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13656'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
