@@ -972,6 +972,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement('あるこーる・すぷらっしゅ vol.2'),
+        date: new Date('2025-11-22'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
