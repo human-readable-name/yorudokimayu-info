@@ -60,6 +60,21 @@ const newsMasterData: NewsMaster[] = [
             })
         ]
     }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2026-02-08 ぶいかふぇ♪vol.206'],
+            ['en', '2026-02-08 Vcafe vol.206'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/15087'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
+                ]),
+            }),
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
