@@ -62,6 +62,21 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2025-12-27 #ぶいちゅっ presents ENTAS 7th Anniversary'],
+            ['en', '2025-12-27 Virtual Tuesday presents ENTAS 7th Anniversary'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原エンタス) チケット'],
+                    ['en', 'Venue (Akihabara ENTAS) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/02z56fgbb9u41.html')
+            })
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2026-02-08 ぶいかふぇ♪vol.206'],
             ['en', '2026-02-08 Vcafe vol.206'],
         ]),
