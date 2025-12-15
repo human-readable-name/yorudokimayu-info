@@ -976,6 +976,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         name: TranslatableValues.createUnifiedStatement('あるこーる・すぷらっしゅ vol.2'),
         date: new Date('2025-11-22'),
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement('NaNa Fes ROOTS Winter'),
+        date: new Date('2025-12-13'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
