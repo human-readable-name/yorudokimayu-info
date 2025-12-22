@@ -22,18 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [  
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2025-11-22 あるこーる・すぷらっしゅ vol.2'),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.stream-ticket.com/events/detail/2512.html'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 (Streamticket) チケット'],
-                    ['en', 'Streaming (Streamticket) ticket'],
-                ]),
-            })
-        ],
-    }),
-    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2025-12-27 ぶいかふぇ♪vol.191'],
             ['en', '2025-12-27 Vcafe vol.191'],
