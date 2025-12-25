@@ -513,6 +513,7 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
+            LinkMaster.createForTuneCore({id: 'T5apQAQB'}),
             LinkMaster.createForOfficialStore({id: '4670069'}),
         ],
     }),
@@ -634,6 +635,7 @@ const productMasterData: ProductMaster[] = [
             }),
         ],
         storeLinks: [
+            LinkMaster.createForTuneCore({id: 'CYcu2HH3'}),
             LinkMaster.createForOfficialStore({id: '3756256'}),
         ]
     }),
