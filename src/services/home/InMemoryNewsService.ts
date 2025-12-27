@@ -48,26 +48,11 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13933'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
+                    ['ja', '配信 (bitfan) チケット'],
+                    ['en', 'Streaming (bitfan) ticket'],
                 ]),
             })
         ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-12-27 #ぶいちゅっ presents ENTAS 7th Anniversary'],
-            ['en', '2025-12-27 Virtual Tuesday presents ENTAS 7th Anniversary'],
-        ]),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ['ja', '現地 (秋葉原エンタス) チケット'],
-                    ['en', 'Venue (Akihabara ENTAS) ticket'],
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://passmarket.yahoo.co.jp/event/show/detail/02z56fgbb9u41.html')
-            })
-        ],
     }),
     new NewsMaster({
         text: TranslatableValues.create([
