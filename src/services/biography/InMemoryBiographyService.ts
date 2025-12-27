@@ -980,6 +980,26 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         name: TranslatableValues.createUnifiedStatement('NaNa Fes ROOTS Winter'),
         date: new Date('2025-12-13'),
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', 'ぶいかふぇ♪vol.191'],
+            ['en', 'Vcafe vol.191'],
+        ]),
+        date: new Date('2025-12-27'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13933'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            })
+        ]
+    }),
+    new EventHistoryMaster({
+        name: TranslatableValues.create([
+            ['ja', '#ぶいちゅっ presents ENTAS 7th Anniversary'],
+            ['en', 'Virtual Tuesday presents ENTAS 7th Anniversary'],
+        ]),
+        date: new Date('2025-12-27'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
