@@ -266,7 +266,7 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             LinkMaster.createForTuneCore({id: "28nzyz5d"}),
-            LinkMaster.createForOfficialStore({id: "6831246"}),
+            LinkMaster.createForOfficialStore({id: "7813005"}),
         ],
     }),
     new ProductMaster({
@@ -437,11 +437,11 @@ const productMasterData: ProductMaster[] = [
         id: "1st-album",
         name: TranslatableValues.createUnifiedStatement("Say,"),
         kind: "Album",
-        genre: null,
+        genre: "Alternative",
         dateOfRelease: new Date("2023-04-30"),
         description: TranslatableValues.create([
-            ["ja", "1st Album M3-2023春 (サブスク配信なし・CD販売のみ)"],
-            ["en", "1st Album M3-2023-Spring (Only CD sales)"],
+            ["ja", "1st Album M3-2023春"],
+            ["en", "1st Album M3-2023-Spring"],
         ]),
         tracks: [
             TranslatableValues.createUnifiedStatement("I breathe here.(instrumental)"),
@@ -514,7 +514,7 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             LinkMaster.createForTuneCore({id: 'T5apQAQB'}),
-            LinkMaster.createForOfficialStore({id: '4670069'}),
+            LinkMaster.createForOfficialStore({id: '7813289'}),
         ],
     }),
     new ProductMaster({
@@ -585,11 +585,11 @@ const productMasterData: ProductMaster[] = [
         id: "1st-ep",
         name: TranslatableValues.createUnifiedStatement("sparkler"),
         kind: "EP",
-        genre: null,
+        genre: "Alternative",
         dateOfRelease: new Date("2022-04-24"),
         description: TranslatableValues.create([
-            ["ja", "1st EP M3-2022春 (サブスク配信なし・CD販売のみ)"],
-            ["en", "1st EP M3-2022-Spring (Only CD sales)"],
+            ["ja", "1st EP M3-2022春"],
+            ["en", "1st EP M3-2022-Spring"],
         ]),
         tracks: [
             TranslatableValues.createUnifiedStatement("Introduction"),
@@ -636,7 +636,7 @@ const productMasterData: ProductMaster[] = [
         ],
         storeLinks: [
             LinkMaster.createForTuneCore({id: 'CYcu2HH3'}),
-            LinkMaster.createForOfficialStore({id: '3756256'}),
+            LinkMaster.createForOfficialStore({id: '7813317'}),
         ]
     }),
     new ProductMaster({
