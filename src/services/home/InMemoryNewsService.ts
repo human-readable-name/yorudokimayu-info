@@ -41,21 +41,6 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-12-27 ぶいかふぇ♪vol.191'],
-            ['en', '2025-12-27 Vcafe vol.191'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/13933'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 (bitfan) チケット'],
-                    ['en', 'Streaming (bitfan) ticket'],
-                ]),
-            })
-        ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2026-02-08 ぶいかふぇ♪vol.206'],
             ['en', '2026-02-08 Vcafe vol.206'],
         ]),
