@@ -54,6 +54,18 @@ const newsMasterData: NewsMaster[] = [
             }),
         ]
     }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2025-04-05 VIRTUAL IMPACT'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (Sound Bar Freja) チケット'],
+                    ['en', 'Venue (Sound Bar Freja) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/988po'),
+            })
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
