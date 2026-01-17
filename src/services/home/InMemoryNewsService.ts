@@ -55,6 +55,18 @@ const newsMasterData: NewsMaster[] = [
         ]
     }),
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-03-20 UMA Chaos Fes. vol.3'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/x2o5c'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (心斎橋3会場) チケット '],
+                    ['en', 'Venue (3 music club in Shinsaibashi) ticket'],
+                ]),
+            }),
+        ]
+    }),
+    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2025-04-05 VIRTUAL IMPACT'),
         links: [
             new LinkMaster({
