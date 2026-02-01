@@ -23,24 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2025-12-25 1st EP "sparkler"を配信リリース'],
-            ['en', '2025-12-25 1st EP "sparkler" is available on streaming services'],
-        ]),
-        links: [
-            LinkMaster.createForTuneCore({id: 'CYcu2HH3'}),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2025-12-25 1st Album "Say,"を配信リリース'],
-            ['en', '2025-12-25 1st Album "Say," is available on streaming services'],
-        ]),
-        links: [
-            LinkMaster.createForTuneCore({id: 'T5apQAQB'}),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2026-02-08 ぶいかふぇ♪vol.206'],
             ['en', '2026-02-08 Vcafe vol.206'],
         ]),
