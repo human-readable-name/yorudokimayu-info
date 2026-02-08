@@ -37,6 +37,25 @@ const newsMasterData: NewsMaster[] = [
         ]
     }),
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-02-19 ProLight & ProVisual 2026'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://prolight-provisual.jp/'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (東京ビッグサイト 東7ホール 株式会社レイ) 来場事前登録 (無料)'],
+                    ['en', 'Venue (Tokyo Big Sight, Hall E7, Ray Corporation) Pre-registration for Visitors (Free)'],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://x.com/vcafe_Vcafe/status/2020356202090361213'),
+                name: TranslatableValues.create([
+                    ['ja', '出演者および時刻一覧'],
+                    ['en', 'List of Performers and Schedule']
+                ]),
+            }),
+        ]
+    }),
+    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-03-20 UMA Chaos Fes. vol.3'),
         links: [
             new LinkMaster({
