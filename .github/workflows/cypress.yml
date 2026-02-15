@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Use Node.js v22
+        uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
-      - run: corepack enable
+          node-version: 22
+      - name: Enable Corepack
+        run: corepack enable
       - name: Run cypress
         uses: cypress-io/github-action@v6
         with:
