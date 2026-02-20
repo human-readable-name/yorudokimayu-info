@@ -1013,6 +1013,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ]
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement('ProLight & ProVisual 2026'),
+        date: new Date('2026-02-19'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
