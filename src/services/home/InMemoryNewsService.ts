@@ -75,6 +75,18 @@ const newsMasterData: NewsMaster[] = [
             }),
         ]
     }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-06-06 RUMBLE LIVE'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/rumble_live'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (下北沢ReG) チケット'],
+                    ['en', 'Venue (Shimokitazawa ReG) ticket'],
+                ]),
+            }),
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
