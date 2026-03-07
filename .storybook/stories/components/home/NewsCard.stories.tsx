@@ -9,15 +9,15 @@ export default {
 } as Meta<typeof NewsCard>;
 
 const Template: StoryFn<typeof NewsCard> = (args) => <NewsCard {...args} />;
-export const withoutLinks = Template.bind({});
-withoutLinks.args = {
+export const WithoutLinks = Template.bind({});
+WithoutLinks.args = {
     newsItem: {
         text: "タイトルのみでリンクなし"
     }
 };
 
-export const withLinks = Template.bind({});
-withLinks.args = {
+export const WithLinks = Template.bind({});
+WithLinks.args = {
     newsItem: {
         text: "タイトルとリンク", 
         links: [

@@ -9,8 +9,8 @@ export default {
 } as Meta<typeof News>;
 
 const Template: StoryFn<typeof News> = (args) => <News {...args} />;
-export const withNews = Template.bind({});
-withNews.args = {
+export const WithNews = Template.bind({});
+WithNews.args = {
     news: [
         {
             text: "タイトルのみでリンクなし"
@@ -24,7 +24,7 @@ withNews.args = {
         }
     ]
 };
-export const withoutNews = Template.bind({});
-withoutNews.args = {
+export const WithoutNews = Template.bind({});
+WithoutNews.args = {
     news: []
 };
