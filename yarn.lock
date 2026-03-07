@@ -14901,6 +14901,8 @@ __metadata:
     "@types/node": "npm:18.15.3"
     "@types/react": "npm:19.2.14"
     "@types/react-dom": "npm:19.2.3"
+    "@typescript-eslint/eslint-plugin": "npm:8.56.1"
+    "@typescript-eslint/parser": "npm:8.56.1"
     autoprefixer: "npm:^10.4.14"
     cypress: "npm:14.5.3"
     date-fns: "npm:^2.29.3"
