@@ -9,8 +9,8 @@ export default {
 } as Meta<typeof ProductCard>;
 
 const Template: StoryFn<typeof ProductCard> = (args) => <ProductCard {...args} />;
-export const productCard = Template.bind({});
-productCard.args = { 
+export const Card = Template.bind({});
+Card.args = {
     productSummary: {
         id: "1st-ep",
         name: "sparkler",

@@ -9,5 +9,5 @@ export default {
 } as Meta<typeof DateOfRleaseLabel>;
 
 const Template: StoryFn<typeof DateOfRleaseLabel> = (args) => <DateOfRleaseLabel {...args} />;
-export const label = Template.bind({});
-label.args = { dateOfRelease: "2020-10-10"};
+export const Label = Template.bind({});
+Label.args = { dateOfRelease: "2020-10-10"};
