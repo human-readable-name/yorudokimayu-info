@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryFn, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/nextjs";
 import News from "../../../../src/components/home/News";
 
 export default {
