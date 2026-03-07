@@ -29,7 +29,6 @@
     "@storybook/addon-docs": "10.2.16",
     "@storybook/addon-links": "10.2.16",
     "@storybook/nextjs": "10.2.16",
-    "@storybook/testing-library": "^0.2.1",
     "@testing-library/cypress": "10.0.3",
     "@types/jest": "^29.5.0",
     "@types/node": "18.15.3",
