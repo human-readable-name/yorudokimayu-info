@@ -10,6 +10,6 @@ describe('createTuneCoreUrl', () => {
     ])('IDが不正な場合は実行時エラーになる %s', (testCase, invalidId) => {
         expect(() => {
             createTuneCoreUrl({id: invalidId, locale: 'ja'})
-        }).toThrowError();
+        }).toThrow();
     });
 });
