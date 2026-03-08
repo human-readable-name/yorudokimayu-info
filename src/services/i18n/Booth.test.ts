@@ -11,6 +11,6 @@ describe('createBoothUrl', () => {
     ])('IDが不正な場合は実行時エラーになる %s', (testCase, invalidId) => {
         expect(() => {
             createBoothUrl({id: invalidId, locale: 'ja'})
-        }).toThrowError();
+        }).toThrow();
     });
 });
