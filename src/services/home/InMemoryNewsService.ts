@@ -61,6 +61,32 @@ const newsMasterData: NewsMaster[] = [
         ]
     }),
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-05-09 Under the Moon / Log_01 – Acoustic Live –'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (QUESTイベントスペース) 特典付きプレミアムチケット'],
+                    ['en', 'Veune (QUEST Event Space) Premium ticket with special benefits'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://fanicon.net/tours/6805/4583/16453'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (QUESTイベントスペース) 一般チケット'],
+                    ['en', 'Venue (QUEST Event Space) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://fanicon.net/tours/6805/4583/16454'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '配信 (bitfan) チケット'],
+                    ['en', 'Streaming (bitfan) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://quest.bitfan.id/events/17546')
+            }),
+        ],
+    }),
+    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2026-05-17 ぶいかふぇ♪vol.249'],
             ['en', '2026-05-17 Vcafe vol.249'],
