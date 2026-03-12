@@ -12,7 +12,7 @@
     "typecheck": "yarn tsc --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "upgrade-storybook": "yarn up storybook@latest @storybook/addon-links@latest @storybook/nextjs@latest eslint-plugin-storybook@latest",
+    "upgrade-storybook": "yarn up storybook@latest @storybook/addon-docs@latest @storybook/addon-links@latest @storybook/nextjs@latest eslint-plugin-storybook@latest",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
   },
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
-    "@storybook/addon-docs": "10.2.16",
+    "@storybook/addon-docs": "10.2.17",
     "@storybook/addon-links": "10.2.17",
     "@storybook/nextjs": "10.2.17",
     "@swc/core": "1.15.18",
