@@ -16,7 +16,7 @@ module.exports = {
   },
 
   "framework": {
-    name: "@storybook/nextjs",
+    name: "@storybook/nextjs-vite",
     options: {
       builder: {
         useSWC: true,

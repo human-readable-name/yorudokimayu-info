@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryFn, Meta } from '@storybook/nextjs';
+import { StoryFn, Meta } from '@storybook/nextjs-vite';
 import ProductKindLabel from '../../../../src/components/discography/ProductKindLabel';
 
 export default {

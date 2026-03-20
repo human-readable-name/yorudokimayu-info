@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryFn, Meta } from '@storybook/nextjs';
+import { StoryFn, Meta } from '@storybook/nextjs-vite';
 import DateOfRleaseLabel from '../../../../src/components/discography/DateOfReleaseLabel';
 
 export default {
