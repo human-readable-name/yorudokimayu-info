@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryFn, Meta } from '@storybook/nextjs';
+import { StoryFn, Meta } from '@storybook/nextjs-vite';
 import PageTitle from '../../../../src/components/common/PageTitle';
 
 export default {
