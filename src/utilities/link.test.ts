@@ -5,7 +5,7 @@ test('isInternal', () => {
     expect(isInternal("/")).toBe(true);
     expect(isInternal("/biography")).toBe(true);
     expect(isInternal("/discography")).toBe(true);
-    expect(isInternal("https://www.youtube.com/channel/UCOJS80LKLRTLihZioG5l73g")).toBe(false);
+    expect(isInternal("https://www.youtube.com/@YorudoKimayuCH")).toBe(false);
 });
 
 test('pageTypeToPath', () => {
