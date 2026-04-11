@@ -26,10 +26,10 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '現地 (Sound Bar Freja) チケット'],
-                    ['en', 'Venue (Sound Bar Freja) ticket'],
+                    ['ja', 'アーカイブは2026-05-02まで視聴可能'],
+                    ['en', 'The live streaming archive will be available until 2026-05-02'],
                 ]),
-                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/988po'),
+                url: TranslatableValues.createUnifiedStatement('https://www.stream-ticket.com/events/detail/2601.html'),
             })
         ]
     }),
@@ -47,6 +47,21 @@ const newsMasterData: NewsMaster[] = [
                 ]),
             }),
         ]
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2026-04-26 M3 2026 春 にて 3rd EP 「身分証明唱」をリリース'],
+            ['en', '2026-04-26 3rd EP "身分証明唱" will be released at M3 2026 spring']
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '頒布物一覧'],
+                    ['en', 'List of items for sale'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://x.com/461Okmy/status/2042213281759404234'),
+            }),
+        ],
     }),
     new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-05-09 Under the Moon / Log_01 – Acoustic Live –'),

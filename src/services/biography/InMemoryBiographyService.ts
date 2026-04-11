@@ -1021,6 +1021,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         name: TranslatableValues.createUnifiedStatement('UMA Chaos Fes. vol.3'),
         date: new Date('2026-03-20'),
     }),
+    new EventHistoryMaster({
+        name: TranslatableValues.createUnifiedStatement('VIRTUAL IMPACT'),
+        date: new Date('2025-04-05'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
