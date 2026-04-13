@@ -69,7 +69,7 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 name: TranslatableValues.create([
                     ['ja', '現地 (QUESTイベントスペース) 特典付きプレミアムチケット'],
-                    ['en', 'Veune (QUEST Event Space) Premium ticket with special benefits'],
+                    ['en', 'Venue (QUEST Event Space) Premium ticket with special benefits'],
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://fanicon.net/tours/6805/4583/16453'),
             }),
@@ -78,7 +78,7 @@ const newsMasterData: NewsMaster[] = [
                     ['ja', '現地 (QUESTイベントスペース) 一般チケット'],
                     ['en', 'Venue (QUEST Event Space) ticket'],
                 ]),
-                url: TranslatableValues.createUnifiedStatement('https://fanicon.net/tours/6805/4583/16454'),
+                url: TranslatableValues.createUnifiedStatement('https://fanicon.net/tours/6805/4583/16774'),
             }),
             new LinkMaster({
                 name: TranslatableValues.create([
