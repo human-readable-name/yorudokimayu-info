@@ -61,6 +61,14 @@ const newsMasterData: NewsMaster[] = [
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://x.com/461Okmy/status/2042213281759404234'),
             }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('身分証明唱 music video'),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/omXDQL4cf2o'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('感電必至♡侵略しんぐあそんぐ music video'),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Z7JYtVEIGBk'),
+            }),
         ],
     }),
     new NewsMaster({
