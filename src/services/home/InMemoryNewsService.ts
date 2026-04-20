@@ -124,6 +124,25 @@ const newsMasterData: NewsMaster[] = [
             }),
         ]
     }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-07-12 AERU-LIVE Vol.5 DAY2'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/5vc1y_260711'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (白金高輪駅周辺) チケット'],
+                    ['en', 'Venue (around Shirokane-Takanawa station) ticket'],
+                ]),
+            }),
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/go1jh_260711'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 チケット'],
+                    ['en', 'Streaming ticket'],
+                ]),
+            }),
+        ],
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
