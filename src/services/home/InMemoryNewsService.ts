@@ -35,31 +35,16 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2026-04-12 ぶいかふぇ♪vol.234'],
-            ['en', '2026-04-12 Vcafe vol.234'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/16913'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
-                ]),
-            }),
-        ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2026-04-26 M3 2026 春 にて 3rd EP 「身分証明唱」をリリース'],
             ['en', '2026-04-26 3rd EP "身分証明唱" will be released at M3 2026 spring']
         ]),
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '頒布物一覧'],
-                    ['en', 'List of items for sale'],
+                    ['ja', 'クロスフェードデモ'],
+                    ['en', 'Crossfade Demo'],
                 ]),
-                url: TranslatableValues.createUnifiedStatement('https://x.com/461Okmy/status/2042213281759404234'),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/xbCz-L4P7Gc'),
             }),
             new LinkMaster({
                 name: TranslatableValues.createUnifiedStatement('身分証明唱 music video'),
