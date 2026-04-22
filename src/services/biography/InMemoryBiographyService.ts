@@ -1028,8 +1028,8 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
     new EventHistoryMaster({
         date: new Date('2026-04-12'),
         name: TranslatableValues.create([
-            ['ja', ' ぶいかふぇ♪vol.234'],
-            ['en', '2026-04-12 Vcafe vol.234'],
+            ['ja', 'ぶいかふぇ♪vol.234'],
+            ['en', 'Vcafe vol.234'],
         ]),
         links: [
             new LinkMaster({
