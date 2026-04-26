@@ -110,6 +110,21 @@ const newsMasterData: NewsMaster[] = [
         ]
     }),
     new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2026-06-28 ぶいかふぇ♪vol.264'],
+            ['en', '2026-06-28 Vcafe vol.264'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/18963'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
+                ]),
+            }),
+        ]
+    }),
+    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-07-12 AERU-LIVE Vol.5 DAY2'),
         links: [
             new LinkMaster({
