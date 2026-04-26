@@ -20,7 +20,7 @@ const ProductCard: React.FC<Props> = ({productSummary}) => {
             </div>
             { productSummary.tracks.length > 0 &&
                 <div className="my-2">
-                    <TrackList tracks={productSummary.tracks} />
+                    <TrackList tracks={productSummary.tracks} extraTracks={productSummary.extraTracks} />
                 </div>
             }
             { productSummary.credits.length > 0 && 

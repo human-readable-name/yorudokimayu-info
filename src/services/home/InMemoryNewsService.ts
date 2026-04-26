@@ -36,7 +36,7 @@ const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2026-04-26 M3 2026 春 にて 3rd EP 「身分証明唱」をリリース'],
-            ['en', '2026-04-26 3rd EP "身分証明唱" will be released at M3 2026 spring']
+            ['en', '2026-04-26 3rd EP "身分証明唱" released at M3 2026 spring']
         ]),
         links: [
             new LinkMaster({

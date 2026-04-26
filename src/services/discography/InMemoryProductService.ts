@@ -12,6 +12,7 @@ export class ProductMaster {
     private dateOfRelease: Date;
     private description?: TranslatableValues;
     private tracks: TranslatableValues[];
+    private extraTracks: TranslatableValues[];
     private credits: TranslatableValues[];
     private mvLinks: LinkMaster[];
     private storeLinks: LinkMaster[];
@@ -24,6 +25,7 @@ export class ProductMaster {
         dateOfRelease: Date,
         description?: TranslatableValues;
         tracks?: TranslatableValues[],
+        extraTracks?: TranslatableValues[],
         credits: TranslatableValues[],
         mvLinks: LinkMaster[],
         storeLinks: LinkMaster[],
@@ -36,6 +38,7 @@ export class ProductMaster {
         this.dateOfRelease = props.dateOfRelease;
         this.description = props.description;
         this.tracks = props.tracks ? props.tracks : [];
+        this.extraTracks = props.extraTracks ? props.extraTracks : [];
         this.credits = props.credits;
         this.mvLinks = props.mvLinks;
         this.storeLinks = props.storeLinks;
@@ -51,6 +54,9 @@ export class ProductMaster {
             description: this.description?.getLocalizedValue(locale) || "",
             tracks: this.tracks.map((trackMaster) => {
                 return trackMaster.getLocalizedValue(locale);
+            }),
+            extraTracks: this.extraTracks.map((extraTrackMaster) => {
+                return extraTrackMaster.getLocalizedValue(locale);
             }),
             credits: this.credits.map((creditMaster) => {
                 return creditMaster.getLocalizedValue(locale);
@@ -69,6 +75,65 @@ export class ProductMaster {
 }
 
 const productMasterData: ProductMaster[] = [
+    new ProductMaster({
+        id: "3rd-ep",
+        name: TranslatableValues.createUnifiedStatement("身分証明唱"),
+        kind: "EP",
+        genre: null,
+        dateOfRelease: new Date("2026-04-26"),
+        description: TranslatableValues.create([
+            ["ja", "3rd EP M3-2026春"],
+            ["en", "3rd EP M3-2026-Spring"],
+        ]),
+        tracks: [
+            TranslatableValues.createUnifiedStatement("Hello,world.（Instrumental）"),
+            TranslatableValues.createUnifiedStatement("身分証明唱"),
+            TranslatableValues.createUnifiedStatement("感電必至♡侵略しんぐあそんぐ♪"),
+            TranslatableValues.createUnifiedStatement("夜のサカナ-Nocturne for Aquarium-"),
+            TranslatableValues.createUnifiedStatement("euthanasia"),
+            TranslatableValues.createUnifiedStatement("StarsAwake"),
+        ],
+        extraTracks: [
+            TranslatableValues.createUnifiedStatement("BiRTH"),
+        ],
+        credits: [
+            TranslatableValues.create([
+                ["ja", "Tr1,3,Ex1 Music マッチ"],
+                ["en", "Tr1,3,Ex1 Music Matchy"],
+            ]),
+            TranslatableValues.createUnifiedStatement("Tr2 Music/Lyrics esora uma"),
+            TranslatableValues.createUnifiedStatement("Tr4 Music/Lyrics のうべんばあ"),
+            TranslatableValues.createUnifiedStatement("Tr5 Music/Lyrics esk/エスケ"),
+            TranslatableValues.create([
+                ["ja", "Tr6 Music/Lyrics 犬絵"],
+                ["en", "Tr6 Music/Lyrics Catpicture"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Tr3,Ex1 Music/Lyrics Vocal 拠鳥きまゆ"],
+                ["en", "Tr3,Ex1 Music/Lyrics Vocal KimayuYorudo"],
+            ]),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', 'クロスフェードデモ'],
+                    ['en', 'Crossfade Demo'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/xbCz-L4P7Gc'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('身分証明唱'),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/omXDQL4cf2o'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('感電必至♡侵略しんぐあそんぐ'),
+                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Z7JYtVEIGBk'),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createForOfficialStore({id: "8254592"}),
+        ],
+    }),
     new ProductMaster({
         id: "25th-single",
         name: TranslatableValues.createUnifiedStatement("The Crumble"),
@@ -229,7 +294,7 @@ const productMasterData: ProductMaster[] = [
         credits: [
             TranslatableValues.create([
                 ["ja", "Tr1,3,5 Music / Tr5 Lyrics マッチ"],
-                ["en", "Tr1,3,5 Music / Tr5 Lyrics  Matchy"],
+                ["en", "Tr1,3,5 Music / Tr5 Lyrics Matchy"],
             ]),
             TranslatableValues.create([
                 ["ja", "Tr2 Music/Lyrics 神田ジョン"],
