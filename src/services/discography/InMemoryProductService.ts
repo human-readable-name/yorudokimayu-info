@@ -109,8 +109,8 @@ const productMasterData: ProductMaster[] = [
                 ["en", "Tr6 Music/Lyrics Catpicture"],
             ]),
             TranslatableValues.create([
-                ["ja", "Tr3,Ex1 Music/Lyrics Vocal 拠鳥きまゆ"],
-                ["en", "Tr3,Ex1 Music/Lyrics Vocal KimayuYorudo"],
+                ["ja", "Tr3,Ex1 Music / Tr3,5,Ex1 Lyrics / Vocal 拠鳥きまゆ"],
+                ["en", "Tr3,Ex1 Music / Tr3,5,Ex1 Lyrics / Vocal KimayuYorudo"],
             ]),
         ],
         mvLinks: [
