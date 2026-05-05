@@ -47,7 +47,8 @@
     "vite": "^7.3.2"
   },
   "resolutions": {
-    "jackspeak": "2.1.1"
+    "jackspeak": "2.1.1",
+    "postcss": "8.5.13"
   },
   "packageManager": "yarn@4.7.0"
 }
