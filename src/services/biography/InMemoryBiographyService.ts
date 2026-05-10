@@ -1038,6 +1038,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ]
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-05-09'),
+        name: TranslatableValues.createUnifiedStatement('Under the Moon / Log_01 – Acoustic Live –'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
@@ -1064,6 +1068,7 @@ export const japaneseProfile: Profile = {
         "2025-07-31 4か月連続リリース企画 #FOR_RISING 開始",
         "2025-10-04 2nd Oneman Live「人鳥は雷震を運んで」を開催",
         "2025-10-30 #FOR_RISING 完結",
+        "2026-04-26 3rd EP 身分証明唱をリリース",
     ],
 };
 
@@ -1091,6 +1096,7 @@ export const englishProfile: Profile = {
         "2025-07-31 Started #FOR_RISING project",
         '2025-10-04 2nd solo concert "Penguin carries the thunder shock."',
         "2025-10-30 Completed #FOR_RISING project",
+        "2026-04-26 Released 3rd EP 身分証明唱",
     ],
 }
 
