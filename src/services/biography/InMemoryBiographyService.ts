@@ -375,10 +375,13 @@ const collaborationMasterData: CollaborationMaster[] = [
     new CollaborationMaster({
         date: new Date('2025-10-26'),
         productName: TranslatableValues.createUnifiedStatement('Bitter Sweet Symphony'),
-        productArtist: TranslatableValues.createUnifiedStatement('アタリメ × Atelier LadyBird'),
+        productArtist: TranslatableValues.create([
+            ['ja', 'アタリメ × Atelier LadyBird'],
+            ['en', 'Atelier LadyBird & atarime'],
+        ]),
         partOfTheWork: TranslatableValues.create([
             ['ja', 'Tr3 未来 歌唱'],
-            ['en', 'Vocal Tr3 未来'],
+            ['en', 'Vocal Tr3 Future'],
         ]),
         links: [
             new LinkMaster({
@@ -387,7 +390,8 @@ const collaborationMasterData: CollaborationMaster[] = [
                     ["en", "Web site"],
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://atarime7.github.io/bitter-sweet-symphony/')
-            })
+            }),
+            LinkMaster.createForTuneCore({id: 'c0NpC6hG'}),
         ],
     }),
 ];
