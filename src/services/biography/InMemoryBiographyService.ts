@@ -1046,6 +1046,19 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         date: new Date('2026-05-09'),
         name: TranslatableValues.createUnifiedStatement('Under the Moon / Log_01 – Acoustic Live –'),
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-05-17'),
+        name: TranslatableValues.create([
+            ['ja', 'ぶいかふぇ♪vol.249'],
+            ['en', 'Vcafe vol.249'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/17481'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            }),
+        ],
+    })
 ];
 
 export const japaneseProfile: Profile = {
