@@ -1058,7 +1058,11 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 name: TranslatableValues.createUnifiedStatement('bitfan'),
             }),
         ],
-    })
+    }),
+    new EventHistoryMaster({
+        date: new Date('2026-06-06'),
+        name: TranslatableValues.createUnifiedStatement('RUMBLE LIVE'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {

@@ -23,41 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2026-04-26 M3 2026 春 にて 3rd EP 「身分証明唱」をリリース'],
-            ['en', '2026-04-26 3rd EP "身分証明唱" released at M3 2026 spring']
-        ]),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ['ja', 'クロスフェードデモ'],
-                    ['en', 'Crossfade Demo'],
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://youtu.be/xbCz-L4P7Gc'),
-            }),
-            new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement('身分証明唱 music video'),
-                url: TranslatableValues.createUnifiedStatement('https://youtu.be/omXDQL4cf2o'),
-            }),
-            new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement('感電必至♡侵略しんぐあそんぐ music video'),
-                url: TranslatableValues.createUnifiedStatement('https://youtu.be/Z7JYtVEIGBk'),
-            }),
-        ],
-    }),
-    new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2026-06-06 RUMBLE LIVE'),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/rumble_live'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (下北沢ReG) チケット'],
-                    ['en', 'Venue (Shimokitazawa ReG) ticket'],
-                ]),
-            }),
-        ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2026-06-28 ぶいかふぇ♪vol.264'],
             ['en', '2026-06-28 Vcafe vol.264'],
         ]),
@@ -87,6 +52,21 @@ const newsMasterData: NewsMaster[] = [
                     ['ja', '配信 チケット'],
                     ['en', 'Streaming ticket'],
                 ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2026-10-10 拠鳥きまゆ 3rd Oneman Live「存在唱命 -Project:Nov4-」'],
+            ['en', '2026-10-10 Kimayu Yorudo 3rd solo concert "Sonz4ishoumei -Project:Nov4-"'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (下北沢ReG) チケット'],
+                    ['en', 'Venue (Shimokitazawa ReG) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/sonz4ishoumei'),
             }),
         ],
     }),
