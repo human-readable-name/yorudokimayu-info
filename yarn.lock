@@ -6656,14 +6656,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-seo@npm:^5.15.0":
-  version: 5.15.0
-  resolution: "next-seo@npm:5.15.0"
+"next-seo@npm:7.2.0":
+  version: 7.2.0
+  resolution: "next-seo@npm:7.2.0"
   peerDependencies:
-    next: ^8.1.1-canary.54 || >=9.0.0
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: 10c0/9f5793a8910cb86f95d1eeb28b373d93524425126089235ad337b9824fc39a7acb9a396c2c63a9966e0e6d2be5cd54a963aa64ee6f1b69f4359780015e524bf3
+    next: ">=13.4.0"
+    react: ">=18.2.0"
+  checksum: 10c0/0d747cc8e5503eeae4ed2ee375382d4c1fa541e84370b69404111f84d496b704f8b7d8c7b28057a2a7dae5bf17162afd317b38701b6a3cb80e2e6f5d0c983574
   languageName: node
   linkType: hard
 
@@ -8794,7 +8793,7 @@ __metadata:
     date-fns: "npm:^2.29.3"
     jest: "npm:30.3.0"
     next: "npm:16.2.6"
-    next-seo: "npm:^5.15.0"
+    next-seo: "npm:7.2.0"
     next-sitemap: "npm:^4.2.3"
     postcss: "npm:8.5.13"
     postcss-loader: "npm:^8.2.1"
