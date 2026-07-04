@@ -4,7 +4,7 @@ import { TranslatableValues } from "../i18n/TranslatableValues";
 import { InMemoryBiographyService, EventHistoryMaster, CollaborationMaster } from "./InMemoryBiographyService";
 
 describe('CollaborationMaster', () => {
-    describe('getCollaboration', () => {
+    test('getCollaboration', () => {
         const master = new CollaborationMaster({
             date: new Date("2021-04-01"),
             productName: TranslatableValues.createForTest([
