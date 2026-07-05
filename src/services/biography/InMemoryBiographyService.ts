@@ -1063,6 +1063,19 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         date: new Date('2026-06-06'),
         name: TranslatableValues.createUnifiedStatement('RUMBLE LIVE'),
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-06-28'),
+        name: TranslatableValues.create([
+            ['ja', 'ぶいかふぇ♪vol.264'],
+            ['en', 'Vcafe vol.264'],
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/18963'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
