@@ -41,6 +41,18 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-08-08 Vack-ON!! × SHUFFLE -CROSS REALITY- vol.9'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10876'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (吉祥寺SHUFFLE) / 配信 (Z-aN) チケット'],
+                    ['en', 'Venue (KICHIJOJI SHUFFLE) / Streaming (Z-aN) ticket'],
+                ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2026-09-13 ぶいかふぇ♪vol.298'],
             ['en', '2026-09-13 Vcafe vol.298'],
