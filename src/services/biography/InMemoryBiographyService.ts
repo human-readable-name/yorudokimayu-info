@@ -1076,6 +1076,10 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-07-12'),
+        name: TranslatableValues.createUnifiedStatement('AERU-LIVE Vol.5 DAY2'),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
