@@ -1,6 +1,6 @@
 {
   "name": "yorudokimayu-info",
-  "version": "1.3.111",
+  "version": "1.3.112",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -24,28 +24,28 @@
     "react-dom": "19.2.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.3",
-    "@storybook/addon-docs": "10.5.0",
-    "@storybook/addon-links": "10.5.0",
-    "@storybook/nextjs-vite": "10.5.0",
+    "@biomejs/biome": "2.5.4",
+    "@storybook/addon-docs": "10.5.2",
+    "@storybook/addon-links": "10.5.2",
+    "@storybook/nextjs-vite": "10.5.2",
     "@swc/core": "1.15.43",
-    "@tailwindcss/postcss": "4.3.2",
+    "@tailwindcss/postcss": "4.3.3",
     "@testing-library/cypress": "10.1.3",
     "@types/node": "25.5.0",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
-    "cypress": "15.18.0",
+    "cypress": "15.18.1",
     "next-sitemap": "^4.2.3",
-    "postcss": "8.5.16",
+    "postcss": "8.5.19",
     "postcss-loader": "8.2.1",
-    "storybook": "10.5.0",
-    "tailwindcss": "4.3.2",
+    "storybook": "10.5.2",
+    "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
-    "vite": "8.1.4",
+    "vite": "8.1.5",
     "vitest": "4.1.10"
   },
   "resolutions": {
-    "postcss": "8.5.16"
+    "postcss": "8.5.19"
   },
   "packageManager": "yarn@4.7.0"
 }
