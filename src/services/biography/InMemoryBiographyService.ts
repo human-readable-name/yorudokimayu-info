@@ -1080,6 +1080,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         date: new Date('2026-07-12'),
         name: TranslatableValues.createUnifiedStatement('AERU-LIVE Vol.5 DAY2'),
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-07-23'),
+        name: TranslatableValues.create([
+            ['ja', 'ぶいかふぇ♪ 路上ライブ'],
+            ['en', 'Vcafe street live'],
+        ]),
+    }),
 ];
 
 export const japaneseProfile: Profile = {
