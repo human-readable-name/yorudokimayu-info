@@ -22,21 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2026-07-23 ぶいかふぇ♪ 路上ライブ'],
-            ['en', '2026-07-23 Vcafe street live'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://x.com/vcafe_Vcafe/status/2075777102109184262'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (文化放送サテライト広場) 観覧無料'],
-                    ['en', 'Venue (Nippon Cultural Broadcasting Inc. Satellite Square) Free admission'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-08-08 Vack-ON!! × SHUFFLE -CROSS REALITY- vol.9'),
         links: [
             new LinkMaster({
