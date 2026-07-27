@@ -1097,10 +1097,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/env@npm:16.2.11"
-  checksum: 10c0/fdb5ff54037f5e554c7452a31f745e40a02ea55416b80c9abf5ebb3b6fba54beaa15e080fc8470f9a59b3a0506c7ce775764134256d413f17e17e4f92802cee3
+"@next/env@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/env@npm:16.2.12"
+  checksum: 10c0/08cab40af01303ff44ba835cd8761cc248e02d27d589d59fae3780566cd95fe8f053f40b44516fc8ff1984ab32981c0973bd1923977f255fdbb2376ac53ba783
   languageName: node
   linkType: hard
 
@@ -1111,58 +1111,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-darwin-arm64@npm:16.2.11"
+"@next/swc-darwin-arm64@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-darwin-arm64@npm:16.2.12"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-darwin-x64@npm:16.2.11"
+"@next/swc-darwin-x64@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-darwin-x64@npm:16.2.12"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-linux-arm64-gnu@npm:16.2.11"
+"@next/swc-linux-arm64-gnu@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-arm64-gnu@npm:16.2.12"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-linux-arm64-musl@npm:16.2.11"
+"@next/swc-linux-arm64-musl@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-arm64-musl@npm:16.2.12"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-linux-x64-gnu@npm:16.2.11"
+"@next/swc-linux-x64-gnu@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-x64-gnu@npm:16.2.12"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-linux-x64-musl@npm:16.2.11"
+"@next/swc-linux-x64-musl@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-x64-musl@npm:16.2.12"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-win32-arm64-msvc@npm:16.2.11"
+"@next/swc-win32-arm64-msvc@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-win32-arm64-msvc@npm:16.2.12"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:16.2.11":
-  version: 16.2.11
-  resolution: "@next/swc-win32-x64-msvc@npm:16.2.11"
+"@next/swc-win32-x64-msvc@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-win32-x64-msvc@npm:16.2.12"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1773,67 +1773,67 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-docs@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/addon-docs@npm:10.5.2"
+"@storybook/addon-docs@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/addon-docs@npm:10.5.5"
   dependencies:
     "@mdx-js/react": "npm:^3.0.0"
-    "@storybook/csf-plugin": "npm:10.5.2"
+    "@storybook/csf-plugin": "npm:10.5.5"
     "@storybook/icons": "npm:^2.0.2"
-    "@storybook/react-dom-shim": "npm:10.5.2"
+    "@storybook/react-dom-shim": "npm:10.5.5"
     react: "npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
     react-dom: "npm:^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.2
+    storybook: ^10.5.5
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/902b1002d1c7fc0a998bb9a6e1c6723cff6c5a3ac90c20b6ace1642e6a0b0f9e8cfd06072360236f2c2b7a3c126e848d63160ba3dc47d58118595e12f8861976
+  checksum: 10c0/7ea6f3dae93ead00330a28cb1a071c8d248d9502c4631b2b5a161b1671f4b075f6ef85f2320e70e6b521da8aa724b77c5c3d3cb36f479ed309113a28686ee31e
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/addon-links@npm:10.5.2"
+"@storybook/addon-links@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/addon-links@npm:10.5.5"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.2
+    storybook: ^10.5.5
   peerDependenciesMeta:
     "@types/react":
       optional: true
     react:
       optional: true
-  checksum: 10c0/c48830b01b552de4973d697096011007f2d467c3d0468a5303a311ffdc207b8f0427ce96e44c4c59bcca49bf6ca1bbfc0bc3cd7457ed0e98ae230c453976f5f2
+  checksum: 10c0/ddd02ddc2211c8a660d764f1a9076cb0c29ae057bb5b027d0a5a923f79f537dc033179dcf652642cbb12adacc73ddb6103a2a936376f49aac66c7202563ccf8f
   languageName: node
   linkType: hard
 
-"@storybook/builder-vite@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/builder-vite@npm:10.5.2"
+"@storybook/builder-vite@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/builder-vite@npm:10.5.5"
   dependencies:
-    "@storybook/csf-plugin": "npm:10.5.2"
+    "@storybook/csf-plugin": "npm:10.5.5"
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
-    storybook: ^10.5.2
+    storybook: ^10.5.5
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 10c0/65bfc4e0881f42ee746fe244a2c69f2522f3eb9921fe22416d3b6743bd5aa278364746b27b8264e9e0dd5650368593159cd39a709f836de0ba790f76f36df712
+  checksum: 10c0/c9c59f4f8d2eeb9d7ee80f039a836ef713f79299a4ddcf2e65532385862d7edda8c89a8098ec44e014f7e36195addfca8566e8e1cbe6838f7f4ecc03812fb72c
   languageName: node
   linkType: hard
 
-"@storybook/csf-plugin@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/csf-plugin@npm:10.5.2"
+"@storybook/csf-plugin@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/csf-plugin@npm:10.5.5"
   dependencies:
     unplugin: "npm:^2.3.5"
   peerDependencies:
     esbuild: "*"
     rollup: "*"
-    storybook: ^10.5.2
+    storybook: ^10.5.5
     vite: "*"
     webpack: "*"
   peerDependenciesMeta:
@@ -1845,7 +1845,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10c0/f7feba941bc916faa03a8822967cc9e188a716a8860ff5de0f5267091362706a14b17d8639888791c130f39d3a8ee4820926d892c2caab0f8c78306397c89815
+  checksum: 10c0/d837db7bce79322b6e72dfeb203398bf101ec877ceb3abbb56d3f2fc2405159ae7be2c68fb91cb1632efdabb89c8746219c0f4005ab6430239808ee5170cb18d
   languageName: node
   linkType: hard
 
@@ -1866,13 +1866,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/nextjs-vite@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/nextjs-vite@npm:10.5.2"
+"@storybook/nextjs-vite@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/nextjs-vite@npm:10.5.5"
   dependencies:
-    "@storybook/builder-vite": "npm:10.5.2"
-    "@storybook/react": "npm:10.5.2"
-    "@storybook/react-vite": "npm:10.5.2"
+    "@storybook/builder-vite": "npm:10.5.5"
+    "@storybook/react": "npm:10.5.5"
+    "@storybook/react-vite": "npm:10.5.5"
     styled-jsx: "npm:5.1.6"
     vite-plugin-storybook-nextjs: "npm:^3.3.0"
   peerDependencies:
@@ -1881,7 +1881,7 @@ __metadata:
     next: ^14.1.0 || ^15.0.0 || ^16.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.2
+    storybook: ^10.5.5
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     "@types/react":
@@ -1890,36 +1890,36 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/8ed1a8ddb66c7d11770ed87e3ee1ecd21556880ed623a7027a9fb8663361431410e7e5d5e4cbdbdd383774780f02d0dc82da56c5bb2849af014efcb4bffbda84
+  checksum: 10c0/2146672ae4e30a8fe7c9bfa03e004556cd18493a8fe5fcad1bd982e5f3707354e197a7353f3573ad25c42820052b57957c4628187969cf0adea7599754a88249
   languageName: node
   linkType: hard
 
-"@storybook/react-dom-shim@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/react-dom-shim@npm:10.5.2"
+"@storybook/react-dom-shim@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/react-dom-shim@npm:10.5.5"
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     "@types/react-dom": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.2
+    storybook: ^10.5.5
   peerDependenciesMeta:
     "@types/react":
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: 10c0/1c57790798b7432fa9faa4cf60399e7cb6121ef1a2a1543cad200976f7d0a68eb8f27ab334afcc192c6681ea36e3d8b2c818b202ed60480c27092bdb7b5f0d7c
+  checksum: 10c0/f469ff9b6c0e41c4b5b8b5d50e13bcdb63ff221af04f10d53584b5997b44e374ce41827d471cb9273a4ab52d2486ab0b7e90c724cb90cfb0a1c3658c925fa840
   languageName: node
   linkType: hard
 
-"@storybook/react-vite@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/react-vite@npm:10.5.2"
+"@storybook/react-vite@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/react-vite@npm:10.5.5"
   dependencies:
     "@joshwooding/vite-plugin-react-docgen-typescript": "npm:^0.7.0"
     "@rollup/pluginutils": "npm:^5.0.2"
-    "@storybook/builder-vite": "npm:10.5.2"
-    "@storybook/react": "npm:10.5.2"
+    "@storybook/builder-vite": "npm:10.5.5"
+    "@storybook/react": "npm:10.5.5"
     empathic: "npm:^2.0.0"
     magic-string: "npm:^0.30.0"
     react-docgen: "npm:^8.0.2"
@@ -1928,22 +1928,22 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.2
+    storybook: ^10.5.5
     typescript: ">= 4.9.x"
     vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/031d62f1a716686fc63f65190c120658e54f54513c6d1205b81901939c0f7aa0e06d46d3fbda56c190b3f6aece47422bc24eb6695d3c684cb88509c3a8c3f334
+  checksum: 10c0/7b3bded5eb147af24ddad1139fbd56ff725fb9ce8db0c5c27183f0f145469efd89eb059980341bff84a6a54dea25a7fbda7bfb97088006ffe9ed6be8fb7eb6bc
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:10.5.2":
-  version: 10.5.2
-  resolution: "@storybook/react@npm:10.5.2"
+"@storybook/react@npm:10.5.5":
+  version: 10.5.5
+  resolution: "@storybook/react@npm:10.5.5"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
-    "@storybook/react-dom-shim": "npm:10.5.2"
+    "@storybook/react-dom-shim": "npm:10.5.5"
     react-docgen: "npm:^8.0.2"
     react-docgen-typescript: "npm:^2.2.2"
   peerDependencies:
@@ -1951,7 +1951,7 @@ __metadata:
     "@types/react-dom": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.5.2
+    storybook: ^10.5.5
     typescript: ">= 4.9.x"
   peerDependenciesMeta:
     "@types/react":
@@ -1960,110 +1960,110 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/7bc16b8b685acae3dda5586bdd2ffff4a4e9f429ab60da3968b3d09683390d389cc0d853b27c27d44eb7cbd5ac47251914c5f73fa9ed08bb84591e408effe390
+  checksum: 10c0/5970fc386c38a46107fbf522c04fb8fd2f9f935059ce4cbc1c501eff14366d07db1fc3df6c5e744c5fa3b5892cc1d8ae9a56d69fb39994937148f9d544773b44
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-darwin-arm64@npm:1.15.43"
+"@swc/core-darwin-arm64@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-darwin-arm64@npm:1.15.46"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-darwin-x64@npm:1.15.43"
+"@swc/core-darwin-x64@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-darwin-x64@npm:1.15.46"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.15.43"
+"@swc/core-linux-arm-gnueabihf@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.15.46"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.15.43"
+"@swc/core-linux-arm64-gnu@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.15.46"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-arm64-musl@npm:1.15.43"
+"@swc/core-linux-arm64-musl@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-arm64-musl@npm:1.15.46"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-ppc64-gnu@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-ppc64-gnu@npm:1.15.43"
+"@swc/core-linux-ppc64-gnu@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-ppc64-gnu@npm:1.15.46"
   conditions: os=linux & cpu=ppc64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-s390x-gnu@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-s390x-gnu@npm:1.15.43"
+"@swc/core-linux-s390x-gnu@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-s390x-gnu@npm:1.15.46"
   conditions: os=linux & cpu=s390x & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-x64-gnu@npm:1.15.43"
+"@swc/core-linux-x64-gnu@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-x64-gnu@npm:1.15.46"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-linux-x64-musl@npm:1.15.43"
+"@swc/core-linux-x64-musl@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-linux-x64-musl@npm:1.15.46"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.15.43"
+"@swc/core-win32-arm64-msvc@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.15.46"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.15.43"
+"@swc/core-win32-ia32-msvc@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.15.46"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core-win32-x64-msvc@npm:1.15.43"
+"@swc/core-win32-x64-msvc@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core-win32-x64-msvc@npm:1.15.46"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:1.15.43":
-  version: 1.15.43
-  resolution: "@swc/core@npm:1.15.43"
+"@swc/core@npm:1.15.46":
+  version: 1.15.46
+  resolution: "@swc/core@npm:1.15.46"
   dependencies:
-    "@swc/core-darwin-arm64": "npm:1.15.43"
-    "@swc/core-darwin-x64": "npm:1.15.43"
-    "@swc/core-linux-arm-gnueabihf": "npm:1.15.43"
-    "@swc/core-linux-arm64-gnu": "npm:1.15.43"
-    "@swc/core-linux-arm64-musl": "npm:1.15.43"
-    "@swc/core-linux-ppc64-gnu": "npm:1.15.43"
-    "@swc/core-linux-s390x-gnu": "npm:1.15.43"
-    "@swc/core-linux-x64-gnu": "npm:1.15.43"
-    "@swc/core-linux-x64-musl": "npm:1.15.43"
-    "@swc/core-win32-arm64-msvc": "npm:1.15.43"
-    "@swc/core-win32-ia32-msvc": "npm:1.15.43"
-    "@swc/core-win32-x64-msvc": "npm:1.15.43"
+    "@swc/core-darwin-arm64": "npm:1.15.46"
+    "@swc/core-darwin-x64": "npm:1.15.46"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.15.46"
+    "@swc/core-linux-arm64-gnu": "npm:1.15.46"
+    "@swc/core-linux-arm64-musl": "npm:1.15.46"
+    "@swc/core-linux-ppc64-gnu": "npm:1.15.46"
+    "@swc/core-linux-s390x-gnu": "npm:1.15.46"
+    "@swc/core-linux-x64-gnu": "npm:1.15.46"
+    "@swc/core-linux-x64-musl": "npm:1.15.46"
+    "@swc/core-win32-arm64-msvc": "npm:1.15.46"
+    "@swc/core-win32-ia32-msvc": "npm:1.15.46"
+    "@swc/core-win32-x64-msvc": "npm:1.15.46"
     "@swc/counter": "npm:^0.1.3"
     "@swc/types": "npm:^0.1.27"
   peerDependencies:
@@ -2096,7 +2096,7 @@ __metadata:
   peerDependenciesMeta:
     "@swc/helpers":
       optional: true
-  checksum: 10c0/ed586746b5a3ce104bf8137a01dace430c9ed7a4f8741cbc1e6b69e6bd15db94d2b90fc35270e95f6eb73c0fd18e0bbd6a6b08987edef27d88da6105998a8c34
+  checksum: 10c0/70cab177b55c69ba6fea493267a4f31fd28c5a078893810d26ed3a84238dc8e23b875697b9f6494efc34c76b8280f6935345a3d89ed2b4848a9efcc17e1f802f
   languageName: node
   linkType: hard
 
@@ -5022,19 +5022,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:16.2.11":
-  version: 16.2.11
-  resolution: "next@npm:16.2.11"
+"next@npm:16.2.12":
+  version: 16.2.12
+  resolution: "next@npm:16.2.12"
   dependencies:
-    "@next/env": "npm:16.2.11"
-    "@next/swc-darwin-arm64": "npm:16.2.11"
-    "@next/swc-darwin-x64": "npm:16.2.11"
-    "@next/swc-linux-arm64-gnu": "npm:16.2.11"
-    "@next/swc-linux-arm64-musl": "npm:16.2.11"
-    "@next/swc-linux-x64-gnu": "npm:16.2.11"
-    "@next/swc-linux-x64-musl": "npm:16.2.11"
-    "@next/swc-win32-arm64-msvc": "npm:16.2.11"
-    "@next/swc-win32-x64-msvc": "npm:16.2.11"
+    "@next/env": "npm:16.2.12"
+    "@next/swc-darwin-arm64": "npm:16.2.12"
+    "@next/swc-darwin-x64": "npm:16.2.12"
+    "@next/swc-linux-arm64-gnu": "npm:16.2.12"
+    "@next/swc-linux-arm64-musl": "npm:16.2.12"
+    "@next/swc-linux-x64-gnu": "npm:16.2.12"
+    "@next/swc-linux-x64-musl": "npm:16.2.12"
+    "@next/swc-win32-arm64-msvc": "npm:16.2.12"
+    "@next/swc-win32-x64-msvc": "npm:16.2.12"
     "@swc/helpers": "npm:0.5.15"
     baseline-browser-mapping: "npm:^2.9.19"
     caniuse-lite: "npm:^1.0.30001579"
@@ -5078,7 +5078,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/81f85262cf01ad6b4fd4a8be369925dfe206806a33e967733033d7adcf367aa0ba1f911272de6169a3d09315821eddf6b57594337a456ad134ba5aa8870a80b1
+  checksum: 10c0/e7d539d3d030fd31b6e47f14639508db3901480b7d5477709c8f980d3153c91098d4a5b10a44bfe0d6914495cb92ca628357bb72743faa473158629bdfe8b924
   languageName: node
   linkType: hard
 
@@ -6244,9 +6244,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:10.5.2":
-  version: 10.5.2
-  resolution: "storybook@npm:10.5.2"
+"storybook@npm:10.5.5":
+  version: 10.5.5
+  resolution: "storybook@npm:10.5.5"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@storybook/icons": "npm:^2.0.2"
@@ -6264,7 +6264,7 @@ __metadata:
     recast: "npm:^0.23.5"
     semver: "npm:^7.7.3"
     use-sync-external-store: "npm:^1.5.0"
-    ws: "npm:^8.18.0"
+    ws: "npm:^8.21.1"
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     prettier: ^2 || ^3
@@ -6278,7 +6278,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./dist/bin/dispatcher.js
-  checksum: 10c0/43f548015e90a93fbfd6b091cdfe412b9436f3daa7d765429d690cb6f531f0fe84736ca5d8684bdc91edf73ca3ed70b82be2b227b5583c3ba5da932ff46f952a
+  checksum: 10c0/f9a373c4a81b85595a76a1d8ea8cbfd428a280c97d39dd4fc987be3d3367a2d460e195b3aa5243ed74cba42860e1d26c2129129b1318fa166a81dadd6cac387d
   languageName: node
   linkType: hard
 
@@ -7058,9 +7058,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.18.0":
-  version: 8.21.0
-  resolution: "ws@npm:8.21.0"
+"ws@npm:^8.21.1":
+  version: 8.21.1
+  resolution: "ws@npm:8.21.1"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ">=5.0.2"
@@ -7069,7 +7069,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 10c0/ef4a243476283fc49bc7550966c4af4aa0eef56273837211e700de3b664e08604a760cdddcb5ba43c049140e74ccfec5b0ee0bb439e08c2adf9138902fdde5f9
+  checksum: 10c0/c4c6f1d95f6d465262de2037c57c715725d67e078dd49420ede4e19115668aba159cb64d85c5e89c06eb2826be599e62e5095860ad6cc54ff42e8bd7684e1db8
   languageName: node
   linkType: hard
 
@@ -7118,10 +7118,10 @@ __metadata:
   resolution: "yorudokimayu-info@workspace:."
   dependencies:
     "@biomejs/biome": "npm:2.5.4"
-    "@storybook/addon-docs": "npm:10.5.2"
-    "@storybook/addon-links": "npm:10.5.2"
-    "@storybook/nextjs-vite": "npm:10.5.2"
-    "@swc/core": "npm:1.15.43"
+    "@storybook/addon-docs": "npm:10.5.5"
+    "@storybook/addon-links": "npm:10.5.5"
+    "@storybook/nextjs-vite": "npm:10.5.5"
+    "@swc/core": "npm:1.15.46"
     "@tailwindcss/postcss": "npm:4.3.3"
     "@testing-library/cypress": "npm:10.1.3"
     "@types/node": "npm:25.5.0"
@@ -7129,14 +7129,14 @@ __metadata:
     "@types/react-dom": "npm:19.2.3"
     cypress: "npm:15.19.0"
     date-fns: "npm:4.4.0"
-    next: "npm:16.2.11"
+    next: "npm:16.2.12"
     next-seo: "npm:7.2.0"
     next-sitemap: "npm:^4.2.3"
     postcss: "npm:8.5.23"
     postcss-loader: "npm:8.2.1"
     react: "npm:19.2.7"
     react-dom: "npm:19.2.7"
-    storybook: "npm:10.5.2"
+    storybook: "npm:10.5.5"
     tailwindcss: "npm:4.3.3"
     typescript: "npm:6.0.3"
     vite: "npm:8.1.5"

@@ -34,6 +34,18 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),
     new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-09-04 バーチャルユニット戦V時代 ～第8回戦～'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/21596'),
+                name: TranslatableValues.create([
+                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
+                ]),
+            }),
+        ],
+    }),
+    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2026-09-13 ぶいかふぇ♪vol.298'],
             ['en', '2026-09-13 Vcafe vol.298'],
