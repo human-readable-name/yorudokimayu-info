@@ -27,10 +27,22 @@ const newsMasterData: NewsMaster[] = [
             new LinkMaster({
                 url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10876'),
                 name: TranslatableValues.create([
-                    ['ja', '現地 (吉祥寺SHUFFLE) / 配信 (Z-aN) チケット'],
-                    ['en', 'Venue (KICHIJOJI SHUFFLE) / Streaming (Z-aN) ticket'],
+                    ['ja', '配信 (Z-aN) チケット (アーカイブは2026-08-15まで)'],
+                    ['en', 'Streaming (Z-aN) ticket (The archive will be available until 2026-08-15)'],
                 ]),
             }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-08-14 りあぷろサマーライブ Day.1'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.youtube.com/live/UsHcsWHwvO4'),
+                name: TranslatableValues.create([
+                    ['ja', '配信 (無料)'],
+                    ['en', 'Live Streaming (for free)'],
+                ]),
+            })
         ],
     }),
     new NewsMaster({
