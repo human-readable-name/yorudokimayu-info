@@ -34,18 +34,6 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2026-08-14 りあぷろサマーライブ Day.1'),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.youtube.com/live/UsHcsWHwvO4'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 (無料)'],
-                    ['en', 'Live Streaming (for free)'],
-                ]),
-            })
-        ],
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-09-04 バーチャルユニット戦V時代 ～第8回戦～'),
         links: [
             new LinkMaster({

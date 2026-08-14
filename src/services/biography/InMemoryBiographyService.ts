@@ -1087,6 +1087,32 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             ['en', 'Vcafe street live'],
         ]),
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-08-08'),
+        name: TranslatableValues.createUnifiedStatement('Vack-ON!! × SHUFFLE -CROSS REALITY- vol.9'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('Z-aN'),
+                url: TranslatableValues.create([
+                    ['ja', 'https://www.zan-live.com/ja/live/detail/10876'],
+                    ['en', 'https://www.zan-live.com/en/live/detail/10876'],
+                ]),
+            }),
+        ],
+    }),
+    new EventHistoryMaster({
+        date: new Date('2026-08-14'),
+        name: TranslatableValues.createUnifiedStatement('りあぷろサマーライブ Day.1'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.youtube.com/live/UsHcsWHwvO4'),
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ]),
+            })
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
