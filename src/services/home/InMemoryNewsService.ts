@@ -22,18 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2026-08-08 Vack-ON!! × SHUFFLE -CROSS REALITY- vol.9'),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://www.zan-live.com/ja/live/detail/10876'),
-                name: TranslatableValues.create([
-                    ['ja', '配信 (Z-aN) チケット (アーカイブは2026-08-15まで)'],
-                    ['en', 'Streaming (Z-aN) ticket (The archive will be available until 2026-08-15)'],
-                ]),
-            }),
-        ],
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-09-04 バーチャルユニット戦V時代 ～第8回戦～'),
         links: [
             new LinkMaster({
