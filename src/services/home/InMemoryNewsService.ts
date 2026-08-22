@@ -63,6 +63,25 @@ const newsMasterData: NewsMaster[] = [
             }),
         ],
     }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-10-24 りあぷろ学園祭2026 Day1 2部公演'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (八王子 1st stage) VIPチケット'],
+                    ['en', 'Venue (Hachioji 1st stage) VIP ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6a86f4a853ee8d5dcce3075b')
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (八王子 1st stage) 一般チケット'],
+                    ['en', 'Venue (Hachioji 1st stage) general admission ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6a86f67b7ebe0a0059728034')
+            }),
+        ]
+    }),
 ];
 
 export class InMemoryNewsService implements NewsService {
