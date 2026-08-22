@@ -87,7 +87,7 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', 'Venue (文化放送メディアプラスホール) チケット'],
+                    ['ja', '現地 (文化放送メディアプラスホール) チケット'],
                     ['en', 'Venue (JOQR Media Plus Hall) ticket'],
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/22326'),
