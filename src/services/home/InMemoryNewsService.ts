@@ -68,19 +68,31 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '現地 (八王子 1st stage) VIPチケット'],
-                    ['en', 'Venue (Hachioji 1st stage) VIP ticket'],
+                    ['ja', '現地 (1st Stage) VIPチケット'],
+                    ['en', 'Venue (1st Stage) VIP ticket'],
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6a86f4a853ee8d5dcce3075b')
             }),
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '現地 (八王子 1st stage) 一般チケット'],
-                    ['en', 'Venue (Hachioji 1st stage) general admission ticket'],
+                    ['ja', '現地 (1st Stage) 一般チケット'],
+                    ['en', 'Venue (1st Stage) general admission ticket'],
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6a86f67b7ebe0a0059728034')
             }),
         ]
+    }),
+    new NewsMaster({
+        text: TranslatableValues.createUnifiedStatement('2026-11-08 ぶいかふぇ♪文化祭ライブ2026 DAY.2'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (文化放送メディアプラスホール) チケット'],
+                    ['en', 'Venue (JOQR Media Plus Hall) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/22326'),
+            })
+        ],
     }),
 ];
 
