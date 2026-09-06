@@ -1113,6 +1113,16 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             })
         ],
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-09-04'),
+        name: TranslatableValues.createUnifiedStatement(' バーチャルユニット戦V時代 ～第8回戦～'),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/21596'),
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
