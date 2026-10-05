@@ -23,21 +23,6 @@ export class NewsMaster {
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
         text: TranslatableValues.create([
-            ['ja', '2026-09-13 ぶいかふぇ♪vol.298'],
-            ['en', '2026-09-13 Vcafe vol.298'],
-        ]),
-        links: [
-            new LinkMaster({
-                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/20834'),
-                name: TranslatableValues.create([
-                    ['ja', '現地 (LIVE SPACE Q) / 配信 (bitfan) チケット'],
-                    ['en', 'Venue (LIVE SPACE Q) / Streaming (bitfan) ticket'],
-                ]),
-            }),
-        ]
-    }),
-    new NewsMaster({
-        text: TranslatableValues.create([
             ['ja', '2026-10-10 拠鳥きまゆ 3rd Oneman Live「存在唱命 -Project:Nov4-」'],
             ['en', '2026-10-10 Kimayu Yorudo 3rd solo concert "Sonz4ishoumei -Project:Nov4-"'],
         ]),
@@ -56,8 +41,8 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '現地 (渋谷ストリーム ホール) チケット'],
-                    ['en', 'Venue (Shibuya Stream Hall) ticket']
+                    ['ja', '現地 (渋谷ストリーム ホール) / 配信 (zaiko) チケット'],
+                    ['en', 'Venue (Shibuya Stream Hall) / Streaming (zaiko) ticket']
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/ja/item/383839'),
             }),
