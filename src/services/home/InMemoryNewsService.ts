@@ -22,21 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.create([
-            ['ja', '2026-10-10 拠鳥きまゆ 3rd Oneman Live「存在唱命 -Project:Nov4-」'],
-            ['en', '2026-10-10 Kimayu Yorudo 3rd solo concert "Sonz4ishoumei -Project:Nov4-"'],
-        ]),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ['ja', '現地 (下北沢ReG) チケット'],
-                    ['en', 'Venue (Shimokitazawa ReG) ticket'],
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://livepocket.jp/e/sonz4ishoumei'),
-            }),
-        ],
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-10-18 深海フェス2026「超・深海」 Day.2'),
         links: [
             new LinkMaster({
@@ -77,6 +62,28 @@ const newsMasterData: NewsMaster[] = [
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/22326'),
             })
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2026-12-13 箱乃なかみ×KiMAYU 2MAN LIVE 「CROSS HEAD SHOT」'],
+            ['en', '2026-12-13 HakonoNakami and KiMAYU joint concert "CROSS HEAD SHOT"'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (池袋周辺) チケット'],
+                    ['en', 'Venue (around Ikebukuro) ticket'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://tiget.net/events/521436'),
+            }),
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '配信 (Streamticket) チケット'],
+                    ['en', 'Streaming (Streamticket) ticket']
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://www.stream-ticket.com/events/detail/3002.html'),
+            }),
         ],
     }),
 ];
