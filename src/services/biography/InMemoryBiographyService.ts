@@ -912,7 +912,7 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
     new EventHistoryMaster({
         date: new Date("2025-10-04"),
         name: TranslatableValues.create([
-            ["ja", "拠鳥きまゆ 拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」"],
+            ["ja", "拠鳥きまゆ 2nd Oneman Live「人鳥は雷震を運んで」"],
             ["en", 'Kimayu Yorudo 2nd solo concert "Penguin carries the thunder shock."'],
         ]),
         links: [
@@ -1136,6 +1136,13 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ]
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-10-10'),
+        name: TranslatableValues.create([
+            ['ja', '拠鳥きまゆ 3rd Oneman Live「存在唱命 -Project:Nov4-」'],
+            ['en', 'Kimayu Yorudo 3rd solo concert "Sonz4ishoumei -Project:Nov4-"'],
+        ])
+    })
 ];
 
 export const japaneseProfile: Profile = {
@@ -1163,6 +1170,7 @@ export const japaneseProfile: Profile = {
         "2025-10-04 2nd Oneman Live「人鳥は雷震を運んで」を開催",
         "2025-10-30 #FOR_RISING 完結",
         "2026-04-26 3rd EP 身分証明唱をリリース",
+        "2026-10-10 3rd Oneman Live「存在唱命 -Project:Nov4-」を開催",
     ],
 };
 
@@ -1191,6 +1199,7 @@ export const englishProfile: Profile = {
         '2025-10-04 2nd solo concert "Penguin carries the thunder shock."',
         "2025-10-30 Completed #FOR_RISING project",
         "2026-04-26 Released 3rd EP 身分証明唱",
+        '2026-10-10 3rd solo concert "Sonz4ishoumei -Project:Nov4-"',
     ],
 }
 
