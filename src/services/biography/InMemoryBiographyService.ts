@@ -1141,7 +1141,16 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         name: TranslatableValues.create([
             ['ja', '拠鳥きまゆ 3rd Oneman Live「存在唱命 -Project:Nov4-」'],
             ['en', 'Kimayu Yorudo 3rd solo concert "Sonz4ishoumei -Project:Nov4-"'],
-        ])
+        ]),
+        links: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement('https://www.echoline.online/kimayu-3rd-oneman-live-report/'),
+                name: TranslatableValues.create([
+                    ['ja', 'ライブレポート'],
+                    ['en', 'Report on Echo Line'],
+                ])
+            }),
+        ],
     })
 ];
 
