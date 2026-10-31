@@ -1151,7 +1151,17 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
                 ])
             }),
         ],
-    })
+    }),
+    new EventHistoryMaster({
+        date: new Date('2026-10-24'),
+        name: TranslatableValues.createUnifiedStatement('りあぷろ学園祭2026 Day1 2部公演'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('Blu-ray disc'),
+                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6aae7f1968a1bed2d8c6ac68'),
+            }),
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
