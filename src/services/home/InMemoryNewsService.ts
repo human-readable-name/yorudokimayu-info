@@ -26,8 +26,8 @@ const newsMasterData: NewsMaster[] = [
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '現地 (渋谷ストリーム ホール) / 配信 (zaiko) チケット'],
-                    ['en', 'Venue (Shibuya Stream Hall) / Streaming (zaiko) ticket']
+                    ['ja', '配信 (zaiko) チケット'],
+                    ['en', 'Streaming archive (zaiko) ticket']
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/ja/item/383839'),
             }),
@@ -37,18 +37,8 @@ const newsMasterData: NewsMaster[] = [
         text: TranslatableValues.createUnifiedStatement('2026-10-24 りあぷろ学園祭2026 Day1 2部公演'),
         links: [
             new LinkMaster({
-                name: TranslatableValues.create([
-                    ['ja', '現地 (1st Stage) VIPチケット'],
-                    ['en', 'Venue (1st Stage) VIP ticket'],
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6a86f4a853ee8d5dcce3075b')
-            }),
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ['ja', '現地 (1st Stage) 一般チケット'],
-                    ['en', 'Venue (1st Stage) general admission ticket'],
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6a86f67b7ebe0a0059728034')
+                name: TranslatableValues.createUnifiedStatement('Blu-ray disc'),
+                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6aae7f1968a1bed2d8c6ac68'),
             }),
         ]
     }),
