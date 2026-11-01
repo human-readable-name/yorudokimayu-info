@@ -6,12 +6,12 @@ import { TranslatableValues } from "../i18n/TranslatableValues";
 const baseUrl = "https://kimayu.rocks";
 
 const siteName = TranslatableValues.create([
-    ["ja",  "拠鳥きまゆアーティスト情報まとめ"],
-    ["en", "Kimayu Yorudo Information"],
+    ["ja",  "KiMAYU アーティスト情報まとめ"],
+    ["en", "KiMAYU Information"],
 ]);
 const siteDescription = TranslatableValues.create([
-    ["ja", "Vsinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報をまとめています"],
-    ["en", "This website is a collection of links about KimayuYorudo's music and live performances."],
+    ["ja", "Vsinger KiMAYU (旧名義 拠鳥きまゆ) のアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報をまとめています"],
+    ["en", "This website compiles various information about Vsinger KiMAYU (formerly known as Kimayu Yorudo)."],
 ]);
 
 class MetaDataMaster {
@@ -62,21 +62,18 @@ class MetaDataMaster {
 
 const homeMetaDataMaster = new MetaDataMaster({
     title: TranslatableValues.create([
-        ["ja", "拠鳥きまゆアーティスト情報まとめ"],
-        ["en", "Kimayu Yorudo Information"],
+        ["ja", "KiMAYU アーティスト情報まとめ"],
+        ["en", "KiMAYU Information"],
     ]),
     description: TranslatableValues.create([
-        ["ja", "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報"],
-        ["en", "This website is a collection of links about KimayuYorudo's music and live performances."],
+        ["ja", "VSinger KiMAYU (旧名義 拠鳥きまゆ) のアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報"],
+        ["en", "This website compiles various information about Vsinger KiMAYU (formerly known as Kimayu Yorudo)."],
     ]),
     pathWithoutLocale: path.home,
 });
 
 const biographyMetaDataMaster = new MetaDataMaster({
-    title: TranslatableValues.create([
-        ["ja", "拠鳥きまゆ Biography"],
-        ["en", "Kimayu Yorudo Biography"],
-    ]),
+    title: TranslatableValues.createUnifiedStatement("KiMAYU Biography"),
     description: TranslatableValues.create([
         ["ja", "アーティスト情報・ライブ出演歴・コラボ情報"],
         ["en", "Artist introduction, live performance history, etc"],
@@ -85,10 +82,7 @@ const biographyMetaDataMaster = new MetaDataMaster({
 }); 
 
 const discographyMetaDataMaster = new MetaDataMaster({
-    title: TranslatableValues.create([
-        ["ja", "拠鳥きまゆ Discography"],
-        ["en", "Kimayu Yorudo Discograpy"],
-    ]),
+    title: TranslatableValues.createUnifiedStatement("KiMAYU Discography"),
     description: TranslatableValues.create([
         ["ja", "楽曲リリース情報やMVなど関連情報へのリンク"],
         ["en", "Released songs, music videos, and other related information"],

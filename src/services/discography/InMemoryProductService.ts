@@ -76,6 +76,41 @@ export class ProductMaster {
 
 const productMasterData: ProductMaster[] = [
     new ProductMaster({
+        id: "26th-single",
+        name: TranslatableValues.create([
+            ["ja", "唱命"],
+            ["en", "Shomei"],
+        ]),
+        kind: "Single",
+        genre: "J-Pop",
+        dateOfRelease: new Date("2026-11-01"),
+        credits: [
+            TranslatableValues.createUnifiedStatement("Music/Lyrics buzzG"),
+            TranslatableValues.createUnifiedStatement("Bass Kei Nakamura"),
+            TranslatableValues.create([
+                ["ja", "Drum 樋口幸佑"],
+                ["en", "Drum Higuchi Kosuke"],
+            ]),
+            TranslatableValues.create([
+                ["ja", "Piano 松岡美弥子"],
+                ["en", "Piano Miyako Matsuoka"],
+            ]),
+            TranslatableValues.createUnifiedStatement("Vocal KiMAYU"),
+        ],
+        mvLinks: [
+            new LinkMaster({
+                url: TranslatableValues.createUnifiedStatement("https://youtu.be/vOLnvszCKcQ"),
+                name: TranslatableValues.create([
+                    ["ja", "唱命"],
+                    ["en", "Shomei"],
+                ]),
+            }),
+        ],
+        storeLinks: [
+            LinkMaster.createMusicVideoOnYouTube({id: 'vOLnvszCKcQ'}),
+        ],
+    }),
+    new ProductMaster({
         id: "3rd-ep",
         name: TranslatableValues.createUnifiedStatement("身分証明唱"),
         kind: "EP",
@@ -789,7 +824,7 @@ const productMasterData: ProductMaster[] = [
             ]),
             TranslatableValues.create([
                 ["ja", "Bass 四谷ゲンロク"],
-                ["en", "Bass performance Genroku Yotsuya"],
+                ["en", "Bass Genroku Yotsuya"],
             ]),
             TranslatableValues.create([
                 ["ja", "Vocal 拠鳥きまゆ"],

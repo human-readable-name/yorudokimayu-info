@@ -22,8 +22,7 @@ const Index: React.FC<Props> = ({profile, eventHistories, collaborations}: Props
             <section>
                 <SectionTitle text="Profile" />
                 <p className="text-center py-4 text-xl">
-                    {profile.name}<br />
-                    {profile.nameCaption}<br />
+                    {profile.name}
                 </p>
                 <div className="flex justify-center">
                     <OutlookTweet />

@@ -1165,14 +1165,14 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
 ];
 
 export const japaneseProfile: Profile = {
-    name: "拠鳥 きまゆ",
-    nameCaption: "(よるど きまゆ)",
+    name: "KiMAYU",
     introductions: [
         "オリジナル曲はRock中心に活動するVsinger。",
         "「夢はPENGUIN RESEARCHと対バン&楽曲提供」を公言しており、自身のYouTubeチャネルにはPENGUIN RESEARCHおよびkemuの楽曲のカバーを投稿している。",
         "2021年には9か月連続リリース企画#nova_nextを実施し、期間中13曲をリリース。",
         "歌唱のほかに動画・ハンドライティング・作詞・VTuberロゴデザインなど活動は多岐にわたる。",
-        "2025年にはPENGUIN RESEARCHの神田ジョンから楽曲提供を受け、夢の1つを実現。"
+        "2025年にはPENGUIN RESEARCHの神田ジョンから楽曲提供を受け、夢の1つを実現。",
+        "2020年に拠鳥(よるど) きまゆとして活動開始し、2026年秋からは活動名義をKiMAYUに改めた。"
     ],
     activities: [
         "2020-10-10 1st Single Penguin Novaリリースと同時に活動開始",
@@ -1194,14 +1194,14 @@ export const japaneseProfile: Profile = {
 };
 
 export const englishProfile: Profile = {
-    name: "Kimayu Yorudo",
-    nameCaption: null,
+    name: "KiMAYU",
     introductions: [
         "She is a virtual artist who focus on rock music.",
         "She respects PENGUIN RESEARCH and posts covers of PENGUIN RESEARCH and kemu songs on her YouTube channel.",
         "In 2021 she released over 13 songs as a deliverable of #nova_next (original music release project for 9 consecutive months).",
         "She is also a multi-creator of videos, hand writing, lyrics, VTuber logo design, etc.",
-        "In 2025 one of her dreams came true when John Kanda (from PENGUIN RESEARCH) provided her with a song."
+        "In 2025 one of her dreams came true when John Kanda (from PENGUIN RESEARCH) provided her with a song.",
+        "She began her career in 2020 under the name Yorudo Kimayu, and changed her stage name to KiMAYU in the fall of 2026.",
     ],
     activities: [
         "2020-10-10 Started activities with the release of Penguin Nova",
