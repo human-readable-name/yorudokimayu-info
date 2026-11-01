@@ -3,7 +3,6 @@ import { LinkItem } from "../common/Link";
 
 export type Profile = {
     name: string;
-    nameCaption: string | null;
     introductions: string[];
     activities: string[];
 };

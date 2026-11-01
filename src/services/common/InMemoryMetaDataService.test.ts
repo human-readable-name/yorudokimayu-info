@@ -14,9 +14,9 @@ describe('InMemoryMetaDataService', () => {
                 service.getHomeMeta('ja')
             ).toEqual(
                 {
-                    title: "拠鳥きまゆアーティスト情報まとめ",
-                    description: "VSinger拠鳥きまゆのアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報",
-                    siteName: "拠鳥きまゆアーティスト情報まとめ",
+                    title: "KiMAYU アーティスト情報まとめ",
+                    description: "VSinger KiMAYU (旧名義 拠鳥きまゆ) のアーティスト情報・ライブ出演歴・コラボ情報・楽曲情報",
+                    siteName: "KiMAYU アーティスト情報まとめ",
                     locale: "ja_JP",
                     canonical: "https://kimayu.rocks/",
                     languageAlternates: [
@@ -39,9 +39,9 @@ describe('InMemoryMetaDataService', () => {
                 service.getHomeMeta('en')
             ).toEqual(
                 {
-                    title: "Kimayu Yorudo Information",
-                    description: "This website is a collection of links about KimayuYorudo's music and live performances.",
-                    siteName: "Kimayu Yorudo Information",
+                    title: "KiMAYU Information",
+                    description: "This website compiles various information about Vsinger KiMAYU (formerly known as Kimayu Yorudo).",
+                    siteName: "KiMAYU Information",
                     locale: "en_US",
                     canonical: "https://kimayu.rocks/en/",
                     languageAlternates: [
@@ -70,9 +70,9 @@ describe('InMemoryMetaDataService', () => {
             service.getBiographyMeta('ja')
         ).toEqual(
             {
-                title: "拠鳥きまゆ Biography",
+                title: "KiMAYU Biography",
                 description: "アーティスト情報・ライブ出演歴・コラボ情報",
-                siteName: "拠鳥きまゆアーティスト情報まとめ",
+                siteName: "KiMAYU アーティスト情報まとめ",
                 locale: "ja_JP",
                 canonical: "https://kimayu.rocks/biography",
                 languageAlternates: [
@@ -95,9 +95,9 @@ describe('InMemoryMetaDataService', () => {
             service.getBiographyMeta('en')
         ).toEqual(
             {
-                title: "Kimayu Yorudo Biography",
+                title: "KiMAYU Biography",
                 description: "Artist introduction, live performance history, etc",
-                siteName: "Kimayu Yorudo Information",
+                siteName: "KiMAYU Information",
                 locale: "en_US",
                 canonical: "https://kimayu.rocks/en/biography",
                 languageAlternates: [
@@ -123,9 +123,9 @@ describe('InMemoryMetaDataService', () => {
             service.getDiscographyMeta('ja')
         ).toEqual(
             {
-                title: "拠鳥きまゆ Discography",
+                title: "KiMAYU Discography",
                 description: "楽曲リリース情報やMVなど関連情報へのリンク",
-                siteName: "拠鳥きまゆアーティスト情報まとめ",
+                siteName: "KiMAYU アーティスト情報まとめ",
                 locale: "ja_JP",
                 canonical: "https://kimayu.rocks/discography",
                 languageAlternates: [
@@ -148,9 +148,9 @@ describe('InMemoryMetaDataService', () => {
             service.getDiscographyMeta('en')
         ).toEqual(
             {
-                title: "Kimayu Yorudo Discograpy",
+                title: "KiMAYU Discography",
                 description: "Released songs, music videos, and other related information",
-                siteName: "Kimayu Yorudo Information",
+                siteName: "KiMAYU Information",
                 locale: "en_US",
                 canonical: "https://kimayu.rocks/en/discography",
                 languageAlternates: [

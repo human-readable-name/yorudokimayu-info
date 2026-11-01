@@ -2,8 +2,20 @@ import React from "react";
 import Sciprt from "next/script";
 const OutlookTweet: React.FC = () => {
     return <>
-        <blockquote className="twitter-tweet"><p lang="ja" dir="ltr">さいこ〜にかわいいぼくを見て💜<a href="https://twitter.com/hashtag/Vtuber%E3%81%AE%E4%B8%89%E9%9D%A2%E5%9B%B3%E3%81%8C%E7%9F%A5%E3%82%8A%E3%81%9F%E3%81%84?src=hash&amp;ref_src=twsrc%5Etfw">#Vtuberの三面図が知りたい</a> <a href="https://t.co/VhcCGWQEnn">pic.twitter.com/VhcCGWQEnn</a></p>&mdash; 拠鳥きまゆ💜🐧⚡ (@461Okmy) <a href="https://twitter.com/461Okmy/status/1379360361720127489?ref_src=twsrc%5Etfw">April 6, 2021</a></blockquote> 
-        <Sciprt async src="https://platform.twitter.com/widgets.js" />
+        <blockquote className="twitter-tweet"><p lang="ja" dir="ltr">𝟐𝟎𝟐𝟔/𝟏𝟏/𝟏 𝐑𝐞𝐝𝐞𝐛𝐮𝐭──.ᐟ.ᐟ
+
+            「──ぼくがきみの、
+            ヒーローになる。」
+
+            💜感電必至のエナジーボイス🎙️
+            ⚡️オリジナル曲50曲以上🎸
+            💜夢を魅せて叶えるVSinger🫧
+
+            ✦ #10月のVTuberフォロー祭り ‍✦
+            ‍✦ #VSinger ‍✦ https://t.co/3GUPOch18f</p>&mdash; KiMAYU💜🐧⚡ (@461Okmy) <a
+            href="https://x.com/461Okmy/status/2109207388150698051?ref_src=twsrc%5Etfw">October 11, 2026</a>
+        </blockquote>
+        <script async src="https://platform.x.com/widgets.js" charSet="utf-8"></script>
     </>
 };
 

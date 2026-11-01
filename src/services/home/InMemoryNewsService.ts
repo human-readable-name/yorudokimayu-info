@@ -43,6 +43,16 @@ const newsMasterData: NewsMaster[] = [
         ]
     }),
     new NewsMaster({
+        text: TranslatableValues.create([
+            ['ja', '2026-11-01 新曲 唱命'],
+            ['en', '2026-11-01 New single "Shomei"'],
+        ]),
+        links: [
+            LinkMaster.createForTuneCore({id: 'AQz6ucUD'}),
+            LinkMaster.createMusicVideoOnYouTube({id: 'vOLnvszCKcQ'}),
+        ],
+    }),
+    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-11-08 ぶいかふぇ♪文化祭ライブ2026 DAY.2'),
         links: [
             new LinkMaster({
