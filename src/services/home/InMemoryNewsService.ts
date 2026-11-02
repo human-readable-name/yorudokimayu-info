@@ -53,12 +53,12 @@ const newsMasterData: NewsMaster[] = [
         ],
     }),
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2026-11-08 ぶいかふぇ♪文化祭ライブ2026 DAY.2'),
+        text: TranslatableValues.createUnifiedStatement('2026-11-08 ぶいかふぇ♪文化祭ライブ2026 DAY.2 第一部'),
         links: [
             new LinkMaster({
                 name: TranslatableValues.create([
-                    ['ja', '現地 (文化放送メディアプラスホール) チケット'],
-                    ['en', 'Venue (JOQR Media Plus Hall) ticket'],
+                    ['ja', '現地 (文化放送メディアプラスホール) / 配信 (bitfan) チケット'],
+                    ['en', 'Venue (JOQR Media Plus Hall) / Streaming (bitfan) ticket'],
                 ]),
                 url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/22326'),
             })
