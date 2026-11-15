@@ -66,6 +66,21 @@ const newsMasterData: NewsMaster[] = [
     }),
     new NewsMaster({
         text: TranslatableValues.create([
+            ['ja', '2026-11-29 ぶいかるライブ！'],
+            ['en', '2026-11-29 BUIKARU Live!'],
+        ]),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', '現地 (秋葉原UDX前 サボニウス広場) 観覧無料'],
+                    ['en', 'Venue (Akihabara UDX Savonius Plaza) Free admission']
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://x.com/shabefes/status/2121921156592877785'),
+            }),
+        ],
+    }),
+    new NewsMaster({
+        text: TranslatableValues.create([
             ['ja', '2026-12-13 箱乃なかみ×KiMAYU 2MAN LIVE 「CROSS HEAD SHOT」'],
             ['en', '2026-12-13 HakonoNakami and KiMAYU joint concert "CROSS HEAD SHOT"'],
         ]),
