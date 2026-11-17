@@ -22,18 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2026-10-18 深海フェス2026「超・深海」 Day.2'),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.create([
-                    ['ja', '配信 (zaiko) チケット'],
-                    ['en', 'Streaming archive (zaiko) ticket']
-                ]),
-                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/ja/item/383839'),
-            }),
-        ]
-    }),
-    new NewsMaster({
         text: TranslatableValues.createUnifiedStatement('2026-10-24 りあぷろ学園祭2026 Day1 2部公演'),
         links: [
             new LinkMaster({
