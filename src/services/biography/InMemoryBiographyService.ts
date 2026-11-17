@@ -1153,6 +1153,19 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
         ],
     }),
     new EventHistoryMaster({
+        date: new Date('2026-10-18'),
+        name: TranslatableValues.createUnifiedStatement('深海フェス2026「超・深海」 Day.2'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.create([
+                    ['ja', 'アーカイブ'],
+                    ['en', 'Live streaming archive'],
+                ]),
+                url: TranslatableValues.createUnifiedStatement('https://pjblue.zaiko.io/ja/item/383839'),
+            }),
+        ],
+    }),
+    new EventHistoryMaster({
         date: new Date('2026-10-24'),
         name: TranslatableValues.createUnifiedStatement('りあぷろ学園祭2026 Day1 2部公演'),
         links: [
