@@ -22,15 +22,6 @@ export class NewsMaster {
 
 const newsMasterData: NewsMaster[] = [
     new NewsMaster({
-        text: TranslatableValues.createUnifiedStatement('2026-10-24 りあぷろ学園祭2026 Day1 2部公演'),
-        links: [
-            new LinkMaster({
-                name: TranslatableValues.createUnifiedStatement('Blu-ray disc'),
-                url: TranslatableValues.createUnifiedStatement('https://realizeproduction.stores.jp/items/6aae7f1968a1bed2d8c6ac68'),
-            }),
-        ]
-    }),
-    new NewsMaster({
         text: TranslatableValues.create([
             ['ja', '2026-11-01 新曲 唱命'],
             ['en', '2026-11-01 New single "Shomei"'],
