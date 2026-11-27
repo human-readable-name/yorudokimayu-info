@@ -1175,6 +1175,16 @@ const eventHistoryMasterData: EventHistoryMaster[] = [
             }),
         ],
     }),
+    new EventHistoryMaster({
+        date: new Date('2026-11-08'),
+        name: TranslatableValues.createUnifiedStatement('ぶいかふぇ♪文化祭ライブ2026 DAY.2 第一部'),
+        links: [
+            new LinkMaster({
+                name: TranslatableValues.createUnifiedStatement('bitfan'),
+                url: TranslatableValues.createUnifiedStatement('https://jcm-event.bitfan.id/events/22326'),
+            })
+        ],
+    }),
 ];
 
 export const japaneseProfile: Profile = {
